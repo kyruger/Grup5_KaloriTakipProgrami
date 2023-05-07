@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Enums
+namespace DAL
 {
-    public enum MealType
+    internal class KalorieTrackingDbContext
     {
-        Breakfast = 1,
-        Lunch,
-        Dinner,
-        Others
     }
 }
