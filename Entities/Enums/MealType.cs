@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    internal enum MealType
+    public enum MealType
     {
         Breakfast = 1,
         Lunch,
