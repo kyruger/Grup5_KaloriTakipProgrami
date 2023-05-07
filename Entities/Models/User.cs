@@ -1,4 +1,5 @@
 ﻿using Entities.Enums;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,9 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class User
+    public class User : BaseClass
     {
-        public int UserId { get; set; }
-
         public string Mail { get; set; }
-
         public string password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
