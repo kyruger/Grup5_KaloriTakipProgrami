@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Configurations
 {
-    internal class MealCFG
+    public class MealCFG
     {
     }
 }
