@@ -9,7 +9,7 @@ namespace Entities
 {
     public class User
     {
-        public int ID { get; set; }
+        public int UserId { get; set; }
 
         public string Mail { get; set; }
 

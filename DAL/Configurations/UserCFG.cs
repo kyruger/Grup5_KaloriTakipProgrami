@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Configurations
 {
-    internal class UserCFG : IEntityTypeConfiguration<User>
+    public class UserCFG : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
