@@ -10,7 +10,7 @@ namespace Entities
     {
         public int FoodID { get; set; }
         public string Name { get; set; }
-        public decimal Calori { get; set; }
+        public decimal Calorie { get; set; }
         public decimal ProteinRate { get; set; }
         public decimal FatRate { get; set; }
         public decimal CarbonhydrateAmount { get; set; }

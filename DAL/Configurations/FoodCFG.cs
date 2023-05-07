@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Enums
+namespace DAL.Configurations
 {
-    public enum MealType
+    public class FoodCFG
     {
-        Breakfast = 1,
-        Lunch,
-        Dinner,
-        Others
     }
 }
