@@ -8,7 +8,8 @@ namespace Entities.Enums
 {
     public enum Gender
     {
-        Erkek,
-        Kadın
+        Male =1,
+        Female,
+        Others
     }
 }
