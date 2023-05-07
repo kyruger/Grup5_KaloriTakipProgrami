@@ -13,7 +13,12 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<Food> builder)
         {
-           
+            builder.Property(a => a.Name).HasColumnType("varchar").HasMaxLength(100);
+            builder.Property(a => a.Calorie).HasPrecision(5, 2);
+            builder.Property(a => a.ProteinRate).HasPrecision(5, 2);
+            builder.Property(a => a.FatRate).HasPrecision(5, 2);
+            builder.Property(a => a.CarbonhydrateAmount).HasPrecision(5, 2);         
+
         }
     }
 }
