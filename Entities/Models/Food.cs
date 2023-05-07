@@ -8,9 +8,9 @@ namespace Entities
 {
     public class Food
     {
-        public int FoodID { get; set; }
+        public int FoodId { get; set; }
         public string Name { get; set; }
-        public decimal Calori { get; set; }
+        public decimal Calorie { get; set; }
         public decimal ProteinRate { get; set; }
         public decimal FatRate { get; set; }
         public decimal CarbonhydrateAmount { get; set; }

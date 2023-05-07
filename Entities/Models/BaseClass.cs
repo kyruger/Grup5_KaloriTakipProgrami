@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Enums
+namespace Entities.Models
 {
-    public enum MealType
+    internal class BaseClass
     {
-        Breakfast = 1,
-        Lunch,
-        Dinner,
-        Others
     }
 }
