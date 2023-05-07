@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    internal class Meal
+    public class Meal
     {
+        public int MealId { get; set; }
+        public string MealType { get; set; }
+        public int Day { get; set; }
+
+        public ICollection<Meal_Food> Foods { get; set; }
     }
 }
