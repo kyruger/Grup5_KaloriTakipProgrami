@@ -13,7 +13,8 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<Food> builder)
         {
-           
+            
+
         }
     }
 }
