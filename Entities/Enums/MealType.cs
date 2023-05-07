@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    public enum Gender
+    internal enum MealType
     {
-        Male =1,
-        Female,
+        Breakfast = 1,
+        Lunch,
+        Dinner,
         Others
     }
 }
