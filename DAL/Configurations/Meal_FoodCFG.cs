@@ -13,7 +13,7 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<Meal_Food> builder)
         {
-            
+            builder.HasKey(ky => new { ky.MealId, ky.FoodId,ky.UserId });
         }
     }
 }
