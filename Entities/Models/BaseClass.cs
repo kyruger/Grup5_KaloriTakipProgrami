@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entities.Models
 {
-    internal class BaseClass
+    public class BaseClass
     {
+        public BaseClass()
+        {
+            CreationTime = DateTime.Now;
+        }
+        public int ID { get; set; }
+        public DateTime CreationTime { get; set; }
     }
 }
