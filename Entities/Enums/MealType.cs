@@ -11,6 +11,6 @@ namespace Entities.Enums
         Breakfast = 1,
         Lunch,
         Dinner,
-        Other
+        Others
     }
 }
