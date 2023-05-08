@@ -23,7 +23,7 @@ namespace Entities
         public string FullName { get => FirstName +" "+LastName; }
         public Gender Gender { get; set; }
         public int Age { get; set; }
-        public string? PhoneNumber? { get; set; }
+        public string? PhoneNumber { get; set; }
         public decimal Weight { get; set; }
         public decimal GoalWeight { get; set; }
         public decimal DailyGoal { get; set; }
