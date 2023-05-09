@@ -12,7 +12,9 @@ namespace Entities
     {
         public MealType MealType { get; set; }
         public int Day { get; set; }
-        public int Quantity { get; set; }
+        public int PortionCount { get; set; } = 0;
+        public PortionType? PortionType { get; set; }
+        public int Quantity { get; set; } = 0;
         public int UserId { get; set; }
         public virtual User User { get; set; }
         public int FoodId { get; set; }
