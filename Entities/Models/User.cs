@@ -12,25 +12,25 @@ namespace Entities
 {
     public class User : BaseClass
     {
+        public User()
+        {
+            ConsumedFoods = new HashSet<ConsumedFood>();
+        }
         public string Mail { get; set; }
-        public string password { get; set; }
+        public string Password { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        [NotMapped]
+        public string LastName { get; set; }    
         public string FullName { get => FirstName +" "+LastName; }
         public Gender Gender { get; set; }
         public int Age { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
         public decimal Weight { get; set; }
         public decimal GoalWeight { get; set; }
         public decimal DailyGoal { get; set; }
         public decimal Height { get; set; }
-
-        [NotMapped]
         public decimal BodyMassIndex { get => Weight / (Height * Height); }
 
-        public ICollection<Meal_Food> MealsAndFoods { get; set; }
+        public virtual ICollection<ConsumedFood> ConsumedFoods{ get; set; }
 
     }
 }

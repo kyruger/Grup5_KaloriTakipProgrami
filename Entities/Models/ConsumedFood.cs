@@ -8,10 +8,15 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Meal :BaseClass
+    public class ConsumedFood : BaseClass
     {
         public MealType MealType { get; set; }
         public int Day { get; set; }
-        public ICollection<Meal_Food> Foods { get; set; }
+        public int Quantity { get; set; }
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
+        public int FoodId { get; set; }
+        public virtual Food Food { get; set; }
+
     }
 }

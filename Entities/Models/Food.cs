@@ -10,13 +10,19 @@ namespace Entities
 {
     public class Food:BaseClass
     {
+        public Food()
+        {
+            ConsumedFoods = new HashSet<ConsumedFood>();
+        }
         public string Name { get; set; }
+        public decimal PortionGram { get; set; }
         public FoodCategory Category { get; set; }
-        public decimal Calorie { get; set; }
-        public decimal ProteinRate { get; set; }
-        public decimal FatRate { get; set; }
-        public decimal CarbonhydrateAmount { get; set; }
-        public ICollection<Meal_Food> Meals { get; set; }
+        public decimal CalorieFor100Gram { get; set; }
+        public decimal ProteinRateFor100Gram { get; set; }
+        public decimal FatRateFor100Gram { get; set; }
+        public decimal CarbonhydrateAmountFor100Gram { get; set; }
+        public byte[] ImageResource { get; set; }
+        public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
 }
