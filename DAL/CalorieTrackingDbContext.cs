@@ -10,9 +10,9 @@ namespace DAL
 {
     public class CalorieTrackingDbContext:DbContext
     {
-        public DbSet<Meal_Food> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Food> Foods { get; set; }
-        public DbSet<Meal> Meals { get; set; }
+        public DbSet<ConsumedFood> ConsumedFoods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
