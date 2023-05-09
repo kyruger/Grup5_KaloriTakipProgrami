@@ -25,6 +25,7 @@ namespace Entities
         public int Age { get; set; }
         public string? PhoneNumber { get; set; }
         public decimal Weight { get; set; }
+        public int DailyGoalCalorie { get; set; }
         public decimal GoalWeight { get; set; }
         public decimal DailyGoal { get; set; }
         public decimal Height { get; set; }
