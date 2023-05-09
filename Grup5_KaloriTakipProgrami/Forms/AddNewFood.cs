@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace WndPL.Forms
 {
-    public partial class Meals : Form
+    public partial class AddNewFood : Form
     {
-        public Meals()
+        public AddNewFood()
         {
             InitializeComponent();
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AddNewFood addNewFood = new AddNewFood();
-            addNewFood.ShowDialog();
+            this.Close();
         }
     }
 }
