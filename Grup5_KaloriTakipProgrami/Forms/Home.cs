@@ -19,14 +19,14 @@ namespace WndPL.Forms
             InitializeComponent();
             userId = id;
         }
-        ConsumedFoodBLL cfBLL = new ConsumedFoodBLL();
-        UserBLL userBLL = new UserBLL();
-        FoodBLL FoodBLL = new FoodBLL();
+        BusinessLogic bl = new BusinessLogic();
         int userId;
         private void Home_Load(object sender, EventArgs e)
         {
-            User user = userBLL.GetById(userId);
-
+            User user = bl.Users.GetById(userId);
+            lblCalorie.Text =                //Öğünlerden hesapla çekilecek
+            
         }
+
     }
 }
