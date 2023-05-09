@@ -14,6 +14,8 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<ConsumedFood> builder)
         {
+            builder.Property(x => x.Quantity).HasDefaultValue(0);
+            builder.Property(x => x.PortionCount).HasDefaultValue(0);
             builder.HasData(
                 new ConsumedFood
                 {
