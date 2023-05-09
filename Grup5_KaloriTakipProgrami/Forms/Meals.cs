@@ -22,5 +22,15 @@ namespace WndPL.Forms
             AddNewFood addNewFood = new AddNewFood();
             addNewFood.ShowDialog();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.se)
+        }
+
+        private void Meals_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
