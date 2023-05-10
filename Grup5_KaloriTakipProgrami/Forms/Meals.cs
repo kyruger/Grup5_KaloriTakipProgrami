@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ namespace WndPL.Forms
             InitializeComponent();
         }
         BusinessLogic bl;
+        int foodID;
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             AddNewFood addNewFood = new AddNewFood();
@@ -35,6 +37,9 @@ namespace WndPL.Forms
                 Food food = bl.Foods.GetById(foodId);
                 tbxFoodName.Text = food.Name;
                 tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
+                foodID = (int)lvFood.FocusedItem.Tag;
+
+
 
             }
         }
@@ -45,6 +50,7 @@ namespace WndPL.Forms
             List<Food> foods = bl.Foods.GetAll();
             ListViewFill(foods);
             cbxPortion.SelectedIndex = 0;
+
 
 
 
@@ -86,6 +92,25 @@ namespace WndPL.Forms
 
         private void btnAddToMeal_Click(object sender, EventArgs e)
         {
+            ConsumedFood consumedFood = new ConsumedFood();
+            consumedFood.FoodId = foodID;
+            if (cbxPortion.SelectedItem.ToString()=="Full")
+            {
+                consumedFood.PortionType = PortionType.Full;
+            }
+            else if (cbxPortion.SelectedItem.ToString() == "Half")
+            {
+                consumedFood.PortionType = PortionType.Half;
+            }
+            else if (cbxPortion.SelectedItem.ToString() == "Quarter")
+            {
+                consumedFood.PortionType= PortionType.Quarter;
+            }
+            else
+            {
+                
+            }
+
 
         }
 
@@ -98,6 +123,11 @@ namespace WndPL.Forms
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBreakFeast_Click(object sender, EventArgs e)
+        {
+            lblMeal.Text = btnBreakFeast.Text;
         }
     }
 }

@@ -32,9 +32,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -65,10 +62,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
+            lblMeal = new Label();
             btnDeleteSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
             btnSaveSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             lvFood = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -84,9 +80,9 @@
             guna2CircleProgressBar3 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2CircleProgressBar4 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            btnDinner = new Guna.UI2.WinForms.Guna2Button();
+            btnLunch = new Guna.UI2.WinForms.Guna2Button();
+            btnBreakFeast = new Guna.UI2.WinForms.Guna2Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
@@ -99,22 +95,21 @@
             guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             label2 = new Label();
             cbxPortion = new Guna.UI2.WinForms.Guna2ComboBox();
-            comboBox1 = new ComboBox();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            listView1 = new ListView();
             guna2Panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblMeal
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(557, 260);
-            label1.Name = "label1";
-            label1.Size = new Size(48, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Meals";
+            lblMeal.AutoSize = true;
+            lblMeal.Location = new Point(557, 260);
+            lblMeal.Name = "lblMeal";
+            lblMeal.Size = new Size(48, 20);
+            lblMeal.TabIndex = 1;
+            lblMeal.Text = "Meals";
             // 
             // btnDeleteSelectedMeal
             // 
@@ -147,58 +142,6 @@
             btnSaveSelectedMeal.Size = new Size(225, 56);
             btnSaveSelectedMeal.TabIndex = 3;
             btnSaveSelectedMeal.Text = "Save Selected Meal";
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(38, 320);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.RowTemplate.Height = 29;
-            guna2DataGridView1.Size = new Size(606, 516);
-            guna2DataGridView1.TabIndex = 4;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // guna2TextBox1
             // 
@@ -300,9 +243,9 @@
             guna2Panel1.Controls.Add(guna2CircleProgressBar3);
             guna2Panel1.Controls.Add(guna2CircleProgressBar4);
             guna2Panel1.Controls.Add(guna2CircleProgressBar2);
-            guna2Panel1.Controls.Add(guna2Button7);
-            guna2Panel1.Controls.Add(guna2Button6);
-            guna2Panel1.Controls.Add(guna2Button5);
+            guna2Panel1.Controls.Add(btnDinner);
+            guna2Panel1.Controls.Add(btnLunch);
+            guna2Panel1.Controls.Add(btnBreakFeast);
             guna2Panel1.CustomizableEdges = customizableEdges20;
             guna2Panel1.Dock = DockStyle.Top;
             guna2Panel1.Location = new Point(0, 0);
@@ -353,53 +296,54 @@
             guna2CircleProgressBar2.TabIndex = 14;
             guna2CircleProgressBar2.Text = "guna2CircleProgressBar2";
             // 
-            // guna2Button7
+            // btnDinner
             // 
-            guna2Button7.CustomizableEdges = customizableEdges14;
-            guna2Button7.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button7.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button7.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button7.ForeColor = Color.White;
-            guna2Button7.Location = new Point(791, 35);
-            guna2Button7.Name = "guna2Button7";
-            guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            guna2Button7.Size = new Size(225, 56);
-            guna2Button7.TabIndex = 2;
-            guna2Button7.Text = "Dinner";
+            btnDinner.CustomizableEdges = customizableEdges14;
+            btnDinner.DisabledState.BorderColor = Color.DarkGray;
+            btnDinner.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDinner.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDinner.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDinner.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDinner.ForeColor = Color.White;
+            btnDinner.Location = new Point(791, 35);
+            btnDinner.Name = "btnDinner";
+            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnDinner.Size = new Size(225, 56);
+            btnDinner.TabIndex = 2;
+            btnDinner.Text = "Dinner";
             // 
-            // guna2Button6
+            // btnLunch
             // 
-            guna2Button6.CustomizableEdges = customizableEdges16;
-            guna2Button6.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button6.ForeColor = Color.White;
-            guna2Button6.Location = new Point(421, 35);
-            guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2Button6.Size = new Size(225, 56);
-            guna2Button6.TabIndex = 1;
-            guna2Button6.Text = "Lunch";
+            btnLunch.CustomizableEdges = customizableEdges16;
+            btnLunch.DisabledState.BorderColor = Color.DarkGray;
+            btnLunch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLunch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLunch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLunch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLunch.ForeColor = Color.White;
+            btnLunch.Location = new Point(421, 35);
+            btnLunch.Name = "btnLunch";
+            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btnLunch.Size = new Size(225, 56);
+            btnLunch.TabIndex = 1;
+            btnLunch.Text = "Lunch";
             // 
-            // guna2Button5
+            // btnBreakFeast
             // 
-            guna2Button5.CustomizableEdges = customizableEdges18;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(38, 35);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2Button5.Size = new Size(225, 56);
-            guna2Button5.TabIndex = 0;
-            guna2Button5.Text = "BreakFeast";
+            btnBreakFeast.CustomizableEdges = customizableEdges18;
+            btnBreakFeast.DisabledState.BorderColor = Color.DarkGray;
+            btnBreakFeast.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBreakFeast.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBreakFeast.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBreakFeast.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBreakFeast.ForeColor = Color.White;
+            btnBreakFeast.Location = new Point(38, 35);
+            btnBreakFeast.Name = "btnBreakFeast";
+            btnBreakFeast.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            btnBreakFeast.Size = new Size(225, 56);
+            btnBreakFeast.TabIndex = 0;
+            btnBreakFeast.Text = "BreakFeast";
+            btnBreakFeast.Click += btnBreakFeast_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -546,23 +490,13 @@
             cbxPortion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbxPortion.ForeColor = Color.Black;
             cbxPortion.ItemHeight = 30;
-            cbxPortion.Items.AddRange(new object[] { " Full", "Half", "Quarter" });
+            cbxPortion.Items.AddRange(new object[] { " Full", "Half", "Quarter", "100Gram" });
             cbxPortion.Location = new Point(956, 670);
             cbxPortion.Name = "cbxPortion";
             cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges34;
             cbxPortion.Size = new Size(162, 36);
             cbxPortion.StartIndex = 0;
             cbxPortion.TabIndex = 20;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(34, 268);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 28);
-            comboBox1.TabIndex = 21;
-            comboBox1.Text = "Select Portion";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -573,13 +507,21 @@
             label3.TabIndex = 22;
             label3.Text = "Select Portion";
             // 
+            // listView1
+            // 
+            listView1.Location = new Point(15, 320);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(642, 516);
+            listView1.TabIndex = 23;
+            listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Meals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 933);
+            Controls.Add(listView1);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
             Controls.Add(cbxPortion);
             Controls.Add(label2);
             Controls.Add(guna2NumericUpDown1);
@@ -595,16 +537,14 @@
             Controls.Add(btnAddToMeal);
             Controls.Add(lvFood);
             Controls.Add(guna2TextBox1);
-            Controls.Add(guna2DataGridView1);
             Controls.Add(btnSaveSelectedMeal);
             Controls.Add(btnDeleteSelectedMeal);
-            Controls.Add(label1);
+            Controls.Add(lblMeal);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Meals";
             Text = "Meals";
             Load += Meals_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             guna2Panel1.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).EndInit();
@@ -614,10 +554,9 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblMeal;
         private Guna.UI2.WinForms.Guna2Button btnDeleteSelectedMeal;
         private Guna.UI2.WinForms.Guna2Button btnSaveSelectedMeal;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private ListView lvFood;
         private ColumnHeader columnHeader1;
@@ -627,9 +566,9 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar4;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnDinner;
+        private Guna.UI2.WinForms.Guna2Button btnLunch;
+        private Guna.UI2.WinForms.Guna2Button btnBreakFeast;
         private FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
@@ -648,7 +587,7 @@
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbxPortion;
-        private ComboBox comboBox1;
         private Label label3;
+        private ListView listView1;
     }
 }
