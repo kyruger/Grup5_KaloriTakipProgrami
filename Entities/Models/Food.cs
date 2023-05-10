@@ -20,9 +20,9 @@ namespace Entities
         public decimal CalorieFor100Gram { get; set; }
         public decimal ProteinRateFor100Gram { get; set; }
         public decimal FatRateFor100Gram { get; set; }
-        public decimal CarbonhydrateAmountFor100Gram { get; set; }
+        public decimal CarbonhydrateRateFor100Gram { get; set; }
         public byte[] ImageResource { get; set; }
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
-}
+} 

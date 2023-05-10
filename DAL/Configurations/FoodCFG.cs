@@ -18,7 +18,7 @@ namespace DAL.Configurations
             builder.Property(a => a.CalorieFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.ProteinRateFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.FatRateFor100Gram).HasPrecision(5, 2);
-            builder.Property(a => a.CarbonhydrateAmountFor100Gram).HasPrecision(5, 2);
+            builder.Property(a => a.CarbonhydrateRateFor100Gram).HasPrecision(5, 2);
 
 
             builder.HasData(
@@ -31,7 +31,7 @@ namespace DAL.Configurations
                     CalorieFor100Gram = Convert.ToDecimal(300.1546),
                     ProteinRateFor100Gram = 17,
                     FatRateFor100Gram = 14,
-                    CarbonhydrateAmountFor100Gram = 69,
+                    CarbonhydrateRateFor100Gram = 69,
                 },
                 new Food
                 {
@@ -42,7 +42,7 @@ namespace DAL.Configurations
                     CalorieFor100Gram = Convert.ToDecimal(186),
                     ProteinRateFor100Gram = Convert.ToDecimal(5.84),
                     FatRateFor100Gram = Convert.ToDecimal(4.33),
-                    CarbonhydrateAmountFor100Gram = Convert.ToDecimal(30.51),
+                    CarbonhydrateRateFor100Gram = Convert.ToDecimal(30.51),
                 },                
                 new Food
                 {
@@ -53,7 +53,7 @@ namespace DAL.Configurations
                     CalorieFor100Gram = Convert.ToDecimal(170),
                     ProteinRateFor100Gram = Convert.ToDecimal(4.12),
                     FatRateFor100Gram = Convert.ToDecimal(3.5),
-                    CarbonhydrateAmountFor100Gram = Convert.ToDecimal(29.71),
+                    CarbonhydrateRateFor100Gram = Convert.ToDecimal(29.71),
                 }
                 );
         }

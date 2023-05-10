@@ -14,18 +14,14 @@ namespace WndPL.Forms
 {
     public partial class Home : Form
     {
-        public Home(int id)
+        public Home()
         {
-            InitializeComponent();
-            userId = id;
+           
         }
-        BusinessLogic bl = new BusinessLogic();
-        int userId;
+
         private void Home_Load(object sender, EventArgs e)
         {
-            User user = bl.Users.GetById(userId);
-            lblCalorie.Text =                //Öğünlerden hesapla çekilecek
-            
+           
         }
 
     }
