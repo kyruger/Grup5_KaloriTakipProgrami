@@ -1,6 +1,6 @@
 ﻿namespace WndPL.Forms
 {
-    partial class SignIn
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -233,7 +233,7 @@
             pbInterface.Margin = new Padding(3, 4, 3, 4);
             pbInterface.Name = "pbInterface";
             pbInterface.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            pbInterface.Size = new Size(305, 592);
+            pbInterface.Size = new Size(305, 599);
             pbInterface.SizeMode = PictureBoxSizeMode.StretchImage;
             pbInterface.TabIndex = 9;
             pbInterface.TabStop = false;
@@ -415,6 +415,7 @@
             btnBack.Size = new Size(127, 44);
             btnBack.TabIndex = 24;
             btnBack.Text = "Back";
+            btnBack.Click += btnBack_Click;
             // 
             // btnConfirm
             // 
@@ -437,7 +438,7 @@
             btnConfirm.Text = "Confirm";
             btnConfirm.Click += btnConfirm_Click;
             // 
-            // SignIn
+            // SignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -454,7 +455,7 @@
             Controls.Add(pnlPhoto);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "SignIn";
+            Name = "SignUp";
             Text = "Sign In";
             Load += Form1_Load;
             pnlPhoto.ResumeLayout(false);

@@ -21,6 +21,7 @@ namespace WndPL.Forms
         }
         BusinessLogic bl = new BusinessLogic();
         User user = new User();
+        Helper helper = new Helper();
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +38,7 @@ namespace WndPL.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool emptyControl = AreTextBoxesEmpty(this);
+            bool emptyControl = helper.AreTextBoxesEmpty(this);
             if (emptyControl)
             {
                 MessageBox.Show("Eksik bilgi girdiniz. \nLütfen tüm alanları doldurunuz.");
@@ -61,23 +62,13 @@ namespace WndPL.Forms
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            SingIn singin = new();
-            singin.ShowDialog();
+            SignUp signIn = new SignUp();
+            signIn.ShowDialog();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bizi ziyare ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
             Application.Exit();
-        }
-
-        public bool AreTextBoxesEmpty(Form form)
-        {
-            bool IsEmpty = false;
-            foreach (var item in form.Controls)
-                if (item is TextBox txt)
-                    if (txt.Text == "")
-                        IsEmpty = true;
-            return IsEmpty;
         }
 
         private string sha256_hash(string password)
@@ -87,13 +78,6 @@ namespace WndPL.Forms
             {
                 return string.Concat(hash.ComputeHash(Encoding.UTF8.GetBytes(password)).Select(l => l.ToString("X2")));
             }
-        }
-
-        public void HideAndShow(Form from1, Form form2)
-        {
-            from1.Hide();
-            form2.ShowDialog();
-            from1.Show();
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
