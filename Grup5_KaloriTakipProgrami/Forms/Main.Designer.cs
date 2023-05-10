@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
             lblMail = new Label();
             lblName = new Label();
@@ -71,11 +71,11 @@
             pnlMenu.Controls.Add(brnReports);
             pnlMenu.Controls.Add(btnMeals);
             pnlMenu.Controls.Add(btnHome);
-            pnlMenu.CustomizableEdges = customizableEdges23;
+            pnlMenu.CustomizableEdges = customizableEdges10;
             pnlMenu.Dock = DockStyle.Left;
             pnlMenu.Location = new Point(0, 0);
             pnlMenu.Name = "pnlMenu";
-            pnlMenu.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            pnlMenu.ShadowDecoration.CustomizableEdges = customizableEdges11;
             pnlMenu.Size = new Size(200, 700);
             pnlMenu.TabIndex = 0;
             // 
@@ -103,7 +103,7 @@
             guna2CirclePictureBox2.ImageRotate = 0F;
             guna2CirclePictureBox2.Location = new Point(12, 12);
             guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2CirclePictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox2.Size = new Size(64, 64);
             guna2CirclePictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             // 
             // btnExit
             // 
-            btnExit.CustomizableEdges = customizableEdges15;
+            btnExit.CustomizableEdges = customizableEdges2;
             btnExit.DisabledState.BorderColor = Color.DarkGray;
             btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -121,7 +121,7 @@
             btnExit.ForeColor = Color.White;
             btnExit.Location = new Point(10, 640);
             btnExit.Name = "btnExit";
-            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnExit.Size = new Size(180, 50);
             btnExit.TabIndex = 6;
             btnExit.Text = "Exit";
@@ -137,7 +137,7 @@
             btnUserSettings.ForeColor = Color.White;
             btnUserSettings.Location = new Point(65, 328);
             btnUserSettings.Name = "btnUserSettings";
-            btnUserSettings.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btnUserSettings.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnUserSettings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnUserSettings.Size = new Size(70, 70);
             btnUserSettings.TabIndex = 5;
@@ -154,7 +154,7 @@
             btnDiets.ForeColor = Color.White;
             btnDiets.Location = new Point(65, 480);
             btnDiets.Name = "btnDiets";
-            btnDiets.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnDiets.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnDiets.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnDiets.Size = new Size(70, 70);
             btnDiets.TabIndex = 4;
@@ -170,7 +170,7 @@
             btnActivity.ForeColor = Color.White;
             btnActivity.Location = new Point(65, 404);
             btnActivity.Name = "btnActivity";
-            btnActivity.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            btnActivity.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnActivity.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnActivity.Size = new Size(70, 70);
             btnActivity.TabIndex = 3;
@@ -186,7 +186,7 @@
             brnReports.ForeColor = Color.White;
             brnReports.Location = new Point(65, 252);
             brnReports.Name = "brnReports";
-            brnReports.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            brnReports.ShadowDecoration.CustomizableEdges = customizableEdges7;
             brnReports.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             brnReports.Size = new Size(70, 70);
             brnReports.TabIndex = 2;
@@ -203,7 +203,7 @@
             btnMeals.ForeColor = Color.White;
             btnMeals.Location = new Point(65, 176);
             btnMeals.Name = "btnMeals";
-            btnMeals.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            btnMeals.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnMeals.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnMeals.Size = new Size(70, 70);
             btnMeals.TabIndex = 1;
@@ -220,7 +220,7 @@
             btnHome.ForeColor = Color.White;
             btnHome.Location = new Point(65, 100);
             btnHome.Name = "btnHome";
-            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnHome.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnHome.Size = new Size(70, 70);
             btnHome.TabIndex = 0;
@@ -229,10 +229,10 @@
             // 
             // pnlMain
             // 
-            pnlMain.CustomizableEdges = customizableEdges25;
+            pnlMain.CustomizableEdges = customizableEdges12;
             pnlMain.Location = new Point(200, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges13;
             pnlMain.Size = new Size(1000, 700);
             pnlMain.TabIndex = 1;
             // 
@@ -245,6 +245,7 @@
             Controls.Add(pnlMenu);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main";
             Load += Main_Load;
             pnlMenu.ResumeLayout(false);

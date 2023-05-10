@@ -4,6 +4,7 @@ using DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(CalorieTrackingDbContext))]
-    partial class CalorieTrackingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230510181554_mig1")]
+    partial class mig1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,7 +72,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 1,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4910),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4898),
                             Day = 1,
                             FoodId = 1,
                             MealType = 3,
@@ -81,7 +83,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 2,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4920),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4906),
                             Day = 1,
                             FoodId = 2,
                             MealType = 3,
@@ -92,7 +94,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 3,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4921),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4907),
                             Day = 1,
                             FoodId = 3,
                             MealType = 2,
@@ -103,7 +105,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 4,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4921),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4908),
                             Day = 2,
                             FoodId = 1,
                             MealType = 2,
@@ -114,7 +116,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 5,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4922),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4909),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
@@ -125,7 +127,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 6,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4923),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4909),
                             Day = 2,
                             FoodId = 2,
                             MealType = 3,
@@ -136,7 +138,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 7,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4923),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4910),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
@@ -147,7 +149,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 8,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4924),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4911),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
@@ -158,7 +160,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 9,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4925),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4912),
                             Day = 5,
                             FoodId = 3,
                             MealType = 3,
@@ -169,18 +171,18 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 10,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4925),
-                            Day = 2,
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4912),
+                            Day = 1,
                             FoodId = 3,
                             MealType = 2,
                             PortionCount = 0,
-                            Quantity = 2,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 11,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4926),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4913),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
@@ -191,30 +193,29 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 12,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4927),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4914),
                             Day = 1,
                             FoodId = 3,
                             MealType = 1,
-                            PortionCount = 1,
-                            PortionType = 2,
+                            PortionCount = 0,
                             Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 13,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4928),
-                            Day = 2,
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4914),
+                            Day = 1,
                             FoodId = 1,
                             MealType = 3,
                             PortionCount = 0,
-                            Quantity = 1,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 14,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4928),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4915),
                             Day = 4,
                             FoodId = 3,
                             MealType = 2,
@@ -225,7 +226,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 15,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4929),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4916),
                             Day = 4,
                             FoodId = 2,
                             MealType = 2,
@@ -236,7 +237,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 16,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4930),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4916),
                             Day = 4,
                             FoodId = 1,
                             MealType = 1,
@@ -247,7 +248,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 17,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(4930),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4917),
                             Day = 5,
                             FoodId = 1,
                             MealType = 1,
@@ -309,7 +310,7 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 300.1546m,
                             CarbonhydrateAmountFor100Gram = 69m,
                             Category = 12,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(5474),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5562),
                             FatRateFor100Gram = 14m,
                             Name = "Hamburger",
                             PortionGram = 190m,
@@ -321,7 +322,7 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 186m,
                             CarbonhydrateAmountFor100Gram = 30.51m,
                             Category = 12,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(5481),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5570),
                             FatRateFor100Gram = 4.33m,
                             Name = "Pizza",
                             PortionGram = 38m,
@@ -333,9 +334,9 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 170m,
                             CarbonhydrateAmountFor100Gram = 29.71m,
                             Category = 9,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(5485),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5573),
                             FatRateFor100Gram = 3.5m,
-                            Name = "Mantı",
+                            Name = "Pizza",
                             PortionGram = 190m,
                             ProteinRateFor100Gram = 4.12m
                         });
@@ -408,7 +409,7 @@ namespace DAL.Migrations
                         {
                             ID = 1,
                             Age = 27,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(6822),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(6913),
                             DailyGoalCalorie = 3000,
                             DayGoal = 0,
                             FirstName = "Enes",
@@ -425,9 +426,9 @@ namespace DAL.Migrations
                         {
                             ID = 2,
                             Age = 24,
-                            CreationTime = new DateTime(2023, 5, 10, 22, 29, 9, 161, DateTimeKind.Local).AddTicks(6830),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(6921),
                             DailyGoalCalorie = 3500,
-                            DayGoal = 30,
+                            DayGoal = 0,
                             FirstName = "Baran",
                             Gender = 1,
                             GoalWeight = 80m,

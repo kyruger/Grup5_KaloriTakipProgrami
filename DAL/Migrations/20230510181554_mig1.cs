@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAL.Migrations
 {
-    public partial class mig2 : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,6 +22,7 @@ namespace DAL.Migrations
                     ProteinRateFor100Gram = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: false),
                     FatRateFor100Gram = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: false),
                     CarbonhydrateAmountFor100Gram = table.Column<decimal>(type: "decimal(5,2)", precision: 5, scale: 2, nullable: false),
+                    ImageResource = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -41,10 +42,11 @@ namespace DAL.Migrations
                     LastName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Gender = table.Column<int>(type: "int", nullable: false),
                     Age = table.Column<int>(type: "int", maxLength: 120, nullable: false),
-                    PhoneNumber = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
+                    PhoneNumber = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: true),
                     Weight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    DailyGoalCalorie = table.Column<int>(type: "int", nullable: false),
                     GoalWeight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    DailyGoal = table.Column<decimal>(type: "decimal(18,2)", maxLength: 90, nullable: false, defaultValue: 0m),
+                    DayGoal = table.Column<int>(type: "int", maxLength: 90, nullable: false, defaultValue: 0),
                     Height = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -61,6 +63,9 @@ namespace DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MealType = table.Column<int>(type: "int", nullable: false),
                     Day = table.Column<int>(type: "int", nullable: false),
+                    PortionCount = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
+                    PortionType = table.Column<int>(type: "int", nullable: true),
+                    Quantity = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     FoodId = table.Column<int>(type: "int", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -84,45 +89,45 @@ namespace DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "ID", "CalorieFor100Gram", "CarbonhydrateAmountFor100Gram", "Category", "CreationTime", "FatRateFor100Gram", "Name", "PortionGram", "ProteinRateFor100Gram" },
+                columns: new[] { "ID", "CalorieFor100Gram", "CarbonhydrateAmountFor100Gram", "Category", "CreationTime", "FatRateFor100Gram", "ImageResource", "Name", "PortionGram", "ProteinRateFor100Gram" },
                 values: new object[,]
                 {
-                    { 1, 300.1546m, 69m, 12, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5481), 14m, "Hamburger", 190m, 17m },
-                    { 2, 186m, 30.51m, 12, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5490), 4.33m, "Pizza", 38m, 5.84m },
-                    { 3, 170m, 29.71m, 9, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5493), 3.5m, "Pizza", 190m, 4.12m }
+                    { 1, 300.1546m, 69m, 12, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5562), 14m, null, "Hamburger", 190m, 17m },
+                    { 2, 186m, 30.51m, 12, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5570), 4.33m, null, "Pizza", 38m, 5.84m },
+                    { 3, 170m, 29.71m, 9, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(5573), 3.5m, null, "Pizza", 190m, 4.12m }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "ID", "Age", "CreationTime", "FirstName", "Gender", "GoalWeight", "Height", "LastName", "Mail", "Password", "PhoneNumber", "Weight" },
+                columns: new[] { "ID", "Age", "CreationTime", "DailyGoalCalorie", "FirstName", "Gender", "GoalWeight", "Height", "LastName", "Mail", "Password", "PhoneNumber", "Weight" },
                 values: new object[,]
                 {
-                    { 1, 27, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(6578), "Enes", 1, 72m, 170m, "Kurt", "eneskurt@bilgeadam.com", "12345", "5434168", 66.5m },
-                    { 2, 24, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(6585), "Baran", 1, 80m, 185m, "Oğuz", "baranoguz@bilgeadam.com", "12345", "11111", 73m }
+                    { 1, 27, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(6913), 3000, "Enes", 1, 72m, 170m, "Kurt", "eneskurt@bilgeadam.com", "12345", "5434168", 66.5m },
+                    { 2, 24, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(6921), 3500, "Baran", 1, 80m, 185m, "Oğuz", "baranoguz@bilgeadam.com", "12345", "11111", 73m }
                 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
-                columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "UserId" },
+                columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4855), 1, 1, 3, 1 },
-                    { 2, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4863), 1, 2, 3, 1 },
-                    { 3, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4864), 1, 3, 2, 1 },
-                    { 4, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4865), 2, 1, 2, 1 },
-                    { 5, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4865), 2, 2, 2, 1 },
-                    { 6, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4866), 2, 2, 3, 1 },
-                    { 7, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4867), 3, 1, 1, 1 },
-                    { 8, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4867), 3, 1, 1, 1 },
-                    { 9, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4868), 5, 3, 3, 1 },
-                    { 10, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4868), 1, 3, 2, 2 },
-                    { 11, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4869), 2, 2, 2, 2 },
-                    { 12, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4870), 1, 3, 1, 2 },
-                    { 13, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4870), 1, 1, 3, 2 },
-                    { 14, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4871), 4, 3, 2, 2 },
-                    { 15, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4872), 4, 2, 2, 2 },
-                    { 16, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4872), 4, 1, 1, 2 },
-                    { 17, new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4873), 5, 1, 1, 2 }
+                    { 1, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4898), 1, 1, 3, null, 1 },
+                    { 2, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4906), 1, 2, 3, null, 1 },
+                    { 3, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4907), 1, 3, 2, null, 1 },
+                    { 4, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4908), 2, 1, 2, null, 1 },
+                    { 5, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4909), 2, 2, 2, null, 1 },
+                    { 6, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4909), 2, 2, 3, null, 1 },
+                    { 7, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4910), 3, 1, 1, null, 1 },
+                    { 8, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4911), 3, 1, 1, null, 1 },
+                    { 9, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4912), 5, 3, 3, null, 1 },
+                    { 10, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4912), 1, 3, 2, null, 2 },
+                    { 11, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4913), 2, 2, 2, null, 2 },
+                    { 12, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4914), 1, 3, 1, null, 2 },
+                    { 13, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4914), 1, 1, 3, null, 2 },
+                    { 14, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4915), 4, 3, 2, null, 2 },
+                    { 15, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4916), 4, 2, 2, null, 2 },
+                    { 16, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4916), 4, 1, 1, null, 2 },
+                    { 17, new DateTime(2023, 5, 10, 21, 15, 54, 704, DateTimeKind.Local).AddTicks(4917), 5, 1, 1, null, 2 }
                 });
 
             migrationBuilder.CreateIndex(

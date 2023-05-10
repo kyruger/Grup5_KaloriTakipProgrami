@@ -11,7 +11,7 @@ namespace BLL
 {
     public class UserBLL : BaseClass<User>
     {
-        public void GetDailyCalorieById(int id)
+        public double GetDailyCalorieById(int id)
         {
             User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
@@ -25,13 +25,14 @@ namespace BLL
                 else if (cf.PortionCount > 0)
                 {
                     if (cf.PortionType == PortionType.Full)
-                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / cf.Food.CalorieFor100Gram) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Full;
+                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Full;
                     else if (cf.PortionType == PortionType.Half)
-                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / cf.Food.CalorieFor100Gram) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Half;
+                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Half;
                     else if (cf.PortionType == PortionType.Quarter)
-                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / cf.Food.CalorieFor100Gram) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Quarter;
+                        dailyCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Quarter;
                 }
             }
+            return dailyCalorie;
         }
     }
 }

@@ -93,9 +93,10 @@ namespace DAL.Configurations
                 {
                     ID =10,
                     MealType = MealType.Lunch,
-                    Day = 1,
+                    Day = 2,
                     UserId = 2,
                     FoodId = 3,
+                    Quantity = 2,
                 },
                 new ConsumedFood
                 {
@@ -112,14 +113,17 @@ namespace DAL.Configurations
                     Day = 1,
                     UserId = 2,
                     FoodId = 3,
+                    PortionCount = 1,
+                    PortionType = PortionType.Half
                 },
                 new ConsumedFood
                 {
                     ID =13,
                     MealType = MealType.Dinner,
-                    Day = 1,
+                    Day = 2,
                     UserId = 2,
                     FoodId = 1,
+                    Quantity= 1,
                 },
                 new ConsumedFood
                 {

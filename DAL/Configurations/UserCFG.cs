@@ -17,9 +17,10 @@ namespace DAL.Configurations
             builder.Property(x => x.FirstName).HasColumnType("nvarchar").HasMaxLength(30);
             builder.Property(x => x.LastName).HasColumnType("nvarchar").HasMaxLength(30);
             builder.Property(x => x.PhoneNumber).HasColumnType("varchar").HasMaxLength(10);
-            builder.Property(x => x.DailyGoal).HasDefaultValue(0).HasMaxLength(90);
+            builder.Property(x => x.DayGoal).HasDefaultValue(0).HasMaxLength(90);
             builder.Property(x=>x.Age).HasMaxLength(120);
-
+            builder.Ignore(p => p.dayGoal);
+            builder.Ignore(p => p.dayGoalCreationTime);
             builder.Ignore(p => p.FullName);
             builder.Ignore(p => p.BodyMassIndex);
 
@@ -48,6 +49,7 @@ namespace DAL.Configurations
                     LastName = "Oğuz",
                     Gender = Gender.Male,
                     Age = 24,
+                    DayGoal =30,
                     DailyGoalCalorie = 3500,
                     PhoneNumber = "11111",
                     Weight = Convert.ToDecimal(73),
