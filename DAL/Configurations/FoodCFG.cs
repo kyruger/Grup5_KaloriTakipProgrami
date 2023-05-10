@@ -47,7 +47,7 @@ namespace DAL.Configurations
                 new Food
                 {
                     ID = 3,
-                    Name = "Pizza",
+                    Name = "Mantı",
                     Category = FoodCategory.BakedGood,
                     PortionGram = 190,
                     CalorieFor100Gram = Convert.ToDecimal(170),

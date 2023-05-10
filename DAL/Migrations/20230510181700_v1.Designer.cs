@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(CalorieTrackingDbContext))]
-    [Migration("20230507182953_mig2")]
-    partial class mig2
+    [Migration("20230510181700_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,6 +44,15 @@ namespace DAL.Migrations
                     b.Property<int>("MealType")
                         .HasColumnType("int");
 
+                    b.Property<int>("PortionCount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PortionType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
@@ -59,154 +68,188 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 1,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4855),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2048),
                             Day = 1,
                             FoodId = 1,
                             MealType = 3,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 2,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4863),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2070),
                             Day = 1,
                             FoodId = 2,
                             MealType = 3,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 3,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4864),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2071),
                             Day = 1,
                             FoodId = 3,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 4,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4865),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2073),
                             Day = 2,
                             FoodId = 1,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 5,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4865),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2074),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 6,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4866),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2075),
                             Day = 2,
                             FoodId = 2,
                             MealType = 3,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 7,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4867),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2076),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 8,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4867),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2077),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 9,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4868),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2078),
                             Day = 5,
                             FoodId = 3,
                             MealType = 3,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 1
                         },
                         new
                         {
                             ID = 10,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4868),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2080),
                             Day = 1,
                             FoodId = 3,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 11,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4869),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2081),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 12,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4870),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2083),
                             Day = 1,
                             FoodId = 3,
                             MealType = 1,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 13,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4870),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2085),
                             Day = 1,
                             FoodId = 1,
                             MealType = 3,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 14,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4871),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2087),
                             Day = 4,
                             FoodId = 3,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 15,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4872),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2089),
                             Day = 4,
                             FoodId = 2,
                             MealType = 2,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 16,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4872),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2091),
                             Day = 4,
                             FoodId = 1,
                             MealType = 1,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         },
                         new
                         {
                             ID = 17,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(4873),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(2093),
                             Day = 5,
                             FoodId = 1,
                             MealType = 1,
+                            PortionCount = 0,
+                            Quantity = 0,
                             UserId = 2
                         });
                 });
@@ -223,7 +266,7 @@ namespace DAL.Migrations
                         .HasPrecision(5, 2)
                         .HasColumnType("decimal(5,2)");
 
-                    b.Property<decimal>("CarbonhydrateAmountFor100Gram")
+                    b.Property<decimal>("CarbonhydrateRateFor100Gram")
                         .HasPrecision(5, 2)
                         .HasColumnType("decimal(5,2)");
 
@@ -236,6 +279,9 @@ namespace DAL.Migrations
                     b.Property<decimal>("FatRateFor100Gram")
                         .HasPrecision(5, 2)
                         .HasColumnType("decimal(5,2)");
+
+                    b.Property<byte[]>("ImageResource")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -258,9 +304,9 @@ namespace DAL.Migrations
                         {
                             ID = 1,
                             CalorieFor100Gram = 300.1546m,
-                            CarbonhydrateAmountFor100Gram = 69m,
+                            CarbonhydrateRateFor100Gram = 69m,
                             Category = 12,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5481),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(3741),
                             FatRateFor100Gram = 14m,
                             Name = "Hamburger",
                             PortionGram = 190m,
@@ -270,9 +316,9 @@ namespace DAL.Migrations
                         {
                             ID = 2,
                             CalorieFor100Gram = 186m,
-                            CarbonhydrateAmountFor100Gram = 30.51m,
+                            CarbonhydrateRateFor100Gram = 30.51m,
                             Category = 12,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5490),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(3764),
                             FatRateFor100Gram = 4.33m,
                             Name = "Pizza",
                             PortionGram = 38m,
@@ -282,9 +328,9 @@ namespace DAL.Migrations
                         {
                             ID = 3,
                             CalorieFor100Gram = 170m,
-                            CarbonhydrateAmountFor100Gram = 29.71m,
+                            CarbonhydrateRateFor100Gram = 29.71m,
                             Category = 9,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(5493),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(3771),
                             FatRateFor100Gram = 3.5m,
                             Name = "Pizza",
                             PortionGram = 190m,
@@ -312,6 +358,9 @@ namespace DAL.Migrations
                         .HasMaxLength(90)
                         .HasColumnType("decimal(18,2)")
                         .HasDefaultValue(0m);
+
+                    b.Property<int>("DailyGoalCalorie")
+                        .HasColumnType("int");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -341,7 +390,6 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
@@ -357,8 +405,9 @@ namespace DAL.Migrations
                         {
                             ID = 1,
                             Age = 27,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(6578),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(6526),
                             DailyGoal = 0m,
+                            DailyGoalCalorie = 3000,
                             FirstName = "Enes",
                             Gender = 1,
                             GoalWeight = 72m,
@@ -373,8 +422,9 @@ namespace DAL.Migrations
                         {
                             ID = 2,
                             Age = 24,
-                            CreationTime = new DateTime(2023, 5, 7, 21, 29, 53, 581, DateTimeKind.Local).AddTicks(6585),
+                            CreationTime = new DateTime(2023, 5, 10, 21, 17, 0, 153, DateTimeKind.Local).AddTicks(6546),
                             DailyGoal = 0m,
+                            DailyGoalCalorie = 3500,
                             FirstName = "Baran",
                             Gender = 1,
                             GoalWeight = 80m,

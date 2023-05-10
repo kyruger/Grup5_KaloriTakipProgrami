@@ -45,6 +45,9 @@ namespace WndPL.Forms
             List<Food> foods = bl.Foods.GetAll();
             ListViewFill(foods);
 
+
+
+
         }
         private void ListViewFill(List<Food> foods)
         {
@@ -82,6 +85,12 @@ namespace WndPL.Forms
         private void btnAddToMeal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddNewFood_Click(object sender, EventArgs e)
+        {
+            AddNewFood addNewFood = new AddNewFood();
+            addNewFood.ShowDialog();
         }
     }
 }

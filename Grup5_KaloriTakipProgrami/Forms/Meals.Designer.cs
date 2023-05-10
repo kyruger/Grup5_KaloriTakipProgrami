@@ -61,6 +61,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             btnDeleteSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
             btnSaveSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
@@ -92,9 +96,14 @@
             tbxFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             tbxFoodCalorie = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            label2 = new Label();
+            cbxPortion = new Guna.UI2.WinForms.Guna2ComboBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2Panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -259,10 +268,10 @@
             btnAddToMeal.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAddToMeal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnAddToMeal.ForeColor = Color.White;
-            btnAddToMeal.Location = new Point(972, 768);
+            btnAddToMeal.Location = new Point(953, 780);
             btnAddToMeal.Name = "btnAddToMeal";
             btnAddToMeal.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnAddToMeal.Size = new Size(111, 56);
+            btnAddToMeal.Size = new Size(162, 56);
             btnAddToMeal.TabIndex = 7;
             btnAddToMeal.Text = "Add To Meal";
             btnAddToMeal.Click += btnAddToMeal_Click;
@@ -282,7 +291,7 @@
             btnAddNewFood.Size = new Size(226, 56);
             btnAddNewFood.TabIndex = 8;
             btnAddNewFood.Text = "Add New Food";
-            btnAddNewFood.Click += guna2Button4_Click;
+            btnAddNewFood.Click += btnAddNewFood_Click;
             // 
             // guna2Panel1
             // 
@@ -503,11 +512,62 @@
             guna2HtmlLabel2.TabIndex = 16;
             guna2HtmlLabel2.Text = "Selected Food Info";
             // 
+            // guna2NumericUpDown1
+            // 
+            guna2NumericUpDown1.BackColor = Color.Transparent;
+            guna2NumericUpDown1.CustomizableEdges = customizableEdges31;
+            guna2NumericUpDown1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2NumericUpDown1.Location = new Point(953, 745);
+            guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2NumericUpDown1.Size = new Size(158, 29);
+            guna2NumericUpDown1.TabIndex = 17;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(999, 722);
+            label2.Name = "label2";
+            label2.Size = new Size(41, 20);
+            label2.TabIndex = 19;
+            label2.Text = "Adet";
+            // 
+            // cbxPortion
+            // 
+            cbxPortion.BackColor = Color.Transparent;
+            cbxPortion.CustomizableEdges = customizableEdges33;
+            cbxPortion.DrawMode = DrawMode.OwnerDrawFixed;
+            cbxPortion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxPortion.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbxPortion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbxPortion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbxPortion.ForeColor = Color.Black;
+            cbxPortion.ItemHeight = 30;
+            cbxPortion.Items.AddRange(new object[] { "sosis,", "patlıcan" });
+            cbxPortion.Location = new Point(202, 260);
+            cbxPortion.Name = "cbxPortion";
+            cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            cbxPortion.Size = new Size(155, 36);
+            cbxPortion.TabIndex = 20;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(953, 673);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(162, 28);
+            comboBox1.TabIndex = 21;
+            comboBox1.Text = "Select Portion";
+            // 
             // Meals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 933);
+            Controls.Add(comboBox1);
+            Controls.Add(cbxPortion);
+            Controls.Add(label2);
+            Controls.Add(guna2NumericUpDown1);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(tbxFoodCalorie);
             Controls.Add(tbxFoodName);
@@ -532,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             guna2Panel1.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -569,5 +630,9 @@
         private ColumnHeader columnHeader6;
         private ColumnHeader columnHeader7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxPortion;
+        private ComboBox comboBox1;
     }
 }
