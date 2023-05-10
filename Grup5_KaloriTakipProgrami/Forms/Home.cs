@@ -23,7 +23,7 @@ namespace WndPL.Forms
         int userId;
         private void Home_Load(object sender, EventArgs e)
         {
-            User user = bl.Users.GetById(userId);
+            //User user = bl.Users.GetById(userId);
             //lblCalorie.Text =                //Öğünlerden hesapla çekilecek
             
         }

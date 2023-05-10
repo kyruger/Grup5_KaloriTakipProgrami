@@ -237,6 +237,7 @@
             btnExit.Size = new Size(269, 56);
             btnExit.TabIndex = 20;
             btnExit.Text = "Exit";
+            btnExit.Click += btnExit_Click;
             // 
             // btnSignIn
             // 

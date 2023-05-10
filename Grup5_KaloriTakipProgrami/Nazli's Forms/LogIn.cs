@@ -27,7 +27,12 @@ namespace WndPL.Forms
         }
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
+            string pw = txtPassword.Text;
 
+            if (cbShowPassword.Checked)
+            {
+                string hashedPassword = sha256_hash(pw);
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -38,19 +43,20 @@ namespace WndPL.Forms
                 MessageBox.Show("Eksik bilgi girdiniz. \nLütfen tüm alanları doldurunuz.");
                 return;
             }
-
-            string password = txtPassword.Text;
-            string hashedPassword = sha256_hash(password);
-
+            User user = new User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
             users.SingleOrDefault(a => a.Mail == txtEmail.Text || a.Password == txtPassword.Text);
             if (users == null)
             {
                 MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign In' butonunu tıklayın.");
+                this.Close();
             }
 
-            else if ()
+            else if (user.Mail != txtEmail.Text && user.Password != txtPassword.Text)
+            {
+                MessageBox.Show("Şifre ya da kullanıcı adı yanlış", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -80,6 +86,11 @@ namespace WndPL.Forms
             from1.Show();
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bizi ziyare ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
+            Application.Exit();
+        }
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -89,6 +100,5 @@ namespace WndPL.Forms
         {
 
         }
-
     }
 }
