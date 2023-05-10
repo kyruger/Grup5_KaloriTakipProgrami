@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Compile Remove="Nazli%27s Forms\LogIn1.cs" />
+    <Compile Remove="Nazli%27s Forms\SingIn.cs" />
   </ItemGroup>
 
   <ItemGroup>

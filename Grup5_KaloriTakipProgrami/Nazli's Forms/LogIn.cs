@@ -59,6 +59,16 @@ namespace WndPL.Forms
             }
         }
 
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            SingIn singin = new();
+            singin.ShowDialog();
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bizi ziyare ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
+            Application.Exit();
+        }
 
         public bool AreTextBoxesEmpty(Form form)
         {
@@ -86,11 +96,6 @@ namespace WndPL.Forms
             from1.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bizi ziyare ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
-            Application.Exit();
-        }
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -100,5 +105,6 @@ namespace WndPL.Forms
         {
 
         }
+
     }
 }

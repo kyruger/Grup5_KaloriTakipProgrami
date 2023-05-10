@@ -257,6 +257,7 @@
             btnSignIn.Size = new Size(269, 56);
             btnSignIn.TabIndex = 19;
             btnSignIn.Text = "Sign In";
+            btnSignIn.Click += btnSignIn_Click;
             // 
             // btnLogin
             // 

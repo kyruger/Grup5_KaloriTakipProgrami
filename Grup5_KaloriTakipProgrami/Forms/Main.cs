@@ -19,14 +19,14 @@ namespace WndPL.Forms
         Helper helper = new Helper();
         private void Main_Load(object sender, EventArgs e)
         {
-            Home homeForm = new Home();
-            helper.ShowPanel(homeForm, pnlMain);
+            //Home homeForm = new Home();
+            //helper.ShowPanel(homeForm, pnlMain);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Home homeForm = new Home();
-            helper.ShowPanel(homeForm, pnlMain);
+            //Home homeForm = new Home();
+            //helper.ShowPanel(homeForm, pnlMain);
         }
 
         private void btnMeals_Click(object sender, EventArgs e)
