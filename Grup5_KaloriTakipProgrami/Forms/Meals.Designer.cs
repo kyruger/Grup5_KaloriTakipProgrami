@@ -100,6 +100,7 @@
             label2 = new Label();
             cbxPortion = new Guna.UI2.WinForms.Guna2ComboBox();
             comboBox1 = new ComboBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2Panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -474,7 +475,7 @@
             tbxFoodName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxFoodName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             tbxFoodName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxFoodName.Location = new Point(953, 605);
+            tbxFoodName.Location = new Point(956, 574);
             tbxFoodName.Name = "tbxFoodName";
             tbxFoodName.PasswordChar = '\0';
             tbxFoodName.PlaceholderText = "FoodName";
@@ -494,7 +495,7 @@
             tbxFoodCalorie.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxFoodCalorie.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             tbxFoodCalorie.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxFoodCalorie.Location = new Point(953, 640);
+            tbxFoodCalorie.Location = new Point(956, 609);
             tbxFoodCalorie.Name = "tbxFoodCalorie";
             tbxFoodCalorie.PasswordChar = '\0';
             tbxFoodCalorie.PlaceholderText = "Food Calorie";
@@ -506,7 +507,7 @@
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Location = new Point(969, 560);
+            guna2HtmlLabel2.Location = new Point(969, 546);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(128, 22);
             guna2HtmlLabel2.TabIndex = 16;
@@ -515,12 +516,13 @@
             // guna2NumericUpDown1
             // 
             guna2NumericUpDown1.BackColor = Color.Transparent;
+            guna2NumericUpDown1.BorderRadius = 15;
             guna2NumericUpDown1.CustomizableEdges = customizableEdges31;
             guna2NumericUpDown1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2NumericUpDown1.Location = new Point(953, 745);
             guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            guna2NumericUpDown1.Size = new Size(158, 29);
+            guna2NumericUpDown1.Size = new Size(165, 29);
             guna2NumericUpDown1.TabIndex = 17;
             // 
             // label2
@@ -535,6 +537,7 @@
             // cbxPortion
             // 
             cbxPortion.BackColor = Color.Transparent;
+            cbxPortion.BorderRadius = 15;
             cbxPortion.CustomizableEdges = customizableEdges33;
             cbxPortion.DrawMode = DrawMode.OwnerDrawFixed;
             cbxPortion.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -543,27 +546,39 @@
             cbxPortion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbxPortion.ForeColor = Color.Black;
             cbxPortion.ItemHeight = 30;
-            cbxPortion.Items.AddRange(new object[] { "sosis,", "patlıcan" });
-            cbxPortion.Location = new Point(202, 260);
+            cbxPortion.Items.AddRange(new object[] { " Full", "Half", "Quarter" });
+            cbxPortion.Location = new Point(956, 670);
             cbxPortion.Name = "cbxPortion";
             cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            cbxPortion.Size = new Size(155, 36);
+            cbxPortion.Size = new Size(162, 36);
+            cbxPortion.StartIndex = 0;
             cbxPortion.TabIndex = 20;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(953, 673);
+            comboBox1.Location = new Point(34, 268);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(162, 28);
             comboBox1.TabIndex = 21;
             comboBox1.Text = "Select Portion";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(982, 647);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 20);
+            label3.TabIndex = 22;
+            label3.Text = "Select Portion";
             // 
             // Meals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 933);
+            Controls.Add(label3);
             Controls.Add(comboBox1);
             Controls.Add(cbxPortion);
             Controls.Add(label2);
@@ -634,5 +649,6 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbxPortion;
         private ComboBox comboBox1;
+        private Label label3;
     }
 }

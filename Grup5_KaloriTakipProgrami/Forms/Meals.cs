@@ -44,6 +44,8 @@ namespace WndPL.Forms
             bl = new BusinessLogic();
             List<Food> foods = bl.Foods.GetAll();
             ListViewFill(foods);
+            cbxPortion.SelectedIndex = 0;
+
 
 
 
@@ -91,6 +93,11 @@ namespace WndPL.Forms
         {
             AddNewFood addNewFood = new AddNewFood();
             addNewFood.ShowDialog();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
