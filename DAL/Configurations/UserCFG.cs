@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -19,7 +20,39 @@ namespace DAL.Configurations
             builder.Property(x => x.DailyGoal).HasDefaultValue(0).HasMaxLength(90);
             builder.Property(x=>x.Age).HasMaxLength(120);
 
+            builder.Ignore(p => p.FullName);
+            builder.Ignore(p => p.BodyMassIndex);
 
+            builder.HasData(
+                new User
+                {
+                    ID =1,
+                    Mail = "eneskurt@bilgeadam.com",
+                    Password = "12345",
+                    FirstName = "Enes",
+                    LastName = "Kurt",
+                    Gender = Gender.Male,
+                    Age = 27,
+                    PhoneNumber = "5434168",
+                    Weight = Convert.ToDecimal(66.5),
+                    GoalWeight = 72,
+                    Height =170,
+                },
+                new User
+                {
+                    ID =2,
+                    Mail = "baranoguz@bilgeadam.com",
+                    Password = "12345",
+                    FirstName = "Baran",
+                    LastName = "Oğuz",
+                    Gender = Gender.Male,
+                    Age = 24,
+                    PhoneNumber = "11111",
+                    Weight = Convert.ToDecimal(73),
+                    GoalWeight = 80,
+                    Height =185,
+                }
+                ); 
         }
     }
 }
