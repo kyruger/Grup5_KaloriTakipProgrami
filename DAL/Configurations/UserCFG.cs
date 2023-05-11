@@ -20,7 +20,7 @@ namespace DAL.Configurations
             builder.Property(x => x.DayGoal).HasDefaultValue(0).HasMaxLength(90);
             builder.Property(x=>x.Age).HasMaxLength(120);
             builder.Ignore(p => p.dayGoal);
-            builder.Ignore(p => p.dayGoalCreationTime);
+            builder.Ignore(p => p.DayGoalCreationTime);
             builder.Ignore(p => p.FullName);
             builder.Ignore(p => p.BodyMassIndex);
 

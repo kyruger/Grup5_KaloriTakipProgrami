@@ -60,7 +60,8 @@
             // 
             // pnlMenu
             // 
-            pnlMenu.BackColor = SystemColors.ActiveCaption;
+            pnlMenu.BackColor = Color.Transparent;
+            pnlMenu.BorderRadius = 40;
             pnlMenu.Controls.Add(lblMail);
             pnlMenu.Controls.Add(lblName);
             pnlMenu.Controls.Add(guna2CirclePictureBox2);
@@ -71,8 +72,11 @@
             pnlMenu.Controls.Add(brnReports);
             pnlMenu.Controls.Add(btnMeals);
             pnlMenu.Controls.Add(btnHome);
+            customizableEdges10.BottomLeft = false;
+            customizableEdges10.TopLeft = false;
             pnlMenu.CustomizableEdges = customizableEdges10;
             pnlMenu.Dock = DockStyle.Left;
+            pnlMenu.FillColor = Color.Teal;
             pnlMenu.Location = new Point(0, 0);
             pnlMenu.Name = "pnlMenu";
             pnlMenu.ShadowDecoration.CustomizableEdges = customizableEdges11;
@@ -112,6 +116,9 @@
             // 
             // btnExit
             // 
+            btnExit.BorderRadius = 25;
+            customizableEdges2.BottomLeft = false;
+            customizableEdges2.TopLeft = false;
             btnExit.CustomizableEdges = customizableEdges2;
             btnExit.DisabledState.BorderColor = Color.DarkGray;
             btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -119,7 +126,7 @@
             btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(10, 640);
+            btnExit.Location = new Point(0, 626);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnExit.Size = new Size(180, 50);
@@ -229,6 +236,9 @@
             // 
             // pnlMain
             // 
+            pnlMain.CustomBorderColor = Color.Transparent;
+            customizableEdges12.BottomLeft = false;
+            customizableEdges12.TopLeft = false;
             pnlMain.CustomizableEdges = customizableEdges12;
             pnlMain.Location = new Point(200, 0);
             pnlMain.Name = "pnlMain";

@@ -15,7 +15,7 @@ namespace Entities
         public User()
         {
             ConsumedFoods = new HashSet<ConsumedFood>();
-            dayGoalCreationTime = DateTime.Now;
+            DayGoalCreationTime = DateTime.Now;
         }
         public string Mail { get; set; }
         public string Password { get; set; }
@@ -29,7 +29,7 @@ namespace Entities
         public int DailyGoalCalorie { get; set; }
         public decimal GoalWeight { get; set; }
 
-        public DateTime dayGoalCreationTime;
+        public DateTime DayGoalCreationTime {  get; private set; }
 
         public int dayGoal;
         public int DayGoal
@@ -42,7 +42,7 @@ namespace Entities
                     dayGoal = value;
                     if (dayGoal != 0)
                     {
-                        dayGoalCreationTime = DateTime.Now;
+                        DayGoalCreationTime = DateTime.Now;
                     }
                 }
             }
