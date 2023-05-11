@@ -32,16 +32,14 @@ namespace WndPL.Forms
         {
             if (cbShowPassword.Checked)
             {
-                txtPassword.UseSystemPasswordChar = true; 
+                txtPassword.UseSystemPasswordChar = true;
             }
             else
             {
-                txtPassword.UseSystemPasswordChar = false; 
+                txtPassword.UseSystemPasswordChar = false;
             }
 
         }
-
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool emptyControl = helper.AreTextBoxesEmpty(this);
@@ -53,24 +51,23 @@ namespace WndPL.Forms
             User user = new User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
-            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text || a.Password == txtPassword.Text);
+            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text && a.Password == txtPassword.Text);
             if (user == null)
             {
-                MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign In' butonunu tıklayın.");
-                this.Close();
+                MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign In' butonunu tıklayın.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
 
-            else if (user != null && (user.Mail != txtEmail.Text) && (user.Password != txtPassword.Text))
+            else if (/*user != null && */(user.Mail != txtEmail.Text) || (user.Password != txtPassword.Text))
             {
-                MessageBox.Show("Şifre ya da kullanıcı adı yanlış", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("kullanıcı adı ya da şifre yanlış", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+
             }
-            else
+            else /*if (user.Mail == txtEmail.Text && user.Password == txtPassword.Text)*/
             {
-                SignUp signUp = new SignUp();
+                SignUp signUp = new();
                 helper.HideAndShow(this, signUp);
             }
         }
-
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             SignUp signIn = new SignUp();
@@ -78,16 +75,13 @@ namespace WndPL.Forms
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bizi ziyare ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
+            MessageBox.Show("Bizi ziyaret ettiğiniz için teşekkürler. \nSağlıklı günler dileriz.");
             Application.Exit();
         }
-
-
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
         {
 

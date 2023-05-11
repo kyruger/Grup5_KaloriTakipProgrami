@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAL.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -92,66 +92,66 @@ namespace DAL.Migrations
                 columns: new[] { "ID", "CalorieFor100Gram", "CarbonhydrateAmountFor100Gram", "Category", "CreationTime", "FatRateFor100Gram", "ImageResource", "Name", "PortionGram", "ProteinRateFor100Gram" },
                 values: new object[,]
                 {
-                    { 1, 300.1546m, 69m, 12, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4447), 14m, null, "Hamburger", 190m, 17m },
-                    { 2, 186m, 30.51m, 12, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4456), 4.33m, null, "Pizza", 38m, 5.84m },
-                    { 3, 170m, 29.71m, 9, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4461), 3.5m, null, "Mantı", 190m, 4.12m }
+                    { 1, 300.1546m, 69m, 12, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3061), 14m, null, "Hamburger", 190m, 17m },
+                    { 2, 186m, 30.51m, 12, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3075), 4.33m, null, "Pizza", 38m, 5.84m },
+                    { 3, 170m, 29.71m, 9, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3080), 3.5m, null, "Mantı", 190m, 4.12m }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "ID", "Age", "CreationTime", "DailyGoalCalorie", "FirstName", "Gender", "GoalWeight", "Height", "LastName", "Mail", "Password", "PhoneNumber", "Weight" },
-                values: new object[] { 1, 27, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(6069), 3000, "Enes", 1, 72m, 170m, "Kurt", "eneskurt@bilgeadam.com", "12345", "5434168", 66.5m });
+                values: new object[] { 1, 27, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(6125), 3000, "Enes", 1, 72m, 170m, "Kurt", "eneskurt@bilgeadam.com", "12345", "5434168", 66.5m });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "ID", "Age", "CreationTime", "DailyGoalCalorie", "DayGoal", "FirstName", "Gender", "GoalWeight", "Height", "LastName", "Mail", "Password", "PhoneNumber", "Weight" },
-                values: new object[] { 2, 24, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(6077), 3500, 30, "Baran", 1, 80m, 185m, "Oğuz", "baranoguz@bilgeadam.com", "12345", "11111", 73m });
+                values: new object[] { 2, 24, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(6138), 3500, 30, "Baran", 1, 80m, 185m, "Oğuz", "baranoguz@bilgeadam.com", "12345", "11111", 73m });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3895), 1, 1, 3, null, 1 },
-                    { 2, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3904), 1, 2, 3, null, 1 },
-                    { 3, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3905), 1, 3, 2, null, 1 },
-                    { 4, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3906), 2, 1, 2, null, 1 },
-                    { 5, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3906), 2, 2, 2, null, 1 },
-                    { 6, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3907), 2, 2, 3, null, 1 },
-                    { 7, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3908), 3, 1, 1, null, 1 },
-                    { 8, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3908), 3, 1, 1, null, 1 },
-                    { 9, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3909), 5, 3, 3, null, 1 }
+                    { 1, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2174), 1, 1, 3, null, 1 },
+                    { 2, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2185), 1, 2, 3, null, 1 },
+                    { 3, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2187), 1, 3, 2, null, 1 },
+                    { 4, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2188), 2, 1, 2, null, 1 },
+                    { 5, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2189), 2, 2, 2, null, 1 },
+                    { 6, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2190), 2, 2, 3, null, 1 },
+                    { 7, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2191), 3, 1, 1, null, 1 },
+                    { 8, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2192), 3, 1, 1, null, 1 },
+                    { 9, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2193), 5, 3, 3, null, 1 }
                 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "Quantity", "UserId" },
-                values: new object[] { 10, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3910), 2, 3, 2, null, 2, 2 });
+                values: new object[] { 10, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2194), 1, 3, 1, null, 2, 2 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "UserId" },
-                values: new object[] { 11, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3911), 2, 2, 2, null, 2 });
+                values: new object[] { 11, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2195), 2, 2, 2, null, 2 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionCount", "PortionType", "UserId" },
-                values: new object[] { 12, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3911), 1, 3, 1, 1, 2, 2 });
+                values: new object[] { 12, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2196), 1, 3, 1, 1, 2, 2 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "Quantity", "UserId" },
-                values: new object[] { 13, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3912), 2, 1, 3, null, 1, 2 });
+                values: new object[] { 13, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2198), 2, 1, 1, null, 1, 2 });
 
             migrationBuilder.InsertData(
                 table: "ConsumedFoods",
                 columns: new[] { "ID", "CreationTime", "Day", "FoodId", "MealType", "PortionType", "UserId" },
                 values: new object[,]
                 {
-                    { 14, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3913), 4, 3, 2, null, 2 },
-                    { 15, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3914), 4, 2, 2, null, 2 },
-                    { 16, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3914), 4, 1, 1, null, 2 },
-                    { 17, new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3915), 5, 1, 1, null, 2 }
+                    { 14, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2199), 4, 3, 2, null, 2 },
+                    { 15, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2199), 4, 2, 2, null, 2 },
+                    { 16, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2200), 4, 1, 1, null, 2 },
+                    { 17, new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2201), 5, 1, 1, null, 2 }
                 });
 
             migrationBuilder.CreateIndex(

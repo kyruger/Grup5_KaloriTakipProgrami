@@ -17,16 +17,16 @@ namespace WndPL.Forms
     {
         public Reports()
         {
-            InitializeComponent();
-            MealsReports mealsReports = new MealsReports();
-            helper.ShowPanel(mealsReports, pnlMain);
+            //InitializeComponent();
+            //MealsReports mealsReports = new MealsReports();
+            //helper.ShowPanel(mealsReports, pnlMain);
         }
         Helper helper = new Helper();
 
         private void btnMeals_Click(object sender, EventArgs e)
         {
-            MealsReports mealsReports = new MealsReports();
-            helper.ShowPanel(mealsReports, pnlMain);
+            //MealsReports mealsReports = new MealsReports();
+            //helper.ShowPanel(mealsReports, pnlMain);
 
 
         }

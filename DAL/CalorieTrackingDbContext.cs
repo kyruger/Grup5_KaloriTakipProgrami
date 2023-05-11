@@ -17,7 +17,7 @@ namespace DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data source =.; initial catalog = CalorieTrackingDb; integrated security = true; TrustServerCertificate = True");
+            optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server = DESKTOP-3PIP4BH\\MSSQGLKD15;User ID=sa;Password=12345;Database=KaloriTakipDB;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -25,6 +25,11 @@ namespace WndPL.Forms
         {
 
         }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            LogIn login = new();
+            helper.HideAndShow(this, login);
+        }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             bool emptyControl = helper.AreTextBoxesEmpty(this);
@@ -76,11 +81,6 @@ namespace WndPL.Forms
             return true;
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            LogIn login = new();
-            helper.HideAndShow(this, login);
-        }
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
 
