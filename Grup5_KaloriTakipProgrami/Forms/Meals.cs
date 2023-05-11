@@ -94,7 +94,7 @@ namespace WndPL.Forms
         {
             ConsumedFood consumedFood = new ConsumedFood();
             consumedFood.FoodId = foodID;
-            if (cbxPortion.SelectedItem.ToString()=="Full")
+            if (cbxPortion.SelectedItem.ToString() == "Full")
             {
                 consumedFood.PortionType = PortionType.Full;
             }
@@ -104,11 +104,11 @@ namespace WndPL.Forms
             }
             else if (cbxPortion.SelectedItem.ToString() == "Quarter")
             {
-                consumedFood.PortionType= PortionType.Quarter;
+                consumedFood.PortionType = PortionType.Quarter;
             }
             else
             {
-                
+
             }
 
 
