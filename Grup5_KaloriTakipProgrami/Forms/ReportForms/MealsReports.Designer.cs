@@ -112,21 +112,24 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnBreakfast = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnLunch = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnDinner = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnOthers = new Guna.UI2.WinForms.Guna2CircleButton();
             gunaChart1 = new Guna.Charts.WinForms.GunaChart();
             barDataFoodCategoryMy2 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataFoodCategoryUsers2 = new Guna.Charts.WinForms.GunaBarDataset();
             gunaChart2 = new Guna.Charts.WinForms.GunaChart();
             barDataFoodCategoryMy1 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataFoodCategoryUsers1 = new Guna.Charts.WinForms.GunaBarDataset();
-            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            pnlStick = new Guna.UI2.WinForms.Guna2GradientPanel();
             gunaChart3 = new Guna.Charts.WinForms.GunaChart();
             barDataCalories1 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataCalories2 = new Guna.Charts.WinForms.GunaBarDataset();
             guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            label1 = new Label();
+            lblLastWeek = new Label();
+            lblMealType = new Label();
+            lblLastMonth = new Label();
+            lblSlash = new Label();
             SuspendLayout();
             // 
             // btnBreakfast
@@ -135,67 +138,71 @@
             btnBreakfast.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBreakfast.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBreakfast.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBreakfast.FillColor = Color.MediumPurple;
-            btnBreakfast.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBreakfast.FillColor = Color.Teal;
+            btnBreakfast.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnBreakfast.ForeColor = Color.White;
-            btnBreakfast.Location = new Point(908, 34);
+            btnBreakfast.Location = new Point(904, 34);
             btnBreakfast.Name = "btnBreakfast";
             btnBreakfast.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnBreakfast.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnBreakfast.Size = new Size(80, 80);
+            btnBreakfast.Size = new Size(85, 85);
             btnBreakfast.TabIndex = 0;
             btnBreakfast.Text = "Breakfast";
+            btnBreakfast.Click += btnBreakfast_Click;
             // 
-            // guna2CircleButton2
+            // btnLunch
             // 
-            guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton2.FillColor = Color.MediumPurple;
-            guna2CircleButton2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton2.ForeColor = Color.White;
-            guna2CircleButton2.Location = new Point(907, 173);
-            guna2CircleButton2.Name = "guna2CircleButton2";
-            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton2.Size = new Size(80, 80);
-            guna2CircleButton2.TabIndex = 1;
-            guna2CircleButton2.Text = "Breakfast";
+            btnLunch.DisabledState.BorderColor = Color.DarkGray;
+            btnLunch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLunch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLunch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLunch.FillColor = Color.Teal;
+            btnLunch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLunch.ForeColor = Color.White;
+            btnLunch.Location = new Point(903, 173);
+            btnLunch.Name = "btnLunch";
+            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLunch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnLunch.Size = new Size(85, 85);
+            btnLunch.TabIndex = 1;
+            btnLunch.Text = "Lunch";
+            btnLunch.Click += btnLunch_Click;
             // 
-            // guna2CircleButton3
+            // btnDinner
             // 
-            guna2CircleButton3.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton3.FillColor = Color.MediumPurple;
-            guna2CircleButton3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton3.ForeColor = Color.White;
-            guna2CircleButton3.Location = new Point(907, 312);
-            guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(80, 80);
-            guna2CircleButton3.TabIndex = 2;
-            guna2CircleButton3.Text = "Breakfast";
+            btnDinner.DisabledState.BorderColor = Color.DarkGray;
+            btnDinner.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDinner.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDinner.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDinner.FillColor = Color.Teal;
+            btnDinner.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDinner.ForeColor = Color.White;
+            btnDinner.Location = new Point(903, 312);
+            btnDinner.Name = "btnDinner";
+            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnDinner.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnDinner.Size = new Size(85, 85);
+            btnDinner.TabIndex = 2;
+            btnDinner.Text = "Dinner";
+            btnDinner.Click += btnDinner_Click;
             // 
-            // guna2CircleButton4
+            // btnOthers
             // 
-            guna2CircleButton4.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton4.FillColor = Color.MediumPurple;
-            guna2CircleButton4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton4.ForeColor = Color.White;
-            guna2CircleButton4.Location = new Point(907, 451);
-            guna2CircleButton4.Name = "guna2CircleButton4";
-            guna2CircleButton4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton4.Size = new Size(80, 80);
-            guna2CircleButton4.TabIndex = 3;
-            guna2CircleButton4.Text = "Breakfast";
+            btnOthers.DisabledState.BorderColor = Color.DarkGray;
+            btnOthers.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnOthers.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnOthers.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnOthers.FillColor = Color.Teal;
+            btnOthers.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOthers.ForeColor = Color.White;
+            btnOthers.Location = new Point(903, 451);
+            btnOthers.Name = "btnOthers";
+            btnOthers.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnOthers.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnOthers.Size = new Size(85, 85);
+            btnOthers.TabIndex = 3;
+            btnOthers.Text = "Others";
+            btnOthers.Click += btnOthers_Click;
             // 
             // gunaChart1
             // 
@@ -203,7 +210,7 @@
             gunaChart1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy2, barDataFoodCategoryUsers2 });
             chartFont1.FontName = "Arial";
             gunaChart1.Legend.LabelFont = chartFont1;
-            gunaChart1.Location = new Point(21, 300);
+            gunaChart1.Location = new Point(21, 312);
             gunaChart1.Name = "gunaChart1";
             gunaChart1.Size = new Size(661, 191);
             gunaChart1.TabIndex = 4;
@@ -274,7 +281,7 @@
             gunaChart2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy1, barDataFoodCategoryUsers1 });
             chartFont9.FontName = "Arial";
             gunaChart2.Legend.LabelFont = chartFont9;
-            gunaChart2.Location = new Point(21, 46);
+            gunaChart2.Location = new Point(21, 76);
             gunaChart2.Name = "gunaChart2";
             gunaChart2.Size = new Size(661, 191);
             gunaChart2.TabIndex = 5;
@@ -340,17 +347,17 @@
             barDataFoodCategoryUsers1.Label = "Users";
             barDataFoodCategoryUsers1.TargetChart = gunaChart2;
             // 
-            // guna2GradientPanel1
+            // pnlStick
             // 
-            guna2GradientPanel1.BorderRadius = 5;
-            guna2GradientPanel1.CustomizableEdges = customizableEdges5;
-            guna2GradientPanel1.FillColor = Color.Teal;
-            guna2GradientPanel1.FillColor2 = Color.Teal;
-            guna2GradientPanel1.Location = new Point(698, 20);
-            guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GradientPanel1.Size = new Size(10, 491);
-            guna2GradientPanel1.TabIndex = 6;
+            pnlStick.BorderRadius = 5;
+            pnlStick.CustomizableEdges = customizableEdges5;
+            pnlStick.FillColor = Color.Teal;
+            pnlStick.FillColor2 = Color.Teal;
+            pnlStick.Location = new Point(698, 64);
+            pnlStick.Name = "pnlStick";
+            pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pnlStick.Size = new Size(10, 467);
+            pnlStick.TabIndex = 6;
             // 
             // gunaChart3
             // 
@@ -358,9 +365,9 @@
             gunaChart3.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataCalories1, barDataCalories2 });
             chartFont17.FontName = "Arial";
             gunaChart3.Legend.LabelFont = chartFont17;
-            gunaChart3.Location = new Point(723, 46);
+            gunaChart3.Location = new Point(723, 76);
             gunaChart3.Name = "gunaChart3";
-            gunaChart3.Size = new Size(166, 445);
+            gunaChart3.Size = new Size(166, 427);
             gunaChart3.TabIndex = 7;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -422,31 +429,69 @@
             guna2ToggleSwitch1.UncheckedState.FillColor = Color.Teal;
             guna2ToggleSwitch1.UncheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch1.UncheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch1.CheckedChanged += guna2ToggleSwitch1_CheckedChanged;
             // 
-            // label1
+            // lblLastWeek
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(106, 535);
-            label1.Name = "label1";
-            label1.Size = new Size(185, 19);
-            label1.TabIndex = 9;
-            label1.Text = "Last Week / Last Month";
+            lblLastWeek.AutoSize = true;
+            lblLastWeek.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLastWeek.ForeColor = Color.Teal;
+            lblLastWeek.Location = new Point(106, 535);
+            lblLastWeek.Name = "lblLastWeek";
+            lblLastWeek.Size = new Size(88, 19);
+            lblLastWeek.TabIndex = 9;
+            lblLastWeek.Text = "Last Week";
+            // 
+            // lblMealType
+            // 
+            lblMealType.AutoSize = true;
+            lblMealType.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMealType.ForeColor = Color.Teal;
+            lblMealType.Location = new Point(277, 20);
+            lblMealType.Name = "lblMealType";
+            lblMealType.Size = new Size(150, 37);
+            lblMealType.TabIndex = 10;
+            lblMealType.Text = "Meal Type";
+            // 
+            // lblLastMonth
+            // 
+            lblLastMonth.AutoSize = true;
+            lblLastMonth.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLastMonth.ForeColor = Color.MediumPurple;
+            lblLastMonth.Location = new Point(207, 535);
+            lblLastMonth.Name = "lblLastMonth";
+            lblLastMonth.Size = new Size(94, 19);
+            lblLastMonth.TabIndex = 11;
+            lblLastMonth.Text = "Last Month";
+            // 
+            // lblSlash
+            // 
+            lblSlash.AutoSize = true;
+            lblSlash.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSlash.Location = new Point(194, 535);
+            lblSlash.Name = "lblSlash";
+            lblSlash.Size = new Size(13, 19);
+            lblSlash.TabIndex = 12;
+            lblSlash.Text = "/";
             // 
             // MealsReports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1000, 580);
-            Controls.Add(label1);
+            Controls.Add(lblSlash);
+            Controls.Add(lblLastMonth);
+            Controls.Add(lblMealType);
+            Controls.Add(lblLastWeek);
             Controls.Add(guna2ToggleSwitch1);
             Controls.Add(gunaChart3);
-            Controls.Add(guna2GradientPanel1);
+            Controls.Add(pnlStick);
             Controls.Add(gunaChart2);
             Controls.Add(gunaChart1);
-            Controls.Add(guna2CircleButton4);
-            Controls.Add(guna2CircleButton3);
-            Controls.Add(guna2CircleButton2);
+            Controls.Add(btnOthers);
+            Controls.Add(btnDinner);
+            Controls.Add(btnLunch);
             Controls.Add(btnBreakfast);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MealsReports";
@@ -459,20 +504,23 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CircleButton btnBreakfast;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
+        private Guna.UI2.WinForms.Guna2CircleButton btnLunch;
+        private Guna.UI2.WinForms.Guna2CircleButton btnDinner;
+        private Guna.UI2.WinForms.Guna2CircleButton btnOthers;
         private Guna.Charts.WinForms.GunaChart gunaChart1;
         private Guna.Charts.WinForms.GunaChart gunaChart2;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryMy1;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryUsers1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlStick;
         private Guna.Charts.WinForms.GunaChart gunaChart3;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryMy2;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryUsers2;
         private Guna.Charts.WinForms.GunaBarDataset barDataCalories1;
         private Guna.Charts.WinForms.GunaBarDataset barDataCalories2;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Label label1;
+        private Label lblLastWeek;
+        private Label lblMealType;
+        private Label lblLastMonth;
+        private Label lblSlash;
     }
 }
