@@ -28,73 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            btnFoods = new Guna.UI2.WinForms.Guna2Button();
+            btnMeals = new Guna.UI2.WinForms.Guna2Button();
+            btnActivity = new Guna.UI2.WinForms.Guna2Button();
+            pnlMain = new Guna.UI2.WinForms.Guna2Panel();
+            pnlTop = new Guna.UI2.WinForms.Guna2GradientPanel();
+            pnlTop.SuspendLayout();
             SuspendLayout();
             // 
-            // gunaChart1
+            // btnFoods
             // 
-            gunaChart1.BackColor = Color.White;
-            chartFont1.FontName = "Arial";
-            gunaChart1.Legend.LabelFont = chartFont1;
-            gunaChart1.Location = new Point(35, 193);
-            gunaChart1.Name = "gunaChart1";
-            gunaChart1.Size = new Size(927, 227);
-            gunaChart1.TabIndex = 0;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            gunaChart1.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Tooltips.TitleFont = chartFont4;
-            gunaChart1.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            gunaChart1.XAxes.Ticks = tick1;
-            gunaChart1.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            gunaChart1.YAxes.Ticks = tick2;
-            gunaChart1.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            gunaChart1.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            gunaChart1.ZAxes.Ticks = tick3;
+            btnFoods.CustomizableEdges = customizableEdges11;
+            btnFoods.DisabledState.BorderColor = Color.DarkGray;
+            btnFoods.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFoods.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFoods.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFoods.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFoods.ForeColor = Color.White;
+            btnFoods.Location = new Point(35, 28);
+            btnFoods.Name = "btnFoods";
+            btnFoods.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnFoods.Size = new Size(180, 45);
+            btnFoods.TabIndex = 0;
+            btnFoods.Text = "Foods";
+            // 
+            // btnMeals
+            // 
+            btnMeals.CustomizableEdges = customizableEdges13;
+            btnMeals.DisabledState.BorderColor = Color.DarkGray;
+            btnMeals.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMeals.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMeals.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMeals.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMeals.ForeColor = Color.White;
+            btnMeals.Location = new Point(315, 28);
+            btnMeals.Name = "btnMeals";
+            btnMeals.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnMeals.Size = new Size(180, 45);
+            btnMeals.TabIndex = 1;
+            btnMeals.Text = "Meals";
+            btnMeals.Click += btnMeals_Click;
+            // 
+            // btnActivity
+            // 
+            btnActivity.CustomizableEdges = customizableEdges15;
+            btnActivity.DisabledState.BorderColor = Color.DarkGray;
+            btnActivity.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnActivity.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnActivity.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnActivity.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActivity.ForeColor = Color.White;
+            btnActivity.Location = new Point(595, 28);
+            btnActivity.Name = "btnActivity";
+            btnActivity.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnActivity.Size = new Size(180, 45);
+            btnActivity.TabIndex = 2;
+            btnActivity.Text = "Activity";
+            // 
+            // pnlMain
+            // 
+            pnlMain.CustomizableEdges = customizableEdges17;
+            pnlMain.Dock = DockStyle.Bottom;
+            pnlMain.Location = new Point(0, 120);
+            pnlMain.Name = "pnlMain";
+            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            pnlMain.Size = new Size(1000, 580);
+            pnlMain.TabIndex = 1;
+            // 
+            // pnlTop
+            // 
+            pnlTop.BorderColor = Color.White;
+            pnlTop.BorderRadius = 25;
+            pnlTop.Controls.Add(btnActivity);
+            pnlTop.Controls.Add(btnMeals);
+            pnlTop.Controls.Add(btnFoods);
+            pnlTop.CustomizableEdges = customizableEdges19;
+            pnlTop.FillColor = Color.Teal;
+            pnlTop.FillColor2 = Color.MediumPurple;
+            pnlTop.Location = new Point(100, 10);
+            pnlTop.Name = "pnlTop";
+            pnlTop.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            pnlTop.Size = new Size(800, 100);
+            pnlTop.TabIndex = 2;
             // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 700);
-            Controls.Add(gunaChart1);
+            Controls.Add(pnlTop);
+            Controls.Add(pnlMain);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Reports";
             Text = "Reports";
+            pnlTop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
+        private Guna.UI2.WinForms.Guna2Button btnFoods;
+        private Guna.UI2.WinForms.Guna2Button btnMeals;
+        private Guna.UI2.WinForms.Guna2Button btnActivity;
+        private Guna.UI2.WinForms.Guna2Panel pnlMain;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlTop;
     }
 }

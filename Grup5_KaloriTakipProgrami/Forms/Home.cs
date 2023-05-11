@@ -47,7 +47,6 @@ namespace WndPL.Forms
                 lblLeftCalorie.Text = "+" + leftCalorie.ToString();
             }
 
-            //lblLeftCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
             txtDayGoal.Text = user.DayGoal.ToString();
             txtCurrentWeight.Text = user.Weight.ToString();
             txtGoalWeight.Text = user.GoalWeight.ToString();

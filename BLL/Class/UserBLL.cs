@@ -36,7 +36,7 @@ namespace BLL
         }
 
 
-        public void GetDailyNutrientsPercentageById(int id,out double dailyProteinGram, out double dailyFatGram, out double dailyCarbohydrateGram)
+        public void GetDailyNutrientsPercentageById(int id, out double dailyProteinGram, out double dailyFatGram, out double dailyCarbohydrateGram)
         {
             dailyProteinGram = 0;
             dailyFatGram = 0;
@@ -44,7 +44,7 @@ namespace BLL
             User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
-            var cfList = user.ConsumedFoods.Where(cf => cf.Day == day).ToList();          
+            var cfList = user.ConsumedFoods.Where(cf => cf.Day == day).ToList();
             foreach (var cf in cfList)
             {
                 if (cf.Quantity > 0)
@@ -67,7 +67,7 @@ namespace BLL
                         dailyProteinGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Half;
                         dailyFatGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Half;
                         dailyCarbohydrateGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Half;
-                    }                 
+                    }
                     else if (cf.PortionType == PortionType.Quarter)
                     {
                         dailyProteinGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Quarter;
@@ -102,5 +102,24 @@ namespace BLL
             return dayCalorie;
         }
 
+
+        public int GetConsumedFoodsAmountForDaysById(int id, int howManyDaysBeforeToday, MealType mealType, FoodCategory foodCategory)
+        {
+            User? user = db.Users.Find(id);
+            TimeSpan timePassed = DateTime.Now - user.CreationTime;
+            int totalAmount = 0;
+            for (int i = 0; i < howManyDaysBeforeToday; i++)
+            {
+                int day = (int)timePassed.TotalDays - i+1;
+                var cfList = user.ConsumedFoods.Where(cf => cf.Day == day && cf.MealType == mealType && cf.Food.Category == foodCategory).ToList();
+
+                foreach (var cf in cfList)
+                {
+                    totalAmount += cf.Quantity;
+                    totalAmount += cf.PortionCount;
+                }
+            } 
+            return totalAmount;
+        }
     }
 }
