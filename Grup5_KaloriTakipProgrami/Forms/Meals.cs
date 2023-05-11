@@ -25,7 +25,7 @@ namespace WndPL.Forms
         BusinessLogic bl;
         int foodID;
         int UserID = 2;
-        
+
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             AddNewFood addNewFood = new AddNewFood();
@@ -52,7 +52,7 @@ namespace WndPL.Forms
         {
             bl = new BusinessLogic();
             List<Food> foods = bl.Foods.GetAll();
-            ListViewFill(foods);
+            ListViewFillFood(foods);
             cbxPortion.SelectedIndex = 0;
 
 
@@ -77,28 +77,10 @@ namespace WndPL.Forms
                 lvFood.Items.Add(lvi);
             }
 
-          
-
-        }
-        private void ListViewFillConsumedFoods(List<ConsumedFood> consumedFoods)
-        {
-            foreach (Food food in consumedFoods)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = food.Name;
-                lvi.SubItems.Add(food.PortionGram.ToString());
-                lvi.SubItems.Add(food.Category.ToString());
-                lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
-                lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
-                lvi.Tag = food.ID;
-                lvFood.Items.Add(lvi);
-            }
-
 
 
         }
+
         private void ButtonActivity(bool control)
         {
             if (control)
@@ -151,11 +133,24 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
-            Entities.User user =bl.Users.GetById(UserID);
+            Entities.User user = bl.Users.GetById(UserID);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
-            List<ConsumedFood> consumedFoods=bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(day, MealType.Breakfast);
-
+            List<ConsumedFood> consumedFoods = bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(day, MealType.Breakfast);
+            foreach (ConsumedFood consumed in consumedFoods)
+            {
+                ListViewItem lvi = new ListViewItem();
+                int id= ;
+                lvi.Text = food.Name;
+                lvi.SubItems.Add(food.PortionGram.ToString());
+                lvi.SubItems.Add(food.Category.ToString());
+                lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
+                lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
+                lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
+                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
+                lvi.Tag = food.ID;
+                lvFood.Items.Add(lvi);
+            }
         }
     }
 }
