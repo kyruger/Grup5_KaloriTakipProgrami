@@ -24,6 +24,7 @@ namespace WndPL.Forms
         }
         BusinessLogic bl;
         int foodID;
+        int UserID = 2;
         
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -60,7 +61,7 @@ namespace WndPL.Forms
 
 
         }
-        private void ListViewFill(List<Food> foods)
+        private void ListViewFillFood(List<Food> foods)
         {
             foreach (Food food in foods)
             {
@@ -71,10 +72,30 @@ namespace WndPL.Forms
                 lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
                 lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
                 lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.CarbonhydrateRateFor100Gram.ToString());
+                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
                 lvi.Tag = food.ID;
                 lvFood.Items.Add(lvi);
             }
+
+          
+
+        }
+        private void ListViewFillConsumedFoods(List<ConsumedFood> consumedFoods)
+        {
+            foreach (Food food in foods)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = food.Name;
+                lvi.SubItems.Add(food.PortionGram.ToString());
+                lvi.SubItems.Add(food.Category.ToString());
+                lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
+                lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
+                lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
+                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
+                lvi.Tag = food.ID;
+                lvFood.Items.Add(lvi);
+            }
+
 
 
         }
@@ -130,9 +151,11 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
-            
+            Entities.User user =bl.Users.GetById(UserID);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
+            bl.ConsumedFoods.
+
         }
     }
 }
