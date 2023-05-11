@@ -1,6 +1,8 @@
 ﻿using BLL;
 using Entities;
 using Entities.Enums;
+using Grup5_KaloriTakipProgrami;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +24,7 @@ namespace WndPL.Forms
         }
         BusinessLogic bl;
         int foodID;
+        
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             AddNewFood addNewFood = new AddNewFood();
@@ -127,7 +130,9 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
-            lblMeal.Text = btnBreakFeast.Text;
+            
+            TimeSpan timePassed = DateTime.Now - user.CreationTime;
+            int day = (int)timePassed.TotalDays + 1;
         }
     }
 }
