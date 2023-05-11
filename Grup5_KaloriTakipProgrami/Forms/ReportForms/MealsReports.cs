@@ -151,6 +151,7 @@ namespace WndPL.Forms.ReportForms
                 FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
         }
 
+        #region Helper Methods
         public void FillFoodCategoryDatas(int day, params MealType[] mealTypes)
         {
             //Data1
@@ -263,7 +264,7 @@ namespace WndPL.Forms.ReportForms
             //Data1
             barDataCalories1.DataPoints.Clear();
             double totalMyCalorieForDays = bl.Users.GetCaloriesForDaysById(userId, day, out int emptyDays1);
-            lpMyAvgCalorie.Y = Math.Round(totalMyCalorieForDays / (day - emptyDays1),2);
+            lpMyAvgCalorie.Y = Math.Round(totalMyCalorieForDays / (day - emptyDays1), 2);
             barDataCalories1.DataPoints.Add(lpMyAvgCalorie);
 
             //Data2
@@ -277,9 +278,11 @@ namespace WndPL.Forms.ReportForms
                 totalUsersCalorieForDays += bl.Users.GetCaloriesForDaysById(user.ID, day, out int emptyDays2);
                 emptyusersDays += emptyDays2;
             }
-            lpUsersAvgCalorie.Y = Math.Round(totalUsersCalorieForDays / (day - emptyusersDays) / userCount ,2);
+            lpUsersAvgCalorie.Y = Math.Round(totalUsersCalorieForDays / (day - emptyusersDays) / userCount, 2);
             barDataCalories2.DataPoints.Add(lpUsersAvgCalorie);
-        }
+        } 
+        #endregion
+
         /* private void MealsReports_Load(object sender, EventArgs e)
          {
              // fill DataFoodCaregory1 bar chart
