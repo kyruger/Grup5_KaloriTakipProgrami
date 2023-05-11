@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using FluentFTP.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +24,7 @@ namespace WndPL.Forms
         private void btnCalculate_Click(object sender, EventArgs e)
         {
 
-            double lenght = Convert.ToDouble(txtLenght.Text);
+            double lenght = Convert.ToDouble(txtLength.Text);
             double weight = Convert.ToDouble(txtWeight.Text);
 
             double bodyMassIndex = weight / (lenght * lenght);
@@ -36,6 +38,18 @@ namespace WndPL.Forms
             if (emptyControl)
             {
                 MessageBox.Show("Boy, kilo, hedef kilo, günlük kalori hedefi, gün hedefi ve yaş bilgilerini eksiksiz giriniz.");
+            }
+            else
+            {
+
+                string length = txtLength.Text;
+                string Weight = txtWeight.Text;
+                string TargetWeight = txtTargetWeight.Text;
+                string DailyTargetCalories = txtDailyTargetCalories.Text;
+                string Age = txtAge.Text;
+                string phoneNumber = mtbTelephone.Text;
+                //string gender = Enums.Gender.Female.ToString();
+
             }
         }
 
