@@ -14,9 +14,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace WndPL.Forms
 {
-    public partial class UserSetting : Form
+    public partial class UserInformation : Form
     {
-        public UserSetting()
+        public UserInformation()
         {
             InitializeComponent();
         }

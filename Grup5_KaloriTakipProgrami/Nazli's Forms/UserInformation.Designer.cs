@@ -1,7 +1,7 @@
 ﻿namespace WndPL.Forms
 {
 
-    partial class UserSetting
+    partial class UserInformation
     {
         /// <summary>
         /// Required designer variable.

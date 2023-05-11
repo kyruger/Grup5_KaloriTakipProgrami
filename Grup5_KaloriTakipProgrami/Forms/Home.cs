@@ -25,7 +25,8 @@ namespace WndPL.Forms
         {
             //User user = bl.Users.GetById(userId);
             //lblCalorie.Text =                //Öğünlerden hesapla çekilecek
-            
+
+
         }
 
     }

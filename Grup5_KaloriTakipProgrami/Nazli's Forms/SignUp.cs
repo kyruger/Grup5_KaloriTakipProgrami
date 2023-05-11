@@ -78,8 +78,8 @@ namespace WndPL.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            UserSetting userSetting = new UserSetting();
-            helper.HideAndShow(this, userSetting);
+            LogIn login = new();
+            helper.HideAndShow(this, login);
         }
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {

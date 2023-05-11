@@ -2,6 +2,7 @@
 using Entities.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Entities
         public decimal ProteinRateFor100Gram { get; set; }
         public decimal FatRateFor100Gram { get; set; }
         public decimal CarbonhydrateAmountFor100Gram { get; set; }
-        public byte[] ImageResource { get; set; }
+        public byte[]? ImageResource { get; set; }
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
