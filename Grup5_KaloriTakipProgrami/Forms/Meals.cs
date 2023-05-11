@@ -82,7 +82,7 @@ namespace WndPL.Forms
         }
         private void ListViewFillConsumedFoods(List<ConsumedFood> consumedFoods)
         {
-            foreach (Food food in foods)
+            foreach (Food food in consumedFoods)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = food.Name;
@@ -154,7 +154,7 @@ namespace WndPL.Forms
             Entities.User user =bl.Users.GetById(UserID);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
-            bl.ConsumedFoods.
+            List<ConsumedFood> consumedFoods=bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(day, MealType.Breakfast);
 
         }
     }

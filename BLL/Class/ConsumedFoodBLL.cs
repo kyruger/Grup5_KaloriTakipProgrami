@@ -10,7 +10,7 @@ namespace BLL
 {
     public class ConsumedFoodBLL : BaseClass<ConsumedFood>
     {
-        private List<ConsumedFood> GetConsumedFoodsByDayAndMealType(int day, MealType meal)
+        public List<ConsumedFood> GetConsumedFoodsByDayAndMealType(int day, MealType meal)
         {
             List<ConsumedFood> consumedFoods = db.ConsumedFoods.Where(x => x.Day == day && x.MealType == meal).ToList();
 
