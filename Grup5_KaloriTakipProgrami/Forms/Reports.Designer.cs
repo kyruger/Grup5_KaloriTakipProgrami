@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnFoods = new Guna.UI2.WinForms.Guna2Button();
             btnMeals = new Guna.UI2.WinForms.Guna2Button();
             btnActivity = new Guna.UI2.WinForms.Guna2Button();
@@ -48,60 +48,69 @@
             // 
             // btnFoods
             // 
-            btnFoods.CustomizableEdges = customizableEdges11;
+            btnFoods.BackColor = Color.Transparent;
+            btnFoods.BorderRadius = 25;
+            btnFoods.CustomizableEdges = customizableEdges1;
             btnFoods.DisabledState.BorderColor = Color.DarkGray;
             btnFoods.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFoods.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnFoods.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFoods.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFoods.FillColor = Color.SandyBrown;
+            btnFoods.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFoods.ForeColor = Color.White;
             btnFoods.Location = new Point(35, 28);
             btnFoods.Name = "btnFoods";
-            btnFoods.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnFoods.Size = new Size(180, 45);
+            btnFoods.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnFoods.Size = new Size(180, 50);
             btnFoods.TabIndex = 0;
             btnFoods.Text = "Foods";
             // 
             // btnMeals
             // 
-            btnMeals.CustomizableEdges = customizableEdges13;
+            btnMeals.BackColor = Color.Transparent;
+            btnMeals.BorderRadius = 25;
+            btnMeals.CustomizableEdges = customizableEdges3;
             btnMeals.DisabledState.BorderColor = Color.DarkGray;
             btnMeals.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMeals.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMeals.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMeals.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMeals.FillColor = Color.SandyBrown;
+            btnMeals.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnMeals.ForeColor = Color.White;
             btnMeals.Location = new Point(315, 28);
             btnMeals.Name = "btnMeals";
-            btnMeals.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnMeals.Size = new Size(180, 45);
+            btnMeals.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnMeals.Size = new Size(180, 50);
             btnMeals.TabIndex = 1;
             btnMeals.Text = "Meals";
             btnMeals.Click += btnMeals_Click;
             // 
             // btnActivity
             // 
-            btnActivity.CustomizableEdges = customizableEdges15;
+            btnActivity.BackColor = Color.Transparent;
+            btnActivity.BorderRadius = 25;
+            btnActivity.CustomizableEdges = customizableEdges5;
             btnActivity.DisabledState.BorderColor = Color.DarkGray;
             btnActivity.DisabledState.CustomBorderColor = Color.DarkGray;
             btnActivity.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnActivity.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnActivity.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActivity.FillColor = Color.SandyBrown;
+            btnActivity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnActivity.ForeColor = Color.White;
             btnActivity.Location = new Point(595, 28);
             btnActivity.Name = "btnActivity";
-            btnActivity.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnActivity.Size = new Size(180, 45);
+            btnActivity.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnActivity.Size = new Size(180, 50);
             btnActivity.TabIndex = 2;
             btnActivity.Text = "Activity";
             // 
             // pnlMain
             // 
-            pnlMain.CustomizableEdges = customizableEdges17;
+            pnlMain.CustomizableEdges = customizableEdges7;
             pnlMain.Dock = DockStyle.Bottom;
             pnlMain.Location = new Point(0, 120);
             pnlMain.Name = "pnlMain";
-            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            pnlMain.ShadowDecoration.CustomizableEdges = customizableEdges8;
             pnlMain.Size = new Size(1000, 580);
             pnlMain.TabIndex = 1;
             // 
@@ -112,12 +121,12 @@
             pnlTop.Controls.Add(btnActivity);
             pnlTop.Controls.Add(btnMeals);
             pnlTop.Controls.Add(btnFoods);
-            pnlTop.CustomizableEdges = customizableEdges19;
+            pnlTop.CustomizableEdges = customizableEdges9;
             pnlTop.FillColor = Color.Teal;
             pnlTop.FillColor2 = Color.MediumPurple;
             pnlTop.Location = new Point(100, 10);
             pnlTop.Name = "pnlTop";
-            pnlTop.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            pnlTop.ShadowDecoration.CustomizableEdges = customizableEdges10;
             pnlTop.Size = new Size(800, 100);
             pnlTop.TabIndex = 2;
             // 

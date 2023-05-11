@@ -35,7 +35,6 @@ namespace WndPL.Forms
         }
         private void Home_Load(object sender, EventArgs e)
         {
-
             lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
             lblGoalCalorie.Text = user.DailyGoalCalorie.ToString();
             int leftCalorie = (int)(Convert.ToDouble(lblGoalCalorie.Text) - Convert.ToDouble(lblCalorie.Text));
@@ -78,7 +77,7 @@ namespace WndPL.Forms
             doughnutData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lpProtein, lpFat, lpCarbohydrate });
             double totalGram = dailyProteinGram + dailyFatGram + dailyCarbohydrateGram;
             double ProteinPercentage = Math.Round((dailyProteinGram / totalGram) * 100, 2);
-            double FatPercentage = Math.Round((dailyFatGram / totalGram) * 100 ,2);
+            double FatPercentage = Math.Round((dailyFatGram / totalGram) * 100, 2);
             double CarbohydratePercentage = Math.Round((dailyCarbohydrateGram / totalGram) * 100, 2);
             lblProteinPercentage.Text = $"%{ProteinPercentage}";
             lblFatPercentage.Text = $"%{FatPercentage}";
