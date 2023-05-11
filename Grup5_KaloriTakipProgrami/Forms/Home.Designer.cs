@@ -311,7 +311,7 @@
             // 
             lblDaysRemaining.AutoSize = true;
             lblDaysRemaining.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDaysRemaining.ForeColor = Color.Black;
+            lblDaysRemaining.ForeColor = Color.Orange;
             lblDaysRemaining.Location = new Point(744, 11);
             lblDaysRemaining.Name = "lblDaysRemaining";
             lblDaysRemaining.Size = new Size(134, 21);
@@ -363,7 +363,7 @@
             // 
             lblGoalWeight.AutoSize = true;
             lblGoalWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblGoalWeight.ForeColor = Color.Black;
+            lblGoalWeight.ForeColor = Color.Orange;
             lblGoalWeight.Location = new Point(519, 11);
             lblGoalWeight.Name = "lblGoalWeight";
             lblGoalWeight.Size = new Size(92, 19);
@@ -374,7 +374,7 @@
             // 
             lblCurrentWeight.AutoSize = true;
             lblCurrentWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCurrentWeight.ForeColor = Color.Black;
+            lblCurrentWeight.ForeColor = Color.Orange;
             lblCurrentWeight.Location = new Point(396, 11);
             lblCurrentWeight.Name = "lblCurrentWeight";
             lblCurrentWeight.Size = new Size(111, 19);
@@ -411,7 +411,7 @@
             // 
             lblDayGoal.AutoSize = true;
             lblDayGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDayGoal.ForeColor = Color.Black;
+            lblDayGoal.ForeColor = Color.Orange;
             lblDayGoal.Location = new Point(646, 11);
             lblDayGoal.Name = "lblDayGoal";
             lblDayGoal.Size = new Size(74, 19);
@@ -422,7 +422,7 @@
             // 
             lblCaloriesName.AutoSize = true;
             lblCaloriesName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCaloriesName.ForeColor = Color.Black;
+            lblCaloriesName.ForeColor = Color.Orange;
             lblCaloriesName.Location = new Point(188, 58);
             lblCaloriesName.Name = "lblCaloriesName";
             lblCaloriesName.Size = new Size(172, 21);

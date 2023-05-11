@@ -114,6 +114,43 @@ namespace WndPL.Forms.ReportForms
 
             }
         }
+
+        private void btnBreakfast_Click(object sender, EventArgs e)
+        {
+            lblMealType.Text = MealType.Breakfast.ToString();
+            if (!tsWeekMonth.Checked)
+                FillFoodCategoryDatas(MealType.Breakfast, 7);
+            else
+                FillFoodCategoryDatas(MealType.Breakfast, 30);
+        }
+
+        private void btnLunch_Click(object sender, EventArgs e)
+        {
+            lblMealType.Text = MealType.Lunch.ToString();
+            if (!tsWeekMonth.Checked)
+                FillFoodCategoryDatas(MealType.Lunch, 7);
+            else
+                FillFoodCategoryDatas(MealType.Lunch, 30);
+        }
+
+        private void btnDinner_Click(object sender, EventArgs e)
+        {
+            lblMealType.Text = MealType.Dinner.ToString();
+            if (!tsWeekMonth.Checked)
+                FillFoodCategoryDatas(MealType.Dinner, 7);
+            else
+                FillFoodCategoryDatas(MealType.Dinner, 30);
+        }
+
+        private void btnOthers_Click(object sender, EventArgs e)
+        {
+            lblMealType.Text = "Others";
+            if (!tsWeekMonth.Checked)
+                FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+            else
+                FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+        }
+
         public void FillFoodCategoryDatas(int day, params MealType[] mealTypes)
         {
             //Data1
@@ -226,7 +263,7 @@ namespace WndPL.Forms.ReportForms
             //Data1
             barDataCalories1.DataPoints.Clear();
             double totalMyCalorieForDays = bl.Users.GetCaloriesForDaysById(userId, day, out int emptyDays1);
-            lpMyAvgCalorie.Y = totalMyCalorieForDays / (day - emptyDays1);
+            lpMyAvgCalorie.Y = Math.Round(totalMyCalorieForDays / (day - emptyDays1),2);
             barDataCalories1.DataPoints.Add(lpMyAvgCalorie);
 
             //Data2
@@ -240,46 +277,9 @@ namespace WndPL.Forms.ReportForms
                 totalUsersCalorieForDays += bl.Users.GetCaloriesForDaysById(user.ID, day, out int emptyDays2);
                 emptyusersDays += emptyDays2;
             }
-            lpUsersAvgCalorie.Y = totalUsersCalorieForDays / (day - emptyusersDays) / userCount;
+            lpUsersAvgCalorie.Y = Math.Round(totalUsersCalorieForDays / (day - emptyusersDays) / userCount ,2);
             barDataCalories2.DataPoints.Add(lpUsersAvgCalorie);
         }
-
-        private void btnBreakfast_Click(object sender, EventArgs e)
-        {
-            lblMealType.Text = MealType.Breakfast.ToString();
-            if (!tsWeekMonth.Checked)
-                FillFoodCategoryDatas(MealType.Breakfast, 7);
-            else
-                FillFoodCategoryDatas(MealType.Breakfast, 30);
-        }
-
-        private void btnLunch_Click(object sender, EventArgs e)
-        {
-            lblMealType.Text = MealType.Lunch.ToString();
-            if (!tsWeekMonth.Checked)
-                FillFoodCategoryDatas(MealType.Lunch, 7);
-            else
-                FillFoodCategoryDatas(MealType.Lunch, 30);
-        }
-
-        private void btnDinner_Click(object sender, EventArgs e)
-        {
-            lblMealType.Text = MealType.Dinner.ToString();
-            if (!tsWeekMonth.Checked)
-                FillFoodCategoryDatas(MealType.Dinner, 7);
-            else
-                FillFoodCategoryDatas(MealType.Dinner, 30);
-        }
-
-        private void btnOthers_Click(object sender, EventArgs e)
-        {
-            lblMealType.Text = "Others";
-            if (!tsWeekMonth.Checked)
-                FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
-            else
-                FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
-        }
-
         /* private void MealsReports_Load(object sender, EventArgs e)
          {
              // fill DataFoodCaregory1 bar chart
