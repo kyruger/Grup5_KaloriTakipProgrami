@@ -36,11 +36,11 @@ namespace BLL
         }
 
 
-        public void GetDailyNutrientsPercentageById(int id,out double dailyProteinPercentage, out double dailyFatPercentage, out double dailyCarbohydratePercentage)
+        public void GetDailyNutrientsPercentageById(int id,out double dailyProteinGram, out double dailyFatGram, out double dailyCarbohydrateGram)
         {
-            dailyProteinPercentage = 0;
-            dailyFatPercentage = 0;
-            dailyCarbohydratePercentage = 0;
+            dailyProteinGram = 0;
+            dailyFatGram = 0;
+            dailyCarbohydrateGram = 0;
             User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
@@ -49,30 +49,30 @@ namespace BLL
             {
                 if (cf.Quantity > 0)
                 {
-                    dailyProteinPercentage += cf.Quantity * (double)cf.Food.ProteinRateFor100Gram;
-                    dailyFatPercentage += cf.Quantity * (double)cf.Food.FatRateFor100Gram;
-                    dailyCarbohydratePercentage += cf.Quantity * (double)cf.Food.CarbonhydrateAmountFor100Gram;
+                    dailyProteinGram += cf.Quantity * (double)cf.Food.ProteinRateFor100Gram;
+                    dailyFatGram += cf.Quantity * (double)cf.Food.FatRateFor100Gram;
+                    dailyCarbohydrateGram += cf.Quantity * (double)cf.Food.CarbonhydrateAmountFor100Gram;
                 }
                 else if (cf.PortionCount > 0)
                 {
                     if (cf.PortionType == PortionType.Full)
                     {
-                        dailyProteinPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Full;
-                        dailyFatPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Full;
-                        dailyCarbohydratePercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Full;
+                        dailyProteinGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Full;
+                        dailyFatGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Full;
+                        dailyCarbohydrateGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Full;
 
                     }
                     else if (cf.PortionType == PortionType.Half)
                     {
-                        dailyProteinPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Half;
-                        dailyFatPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Half;
-                        dailyCarbohydratePercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Half;
+                        dailyProteinGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Half;
+                        dailyFatGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Half;
+                        dailyCarbohydrateGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Half;
                     }                 
                     else if (cf.PortionType == PortionType.Quarter)
                     {
-                        dailyProteinPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Quarter;
-                        dailyFatPercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Quarter;
-                        dailyCarbohydratePercentage += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Quarter;
+                        dailyProteinGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.ProteinRateFor100Gram / (int)PortionType.Quarter;
+                        dailyFatGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.FatRateFor100Gram / (int)PortionType.Quarter;
+                        dailyCarbohydrateGram += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CarbonhydrateAmountFor100Gram / (int)PortionType.Quarter;
                     }
                 }
             }

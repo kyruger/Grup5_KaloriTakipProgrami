@@ -65,21 +65,25 @@ namespace WndPL.Forms
             cpbDailyCalorie.Value = (int)bl.Users.GetDailyCalorieById(userId);
 
             // fill nutrient doughnut chart
-            bl.Users.GetDailyNutrientsPercentageById(userId, out double dailyProteinPercentage, out double dailyFatPercentage, out double dailyCarbohydratePercentage);
+            bl.Users.GetDailyNutrientsPercentageById(userId, out double dailyProteinGram, out double dailyFatGram, out double dailyCarbohydrateGram);
             doughnutData.DataPoints.Clear();
             Guna.Charts.WinForms.LPoint lpProtein = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.LPoint lpFat = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.LPoint lpCarbohydrate = new Guna.Charts.WinForms.LPoint();
             lpProtein.Label = "Protein";
-            lpProtein.Y = Math.Round(dailyProteinPercentage, 2);
+            lpProtein.Y = Math.Round(dailyProteinGram, 2);
             lpFat.Label = "Fat";
-            lpFat.Y = Math.Round(dailyFatPercentage, 2);
+            lpFat.Y = Math.Round(dailyFatGram, 2);
             lpCarbohydrate.Label = "Carbohydrate";
-            lpCarbohydrate.Y = Math.Round(dailyCarbohydratePercentage, 2);
+            lpCarbohydrate.Y = Math.Round(dailyCarbohydrateGram, 2);
             doughnutData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lpProtein, lpFat, lpCarbohydrate });
-            lblProteinPercentage.Text = $"%{lpProtein.Y}";
-            lblFatPercentage.Text = $"%{lpFat.Y}";
-            lblCarbohydratePercentage.Text = $"%{lpCarbohydrate.Y}";
+            double totalGram = dailyProteinGram + dailyFatGram + dailyCarbohydrateGram;
+            double ProteinPercentage = Math.Round((dailyProteinGram / totalGram) * 100, 2);
+            double FatPercentage = Math.Round((dailyFatGram / totalGram) * 100 ,2);
+            double CarbohydratePercentage = Math.Round((dailyCarbohydrateGram / totalGram) * 100, 2);
+            lblProteinPercentage.Text = $"%{ProteinPercentage}";
+            lblFatPercentage.Text = $"%{FatPercentage}";
+            lblCarbohydratePercentage.Text = $"%{CarbohydratePercentage}";
 
 
             // fill weekly calories bar chart
