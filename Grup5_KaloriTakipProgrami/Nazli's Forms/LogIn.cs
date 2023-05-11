@@ -63,7 +63,7 @@ namespace WndPL.Forms
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             SignUp signIn = new SignUp();
-            signIn.ShowDialog();
+            helper.HideAndShow(this, signIn);
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

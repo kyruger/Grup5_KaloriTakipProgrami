@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Remove="Nazli%27s Forms\LogIn1.cs" />
     <Compile Remove="Nazli%27s Forms\SingIn.cs" />
+    <Compile Remove="Nazli%27s Forms\UserSettings1.cs" />
   </ItemGroup>
 
   <ItemGroup>

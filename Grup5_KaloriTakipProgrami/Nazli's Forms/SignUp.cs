@@ -63,6 +63,7 @@ namespace WndPL.Forms
                 }
             }
 
+
         }
 
         private bool IsPasswordValid(string password)
@@ -77,9 +78,8 @@ namespace WndPL.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            LogIn login = new LogIn();
-            login.ShowDialog();
-            this.Close();
+            UserSetting userSetting = new UserSetting();
+            helper.HideAndShow(this, userSetting);
         }
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
