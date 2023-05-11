@@ -14,6 +14,8 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<ConsumedFood> builder)
         {
+            builder.Property(x => x.Quantity).HasDefaultValue(0);
+            builder.Property(x => x.PortionCount).HasDefaultValue(0);
             builder.HasData(
                 new ConsumedFood
                 {
@@ -90,10 +92,11 @@ namespace DAL.Configurations
                 new ConsumedFood
                 {
                     ID =10,
-                    MealType = MealType.Lunch,
+                    MealType = MealType.Breakfast,
                     Day = 1,
                     UserId = 2,
                     FoodId = 3,
+                    Quantity = 2,
                 },
                 new ConsumedFood
                 {
@@ -110,14 +113,17 @@ namespace DAL.Configurations
                     Day = 1,
                     UserId = 2,
                     FoodId = 3,
+                    PortionCount = 1,
+                    PortionType = PortionType.Half
                 },
                 new ConsumedFood
                 {
                     ID =13,
-                    MealType = MealType.Dinner,
-                    Day = 1,
+                    MealType = MealType.Breakfast,
+                    Day = 2,
                     UserId = 2,
                     FoodId = 1,
+                    Quantity= 1,
                 },
                 new ConsumedFood
                 {

@@ -28,80 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont20 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid7 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick7 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont21 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid8 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick8 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont22 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid9 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel3 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont23 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick9 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont24 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.LPoint lPoint4 = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.LPoint lPoint5 = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.LPoint lPoint6 = new Guna.Charts.WinForms.LPoint();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.Charts.WinForms.LPoint lPoint7 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint8 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint9 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint10 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint11 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint12 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint13 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint14 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint15 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint16 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint17 = new Guna.Charts.WinForms.LPoint();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.Charts.WinForms.ChartFont chartFont25 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont26 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont27 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont28 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid10 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick10 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont29 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid11 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick11 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont30 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid12 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel4 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont31 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick12 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont32 = new Guna.Charts.WinForms.ChartFont();
             chartDailyNutrient = new Guna.Charts.WinForms.GunaChart();
-            piedataDaiylNutrient = new Guna.Charts.WinForms.GunaPieDataset();
+            doughnutData = new Guna.Charts.WinForms.GunaDoughnutDataset();
             cpbDailyCalorie = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            lblCurrentCalorie = new Label();
+            lblLeftCalorie = new Label();
             pnlHomeTop = new Guna.UI2.WinForms.Guna2GradientPanel();
+            cpbDaysRemaining = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            lblRemainingDay = new Label();
             lblGoalCalorie = new Label();
             lblSlash = new Label();
-            lblDayGoalValue = new Label();
-            lblFirstWeightValue = new Label();
             lblCalorie = new Label();
             lblDaysRemaining = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            txtDaysRemaining = new Guna.UI2.WinForms.Guna2TextBox();
+            txtDayGoal = new Guna.UI2.WinForms.Guna2TextBox();
             lblGoalWeight = new Label();
             lblCurrentWeight = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             pbCurrentWeight = new Guna.UI2.WinForms.Guna2PictureBox();
             lblDayGoal = new Label();
-            lblFirstWeight = new Label();
             lblCaloriesName = new Label();
             txtGoalWeight = new Guna.UI2.WinForms.Guna2TextBox();
             txtCurrentWeight = new Guna.UI2.WinForms.Guna2TextBox();
-            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            chartWeeklyCalorie = new Guna.Charts.WinForms.GunaChart();
+            lineData = new Guna.Charts.WinForms.GunaLineDataset();
+            barData = new Guna.Charts.WinForms.GunaBarDataset();
+            pnlStick = new Guna.UI2.WinForms.Guna2Panel();
+            lblProteinPercentage = new Label();
+            lblFatPercentage = new Label();
+            lblCarbohydratePercentage = new Label();
             cpbDailyCalorie.SuspendLayout();
             pnlHomeTop.SuspendLayout();
+            cpbDaysRemaining.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbCurrentWeight).BeginInit();
@@ -110,241 +133,276 @@
             // chartDailyNutrient
             // 
             chartDailyNutrient.BackColor = Color.Transparent;
-            chartDailyNutrient.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { piedataDaiylNutrient });
-            chartFont17.FontName = "Arial";
-            chartDailyNutrient.Legend.LabelFont = chartFont17;
+            chartDailyNutrient.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { doughnutData });
+            chartFont1.FontName = "Arial";
+            chartFont1.Size = 9;
+            chartDailyNutrient.Legend.LabelFont = chartFont1;
             chartDailyNutrient.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
-            chartDailyNutrient.Location = new Point(58, 306);
+            chartDailyNutrient.Location = new Point(27, 296);
             chartDailyNutrient.Name = "chartDailyNutrient";
-            chartDailyNutrient.Size = new Size(323, 230);
+            chartDailyNutrient.Size = new Size(345, 273);
             chartDailyNutrient.TabIndex = 0;
-            chartFont18.FontName = "Arial";
-            chartFont18.Size = 12;
-            chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            chartDailyNutrient.Title.Font = chartFont18;
-            chartDailyNutrient.Title.ForeColor = Color.Maroon;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 15;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            chartDailyNutrient.Title.Font = chartFont2;
+            chartDailyNutrient.Title.ForeColor = Color.Teal;
             chartDailyNutrient.Title.Text = "Daily Nutrients";
-            chartFont19.FontName = "Arial";
-            chartDailyNutrient.Tooltips.BodyFont = chartFont19;
-            chartFont20.FontName = "Arial";
-            chartFont20.Size = 9;
-            chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            chartDailyNutrient.Tooltips.TitleFont = chartFont20;
+            chartFont3.FontName = "Arial";
+            chartDailyNutrient.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            chartDailyNutrient.Tooltips.TitleFont = chartFont4;
             chartDailyNutrient.XAxes.Display = false;
-            chartDailyNutrient.XAxes.GridLines = grid7;
-            chartFont21.FontName = "Arial";
-            tick7.Font = chartFont21;
-            chartDailyNutrient.XAxes.Ticks = tick7;
+            chartDailyNutrient.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            chartDailyNutrient.XAxes.Ticks = tick1;
             chartDailyNutrient.YAxes.Display = false;
-            chartDailyNutrient.YAxes.GridLines = grid8;
-            chartFont22.FontName = "Arial";
-            tick8.Font = chartFont22;
-            chartDailyNutrient.YAxes.Ticks = tick8;
-            chartDailyNutrient.ZAxes.GridLines = grid9;
-            chartFont23.FontName = "Arial";
-            pointLabel3.Font = chartFont23;
-            chartDailyNutrient.ZAxes.PointLabels = pointLabel3;
-            chartFont24.FontName = "Arial";
-            tick9.Font = chartFont24;
-            chartDailyNutrient.ZAxes.Ticks = tick9;
+            chartDailyNutrient.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            chartDailyNutrient.YAxes.Ticks = tick2;
+            chartDailyNutrient.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            chartDailyNutrient.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            chartDailyNutrient.ZAxes.Ticks = tick3;
             // 
-            // piedataDaiylNutrient
+            // doughnutData
             // 
-            lPoint4.Label = "Fat";
-            lPoint4.Y = 20D;
-            lPoint5.Label = "Protein";
-            lPoint5.Y = 25D;
-            lPoint6.Label = "Carbohydrate";
-            lPoint6.Y = 55D;
-            piedataDaiylNutrient.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint4, lPoint5, lPoint6 });
-            piedataDaiylNutrient.FillColors.AddRange(new Color[] { Color.Red, Color.Lime, Color.Yellow });
-            piedataDaiylNutrient.Label = "Daiyl Nutrients";
-            piedataDaiylNutrient.TargetChart = chartDailyNutrient;
+            doughnutData.BorderColors.AddRange(new Color[] { Color.Black, Color.Black, Color.Black });
+            doughnutData.BorderWidth = 2;
+            lPoint1.Label = "Protein";
+            lPoint1.Y = 20D;
+            lPoint2.Label = "Fat";
+            lPoint2.Y = 25D;
+            lPoint3.Label = "Carbohydrate";
+            lPoint3.Y = 55D;
+            doughnutData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint1, lPoint2, lPoint3 });
+            doughnutData.FillColors.AddRange(new Color[] { Color.FromArgb(255, 128, 128), Color.FromArgb(128, 128, 255), Color.FromArgb(255, 255, 128) });
+            doughnutData.Label = "Daily Nutrients";
+            doughnutData.TargetChart = chartDailyNutrient;
             // 
             // cpbDailyCalorie
             // 
-            cpbDailyCalorie.BackColor = SystemColors.ActiveCaption;
-            cpbDailyCalorie.Controls.Add(lblCurrentCalorie);
+            cpbDailyCalorie.BackColor = Color.Transparent;
+            cpbDailyCalorie.Controls.Add(lblLeftCalorie);
             cpbDailyCalorie.FillColor = Color.FromArgb(200, 213, 218, 223);
             cpbDailyCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cpbDailyCalorie.ForeColor = Color.White;
             cpbDailyCalorie.Location = new Point(22, 0);
             cpbDailyCalorie.Minimum = 0;
             cpbDailyCalorie.Name = "cpbDailyCalorie";
-            cpbDailyCalorie.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cpbDailyCalorie.ProgressColor = Color.DarkOrange;
+            cpbDailyCalorie.ProgressColor2 = Color.DarkOrange;
+            cpbDailyCalorie.ShadowDecoration.CustomizableEdges = customizableEdges1;
             cpbDailyCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             cpbDailyCalorie.Size = new Size(150, 150);
             cpbDailyCalorie.TabIndex = 1;
             cpbDailyCalorie.Text = "Daily Calorie";
             // 
-            // lblCurrentCalorie
+            // lblLeftCalorie
             // 
-            lblCurrentCalorie.AutoSize = true;
-            lblCurrentCalorie.Location = new Point(49, 66);
-            lblCurrentCalorie.Name = "lblCurrentCalorie";
-            lblCurrentCalorie.Size = new Size(59, 21);
-            lblCurrentCalorie.TabIndex = 4;
-            lblCurrentCalorie.Text = "Calorie";
+            lblLeftCalorie.AutoSize = true;
+            lblLeftCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLeftCalorie.Location = new Point(45, 66);
+            lblLeftCalorie.Name = "lblLeftCalorie";
+            lblLeftCalorie.Size = new Size(64, 21);
+            lblLeftCalorie.TabIndex = 4;
+            lblLeftCalorie.Text = "Calorie";
             // 
             // pnlHomeTop
             // 
-            pnlHomeTop.BackColor = SystemColors.ActiveCaption;
+            pnlHomeTop.BackColor = Color.Transparent;
             pnlHomeTop.BorderColor = Color.Transparent;
+            pnlHomeTop.BorderRadius = 20;
+            pnlHomeTop.Controls.Add(cpbDaysRemaining);
             pnlHomeTop.Controls.Add(lblGoalCalorie);
             pnlHomeTop.Controls.Add(lblSlash);
-            pnlHomeTop.Controls.Add(lblDayGoalValue);
-            pnlHomeTop.Controls.Add(lblFirstWeightValue);
             pnlHomeTop.Controls.Add(lblCalorie);
             pnlHomeTop.Controls.Add(lblDaysRemaining);
             pnlHomeTop.Controls.Add(guna2PictureBox1);
-            pnlHomeTop.Controls.Add(txtDaysRemaining);
+            pnlHomeTop.Controls.Add(txtDayGoal);
             pnlHomeTop.Controls.Add(lblGoalWeight);
             pnlHomeTop.Controls.Add(lblCurrentWeight);
             pnlHomeTop.Controls.Add(guna2PictureBox2);
             pnlHomeTop.Controls.Add(pbCurrentWeight);
             pnlHomeTop.Controls.Add(lblDayGoal);
-            pnlHomeTop.Controls.Add(lblFirstWeight);
             pnlHomeTop.Controls.Add(lblCaloriesName);
             pnlHomeTop.Controls.Add(txtGoalWeight);
             pnlHomeTop.Controls.Add(txtCurrentWeight);
             pnlHomeTop.Controls.Add(cpbDailyCalorie);
-            pnlHomeTop.CustomizableEdges = customizableEdges29;
-            pnlHomeTop.Location = new Point(58, 68);
+            pnlHomeTop.CustomizableEdges = customizableEdges15;
+            pnlHomeTop.FillColor = Color.Teal;
+            pnlHomeTop.FillColor2 = Color.MediumPurple;
+            pnlHomeTop.Location = new Point(56, 53);
             pnlHomeTop.Name = "pnlHomeTop";
-            pnlHomeTop.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            pnlHomeTop.ShadowDecoration.CustomizableEdges = customizableEdges16;
             pnlHomeTop.Size = new Size(888, 150);
             pnlHomeTop.TabIndex = 2;
+            // 
+            // cpbDaysRemaining
+            // 
+            cpbDaysRemaining.Controls.Add(lblRemainingDay);
+            cpbDaysRemaining.FillColor = Color.FromArgb(200, 213, 218, 223);
+            cpbDaysRemaining.FillThickness = 12;
+            cpbDaysRemaining.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cpbDaysRemaining.ForeColor = Color.White;
+            cpbDaysRemaining.Location = new Point(762, 43);
+            cpbDaysRemaining.Minimum = 0;
+            cpbDaysRemaining.Name = "cpbDaysRemaining";
+            cpbDaysRemaining.ProgressColor = Color.DarkOrange;
+            cpbDaysRemaining.ProgressColor2 = Color.DarkOrange;
+            cpbDaysRemaining.ProgressThickness = 12;
+            cpbDaysRemaining.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cpbDaysRemaining.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbDaysRemaining.Size = new Size(100, 100);
+            cpbDaysRemaining.TabIndex = 18;
+            cpbDaysRemaining.Text = "Days Remaining";
+            // 
+            // lblRemainingDay
+            // 
+            lblRemainingDay.AutoSize = true;
+            lblRemainingDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRemainingDay.Location = new Point(38, 38);
+            lblRemainingDay.Name = "lblRemainingDay";
+            lblRemainingDay.Size = new Size(40, 21);
+            lblRemainingDay.TabIndex = 5;
+            lblRemainingDay.Text = "Day";
             // 
             // lblGoalCalorie
             // 
             lblGoalCalorie.AutoSize = true;
-            lblGoalCalorie.Location = new Point(270, 45);
+            lblGoalCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGoalCalorie.ForeColor = Color.White;
+            lblGoalCalorie.Location = new Point(269, 84);
             lblGoalCalorie.Name = "lblGoalCalorie";
-            lblGoalCalorie.Size = new Size(71, 15);
+            lblGoalCalorie.Size = new Size(103, 21);
             lblGoalCalorie.TabIndex = 17;
             lblGoalCalorie.Text = "Goal Calorie";
             // 
             // lblSlash
             // 
             lblSlash.AutoSize = true;
-            lblSlash.Location = new Point(252, 45);
+            lblSlash.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSlash.ForeColor = Color.White;
+            lblSlash.Location = new Point(252, 84);
             lblSlash.Name = "lblSlash";
-            lblSlash.Size = new Size(12, 15);
+            lblSlash.Size = new Size(17, 21);
             lblSlash.TabIndex = 16;
             lblSlash.Text = "/";
-            // 
-            // lblDayGoalValue
-            // 
-            lblDayGoalValue.AutoSize = true;
-            lblDayGoalValue.Location = new Point(273, 97);
-            lblDayGoalValue.Name = "lblDayGoalValue";
-            lblDayGoalValue.Size = new Size(12, 15);
-            lblDayGoalValue.TabIndex = 15;
-            lblDayGoalValue.Text = "-";
-            // 
-            // lblFirstWeightValue
-            // 
-            lblFirstWeightValue.AutoSize = true;
-            lblFirstWeightValue.Location = new Point(284, 72);
-            lblFirstWeightValue.Name = "lblFirstWeightValue";
-            lblFirstWeightValue.Size = new Size(12, 15);
-            lblFirstWeightValue.TabIndex = 14;
-            lblFirstWeightValue.Text = "-";
             // 
             // lblCalorie
             // 
             lblCalorie.AutoSize = true;
-            lblCalorie.Location = new Point(204, 45);
+            lblCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCalorie.ForeColor = Color.White;
+            lblCalorie.Location = new Point(188, 84);
             lblCalorie.Name = "lblCalorie";
-            lblCalorie.Size = new Size(44, 15);
+            lblCalorie.Size = new Size(64, 21);
             lblCalorie.TabIndex = 13;
             lblCalorie.Text = "Calorie";
             // 
             // lblDaysRemaining
             // 
             lblDaysRemaining.AutoSize = true;
-            lblDaysRemaining.Location = new Point(711, 15);
+            lblDaysRemaining.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDaysRemaining.ForeColor = Color.Orange;
+            lblDaysRemaining.Location = new Point(744, 11);
             lblDaysRemaining.Name = "lblDaysRemaining";
-            lblDaysRemaining.Size = new Size(92, 15);
+            lblDaysRemaining.Size = new Size(134, 21);
             lblDaysRemaining.TabIndex = 12;
             lblDaysRemaining.Text = "Days Remaining";
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges17;
+            guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(730, 47);
+            guna2PictureBox1.Location = new Point(652, 37);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2PictureBox1.Size = new Size(40, 40);
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.Size = new Size(50, 50);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 11;
             guna2PictureBox1.TabStop = false;
             // 
-            // txtDaysRemaining
+            // txtDayGoal
             // 
-            txtDaysRemaining.BorderRadius = 20;
-            txtDaysRemaining.CustomizableEdges = customizableEdges19;
-            txtDaysRemaining.DefaultText = "_";
-            txtDaysRemaining.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtDaysRemaining.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtDaysRemaining.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtDaysRemaining.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtDaysRemaining.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDaysRemaining.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtDaysRemaining.ForeColor = Color.Black;
-            txtDaysRemaining.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDaysRemaining.Location = new Point(730, 93);
-            txtDaysRemaining.Name = "txtDaysRemaining";
-            txtDaysRemaining.PasswordChar = '\0';
-            txtDaysRemaining.PlaceholderText = "";
-            txtDaysRemaining.SelectedText = "";
-            txtDaysRemaining.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtDaysRemaining.Size = new Size(40, 40);
-            txtDaysRemaining.TabIndex = 4;
-            txtDaysRemaining.TextAlign = HorizontalAlignment.Center;
+            txtDayGoal.BorderRadius = 25;
+            txtDayGoal.CustomizableEdges = customizableEdges5;
+            txtDayGoal.DefaultText = "0";
+            txtDayGoal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtDayGoal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtDayGoal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtDayGoal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtDayGoal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDayGoal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtDayGoal.ForeColor = Color.Black;
+            txtDayGoal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDayGoal.Location = new Point(652, 93);
+            txtDayGoal.MaxLength = 2;
+            txtDayGoal.Name = "txtDayGoal";
+            txtDayGoal.PasswordChar = '\0';
+            txtDayGoal.PlaceholderText = "";
+            txtDayGoal.SelectedText = "";
+            txtDayGoal.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtDayGoal.Size = new Size(50, 50);
+            txtDayGoal.TabIndex = 4;
+            txtDayGoal.TextAlign = HorizontalAlignment.Center;
+            txtDayGoal.TextOffset = new Point(9, 0);
+            txtDayGoal.TextChanged += txtDaysRemaining_TextChanged;
+            txtDayGoal.KeyPress += txtDayGoal_KeyPress;
+            txtDayGoal.Leave += txtDayGoal_Leave;
             // 
             // lblGoalWeight
             // 
             lblGoalWeight.AutoSize = true;
-            lblGoalWeight.Location = new Point(612, 15);
+            lblGoalWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGoalWeight.ForeColor = Color.Orange;
+            lblGoalWeight.Location = new Point(519, 11);
             lblGoalWeight.Name = "lblGoalWeight";
-            lblGoalWeight.Size = new Size(72, 15);
+            lblGoalWeight.Size = new Size(92, 19);
             lblGoalWeight.TabIndex = 10;
             lblGoalWeight.Text = "Goal Weight";
             // 
             // lblCurrentWeight
             // 
             lblCurrentWeight.AutoSize = true;
-            lblCurrentWeight.Location = new Point(497, 15);
+            lblCurrentWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCurrentWeight.ForeColor = Color.Orange;
+            lblCurrentWeight.Location = new Point(396, 11);
             lblCurrentWeight.Name = "lblCurrentWeight";
-            lblCurrentWeight.Size = new Size(88, 15);
+            lblCurrentWeight.Size = new Size(111, 19);
             lblCurrentWeight.TabIndex = 9;
             lblCurrentWeight.Text = "Current Weight";
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges21;
+            guna2PictureBox2.CustomizableEdges = customizableEdges7;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(626, 47);
+            guna2PictureBox2.Location = new Point(538, 37);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2PictureBox2.Size = new Size(40, 40);
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2PictureBox2.Size = new Size(50, 50);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 8;
             guna2PictureBox2.TabStop = false;
             // 
             // pbCurrentWeight
             // 
-            pbCurrentWeight.CustomizableEdges = customizableEdges23;
+            pbCurrentWeight.CustomizableEdges = customizableEdges9;
             pbCurrentWeight.Image = (Image)resources.GetObject("pbCurrentWeight.Image");
             pbCurrentWeight.ImageRotate = 0F;
-            pbCurrentWeight.Location = new Point(522, 47);
+            pbCurrentWeight.Location = new Point(424, 37);
             pbCurrentWeight.Name = "pbCurrentWeight";
-            pbCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            pbCurrentWeight.Size = new Size(40, 40);
+            pbCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            pbCurrentWeight.Size = new Size(50, 50);
             pbCurrentWeight.SizeMode = PictureBoxSizeMode.Zoom;
             pbCurrentWeight.TabIndex = 7;
             pbCurrentWeight.TabStop = false;
@@ -352,35 +410,30 @@
             // lblDayGoal
             // 
             lblDayGoal.AutoSize = true;
-            lblDayGoal.Location = new Point(204, 97);
+            lblDayGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDayGoal.ForeColor = Color.Orange;
+            lblDayGoal.Location = new Point(646, 11);
             lblDayGoal.Name = "lblDayGoal";
-            lblDayGoal.Size = new Size(63, 15);
+            lblDayGoal.Size = new Size(74, 19);
             lblDayGoal.TabIndex = 6;
-            lblDayGoal.Text = "Day Goal : ";
-            // 
-            // lblFirstWeight
-            // 
-            lblFirstWeight.AutoSize = true;
-            lblFirstWeight.Location = new Point(204, 71);
-            lblFirstWeight.Name = "lblFirstWeight";
-            lblFirstWeight.Size = new Size(79, 15);
-            lblFirstWeight.TabIndex = 5;
-            lblFirstWeight.Text = "First Weight : ";
+            lblDayGoal.Text = "Day Goal ";
             // 
             // lblCaloriesName
             // 
             lblCaloriesName.AutoSize = true;
-            lblCaloriesName.Location = new Point(204, 19);
+            lblCaloriesName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCaloriesName.ForeColor = Color.Orange;
+            lblCaloriesName.Location = new Point(188, 58);
             lblCaloriesName.Name = "lblCaloriesName";
-            lblCaloriesName.Size = new Size(119, 15);
+            lblCaloriesName.Size = new Size(172, 21);
             lblCaloriesName.TabIndex = 4;
             lblCaloriesName.Text = "Calorie / Goal Calorie";
             // 
             // txtGoalWeight
             // 
-            txtGoalWeight.BorderRadius = 20;
-            txtGoalWeight.CustomizableEdges = customizableEdges25;
-            txtGoalWeight.DefaultText = "_";
+            txtGoalWeight.BorderRadius = 25;
+            txtGoalWeight.CustomizableEdges = customizableEdges11;
+            txtGoalWeight.DefaultText = "0";
             txtGoalWeight.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtGoalWeight.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtGoalWeight.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -389,21 +442,23 @@
             txtGoalWeight.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtGoalWeight.ForeColor = Color.Black;
             txtGoalWeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtGoalWeight.Location = new Point(626, 93);
+            txtGoalWeight.Location = new Point(538, 93);
+            txtGoalWeight.MaxLength = 5;
             txtGoalWeight.Name = "txtGoalWeight";
             txtGoalWeight.PasswordChar = '\0';
             txtGoalWeight.PlaceholderText = "";
             txtGoalWeight.SelectedText = "";
-            txtGoalWeight.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            txtGoalWeight.Size = new Size(40, 40);
+            txtGoalWeight.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtGoalWeight.Size = new Size(50, 50);
             txtGoalWeight.TabIndex = 3;
             txtGoalWeight.TextAlign = HorizontalAlignment.Center;
+            txtGoalWeight.KeyPress += txtWeightTexts_KeyPress;
             // 
             // txtCurrentWeight
             // 
-            txtCurrentWeight.BorderRadius = 20;
-            txtCurrentWeight.CustomizableEdges = customizableEdges27;
-            txtCurrentWeight.DefaultText = "_";
+            txtCurrentWeight.BorderRadius = 25;
+            txtCurrentWeight.CustomizableEdges = customizableEdges13;
+            txtCurrentWeight.DefaultText = "0";
             txtCurrentWeight.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCurrentWeight.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtCurrentWeight.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -412,59 +467,155 @@
             txtCurrentWeight.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtCurrentWeight.ForeColor = Color.Black;
             txtCurrentWeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCurrentWeight.Location = new Point(522, 93);
+            txtCurrentWeight.Location = new Point(424, 93);
+            txtCurrentWeight.MaxLength = 5;
             txtCurrentWeight.Name = "txtCurrentWeight";
             txtCurrentWeight.PasswordChar = '\0';
             txtCurrentWeight.PlaceholderText = "";
             txtCurrentWeight.SelectedText = "";
-            txtCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txtCurrentWeight.Size = new Size(40, 40);
+            txtCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtCurrentWeight.Size = new Size(50, 50);
             txtCurrentWeight.TabIndex = 2;
             txtCurrentWeight.TextAlign = HorizontalAlignment.Center;
+            txtCurrentWeight.Enter += txtCurrentWeight_Enter;
+            txtCurrentWeight.KeyPress += txtWeightTexts_KeyPress;
+            txtCurrentWeight.Leave += txtCurrentWeight_Leave;
             // 
-            // gunaChart1
+            // chartWeeklyCalorie
             // 
-            gunaChart1.BackColor = Color.White;
-            chartFont25.FontName = "Arial";
-            gunaChart1.Legend.LabelFont = chartFont25;
-            gunaChart1.Location = new Point(580, 306);
-            gunaChart1.Name = "gunaChart1";
-            gunaChart1.Size = new Size(323, 230);
-            gunaChart1.TabIndex = 3;
-            chartFont26.FontName = "Arial";
-            chartFont26.Size = 12;
-            chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Title.Font = chartFont26;
-            chartFont27.FontName = "Arial";
-            gunaChart1.Tooltips.BodyFont = chartFont27;
-            chartFont28.FontName = "Arial";
-            chartFont28.Size = 9;
-            chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Tooltips.TitleFont = chartFont28;
-            gunaChart1.XAxes.Display = false;
-            gunaChart1.XAxes.GridLines = grid10;
-            chartFont29.FontName = "Arial";
-            tick10.Font = chartFont29;
-            gunaChart1.XAxes.Ticks = tick10;
-            gunaChart1.YAxes.Display = false;
-            gunaChart1.YAxes.GridLines = grid11;
-            chartFont30.FontName = "Arial";
-            tick11.Font = chartFont30;
-            gunaChart1.YAxes.Ticks = tick11;
-            gunaChart1.ZAxes.GridLines = grid12;
-            chartFont31.FontName = "Arial";
-            pointLabel4.Font = chartFont31;
-            gunaChart1.ZAxes.PointLabels = pointLabel4;
-            chartFont32.FontName = "Arial";
-            tick12.Font = chartFont32;
-            gunaChart1.ZAxes.Ticks = tick12;
+            chartWeeklyCalorie.BackColor = Color.Transparent;
+            chartWeeklyCalorie.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { lineData, barData });
+            chartFont9.FontName = "Arial";
+            chartWeeklyCalorie.Legend.LabelFont = chartFont9;
+            chartWeeklyCalorie.Location = new Point(480, 286);
+            chartWeeklyCalorie.Name = "chartWeeklyCalorie";
+            chartWeeklyCalorie.Size = new Size(508, 320);
+            chartWeeklyCalorie.TabIndex = 3;
+            chartFont10.FontName = "Arial";
+            chartFont10.Size = 15;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            chartWeeklyCalorie.Title.Font = chartFont10;
+            chartWeeklyCalorie.Title.ForeColor = Color.Teal;
+            chartWeeklyCalorie.Title.Text = "Weekly Calorie";
+            chartFont11.FontName = "Arial";
+            chartWeeklyCalorie.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            chartWeeklyCalorie.Tooltips.TitleFont = chartFont12;
+            chartWeeklyCalorie.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            chartWeeklyCalorie.XAxes.Ticks = tick4;
+            chartWeeklyCalorie.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            chartWeeklyCalorie.YAxes.Ticks = tick5;
+            chartWeeklyCalorie.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            chartWeeklyCalorie.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            chartWeeklyCalorie.ZAxes.Ticks = tick6;
+            // 
+            // lineData
+            // 
+            lineData.BorderColor = Color.Navy;
+            lineData.BorderWidth = 1;
+            lPoint4.Y = 3500D;
+            lPoint5.Y = 3500D;
+            lPoint6.Y = 3500D;
+            lPoint7.Y = 3500D;
+            lPoint8.Y = 3500D;
+            lPoint9.Y = 3500D;
+            lPoint10.Y = 3500D;
+            lineData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint4, lPoint5, lPoint6, lPoint7, lPoint8, lPoint9, lPoint10 });
+            lineData.FillColor = Color.Navy;
+            lineData.Label = "Goal Calorie";
+            lineData.PointBorderWidth = 0;
+            lineData.PointRadius = 0;
+            lineData.TargetChart = chartWeeklyCalorie;
+            // 
+            // barData
+            // 
+            barData.BarPercentage = 0.8D;
+            barData.BorderColors.AddRange(new Color[] { Color.Black, Color.Black, Color.Black, Color.Black, Color.Black, Color.Black, Color.Black });
+            barData.BorderWidth = 2;
+            lPoint11.Label = "Monday";
+            lPoint11.Y = 2500D;
+            lPoint12.Label = "Tuesday";
+            lPoint12.Y = 3700D;
+            lPoint13.Label = "Wednesday";
+            lPoint13.Y = 3200D;
+            lPoint14.Label = "Thursday";
+            lPoint14.Y = 2800D;
+            lPoint15.Label = "Friday";
+            lPoint15.Y = 2000D;
+            lPoint16.Label = "Saturday";
+            lPoint16.Y = 3000D;
+            lPoint17.Label = "Sunday";
+            lPoint17.Y = 3500D;
+            barData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint11, lPoint12, lPoint13, lPoint14, lPoint15, lPoint16, lPoint17 });
+            barData.Label = "Daily Calorie";
+            barData.TargetChart = chartWeeklyCalorie;
+            // 
+            // pnlStick
+            // 
+            pnlStick.BackColor = Color.Transparent;
+            pnlStick.BorderRadius = 8;
+            pnlStick.CustomizableEdges = customizableEdges17;
+            pnlStick.FillColor = Color.Teal;
+            pnlStick.Location = new Point(441, 270);
+            pnlStick.Name = "pnlStick";
+            pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            pnlStick.Size = new Size(16, 362);
+            pnlStick.TabIndex = 4;
+            // 
+            // lblProteinPercentage
+            // 
+            lblProteinPercentage.AutoSize = true;
+            lblProteinPercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProteinPercentage.ForeColor = Color.DimGray;
+            lblProteinPercentage.Location = new Point(369, 421);
+            lblProteinPercentage.Name = "lblProteinPercentage";
+            lblProteinPercentage.Size = new Size(47, 15);
+            lblProteinPercentage.TabIndex = 5;
+            lblProteinPercentage.Text = "%00.00";
+            // 
+            // lblFatPercentage
+            // 
+            lblFatPercentage.AutoSize = true;
+            lblFatPercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFatPercentage.ForeColor = Color.DimGray;
+            lblFatPercentage.Location = new Point(369, 445);
+            lblFatPercentage.Name = "lblFatPercentage";
+            lblFatPercentage.Size = new Size(47, 15);
+            lblFatPercentage.TabIndex = 6;
+            lblFatPercentage.Text = "%00.00";
+            // 
+            // lblCarbohydratePercentage
+            // 
+            lblCarbohydratePercentage.AutoSize = true;
+            lblCarbohydratePercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCarbohydratePercentage.ForeColor = Color.DimGray;
+            lblCarbohydratePercentage.Location = new Point(369, 469);
+            lblCarbohydratePercentage.Name = "lblCarbohydratePercentage";
+            lblCarbohydratePercentage.Size = new Size(47, 15);
+            lblCarbohydratePercentage.TabIndex = 7;
+            lblCarbohydratePercentage.Text = "%00.00";
             // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1000, 700);
-            Controls.Add(gunaChart1);
+            Controls.Add(lblCarbohydratePercentage);
+            Controls.Add(lblFatPercentage);
+            Controls.Add(lblProteinPercentage);
+            Controls.Add(pnlStick);
+            Controls.Add(chartWeeklyCalorie);
             Controls.Add(pnlHomeTop);
             Controls.Add(chartDailyNutrient);
             FormBorderStyle = FormBorderStyle.None;
@@ -475,10 +626,13 @@
             cpbDailyCalorie.PerformLayout();
             pnlHomeTop.ResumeLayout(false);
             pnlHomeTop.PerformLayout();
+            cpbDaysRemaining.ResumeLayout(false);
+            cpbDaysRemaining.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbCurrentWeight).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -486,25 +640,33 @@
         private Guna.Charts.WinForms.GunaChart chartDailyNutrient;
         private Guna.UI2.WinForms.Guna2CircleProgressBar cpbDailyCalorie;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlHomeTop;
-        private Label lblCurrentCalorie;
+        private Label lblLeftCalorie;
         private Label lblCalorie;
         private Label lblDaysRemaining;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtDaysRemaining;
+        private Guna.UI2.WinForms.Guna2TextBox txtDayGoal;
         private Label lblGoalWeight;
         private Label lblCurrentWeight;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox pbCurrentWeight;
         private Label lblDayGoal;
-        private Label lblFirstWeight;
         private Label lblCaloriesName;
         private Guna.UI2.WinForms.Guna2TextBox txtGoalWeight;
         private Guna.UI2.WinForms.Guna2TextBox txtCurrentWeight;
-        private Guna.Charts.WinForms.GunaPieDataset piedataDaiylNutrient;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
-        private Label lblDayGoalValue;
-        private Label lblFirstWeightValue;
+        private Guna.Charts.WinForms.GunaChart chartWeeklyCalorie;
         private Label lblGoalCalorie;
         private Label lblSlash;
+        private Guna.Charts.WinForms.GunaDoughnutDataset doughnutData;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbDaysRemaining;
+        private Label lblRemainingDay;
+        private Guna.Charts.WinForms.GunaBarDataset barData;
+        private Guna.UI2.WinForms.Guna2Panel pnlStick;
+        private Guna.Charts.WinForms.GunaLineDataset lineData;
+        private Label lblProteinPercentage;
+        private Label lblFatPercentage;
+        private Label lblCarbohydratePercentage;
+        // private Guna.Charts.WinForms.LPoint lPointProtein;
+        // private Guna.Charts.WinForms.LPoint lPointFat;
+        // private Guna.Charts.WinForms.LPoint lPointCarbohydrate;
     }
 }
