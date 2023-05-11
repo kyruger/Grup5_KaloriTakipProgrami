@@ -24,7 +24,6 @@ namespace WndPL.Forms
         }
         BusinessLogic bl;
         int foodID;
-        int UserID = 2;
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -133,24 +132,37 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
-            Entities.User user = bl.Users.GetById(UserID);
-            TimeSpan timePassed = DateTime.Now - user.CreationTime;
-            int day = (int)timePassed.TotalDays + 1;
-            List<ConsumedFood> consumedFoods = bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(day, MealType.Breakfast);
+
+            List<ConsumedFood> consumedFoods = bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(2, MealType.Breakfast);
             foreach (ConsumedFood consumed in consumedFoods)
             {
                 ListViewItem lvi = new ListViewItem();
-                int id= ;
+                int foodId = consumed.FoodId;
+                Food food = bl.Foods.GetById(foodId);
                 lvi.Text = food.Name;
-                lvi.SubItems.Add(food.PortionGram.ToString());
                 lvi.SubItems.Add(food.Category.ToString());
-                lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
-                lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
+                if (consumed.PortionType==null)
+                {
+                    lvi.SubItems.Add("100Gram");
+                    lvi.SubItems.Add(consumed.Quantity.ToString());
+                    lvi.SubItems.Add((food.ProteinRateFor100Gram*consumed.Quantity).ToString());
+
+                }
+                else
+                {
+                    lvi.SubItems.Add(consumed.PortionType.ToString());
+                    lvi.SubItems.Add(consumed.PortionCount.ToString());
+                    //lvi.SubItems.Add((food.ProteinRateFor100Gram*);
+                }
                 lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
                 lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
                 lvi.Tag = food.ID;
-                lvFood.Items.Add(lvi);
+                lviDailyConsumedFood.Items.Add(lvi);
+
+                
+
             }
         }
+        
     }
 }
