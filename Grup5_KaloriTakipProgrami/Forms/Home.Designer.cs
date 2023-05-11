@@ -197,8 +197,8 @@
             cpbDailyCalorie.Location = new Point(22, 0);
             cpbDailyCalorie.Minimum = 0;
             cpbDailyCalorie.Name = "cpbDailyCalorie";
-            cpbDailyCalorie.ProgressColor = Color.SlateBlue;
-            cpbDailyCalorie.ProgressColor2 = Color.Black;
+            cpbDailyCalorie.ProgressColor = Color.DarkOrange;
+            cpbDailyCalorie.ProgressColor2 = Color.DarkOrange;
             cpbDailyCalorie.ShadowDecoration.CustomizableEdges = customizableEdges1;
             cpbDailyCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             cpbDailyCalorie.Size = new Size(150, 150);
@@ -255,8 +255,8 @@
             cpbDaysRemaining.Location = new Point(762, 43);
             cpbDaysRemaining.Minimum = 0;
             cpbDaysRemaining.Name = "cpbDaysRemaining";
-            cpbDaysRemaining.ProgressColor = Color.SlateBlue;
-            cpbDaysRemaining.ProgressColor2 = Color.Black;
+            cpbDaysRemaining.ProgressColor = Color.DarkOrange;
+            cpbDaysRemaining.ProgressColor2 = Color.DarkOrange;
             cpbDaysRemaining.ProgressThickness = 12;
             cpbDaysRemaining.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cpbDaysRemaining.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;

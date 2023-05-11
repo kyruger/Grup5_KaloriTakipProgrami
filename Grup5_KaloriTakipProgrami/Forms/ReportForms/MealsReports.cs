@@ -69,9 +69,9 @@ namespace WndPL.Forms.ReportForms
 
             lblMealType.Text = MealType.Breakfast.ToString();
         }
-        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        private void tsWeekMonth_CheckedChanged(object sender, EventArgs e)
         {
-            if (!guna2ToggleSwitch1.Checked)
+            if (!tsWeekMonth.Checked)
             {
                 //for data load
                 FillCalorieData(7);
@@ -247,7 +247,7 @@ namespace WndPL.Forms.ReportForms
         private void btnBreakfast_Click(object sender, EventArgs e)
         {
             lblMealType.Text = MealType.Breakfast.ToString();
-            if (!guna2ToggleSwitch1.Checked)
+            if (!tsWeekMonth.Checked)
                 FillFoodCategoryDatas(MealType.Breakfast, 7);
             else
                 FillFoodCategoryDatas(MealType.Breakfast, 30);
@@ -256,7 +256,7 @@ namespace WndPL.Forms.ReportForms
         private void btnLunch_Click(object sender, EventArgs e)
         {
             lblMealType.Text = MealType.Lunch.ToString();
-            if (!guna2ToggleSwitch1.Checked)
+            if (!tsWeekMonth.Checked)
                 FillFoodCategoryDatas(MealType.Lunch, 7);
             else
                 FillFoodCategoryDatas(MealType.Lunch, 30);
@@ -265,7 +265,7 @@ namespace WndPL.Forms.ReportForms
         private void btnDinner_Click(object sender, EventArgs e)
         {
             lblMealType.Text = MealType.Dinner.ToString();
-            if (!guna2ToggleSwitch1.Checked)
+            if (!tsWeekMonth.Checked)
                 FillFoodCategoryDatas(MealType.Dinner, 7);
             else
                 FillFoodCategoryDatas(MealType.Dinner, 30);
@@ -274,7 +274,7 @@ namespace WndPL.Forms.ReportForms
         private void btnOthers_Click(object sender, EventArgs e)
         {
             lblMealType.Text = "Others";
-            if (!guna2ToggleSwitch1.Checked)
+            if (!tsWeekMonth.Checked)
                 FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
             else
                 FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);

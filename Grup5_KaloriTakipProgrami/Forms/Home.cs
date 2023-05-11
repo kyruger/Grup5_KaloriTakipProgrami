@@ -77,7 +77,7 @@ namespace WndPL.Forms
             doughnutData.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lpProtein, lpFat, lpCarbohydrate });
             double totalGram = dailyProteinGram + dailyFatGram + dailyCarbohydrateGram;
             double ProteinPercentage = Math.Round((dailyProteinGram / totalGram) * 100, 2);
-            double FatPercentage = Math.Round((dailyFatGram / totalGram) * 100 ,2);
+            double FatPercentage = Math.Round((dailyFatGram / totalGram) * 100, 2);
             double CarbohydratePercentage = Math.Round((dailyCarbohydrateGram / totalGram) * 100, 2);
             lblProteinPercentage.Text = $"%{ProteinPercentage}";
             lblFatPercentage.Text = $"%{FatPercentage}";
