@@ -24,6 +24,8 @@ namespace WndPL.Forms
         }
         BusinessLogic bl;
         int foodID;
+        int userID = 2;
+        MealType mealType;
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -33,14 +35,14 @@ namespace WndPL.Forms
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lvFood.SelectedItems.Count > 0)
+            if (lviFood.SelectedItems.Count > 0)
             {
                 ButtonActivity(true);
-                int foodId = (int)lvFood.FocusedItem.Tag;
+                int foodId = (int)lviFood.FocusedItem.Tag;
                 Food food = bl.Foods.GetById(foodId);
                 tbxFoodName.Text = food.Name;
                 tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
-                foodID = (int)lvFood.FocusedItem.Tag;
+                foodID = (int)lviFood.FocusedItem.Tag;
 
 
 
@@ -62,6 +64,7 @@ namespace WndPL.Forms
         }
         private void ListViewFillFood(List<Food> foods)
         {
+            lviFood.Items.Clear();
             foreach (Food food in foods)
             {
                 ListViewItem lvi = new ListViewItem();
@@ -73,7 +76,7 @@ namespace WndPL.Forms
                 lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
                 lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
                 lvi.Tag = food.ID;
-                lvFood.Items.Add(lvi);
+                lviFood.Items.Add(lvi);
             }
 
 
@@ -132,37 +135,96 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
+            mealType = MealType.Breakfast;
+            FillListViewConsumedFood(userID, mealType);
+        }
+        private void FillListViewConsumedFood(int id, MealType meal)
+        {
 
-            List<ConsumedFood> consumedFoods = bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(2, MealType.Breakfast);
+            lviDailyConsumedFood.Items.Clear();
+            List<ConsumedFood> consumedFoods = bl.ConsumedFoods.GetConsumedFoodsByDayAndMealType(id, meal);
             foreach (ConsumedFood consumed in consumedFoods)
             {
                 ListViewItem lvi = new ListViewItem();
                 int foodId = consumed.FoodId;
                 Food food = bl.Foods.GetById(foodId);
-                lvi.Text = food.Name;
-                lvi.SubItems.Add(food.Category.ToString());
-                if (consumed.PortionType==null)
+                lvi.Text = food.Name;//food name
+                lvi.SubItems.Add(food.Category.ToString());//category
+                if (consumed.PortionType == null)
                 {
                     lvi.SubItems.Add("100Gram");
                     lvi.SubItems.Add(consumed.Quantity.ToString());
-                    lvi.SubItems.Add((food.ProteinRateFor100Gram*consumed.Quantity).ToString());
+                    lvi.SubItems.Add((100 * consumed.Quantity).ToString());
+                    lvi.SubItems.Add((food.CalorieFor100Gram * consumed.Quantity).ToString());
+                    lvi.SubItems.Add((food.ProteinRateFor100Gram * consumed.Quantity).ToString());
+                    lvi.SubItems.Add((food.FatRateFor100Gram * consumed.Quantity).ToString());
+                    lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * consumed.Quantity).ToString());
 
                 }
                 else
                 {
+                    decimal portionGramForType = food.PortionGram / (int)consumed.PortionType;
                     lvi.SubItems.Add(consumed.PortionType.ToString());
                     lvi.SubItems.Add(consumed.PortionCount.ToString());
-                    //lvi.SubItems.Add((food.ProteinRateFor100Gram*);
+                    lvi.SubItems.Add(portionGramForType.ToString());
+                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+
+
+
                 }
-                lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
-                lvi.Tag = food.ID;
+
+
+                lvi.Tag = consumed.ID;
                 lviDailyConsumedFood.Items.Add(lvi);
 
-                
+
 
             }
         }
-        
+
+        private void FoodSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<Food> foods = bl.Foods.GetFoodsByWord(tbxFoodSearch.Text);
+            ListViewFillFood(foods);
+
+
+        }
+
+        private void btnLunch_Click(object sender, EventArgs e)
+        {
+            mealType=MealType.Lunch;    
+            FillListViewConsumedFood(userID, mealType);
+        }
+
+        private void btnDinner_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Dinner;
+            FillListViewConsumedFood(userID,mealType);
+        }
+
+        private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
+        {
+           for(int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
+            {
+                int id = (int)lviDailyConsumedFood.Items[i].Tag;
+                bool control = bl.ConsumedFoods.IsExist(id);
+                if (!control)
+                {
+                    ConsumedFood consumed = new ConsumedFood();
+                    consumed.MealType=mealType;
+
+                    Entities.User user = bl.Users.GetById(userID);
+                    TimeSpan timePassed = DateTime.Now - user.CreationTime;
+                    int day = (int)timePassed.TotalDays + 1;
+                    consumed.Day = day;
+                    consumed.UserId = userID;
+                    int foodId = bl.Foods.GetFoodIdByFoodName(lviDailyConsumedFood.Items[i].SubItems[0].Text);
+                    consumed.FoodId = foodId;
+                }
+            }
+        }
     }
 }

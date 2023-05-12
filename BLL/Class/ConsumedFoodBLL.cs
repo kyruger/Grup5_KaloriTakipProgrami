@@ -20,6 +20,15 @@ namespace BLL
 
             return consumedFoods;
         }
+
+        public bool IsExist(int id)
+        {
+            var result=db.ConsumedFoods.SingleOrDefault(x=>x.ID==id);
+            if (result == null)
+                return false;
+            else
+                return true;
+        }
       
     }
 }
