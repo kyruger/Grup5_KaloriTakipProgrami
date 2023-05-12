@@ -288,12 +288,48 @@ namespace WndPL.Forms
         {
             if (count<=5)
             {
-                Guna2Button btn = new Guna2Button();
-                btn.Text = $"Snack{count}";
-                btn.Width = 164;
-                btn.Height = 92;
-                count++;
-                flyo.Controls.Add(btn);
+                if (count==2)
+                {
+                    Guna2Button btn = new Guna2Button();
+                    btn.Text = $"Snack{count}";
+                    btn.Width = 164;
+                    btn.Height = 92;
+                    btn.Click += new EventHandler(SnackClick2);
+                    count++;
+                    flyo.Controls.Add(btn);
+                }
+                else if (count == 3)
+                {
+                    Guna2Button btn = new Guna2Button();
+                    btn.Text = $"Snack{count}";
+                    btn.Width = 164;
+                    btn.Height = 92;
+                    btn.Click += new EventHandler(SnackClick3);
+                    count++;
+                    flyo.Controls.Add(btn);
+
+                }
+                else if (count == 4)
+                {
+                    Guna2Button btn = new Guna2Button();
+                    btn.Text = $"Snack{count}";
+                    btn.Width = 164;
+                    btn.Height = 92;
+                    btn.Click += new EventHandler(SnackClick4);
+                    count++;
+                    flyo.Controls.Add(btn);
+                }
+                else if (count == 5)
+                {
+                    Guna2Button btn = new Guna2Button();
+                    btn.Text = $"Snack{count}";
+                    btn.Width = 164;
+                    btn.Height = 92;
+                    btn.Click += new EventHandler(SnackClick5);
+                    count++;
+                    flyo.Controls.Add(btn);
+                }
+
             }
             else
             {
@@ -301,5 +337,26 @@ namespace WndPL.Forms
             }
 
         }
+        private void SnackClick2(object sender,EventArgs e)
+        {
+            mealType = MealType.Snack2;
+            FillListViewConsumedFood(userID, mealType);
+        }
+        private void SnackClick3(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack3;
+            FillListViewConsumedFood(userID, mealType);
+        }
+        private void SnackClick4(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack4;
+            FillListViewConsumedFood(userID, mealType);
+        }
+        private void SnackClick5(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack5;
+            FillListViewConsumedFood(userID, mealType);
+        }
+        
     }
 }
