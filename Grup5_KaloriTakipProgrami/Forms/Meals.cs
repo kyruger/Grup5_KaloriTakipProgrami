@@ -273,5 +273,16 @@ namespace WndPL.Forms
 
 
         }
+
+        private void btnSnack_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack1;
+            FillListViewConsumedFood(userID, mealType);
+        }
+
+        private void btnAddSnack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

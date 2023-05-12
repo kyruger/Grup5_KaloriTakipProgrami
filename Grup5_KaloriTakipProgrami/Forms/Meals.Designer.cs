@@ -84,7 +84,7 @@
             btnLunch = new Guna.UI2.WinForms.Guna2Button();
             btnBreakFeast = new Guna.UI2.WinForms.Guna2Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            btnSnack = new Guna.UI2.WinForms.Guna2Button();
             btnAddSnack = new Guna.UI2.WinForms.Guna2Button();
             guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -374,27 +374,28 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(guna2Button9);
+            flowLayoutPanel1.Controls.Add(btnSnack);
             flowLayoutPanel1.Location = new Point(12, 151);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(968, 95);
             flowLayoutPanel1.TabIndex = 10;
             // 
-            // guna2Button9
+            // btnSnack
             // 
-            guna2Button9.CustomizableEdges = customizableEdges22;
-            guna2Button9.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(3, 3);
-            guna2Button9.Name = "guna2Button9";
-            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2Button9.Size = new Size(164, 92);
-            guna2Button9.TabIndex = 0;
-            guna2Button9.Text = "Snack1";
+            btnSnack.CustomizableEdges = customizableEdges22;
+            btnSnack.DisabledState.BorderColor = Color.DarkGray;
+            btnSnack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSnack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSnack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSnack.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSnack.ForeColor = Color.White;
+            btnSnack.Location = new Point(3, 3);
+            btnSnack.Name = "btnSnack";
+            btnSnack.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            btnSnack.Size = new Size(164, 92);
+            btnSnack.TabIndex = 0;
+            btnSnack.Text = "Snack1";
+            btnSnack.Click += btnSnack_Click;
             // 
             // btnAddSnack
             // 
@@ -411,6 +412,7 @@
             btnAddSnack.Size = new Size(132, 95);
             btnAddSnack.TabIndex = 11;
             btnAddSnack.Text = "Add Snack";
+            btnAddSnack.Click += btnAddSnack_Click;
             // 
             // guna2CircleProgressBar1
             // 
@@ -649,7 +651,7 @@
         private Guna.UI2.WinForms.Guna2Button btnLunch;
         private Guna.UI2.WinForms.Guna2Button btnBreakFeast;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button btnSnack;
         private Guna.UI2.WinForms.Guna2Button btnAddSnack;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
