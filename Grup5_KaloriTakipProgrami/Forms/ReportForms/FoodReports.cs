@@ -16,5 +16,10 @@ namespace WndPL.Forms.ReportForms
         {
             InitializeComponent();
         }
+
+        private void FoodReports_Load(object sender, EventArgs e)
+        {
+            lvSearchList.Hide();
+        }
     }
 }

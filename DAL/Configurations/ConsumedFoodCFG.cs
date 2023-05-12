@@ -158,6 +158,21 @@ namespace DAL.Configurations
                     FoodId = 1,
                 }
                 );
+
+            //var rand = new Random();
+            //var consumedFoods = new List<ConsumedFood>();
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    consumedFoods.Add(new ConsumedFood
+            //    {
+            //        ID = i,
+            //        MealType = (MealType)rand.Next(0, 3),
+            //        Day = rand.Next(1, 46),
+            //        UserId = rand.Next(1, 3),
+            //        FoodId = rand.Next(1, 31),
+            //    });
+            //}
+            //builder.HasData(consumedFoods);
         }
     }
 }

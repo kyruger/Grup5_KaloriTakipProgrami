@@ -24,7 +24,7 @@ namespace WndPL.Forms
         //    userId = id;
         //    user = bl.Users.GetById(userId);
         //}
-        int userId = 1;
+        int userId = 2;
         BusinessLogic bl = new BusinessLogic();
         Entities.User user;
         decimal currentWeight = 0;

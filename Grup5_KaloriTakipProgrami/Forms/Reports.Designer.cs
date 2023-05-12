@@ -64,6 +64,7 @@
             btnFoods.Size = new Size(180, 50);
             btnFoods.TabIndex = 0;
             btnFoods.Text = "Foods";
+            btnFoods.Click += btnFoods_Click;
             // 
             // btnMeals
             // 
