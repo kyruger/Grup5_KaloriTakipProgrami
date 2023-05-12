@@ -28,6 +28,7 @@ namespace WndPL.Forms
         int userID = 2;
         MealType mealType;
         int count;
+        int deleted;
 
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace WndPL.Forms
             cbxPortion.SelectedIndex = 0;
 
             count = 2;
+            deleted = 0;
 
 
 
@@ -250,7 +252,7 @@ namespace WndPL.Forms
 
             }
         }
-
+        
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
 
@@ -262,6 +264,7 @@ namespace WndPL.Forms
                     if (mealType.ToString()==btn.Text)
                     {
                         flyo.Controls.Remove(btn);
+                        count = count - 1;
                     }
                
                 }
