@@ -289,6 +289,8 @@ namespace WndPL.Forms
            
             Guna2Button btn =new Guna2Button();
             btn.Text = $"Snack{count}";
+            btn.Width = 164;
+            btn.Height = 92;
             count++;
             flyo.Controls.Add(btn);
         }
