@@ -286,13 +286,20 @@ namespace WndPL.Forms
 
         private void btnAddSnack_Click(object sender, EventArgs e)
         {
-           
-            Guna2Button btn =new Guna2Button();
-            btn.Text = $"Snack{count}";
-            btn.Width = 164;
-            btn.Height = 92;
-            count++;
-            flyo.Controls.Add(btn);
+            if (count<=5)
+            {
+                Guna2Button btn = new Guna2Button();
+                btn.Text = $"Snack{count}";
+                btn.Width = 164;
+                btn.Height = 92;
+                count++;
+                flyo.Controls.Add(btn);
+            }
+            else
+            {
+                MessageBox.Show("You can not add more than 5 Snack");
+            }
+
         }
     }
 }
