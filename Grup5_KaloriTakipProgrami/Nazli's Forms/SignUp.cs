@@ -64,7 +64,12 @@ namespace WndPL.Forms
                 else
                 {
                     MessageBox.Show("Sisteme başarıyla kayıt oldunuz.");
-                    return;
+                    User _user = new User();
+                    bl = new BusinessLogic();
+                    bl.Users.Add(_user);
+                    UserInformation userInfo = new();
+                    helper.HideAndShow(this, userInfo);
+                    
                 }
             }
 

@@ -57,7 +57,7 @@ namespace WndPL.Forms
                 MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign In' butonunu tıklayın.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
 
-            else if (/*user != null && */(user.Mail != txtEmail.Text) || (user.Password != txtPassword.Text))
+            else if (user != null && (user.Mail == txtEmail.Text && user.Password != txtPassword.Text))
             {
                 MessageBox.Show("kullanıcı adı ya da şifre yanlış", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 
