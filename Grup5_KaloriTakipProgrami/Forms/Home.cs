@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Castle.Core.Internal;
 using Entities;
 using Guna.Charts.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -23,7 +24,7 @@ namespace WndPL.Forms
         //    userId = id;
         //    user = bl.Users.GetById(userId);
         //}
-        int userId = 2;
+        int userId = 1;
         BusinessLogic bl = new BusinessLogic();
         Entities.User user;
         decimal currentWeight = 0;
@@ -130,7 +131,7 @@ namespace WndPL.Forms
 
         private void txtDaysRemaining_TextChanged(object sender, EventArgs e)
         {
-            if (txtDayGoal.Text.All(char.IsDigit))
+            if (txtDayGoal.Text.All(char.IsDigit) && !txtDayGoal.Text.IsNullOrEmpty())
             {
                 user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
                 bl.Users.Update(user);
@@ -180,8 +181,6 @@ namespace WndPL.Forms
         #endregion
 
 
-
-
         #region Helper Methods
         public int CalculateRemainingDay()
         {
@@ -192,14 +191,16 @@ namespace WndPL.Forms
         }
         public void FillDaysRemainingProgressBar()
         {
-            if (lblRemainingDay.Text != "0")
+            if (txtDayGoal.Text != "0")
             {
                 int remainingDay = CalculateRemainingDay();
                 txtDayGoal.Enabled = false;
                 txtGoalWeight.Enabled = false;
                 cpbDaysRemaining.Maximum = user.DayGoal;
                 cpbDaysRemaining.Value = user.DayGoal - remainingDay;
+                lblRemainingDay.Text = remainingDay.ToString();
             }
+
         }
         #endregion
     }

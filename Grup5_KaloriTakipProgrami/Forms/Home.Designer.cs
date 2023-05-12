@@ -522,7 +522,7 @@
             // lineData
             // 
             lineData.BorderColor = Color.Navy;
-            lineData.BorderWidth = 1;
+            lineData.BorderWidth = 2;
             lPoint4.Y = 3500D;
             lPoint5.Y = 3500D;
             lPoint6.Y = 3500D;
