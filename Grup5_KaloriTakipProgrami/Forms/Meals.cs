@@ -221,10 +221,57 @@ namespace WndPL.Forms
                     consumed.UserId = userID;
                     int foodId = bl.Foods.GetFoodIdByFoodName(lviDailyConsumedFood.Items[i].SubItems[0].Text);
                     consumed.FoodId = foodId;
+                    if (lviDailyConsumedFood.Items[i].SubItems[2].Text == "100Gram")
+                    {
+                        consumed.Quantity = Convert.ToInt32(lviDailyConsumedFood.Items[i].SubItems[3].Text);
+                    }
+                    else
+                    {
+
+                        consumed.PortionType = (PortionType)Enum.Parse(typeof(PortionType), lviDailyConsumedFood.Items[i].SubItems[2].Text);
+                        consumed.PortionCount = Convert.ToInt32(lviDailyConsumedFood.Items[i].SubItems[3].Text);
+                    }
+                    bool IsAdded = bl.ConsumedFoods.Add(consumed);
+                    if (IsAdded)
+                    {
+                        MessageBox.Show("The meal is saved");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The meal is not saved something go wrong");
+                    }
+
                 }
-                
+
 
             }
+        }
+
+        private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
+            {
+                if (lviDailyConsumedFood.Items[i].Tag != null)
+                {
+                    int id = (int)lviDailyConsumedFood.Items[i].Tag;
+                    bool isRemoved = bl.ConsumedFoods.Remove(id);
+                    ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
+                    Food food = bl.Foods.GetById(consumed.FoodId);
+                    if (isRemoved)
+                    {
+                        MessageBox.Show($"{food.Name} deleted from your meal");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"{food.Name} can't deleted from your meal something go wrong");
+                    }
+
+                }
+                lviDailyConsumedFood.Items.Clear();
+            }
+
+
+
         }
     }
 }
