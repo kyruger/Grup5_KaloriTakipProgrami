@@ -12,9 +12,13 @@ namespace WndPL.Forms
         {
             bool IsEmpty = false;
             foreach (var item in form.Controls)
+            {
+
                 if (item is TextBox txt)
-                    if (txt.Text == "")
+                    if (string.IsNullOrWhiteSpace(txt.Text))
+
                         IsEmpty = true;
+            }
             return IsEmpty;
         }
         public void HideAndShow(Form from1, Form form2)

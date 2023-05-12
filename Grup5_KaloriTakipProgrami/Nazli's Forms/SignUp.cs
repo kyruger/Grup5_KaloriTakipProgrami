@@ -32,6 +32,7 @@ namespace WndPL.Forms
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            var asdas = this;
             bool emptyControl = helper.AreTextBoxesEmpty(this);
             if (emptyControl)
             {

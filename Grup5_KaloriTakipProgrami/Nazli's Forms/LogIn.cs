@@ -51,10 +51,14 @@ namespace WndPL.Forms
             User user = new User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
-            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text && a.Password == txtPassword.Text);
+            
+            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text );
+            
             if (user == null)
             {
-                MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign In' butonunu tıklayın.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+
+                MessageBox.Show("Kullanıcı bulunamadı. \nKayıt olmak için lütfen 'Sign Up' butonunu tıklayın.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+
             }
 
             else if (user != null && (user.Mail == txtEmail.Text && user.Password != txtPassword.Text))
@@ -62,7 +66,7 @@ namespace WndPL.Forms
                 MessageBox.Show("kullanıcı adı ya da şifre yanlış", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 
             }
-            else /*if (user.Mail == txtEmail.Text && user.Password == txtPassword.Text)*/
+            else
             {
                 SignUp signUp = new();
                 helper.HideAndShow(this, signUp);
