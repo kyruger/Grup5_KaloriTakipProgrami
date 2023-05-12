@@ -253,6 +253,19 @@ namespace WndPL.Forms
 
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
+
+            foreach (Control control in flyo.Controls)
+            {
+                if(control is Guna2Button)
+                {
+                    Guna2Button btn = (Guna2Button)control;
+                    if (mealType.ToString()==btn.Text)
+                    {
+                        flyo.Controls.Remove(btn);
+                    }
+               
+                }
+            }                           
             for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
             {
                 if (lviDailyConsumedFood.Items[i].Tag != null)
