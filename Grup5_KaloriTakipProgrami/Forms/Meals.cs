@@ -195,26 +195,24 @@ namespace WndPL.Forms
 
         private void btnLunch_Click(object sender, EventArgs e)
         {
-            mealType=MealType.Lunch;    
+            mealType = MealType.Lunch;
             FillListViewConsumedFood(userID, mealType);
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
         {
             mealType = MealType.Dinner;
-            FillListViewConsumedFood(userID,mealType);
+            FillListViewConsumedFood(userID, mealType);
         }
 
         private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
         {
-           for(int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
+            for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
             {
-                int id = (int)lviDailyConsumedFood.Items[i].Tag;
-                bool control = bl.ConsumedFoods.IsExist(id);
-                if (!control)
+                if (lviDailyConsumedFood.Items[i].Tag == null)//tag null olursa idsı olmayan bir yiyecek demek
                 {
                     ConsumedFood consumed = new ConsumedFood();
-                    consumed.MealType=mealType;
+                    consumed.MealType = mealType;
 
                     Entities.User user = bl.Users.GetById(userID);
                     TimeSpan timePassed = DateTime.Now - user.CreationTime;
@@ -224,6 +222,8 @@ namespace WndPL.Forms
                     int foodId = bl.Foods.GetFoodIdByFoodName(lviDailyConsumedFood.Items[i].SubItems[0].Text);
                     consumed.FoodId = foodId;
                 }
+                
+
             }
         }
     }

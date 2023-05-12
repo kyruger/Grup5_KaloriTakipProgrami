@@ -136,6 +136,7 @@
             btnDeleteSelectedMeal.Size = new Size(225, 56);
             btnDeleteSelectedMeal.TabIndex = 2;
             btnDeleteSelectedMeal.Text = "Delete Selected Meal";
+            btnDeleteSelectedMeal.Click += btnDeleteSelectedMeal_Click;
             // 
             // btnSaveSelectedMeal
             // 
