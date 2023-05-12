@@ -2,6 +2,7 @@
 using Entities;
 using Entities.Enums;
 using Grup5_KaloriTakipProgrami;
+using Guna.UI2.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,8 @@ namespace WndPL.Forms
         int foodID;
         int userID = 2;
         MealType mealType;
+        int count;
+
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -56,6 +59,7 @@ namespace WndPL.Forms
             ListViewFillFood(foods);
             cbxPortion.SelectedIndex = 0;
 
+            count = 2;
 
 
 
@@ -282,7 +286,11 @@ namespace WndPL.Forms
 
         private void btnAddSnack_Click(object sender, EventArgs e)
         {
-
+           
+            Guna2Button btn =new Guna2Button();
+            btn.Text = $"Snack{count}";
+            count++;
+            flyo.Controls.Add(btn);
         }
     }
 }
