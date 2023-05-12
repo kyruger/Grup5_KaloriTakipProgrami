@@ -36,6 +36,7 @@ namespace WndPL.Forms
         }
         private void Home_Load(object sender, EventArgs e)
         {
+            lblRemainingDay.Text = "0";
             lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
             lblGoalCalorie.Text = user.DailyGoalCalorie.ToString();
             int leftCalorie = (int)(Convert.ToDouble(lblGoalCalorie.Text) - Convert.ToDouble(lblCalorie.Text));
@@ -129,15 +130,6 @@ namespace WndPL.Forms
             }
         }
 
-        private void txtDaysRemaining_TextChanged(object sender, EventArgs e)
-        {
-            if (txtDayGoal.Text.All(char.IsDigit) && !txtDayGoal.Text.IsNullOrEmpty())
-            {
-                user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
-                bl.Users.Update(user);
-            }
-
-        }
 
         #region txtDayGoal
         private void txtDayGoal_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,6 +138,16 @@ namespace WndPL.Forms
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtDayGoal_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDayGoal.Text.All(char.IsDigit) && !txtDayGoal.Text.IsNullOrEmpty())
+            {
+                user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
+                bl.Users.Update(user);
+            }
+
         }
 
         private void txtDayGoal_Leave(object sender, EventArgs e)

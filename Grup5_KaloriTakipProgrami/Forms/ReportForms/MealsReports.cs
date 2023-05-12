@@ -82,7 +82,7 @@ namespace WndPL.Forms.ReportForms
                 else if (lblMealType.Text == MealType.Dinner.ToString())
                     FillFoodCategoryDatas(MealType.Dinner, 7);
                 else
-                    FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+                    FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
                 //For colors switch
                 lblMealType.ForeColor = Color.Teal;
                 btnBreakfast.FillColor = Color.Teal;
@@ -91,6 +91,8 @@ namespace WndPL.Forms.ReportForms
                 btnOthers.FillColor = Color.Teal;
                 pnlStick.FillColor = Color.Teal;
                 pnlStick.FillColor2 = Color.Teal;
+                chartCalorie.Title.ForeColor = Color.Teal;
+
             }
             else
             {
@@ -102,7 +104,7 @@ namespace WndPL.Forms.ReportForms
                 else if (lblMealType.Text == MealType.Dinner.ToString())
                     FillFoodCategoryDatas(MealType.Dinner, 30);
                 else
-                    FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+                    FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
 
                 lblMealType.ForeColor = Color.MediumPurple;
                 btnBreakfast.FillColor = Color.MediumPurple;
@@ -111,6 +113,7 @@ namespace WndPL.Forms.ReportForms
                 btnOthers.FillColor = Color.MediumPurple;
                 pnlStick.FillColor = Color.MediumPurple;
                 pnlStick.FillColor2 = Color.MediumPurple;
+                chartCalorie.Title.ForeColor = Color.MediumPurple;
 
             }
         }
@@ -146,9 +149,9 @@ namespace WndPL.Forms.ReportForms
         {
             lblMealType.Text = "Others";
             if (!tsWeekMonth.Checked)
-                FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+                FillFoodCategoryDatas(7, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
             else
-                FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5, MealType.Snack6, MealType.Snack7);
+                FillFoodCategoryDatas(30, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
         }
 
         #region Helper Methods
@@ -280,7 +283,7 @@ namespace WndPL.Forms.ReportForms
             }
             lpUsersAvgCalorie.Y = Math.Round(totalUsersCalorieForDays / (day - emptyusersDays) / userCount, 2);
             barDataCalories2.DataPoints.Add(lpUsersAvgCalorie);
-        } 
+        }
         #endregion
 
         /* private void MealsReports_Load(object sender, EventArgs e)

@@ -355,7 +355,7 @@
             txtDayGoal.TabIndex = 4;
             txtDayGoal.TextAlign = HorizontalAlignment.Center;
             txtDayGoal.TextOffset = new Point(9, 0);
-            txtDayGoal.TextChanged += txtDaysRemaining_TextChanged;
+            txtDayGoal.TextChanged += txtDayGoal_TextChanged;
             txtDayGoal.KeyPress += txtDayGoal_KeyPress;
             txtDayGoal.Leave += txtDayGoal_Leave;
             // 
@@ -563,13 +563,13 @@
             // pnlStick
             // 
             pnlStick.BackColor = Color.Transparent;
-            pnlStick.BorderRadius = 8;
+            pnlStick.BorderRadius = 5;
             pnlStick.CustomizableEdges = customizableEdges17;
             pnlStick.FillColor = Color.Teal;
-            pnlStick.Location = new Point(441, 270);
+            pnlStick.Location = new Point(452, 269);
             pnlStick.Name = "pnlStick";
             pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            pnlStick.Size = new Size(16, 362);
+            pnlStick.Size = new Size(10, 362);
             pnlStick.TabIndex = 4;
             // 
             // lblProteinPercentage
