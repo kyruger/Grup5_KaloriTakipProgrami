@@ -39,7 +39,7 @@ namespace WndPL.Forms
 
             if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
             {
-                MessageBox.Show("İsim ve soyisimde nümerik değer giremezsiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lütfen geçerli bir isim giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -80,7 +80,7 @@ namespace WndPL.Forms
                     bl.Users.Add(_user);
                     UserInformation userInfo = new();
                     helper.HideAndShow(this, userInfo);
-                    
+
                 }
             }
 
