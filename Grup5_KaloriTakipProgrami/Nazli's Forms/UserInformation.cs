@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Entities.Enums;
 using FluentFTP.Helpers;
 using System;
 using System.Collections.Generic;
@@ -23,21 +24,32 @@ namespace WndPL.Forms
         Helper helper = new Helper();
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-
-            double lenght = Convert.ToDouble(txtLength.Text);
+            if(string.IsNullOrWhiteSpace(txtLength.Text) || string.IsNullOrWhiteSpace(txtWeight.Text))
+            {
+                MessageBox.Show("Boy ve kilo bilgilerini girmeden bu işlem gerçekleştirilemez.");
+            }
+            else
+            {
+                double lenght = Convert.ToDouble(txtLength.Text) / 100.0;
             double weight = Convert.ToDouble(txtWeight.Text);
 
             double bodyMassIndex = weight / (lenght * lenght);
 
-            Text = "Vücut Kitle İndeksi (BMI): " + bodyMassIndex.ToString("F2");
-            Show(this);
+            txtBodyMassIndex.Text = bodyMassIndex.ToString("0.00");
+                
+
+            }
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            bool emptyControl = helper.AreTextBoxesEmpty(this);
-            if (emptyControl)
+            //bool emptyControl = helper.AreTextBoxesEmpty(this);
+            //if (emptyControl)
+            //{
+            //    MessageBox.Show("Boy, kilo, hedef kilo, günlük kalori hedefi, gün hedefi ve yaş bilgilerini eksiksiz giriniz.");
+            //}
+            if(string.IsNullOrWhiteSpace(txtLength.Text) || string.IsNullOrWhiteSpace(txtWeight.Text) || string.IsNullOrWhiteSpace(txtDailyTargetCalories.Text) || string.IsNullOrWhiteSpace(txtDayTarget.Text) || string.IsNullOrWhiteSpace(txtAge.Text) || string.IsNullOrWhiteSpace(mtbTelephone.Text) || cmbGender.SelectedItem == null)
             {
-                MessageBox.Show("Boy, kilo, hedef kilo, günlük kalori hedefi, gün hedefi ve yaş bilgilerini eksiksiz giriniz.");
+                MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
             else
             {
@@ -68,12 +80,30 @@ namespace WndPL.Forms
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string filePath = openFileDialog.FileName;
-                Image selectedImage = Image.FromFile(filePath);
-                pbPhoto.Image = selectedImage;
+                string imagePath = openFileDialog.FileName;
+                Image originalImage = Image.FromFile(imagePath);
+                int maxWidth = 100;
+                int maxHeight = 100;
+
+                int newWidth, newHeight;
+                if (originalImage.Width > originalImage.Height)
+                {
+                    newWidth = maxWidth;
+                    newHeight = (int)(originalImage.Height * (float)newWidth / originalImage.Width);
+                }
+                else
+                {
+                    newHeight = maxHeight;
+                    newWidth = (int)(originalImage.Width * (float)newHeight / originalImage.Height);
+                }
+
+                Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
+
+                pbPhoto.Image = resizedImage;
+                pbPhoto.SizeMode = PictureBoxSizeMode.CenterImage;
+
             }
-
-
+          
         }
     }
 
