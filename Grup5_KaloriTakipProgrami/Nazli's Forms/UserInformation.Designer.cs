@@ -74,7 +74,7 @@
             txtDailyTargetCalories = new Guna.UI2.WinForms.Guna2TextBox();
             txtTargetWeight = new Guna.UI2.WinForms.Guna2TextBox();
             txtWeight = new Guna.UI2.WinForms.Guna2TextBox();
-            txtLength = new Guna.UI2.WinForms.Guna2TextBox();
+            txtHeight = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPhoto).BeginInit();
             SuspendLayout();
@@ -105,7 +105,7 @@
             guna2Panel2.Controls.Add(txtDailyTargetCalories);
             guna2Panel2.Controls.Add(txtTargetWeight);
             guna2Panel2.Controls.Add(txtWeight);
-            guna2Panel2.Controls.Add(txtLength);
+            guna2Panel2.Controls.Add(txtHeight);
             guna2Panel2.CustomizableEdges = customizableEdges29;
             guna2Panel2.Location = new Point(212, 2);
             guna2Panel2.Margin = new Padding(3, 4, 3, 4);
@@ -383,31 +383,31 @@
             txtWeight.Size = new Size(226, 50);
             txtWeight.TabIndex = 27;
             // 
-            // txtLength
+            // txtHeight
             // 
-            txtLength.BackColor = Color.WhiteSmoke;
-            txtLength.BorderRadius = 20;
-            txtLength.Cursor = Cursors.IBeam;
-            txtLength.CustomizableEdges = customizableEdges27;
-            txtLength.DefaultText = "";
-            txtLength.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtLength.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtLength.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtLength.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtLength.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLength.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLength.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLength.Location = new Point(30, 89);
-            txtLength.Margin = new Padding(3, 5, 3, 5);
-            txtLength.Name = "txtLength";
-            txtLength.PasswordChar = '\0';
-            txtLength.PlaceholderText = "Length";
-            txtLength.SelectedText = "";
-            txtLength.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txtLength.Size = new Size(226, 49);
-            txtLength.TabIndex = 26;
+            txtHeight.BackColor = Color.WhiteSmoke;
+            txtHeight.BorderRadius = 20;
+            txtHeight.Cursor = Cursors.IBeam;
+            txtHeight.CustomizableEdges = customizableEdges27;
+            txtHeight.DefaultText = "";
+            txtHeight.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtHeight.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtHeight.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtHeight.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtHeight.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtHeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtHeight.Location = new Point(30, 89);
+            txtHeight.Margin = new Padding(3, 5, 3, 5);
+            txtHeight.Name = "txtHeight";
+            txtHeight.PasswordChar = '\0';
+            txtHeight.PlaceholderText = "Height";
+            txtHeight.SelectedText = "";
+            txtHeight.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtHeight.Size = new Size(226, 49);
+            txtHeight.TabIndex = 26;
             // 
-            // UserSetting
+            // UserInformation
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -416,7 +416,7 @@
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "UserSetting";
+            Name = "UserInformation";
             Text = "PersonalInformation";
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
@@ -435,7 +435,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDailyTargetCalories;
         private Guna.UI2.WinForms.Guna2TextBox txtTargetWeight;
         private Guna.UI2.WinForms.Guna2TextBox txtWeight;
-        private Guna.UI2.WinForms.Guna2TextBox txtLength;
+        private Guna.UI2.WinForms.Guna2TextBox txtHeight;
         private Guna.UI2.WinForms.Guna2Button btnAddPhoto;
         private Guna.UI2.WinForms.Guna2TextBox txtAge;
         private System.Windows.Forms.MaskedTextBox mtbTelephone;

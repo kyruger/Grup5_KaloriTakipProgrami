@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Enums
+namespace User.Enums
 {
     public enum Gender
     {

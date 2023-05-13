@@ -1,6 +1,10 @@
 ﻿using BLL;
-using Entities.Enums;
+using DAL;
+using User;
+using User.Enums;
+using User.Models;
 using FluentFTP.Helpers;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,59 +25,85 @@ namespace WndPL.Forms
         {
             InitializeComponent();
         }
+        User.User user = new User.User();
+        BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
+
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtLength.Text) || string.IsNullOrWhiteSpace(txtWeight.Text))
+            if (string.IsNullOrWhiteSpace(txtHeight.Text) || string.IsNullOrWhiteSpace(txtWeight.Text))
             {
                 MessageBox.Show("Boy ve kilo bilgilerini girmeden bu işlem gerçekleştirilemez.");
             }
             else
             {
-                double lenght = Convert.ToDouble(txtLength.Text) / 100.0;
-            double weight = Convert.ToDouble(txtWeight.Text);
 
-            double bodyMassIndex = weight / (lenght * lenght);
-
-            txtBodyMassIndex.Text = bodyMassIndex.ToString("0.00");
-                
+                double height = Convert.ToDouble(txtHeight.Text) / 100.0;
+                double weight = Convert.ToDouble(txtHeight.Text);
+                double bodyMassIndex = weight / (height * height);
+                txtBodyMassIndex.Text = bodyMassIndex.ToString("0.00");
 
             }
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //bool emptyControl = helper.AreTextBoxesEmpty(this);
-            //if (emptyControl)
-            //{
-            //    MessageBox.Show("Boy, kilo, hedef kilo, günlük kalori hedefi, gün hedefi ve yaş bilgilerini eksiksiz giriniz.");
-            //}
-            if(string.IsNullOrWhiteSpace(txtLength.Text) || string.IsNullOrWhiteSpace(txtWeight.Text) || string.IsNullOrWhiteSpace(txtDailyTargetCalories.Text) || string.IsNullOrWhiteSpace(txtDayTarget.Text) || string.IsNullOrWhiteSpace(txtAge.Text) || string.IsNullOrWhiteSpace(mtbTelephone.Text) || cmbGender.SelectedItem == null)
+
+            if (AreFieldsEmpty())
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
+
             else
             {
+                decimal height = Convert.ToDecimal(txtHeight.Text);
+                decimal weight = Convert.ToDecimal(txtWeight.Text);
+                decimal goalWeight = Convert.ToDecimal(txtTargetWeight.Text);
+                int dailyTargetCalories = Convert.ToInt32(txtDailyTargetCalories.Text);
+                int age = Convert.ToInt32(txtAge.Text);
+                string? phoneNumber = mtbTelephone.Text;
+                Gender gender = (Gender)cmbGender.SelectedItem;
 
-                string length = txtLength.Text;
-                string Weight = txtWeight.Text;
-                string TargetWeight = txtTargetWeight.Text;
-                string DailyTargetCalories = txtDailyTargetCalories.Text;
-                string Age = txtAge.Text;
-                string phoneNumber = mtbTelephone.Text;
-                //string gender = Enums.Gender.Female.ToString();
+                using (var dbContext = new CalorieTrackingDbContext())
+                {
 
+                    BusinessLogic bl = new BusinessLogic();
+
+                    User.User user = new User.User()
+                    {
+                        Height = height,
+                        Weight = weight,
+                        GoalWeight = goalWeight,
+                        DailyGoalCalorie = dailyTargetCalories,
+                        Age = age,
+                        PhoneNumber = phoneNumber,
+                        Gender = gender
+                    };
+
+
+                    bool result = bl.Users.Add(user);
+
+                    if (result)
+                    {
+
+                        MessageBox.Show("Ekleme başarılı.");
+
+                    }
+
+                    else
+                    {
+
+                        MessageBox.Show("Ekleme başarısız.");
+
+                    }
+
+                }
             }
+
+
         }
-
-        private void btnSkip_Click(object sender, EventArgs e)
-        {
-            SignUp signUp = new SignUp();
-            helper.HideAndShow(this, signUp);
-        }
-
-
         private void btnAddPhoto_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif";
             openFileDialog.Title = "Fotoğraf Seç";
@@ -98,12 +128,37 @@ namespace WndPL.Forms
                 }
 
                 Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
-
                 pbPhoto.Image = resizedImage;
                 pbPhoto.SizeMode = PictureBoxSizeMode.CenterImage;
 
             }
-          
+
+        }
+
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+
+            SignUp signUp = new SignUp();
+            helper.HideAndShow(this, signUp);
+
+        }
+
+        private bool AreFieldsEmpty()
+        {
+            if (string.IsNullOrWhiteSpace(txtHeight.Text) ||
+                string.IsNullOrWhiteSpace(txtWeight.Text) ||
+                string.IsNullOrWhiteSpace(txtDailyTargetCalories.Text) ||
+                string.IsNullOrWhiteSpace(txtDayTarget.Text) ||
+                string.IsNullOrWhiteSpace(txtAge.Text) ||
+                string.IsNullOrWhiteSpace(mtbTelephone.Text) ||
+                cmbGender.SelectedItem == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 

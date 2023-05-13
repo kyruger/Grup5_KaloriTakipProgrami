@@ -1,5 +1,5 @@
 ﻿using BLL;
-using Entities;
+using User;
 using Guna.Charts.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
@@ -25,7 +25,7 @@ namespace WndPL.Forms
         //}
         int userId = 2;
         BusinessLogic bl = new BusinessLogic();
-        Entities.User user;
+        User.User user;
         decimal currentWeight = 0;
 
         public Home()
@@ -35,6 +35,12 @@ namespace WndPL.Forms
         }
         private void Home_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            //User user = bl.Users.GetById(userId);
+            //lblCalorie.Text =                //Öğünlerden hesapla çekilecek
+
+
+=======
             lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
             lblGoalCalorie.Text = user.DailyGoalCalorie.ToString();
             int leftCalorie = (int)(Convert.ToDouble(lblGoalCalorie.Text) - Convert.ToDouble(lblCalorie.Text));
@@ -118,6 +124,7 @@ namespace WndPL.Forms
             {
                 lpLinePoints[i].Y = Convert.ToDouble(lblCalorie.Text);
             }
+>>>>>>> EnesBranch
         }
 
         private void txtWeightTexts_KeyPress(object sender, KeyPressEventArgs e)

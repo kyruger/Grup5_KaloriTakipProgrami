@@ -1,6 +1,6 @@
 ﻿using BLL;
 using Castle.DynamicProxy.Generators;
-using Entities.Enums;
+using User.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

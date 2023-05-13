@@ -1,12 +1,12 @@
-﻿using Entities.Enums;
-using Entities.Models;
+﻿using User.Enums;
+using User.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities
+namespace User
 {
     public class ConsumedFood : BaseClass
     {

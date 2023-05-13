@@ -1,5 +1,5 @@
 ﻿using BLL;
-using Entities;
+using User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +20,9 @@ namespace WndPL.Forms
             InitializeComponent();
         }
         BusinessLogic bl = new BusinessLogic();
-        User user = new User();
+        User.User user = new User.User();
         Helper helper = new Helper();
-        //Food food = new Food();
-        //food.ImageResource = File.ReadAllBytes("image.jpg");
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -48,7 +47,7 @@ namespace WndPL.Forms
                 MessageBox.Show("Eksik bilgi girdiniz. \nLütfen tüm alanları doldurunuz.");
                 return;
             }
-            User user = new User();
+            User.User user = new User.User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
             
