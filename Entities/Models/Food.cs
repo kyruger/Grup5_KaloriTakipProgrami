@@ -27,4 +27,4 @@ namespace User
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
-}
+} 

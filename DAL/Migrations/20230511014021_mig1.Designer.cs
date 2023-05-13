@@ -12,13 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(CalorieTrackingDbContext))]
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-    [Migration("20230511152436_init")]
-    partial class init
-========
-    [Migration("20230511160101_v1")]
-    partial class v1
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+    [Migration("20230511014021_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,11 +72,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 1,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2174),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4151),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3895),
                             Day = 1,
                             FoodId = 1,
                             MealType = 3,
@@ -92,11 +83,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 2,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2185),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4176),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3904),
                             Day = 1,
                             FoodId = 2,
                             MealType = 3,
@@ -107,11 +94,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 3,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2187),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4177),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3905),
                             Day = 1,
                             FoodId = 3,
                             MealType = 2,
@@ -122,11 +105,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 4,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2188),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4178),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3906),
                             Day = 2,
                             FoodId = 1,
                             MealType = 2,
@@ -137,11 +116,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 5,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2189),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4183),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3906),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
@@ -152,11 +127,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 6,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2190),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4184),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3907),
                             Day = 2,
                             FoodId = 2,
                             MealType = 3,
@@ -167,11 +138,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 7,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2191),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4186),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3908),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
@@ -182,11 +149,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 8,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2192),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4187),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3908),
                             Day = 3,
                             FoodId = 1,
                             MealType = 1,
@@ -197,11 +160,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 9,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2193),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4189),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3909),
                             Day = 5,
                             FoodId = 3,
                             MealType = 3,
@@ -212,14 +171,10 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 10,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2194),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4190),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
-                            Day = 1,
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3910),
+                            Day = 2,
                             FoodId = 3,
-                            MealType = 1,
+                            MealType = 2,
                             PortionCount = 0,
                             Quantity = 2,
                             UserId = 2
@@ -227,11 +182,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 11,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2195),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4191),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3911),
                             Day = 2,
                             FoodId = 2,
                             MealType = 2,
@@ -242,11 +193,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 12,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2196),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4193),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3911),
                             Day = 1,
                             FoodId = 3,
                             MealType = 1,
@@ -258,14 +205,10 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 13,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2198),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4195),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3912),
                             Day = 2,
                             FoodId = 1,
-                            MealType = 1,
+                            MealType = 3,
                             PortionCount = 0,
                             Quantity = 1,
                             UserId = 2
@@ -273,11 +216,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 14,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2199),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4196),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3913),
                             Day = 4,
                             FoodId = 3,
                             MealType = 2,
@@ -288,11 +227,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 15,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2199),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4198),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3914),
                             Day = 4,
                             FoodId = 2,
                             MealType = 2,
@@ -303,11 +238,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 16,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2200),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4199),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3914),
                             Day = 4,
                             FoodId = 1,
                             MealType = 1,
@@ -318,11 +249,7 @@ namespace DAL.Migrations
                         new
                         {
                             ID = 17,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(2201),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(4200),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(3915),
                             Day = 5,
                             FoodId = 1,
                             MealType = 1,
@@ -384,11 +311,7 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 300.1546m,
                             CarbonhydrateAmountFor100Gram = 69m,
                             Category = 12,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3061),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(5016),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4447),
                             FatRateFor100Gram = 14m,
                             Name = "Hamburger",
                             PortionGram = 190m,
@@ -400,11 +323,7 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 186m,
                             CarbonhydrateAmountFor100Gram = 30.51m,
                             Category = 12,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3075),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(5034),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4456),
                             FatRateFor100Gram = 4.33m,
                             Name = "Pizza",
                             PortionGram = 38m,
@@ -416,11 +335,7 @@ namespace DAL.Migrations
                             CalorieFor100Gram = 170m,
                             CarbonhydrateAmountFor100Gram = 29.71m,
                             Category = 9,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(3080),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(5042),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(4461),
                             FatRateFor100Gram = 3.5m,
                             Name = "Mantı",
                             PortionGram = 190m,
@@ -495,11 +410,7 @@ namespace DAL.Migrations
                         {
                             ID = 1,
                             Age = 27,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(6125),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(7739),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(6069),
                             DailyGoalCalorie = 3000,
                             DayGoal = 0,
                             FirstName = "Enes",
@@ -516,11 +427,7 @@ namespace DAL.Migrations
                         {
                             ID = 2,
                             Age = 24,
-<<<<<<<< HEAD:DAL/Migrations/20230511152436_init.Designer.cs
-                            CreationTime = new DateTime(2023, 5, 11, 18, 24, 36, 2, DateTimeKind.Local).AddTicks(6138),
-========
-                            CreationTime = new DateTime(2023, 5, 11, 19, 1, 0, 816, DateTimeKind.Local).AddTicks(7753),
->>>>>>>> Baran_Brench:DAL/Migrations/20230511160101_v1.Designer.cs
+                            CreationTime = new DateTime(2023, 5, 11, 4, 40, 21, 690, DateTimeKind.Local).AddTicks(6077),
                             DailyGoalCalorie = 3500,
                             DayGoal = 30,
                             FirstName = "Baran",
