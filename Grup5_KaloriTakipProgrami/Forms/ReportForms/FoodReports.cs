@@ -31,7 +31,6 @@ namespace WndPL.Forms.ReportForms
         {
 
             lvSearchedFoods.Items.Clear();
-            lvSearchedFoods.Show();
             List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
             foreach (var food in searchedFoods)
             {
@@ -41,11 +40,11 @@ namespace WndPL.Forms.ReportForms
                 lv1.SubItems.Add(food.Category.ToString());
                 lvSearchedFoods.Items.Add(lv1);
             }
+            lvSearchedFoods.Show();
         }
 
         private void txtFoodSearch_Leave(object sender, EventArgs e)
         {
-            txtFoodSearch.Clear();
             lvSearchedFoods.Hide();
             if (lvSearchedFoods.SelectedItems.Count > 0)
             {
@@ -62,8 +61,9 @@ namespace WndPL.Forms.ReportForms
                 bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Breakfast, MealType.Lunch, MealType.Dinner, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
                 txtPlace.Text = place.ToString();
                 lblTotalFoodCount.Text = totalCount.ToString();
-
             }
+            lblFoodSearch.Show();
+
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -109,6 +109,17 @@ namespace WndPL.Forms.ReportForms
             txtPlace.Text = place.ToString();
             lblTotalFoodCount.Text = totalCount.ToString();
             lblMealType.Text = "Others";
+        }
+
+        private void lblFoodSearch_Click(object sender, EventArgs e)
+        {
+            lblFoodSearch.Hide();
+            txtFoodSearch.Focus();
+        }
+
+        private void txtFoodSearch_Enter(object sender, EventArgs e)
+        {
+            lblFoodSearch.Hide();
         }
 
         /*public void FillPlaceAndQuantity(MealType[] mealTypes)
