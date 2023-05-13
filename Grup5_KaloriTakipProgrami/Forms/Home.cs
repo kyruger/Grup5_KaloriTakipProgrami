@@ -53,10 +53,7 @@ namespace WndPL.Forms
             txtGoalWeight.Text = user.GoalWeight.ToString();
             int remainingDay = CalculateRemainingDay();
             if (remainingDay > 0)
-            {
-                user.DayGoal = remainingDay;
                 lblRemainingDay.Text = remainingDay.ToString();
-            }
             else
             {
                 lblRemainingDay.Text = "0";
