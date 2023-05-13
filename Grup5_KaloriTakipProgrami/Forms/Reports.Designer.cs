@@ -64,6 +64,7 @@
             btnFoods.Size = new Size(180, 50);
             btnFoods.TabIndex = 0;
             btnFoods.Text = "Foods";
+            btnFoods.Click += btnFoods_Click;
             // 
             // btnMeals
             // 
@@ -140,6 +141,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Reports";
             Text = "Reports";
+            Load += Reports_Load;
             pnlTop.ResumeLayout(false);
             ResumeLayout(false);
         }

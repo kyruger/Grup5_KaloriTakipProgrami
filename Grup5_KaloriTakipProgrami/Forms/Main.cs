@@ -19,6 +19,10 @@ namespace WndPL.Forms
         Helper helper = new Helper();
         private void Main_Load(object sender, EventArgs e)
         {
+            Home homeForm = new Home();
+            helper.ShowPanel(homeForm, pnlMain);
+            btnActivity.Enabled = false;
+            btnDiets.Enabled = false;
             //Home homeForm = new Home();
             //helper.ShowPanel(homeForm, pnlMain);
         }

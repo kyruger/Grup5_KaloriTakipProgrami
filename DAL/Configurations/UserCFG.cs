@@ -28,6 +28,7 @@ namespace DAL.Configurations
                 new User
                 {
                     ID =1,
+                    CreationTime = new DateTime(2023, 4, 18, 14, 30, 0),
                     Mail = "eneskurt@bilgeadam.com",
                     Password = "12345",
                     FirstName = "Enes",
@@ -43,6 +44,7 @@ namespace DAL.Configurations
                 new User
                 {
                     ID =2,
+                    CreationTime = new DateTime(2023, 4, 18, 14, 30, 0),
                     Mail = "baranoguz@bilgeadam.com",
                     Password = "12345",
                     FirstName = "Baran",
@@ -55,6 +57,57 @@ namespace DAL.Configurations
                     Weight = Convert.ToDecimal(73),
                     GoalWeight = 80,
                     Height =185,
+                },
+                new User
+                {
+                    ID =3,
+                    CreationTime = new DateTime(2023, 4, 18, 14, 30, 0),
+                    Mail = "nazlikoc@bilgeadam.com",
+                    Password = "12345",
+                    FirstName = "Nazli",
+                    LastName = "Koc",
+                    Gender = Gender.Female,
+                    Age = 30,
+                    DayGoal =0,
+                    DailyGoalCalorie = 2500,
+                    PhoneNumber = "22222",
+                    Weight = Convert.ToDecimal(47),
+                    GoalWeight = 45,
+                    Height =165,
+                },
+                new User
+                {
+                    ID =4,
+                    CreationTime = new DateTime(2023, 4, 18, 14, 30, 0),
+                    Mail = "erdincdincer@bilgeadam.com",
+                    Password = "12345",
+                    FirstName = "Erdinç",
+                    LastName = "Dincer",
+                    Gender = Gender.Male,
+                    Age = 35,
+                    DayGoal =60,
+                    DailyGoalCalorie = 3200,
+                    PhoneNumber = "3333333",
+                    Weight = Convert.ToDecimal(85),
+                    GoalWeight = 80,
+                    Height =180,
+                },
+                new User
+                {
+                    ID =5,
+                    CreationTime = new DateTime(2023, 4, 18, 14, 30, 0),
+                    Mail = "yilmazuslu@bilgeadam.com",
+                    Password = "12345",
+                    FirstName = "Yılmaz",
+                    LastName = "Uslu",
+                    Gender = Gender.Male,
+                    Age = 45,
+                    DayGoal =0,
+                    DailyGoalCalorie = 2800,
+                    PhoneNumber = "22222",
+                    Weight = Convert.ToDecimal(75),
+                    GoalWeight = 65,
+                    Height =175,
                 }
                 ); 
         }

@@ -1,4 +1,6 @@
 ﻿using BLL;
+using Castle.Core.Internal;
+using Entities;
 using User;
 using Guna.Charts.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -35,12 +37,6 @@ namespace WndPL.Forms
         }
         private void Home_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //User user = bl.Users.GetById(userId);
-            //lblCalorie.Text =                //Öğünlerden hesapla çekilecek
-
-
-=======
             lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
             lblGoalCalorie.Text = user.DailyGoalCalorie.ToString();
             int leftCalorie = (int)(Convert.ToDouble(lblGoalCalorie.Text) - Convert.ToDouble(lblCalorie.Text));
@@ -58,8 +54,8 @@ namespace WndPL.Forms
             int remainingDay = CalculateRemainingDay();
             if (remainingDay > 0)
                 lblRemainingDay.Text = remainingDay.ToString();
-            //else
-            //    lblRemainingDay.Text = "0";
+            else
+                lblRemainingDay.Text = "0";
 
             // fill DailyRemaining circle progress bar
             FillDaysRemainingProgressBar();
@@ -135,15 +131,6 @@ namespace WndPL.Forms
             }
         }
 
-        private void txtDaysRemaining_TextChanged(object sender, EventArgs e)
-        {
-            if (txtDayGoal.Text.All(char.IsDigit))
-            {
-                user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
-                bl.Users.Update(user);
-            }
-
-        }
 
         #region txtDayGoal
         private void txtDayGoal_KeyPress(object sender, KeyPressEventArgs e)
@@ -152,6 +139,16 @@ namespace WndPL.Forms
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtDayGoal_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDayGoal.Text.All(char.IsDigit) && !txtDayGoal.Text.IsNullOrEmpty())
+            {
+                user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
+                bl.Users.Update(user);
+            }
+
         }
 
         private void txtDayGoal_Leave(object sender, EventArgs e)
@@ -174,7 +171,6 @@ namespace WndPL.Forms
 
         private void txtCurrentWeight_Leave(object sender, EventArgs e)
         {
-            //if (System.Text.RegularExpressions.Regex.IsMatch(txtCurrentWeight.Text, "^[0-9.]*$"))
             if (char.IsDigit(txtCurrentWeight.Text[0]) && char.IsDigit(txtCurrentWeight.Text[^1]))
             {
                 user.Weight = Convert.ToDecimal(txtCurrentWeight.Text);
@@ -187,8 +183,6 @@ namespace WndPL.Forms
         #endregion
 
 
-
-
         #region Helper Methods
         public int CalculateRemainingDay()
         {
@@ -199,14 +193,16 @@ namespace WndPL.Forms
         }
         public void FillDaysRemainingProgressBar()
         {
-            if (lblRemainingDay.Text != "0")
+            if (txtDayGoal.Text != "0")
             {
                 int remainingDay = CalculateRemainingDay();
                 txtDayGoal.Enabled = false;
                 txtGoalWeight.Enabled = false;
                 cpbDaysRemaining.Maximum = user.DayGoal;
                 cpbDaysRemaining.Value = user.DayGoal - remainingDay;
+                lblRemainingDay.Text = remainingDay.ToString();
             }
+
         }
         #endregion
     }

@@ -15,8 +15,6 @@ namespace User.Enums
         Snack2,
         Snack3,
         Snack4,
-        Snack5,
-        Snack6,
-        Snack7
+        Snack5
     }
 }
