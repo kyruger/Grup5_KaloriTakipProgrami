@@ -31,7 +31,7 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(1, 6),
-                    Quantity = rand.Next(0, 5),
+                    Quantity = rand.Next(1, 5),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
                     FoodId = rand.Next(1, 29),
@@ -43,7 +43,7 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(1, 6),
-                    PortionCount = rand.Next(0, 5),
+                    PortionCount = rand.Next(1, 5),
                     PortionType = (PortionType)rand.Next(1, 4),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
