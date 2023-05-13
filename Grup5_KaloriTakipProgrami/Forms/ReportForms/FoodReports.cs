@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using Entities;
+using Entities.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +19,95 @@ namespace WndPL.Forms.ReportForms
         {
             InitializeComponent();
         }
-
+        BusinessLogic bl = new BusinessLogic();
+        Helper helper = new Helper();
+        int foodId;
         private void FoodReports_Load(object sender, EventArgs e)
         {
-            lvSearchList.Hide();
+
+        }
+
+        private void txtFoodSearch_TextChanged(object sender, EventArgs e)
+        {
+            lvSearchedFoods.Items.Clear();
+            lvSearchedFoods.Show();
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
+            foreach (var food in searchedFoods)
+            {
+                ListViewItem lv1 = new ListViewItem();
+                lv1.Tag = food.ID;
+                lv1.Text = food.Name;
+                lv1.SubItems.Add(food.Category.ToString());
+                lvSearchedFoods.Items.Add(lv1);
+            }
+        }
+
+        private void txtFoodSearch_Leave(object sender, EventArgs e)
+        {
+            txtFoodSearch.Clear();
+            lvSearchedFoods.Hide();
+            if (lvSearchedFoods.SelectedItems.Count > 0)
+            {
+                lblFoodName.Text = lvSearchedFoods.SelectedItems[0].Text;
+                foodId = (int)lvSearchedFoods.SelectedItems[0].Tag;
+                Food selectedFood = bl.Foods.GetById(foodId);
+                txtCalorie.Text = selectedFood.CalorieFor100Gram.ToString();
+                txtCategory.Text = selectedFood.Category.ToString();
+                txtPortion.Text = selectedFood.PortionGram.ToString();
+                txtProtein.Text = selectedFood.ProteinRateFor100Gram.ToString();
+                txtFat.Text = selectedFood.FatRateFor100Gram.ToString();
+                txtCarbohydrate.Text = selectedFood.CarbonhydrateAmountFor100Gram.ToString();
+                txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Breakfast, MealType.Lunch, MealType.Dinner, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5).ToString();
+                bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Breakfast, MealType.Lunch, MealType.Dinner, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
+                txtPlace.Text = place.ToString();
+                lblTotalFoodCount.Text = totalCount.ToString();
+
+            }
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Breakfast, MealType.Lunch, MealType.Dinner, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Breakfast, MealType.Lunch, MealType.Dinner, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
+            txtPlace.Text = place.ToString();
+            lblTotalFoodCount.Text = totalCount.ToString();
+            lblMealType.Text = "All";
+        }
+
+        private void btnBreakfast_Click(object sender, EventArgs e)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Breakfast).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Breakfast);
+            txtPlace.Text = place.ToString();
+            lblTotalFoodCount.Text = totalCount.ToString();
+            lblMealType.Text = MealType.Breakfast.ToString();
+        }
+
+        private void btnLunch_Click(object sender, EventArgs e)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Lunch).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Lunch);
+            txtPlace.Text = place.ToString();
+            lblTotalFoodCount.Text = totalCount.ToString();
+            lblMealType.Text = MealType.Lunch.ToString();
+        }
+
+        private void btnDinner_Click(object sender, EventArgs e)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Dinner).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Dinner);
+            txtPlace.Text = place.ToString();
+            lblTotalFoodCount.Text = totalCount.ToString();
+            lblMealType.Text = MealType.Dinner.ToString();
+        }
+
+        private void btnOthers_Click(object sender, EventArgs e)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
+            txtPlace.Text = place.ToString();
+            lblTotalFoodCount.Text = totalCount.ToString();
+            lblMealType.Text = "Others";
         }
     }
 }
