@@ -29,6 +29,7 @@ namespace WndPL.Forms.ReportForms
 
         private void txtFoodSearch_TextChanged(object sender, EventArgs e)
         {
+
             lvSearchedFoods.Items.Clear();
             lvSearchedFoods.Show();
             List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
@@ -109,5 +110,30 @@ namespace WndPL.Forms.ReportForms
             lblTotalFoodCount.Text = totalCount.ToString();
             lblMealType.Text = "Others";
         }
+
+        /*public void FillPlaceAndQuantity(MealType[] mealTypes)
+        {
+            txtQuantity.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, mealTypes).ToString();
+            bl.ConsumedFoods.GetFoodConsumedPlaceAndTotalByFoodId(foodId, out int place, out int totalCount, mealTypes);
+            if(mealTypes.Count() == 1)
+            {
+                txtPlace.Text = place.ToString();
+                lblTotalFoodCount.Text = totalCount.ToString();
+                lblMealType.Text = mealTypes[0].ToString();
+            }
+            else if (mealTypes.Count() > 5)
+            {
+                txtPlace.Text = place.ToString();
+                lblTotalFoodCount.Text = totalCount.ToString();
+                lblMealType.Text = "All";
+            }
+            else
+            {
+                txtPlace.Text = place.ToString();
+                lblTotalFoodCount.Text = totalCount.ToString();
+                lblMealType.Text = "Others";
+            }
+        }
+        */
     }
 }

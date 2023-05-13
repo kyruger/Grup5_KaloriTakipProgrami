@@ -12,167 +12,45 @@ namespace DAL.Configurations
 {
     public class ConsumedFoodCFG : IEntityTypeConfiguration<ConsumedFood>
     {
+
         public void Configure(EntityTypeBuilder<ConsumedFood> builder)
         {
             builder.Property(x => x.Quantity).HasDefaultValue(0);
             builder.Property(x => x.PortionCount).HasDefaultValue(0);
-            builder.HasData(
-                new ConsumedFood
-                {
-                    ID =1,
-                    MealType = MealType.Dinner,
-                    Day = 1,
-                    UserId = 1,
-                    FoodId = 1,
-                },              
-                new ConsumedFood
-                {
-                    ID =2,
-                    MealType = MealType.Dinner,
-                    Day = 1,
-                    UserId = 1,
-                    FoodId = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =3,
-                    MealType = MealType.Lunch,
-                    Day = 1,
-                    UserId = 1,
-                    FoodId = 3,
-                },
-                new ConsumedFood
-                {
-                    ID =4,
-                    MealType = MealType.Lunch,
-                    Day = 2,
-                    UserId = 1,
-                    FoodId = 1,
-                },
-                new ConsumedFood
-                {
-                    ID =5,
-                    MealType = MealType.Lunch,
-                    Day = 2,
-                    UserId = 1,
-                    FoodId = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =6,
-                    MealType = MealType.Dinner,
-                    Day = 2,
-                    UserId = 1,
-                    FoodId = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =7,
-                    MealType = MealType.Breakfast,
-                    Day = 3,
-                    UserId = 1,
-                    FoodId = 1,
-                },
-                new ConsumedFood
-                {
-                    ID =8,
-                    MealType = MealType.Breakfast,
-                    Day = 3,
-                    UserId = 1,
-                    FoodId = 1,
-                },
-                new ConsumedFood
-                {
-                    ID =9,
-                    MealType = MealType.Dinner,
-                    Day = 5,
-                    UserId = 1,
-                    FoodId = 3,
-                },
-                new ConsumedFood
-                {
-                    ID =10,
-                    MealType = MealType.Breakfast,
-                    Day = 1,
-                    UserId = 2,
-                    FoodId = 3,
-                    Quantity = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =11,
-                    MealType = MealType.Lunch,
-                    Day = 2,
-                    UserId = 2,
-                    FoodId = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =12,
-                    MealType = MealType.Breakfast,
-                    Day = 1,
-                    UserId = 2,
-                    FoodId = 3,
-                    PortionCount = 1,
-                    PortionType = PortionType.Half
-                },
-                new ConsumedFood
-                {
-                    ID =13,
-                    MealType = MealType.Breakfast,
-                    Day = 2,
-                    UserId = 2,
-                    FoodId = 1,
-                    Quantity= 1,
-                },
-                new ConsumedFood
-                {
-                    ID =14,
-                    MealType = MealType.Lunch,
-                    Day = 4,
-                    UserId = 2,
-                    FoodId = 3,
-                },
-                new ConsumedFood
-                {
-                    ID =15,
-                    MealType = MealType.Lunch,
-                    Day = 4,
-                    UserId = 2,
-                    FoodId = 2,
-                },
-                new ConsumedFood
-                {
-                    ID =16,
-                    MealType = MealType.Breakfast,
-                    Day = 4,
-                    UserId = 2,
-                    FoodId = 1,
-                },
-                new ConsumedFood
-                {
-                    ID =17,
-                    MealType = MealType.Breakfast,
-                    Day = 5,
-                    UserId = 2,
-                    FoodId = 1,
-                }
-                );
+            builder.HasData(RandomData());
 
-            //var rand = new Random();
-            //var consumedFoods = new List<ConsumedFood>();
-            //for (int i = 1; i <= 100; i++)
-            //{
-            //    consumedFoods.Add(new ConsumedFood
-            //    {
-            //        ID = i,
-            //        MealType = (MealType)rand.Next(0, 3),
-            //        Day = rand.Next(1, 46),
-            //        UserId = rand.Next(1, 3),
-            //        FoodId = rand.Next(1, 31),
-            //    });
-            //}
-            //builder.HasData(consumedFoods);
         }
+
+        public List<ConsumedFood> RandomData()
+        {
+            Random rand = new Random();
+            var consumedFoods = new List<ConsumedFood>();
+            for (int i = 1; i <= 1500; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(1, 6),
+                    Quantity = rand.Next(0, 5),
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+            for (int i = 1501; i <= 3000; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(1, 6),
+                    PortionCount = rand.Next(0, 5),
+                    PortionType = (PortionType)rand.Next(1, 4),
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+            return consumedFoods;
+        }        
     }
 }
