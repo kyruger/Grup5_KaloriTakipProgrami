@@ -92,7 +92,7 @@ namespace WndPL.Forms.ReportForms
                     lPoint.Label = ((MealType)(i + 1)).ToString();
                     int totalQuantity1 = bl.ConsumedFoods.GetFoodConsumedTotalQuantityByFoodId(foodId, (MealType)(i + 1));
                     int totalPortionCount1 = bl.ConsumedFoods.GetFoodConsumedTotalPortionCountByFoodId(foodId, (MealType)(i + 1));
-                    double dailyConsumeAmount = totalQuantity1  + totalPortionCount1 ;
+                    double dailyConsumeAmount = totalQuantity1 + totalPortionCount1;
                     lPoint.Y = Math.Round(dailyConsumeAmount / totalDay, 2);
                     pieDataFoodAvgDayConsume.DataPoints.Add(lPoint);
                 }
