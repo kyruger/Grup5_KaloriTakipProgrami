@@ -115,14 +115,14 @@
             btnLunch = new Guna.UI2.WinForms.Guna2CircleButton();
             btnDinner = new Guna.UI2.WinForms.Guna2CircleButton();
             btnOthers = new Guna.UI2.WinForms.Guna2CircleButton();
-            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            chartFoodCategory2 = new Guna.Charts.WinForms.GunaChart();
             barDataFoodCategoryMy2 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataFoodCategoryUsers2 = new Guna.Charts.WinForms.GunaBarDataset();
-            gunaChart2 = new Guna.Charts.WinForms.GunaChart();
+            chartFoodCategory1 = new Guna.Charts.WinForms.GunaChart();
             barDataFoodCategoryMy1 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataFoodCategoryUsers1 = new Guna.Charts.WinForms.GunaBarDataset();
             pnlStick = new Guna.UI2.WinForms.Guna2GradientPanel();
-            gunaChart3 = new Guna.Charts.WinForms.GunaChart();
+            chartCalorie = new Guna.Charts.WinForms.GunaChart();
             barDataCalories1 = new Guna.Charts.WinForms.GunaBarDataset();
             barDataCalories2 = new Guna.Charts.WinForms.GunaBarDataset();
             tsWeekMonth = new Guna.UI2.WinForms.Guna2ToggleSwitch();
@@ -204,41 +204,41 @@
             btnOthers.Text = "Others";
             btnOthers.Click += btnOthers_Click;
             // 
-            // gunaChart1
+            // chartFoodCategory2
             // 
-            gunaChart1.BackColor = Color.White;
-            gunaChart1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy2, barDataFoodCategoryUsers2 });
+            chartFoodCategory2.BackColor = Color.White;
+            chartFoodCategory2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy2, barDataFoodCategoryUsers2 });
             chartFont25.FontName = "Arial";
-            gunaChart1.Legend.LabelFont = chartFont25;
-            gunaChart1.Location = new Point(21, 312);
-            gunaChart1.Name = "gunaChart1";
-            gunaChart1.Size = new Size(661, 191);
-            gunaChart1.TabIndex = 4;
+            chartFoodCategory2.Legend.LabelFont = chartFont25;
+            chartFoodCategory2.Location = new Point(21, 312);
+            chartFoodCategory2.Name = "chartFoodCategory2";
+            chartFoodCategory2.Size = new Size(661, 191);
+            chartFoodCategory2.TabIndex = 4;
             chartFont26.FontName = "Arial";
             chartFont26.Size = 12;
             chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Title.Font = chartFont26;
+            chartFoodCategory2.Title.Font = chartFont26;
             chartFont27.FontName = "Arial";
-            gunaChart1.Tooltips.BodyFont = chartFont27;
+            chartFoodCategory2.Tooltips.BodyFont = chartFont27;
             chartFont28.FontName = "Arial";
             chartFont28.Size = 9;
             chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Tooltips.TitleFont = chartFont28;
-            gunaChart1.XAxes.GridLines = grid10;
+            chartFoodCategory2.Tooltips.TitleFont = chartFont28;
+            chartFoodCategory2.XAxes.GridLines = grid10;
             chartFont29.FontName = "Arial";
             tick10.Font = chartFont29;
-            gunaChart1.XAxes.Ticks = tick10;
-            gunaChart1.YAxes.GridLines = grid11;
+            chartFoodCategory2.XAxes.Ticks = tick10;
+            chartFoodCategory2.YAxes.GridLines = grid11;
             chartFont30.FontName = "Arial";
             tick11.Font = chartFont30;
-            gunaChart1.YAxes.Ticks = tick11;
-            gunaChart1.ZAxes.GridLines = grid12;
+            chartFoodCategory2.YAxes.Ticks = tick11;
+            chartFoodCategory2.ZAxes.GridLines = grid12;
             chartFont31.FontName = "Arial";
             pointLabel4.Font = chartFont31;
-            gunaChart1.ZAxes.PointLabels = pointLabel4;
+            chartFoodCategory2.ZAxes.PointLabels = pointLabel4;
             chartFont32.FontName = "Arial";
             tick12.Font = chartFont32;
-            gunaChart1.ZAxes.Ticks = tick12;
+            chartFoodCategory2.ZAxes.Ticks = tick12;
             // 
             // barDataFoodCategoryMy2
             // 
@@ -252,7 +252,7 @@
             barDataFoodCategoryMy2.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint31, lPoint32, lPoint33, lPoint34, lPoint35, lPoint36, lPoint37 });
             barDataFoodCategoryMy2.FillColors.AddRange(new Color[] { Color.Salmon });
             barDataFoodCategoryMy2.Label = "My";
-            barDataFoodCategoryMy2.TargetChart = gunaChart1;
+            barDataFoodCategoryMy2.TargetChart = chartFoodCategory2;
             // 
             // barDataFoodCategoryUsers2
             // 
@@ -273,43 +273,43 @@
             barDataFoodCategoryUsers2.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint1, lPoint2, lPoint3, lPoint4, lPoint5, lPoint6, lPoint7 });
             barDataFoodCategoryUsers2.FillColors.AddRange(new Color[] { Color.SteelBlue });
             barDataFoodCategoryUsers2.Label = "Users";
-            barDataFoodCategoryUsers2.TargetChart = gunaChart1;
+            barDataFoodCategoryUsers2.TargetChart = chartFoodCategory2;
             // 
-            // gunaChart2
+            // chartFoodCategory1
             // 
-            gunaChart2.BackColor = Color.White;
-            gunaChart2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy1, barDataFoodCategoryUsers1 });
+            chartFoodCategory1.BackColor = Color.White;
+            chartFoodCategory1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataFoodCategoryMy1, barDataFoodCategoryUsers1 });
             chartFont33.FontName = "Arial";
-            gunaChart2.Legend.LabelFont = chartFont33;
-            gunaChart2.Location = new Point(21, 76);
-            gunaChart2.Name = "gunaChart2";
-            gunaChart2.Size = new Size(661, 191);
-            gunaChart2.TabIndex = 5;
+            chartFoodCategory1.Legend.LabelFont = chartFont33;
+            chartFoodCategory1.Location = new Point(21, 76);
+            chartFoodCategory1.Name = "chartFoodCategory1";
+            chartFoodCategory1.Size = new Size(661, 191);
+            chartFoodCategory1.TabIndex = 5;
             chartFont34.FontName = "Arial";
             chartFont34.Size = 12;
             chartFont34.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Title.Font = chartFont34;
+            chartFoodCategory1.Title.Font = chartFont34;
             chartFont35.FontName = "Arial";
-            gunaChart2.Tooltips.BodyFont = chartFont35;
+            chartFoodCategory1.Tooltips.BodyFont = chartFont35;
             chartFont36.FontName = "Arial";
             chartFont36.Size = 9;
             chartFont36.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Tooltips.TitleFont = chartFont36;
-            gunaChart2.XAxes.GridLines = grid13;
+            chartFoodCategory1.Tooltips.TitleFont = chartFont36;
+            chartFoodCategory1.XAxes.GridLines = grid13;
             chartFont37.FontName = "Arial";
             tick13.Font = chartFont37;
-            gunaChart2.XAxes.Ticks = tick13;
-            gunaChart2.YAxes.GridLines = grid14;
+            chartFoodCategory1.XAxes.Ticks = tick13;
+            chartFoodCategory1.YAxes.GridLines = grid14;
             chartFont38.FontName = "Arial";
             tick14.Font = chartFont38;
-            gunaChart2.YAxes.Ticks = tick14;
-            gunaChart2.ZAxes.GridLines = grid15;
+            chartFoodCategory1.YAxes.Ticks = tick14;
+            chartFoodCategory1.ZAxes.GridLines = grid15;
             chartFont39.FontName = "Arial";
             pointLabel5.Font = chartFont39;
-            gunaChart2.ZAxes.PointLabels = pointLabel5;
+            chartFoodCategory1.ZAxes.PointLabels = pointLabel5;
             chartFont40.FontName = "Arial";
             tick15.Font = chartFont40;
-            gunaChart2.ZAxes.Ticks = tick15;
+            chartFoodCategory1.ZAxes.Ticks = tick15;
             // 
             // barDataFoodCategoryMy1
             // 
@@ -323,7 +323,7 @@
             barDataFoodCategoryMy1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint8, lPoint9, lPoint10, lPoint11, lPoint12, lPoint13, lPoint14 });
             barDataFoodCategoryMy1.FillColors.AddRange(new Color[] { Color.Salmon });
             barDataFoodCategoryMy1.Label = "My";
-            barDataFoodCategoryMy1.TargetChart = gunaChart2;
+            barDataFoodCategoryMy1.TargetChart = chartFoodCategory1;
             // 
             // barDataFoodCategoryUsers1
             // 
@@ -345,7 +345,7 @@
             barDataFoodCategoryUsers1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint15, lPoint16, lPoint17, lPoint18, lPoint19, lPoint20, lPoint21 });
             barDataFoodCategoryUsers1.FillColors.AddRange(new Color[] { Color.SteelBlue });
             barDataFoodCategoryUsers1.Label = "Users";
-            barDataFoodCategoryUsers1.TargetChart = gunaChart2;
+            barDataFoodCategoryUsers1.TargetChart = chartFoodCategory1;
             // 
             // pnlStick
             // 
@@ -359,42 +359,43 @@
             pnlStick.Size = new Size(10, 467);
             pnlStick.TabIndex = 6;
             // 
-            // gunaChart3
+            // chartCalorie
             // 
-            gunaChart3.BackColor = Color.White;
-            gunaChart3.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataCalories1, barDataCalories2 });
+            chartCalorie.BackColor = Color.White;
+            chartCalorie.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { barDataCalories1, barDataCalories2 });
             chartFont41.FontName = "Arial";
-            gunaChart3.Legend.LabelFont = chartFont41;
-            gunaChart3.Location = new Point(723, 76);
-            gunaChart3.Name = "gunaChart3";
-            gunaChart3.Size = new Size(166, 427);
-            gunaChart3.TabIndex = 7;
+            chartCalorie.Legend.LabelFont = chartFont41;
+            chartCalorie.Location = new Point(723, 76);
+            chartCalorie.Name = "chartCalorie";
+            chartCalorie.Size = new Size(166, 427);
+            chartCalorie.TabIndex = 7;
             chartFont42.FontName = "Arial";
-            chartFont42.Size = 12;
+            chartFont42.Size = 15;
             chartFont42.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart3.Title.Font = chartFont42;
-            gunaChart3.Title.Text = "Calorie";
+            chartCalorie.Title.Font = chartFont42;
+            chartCalorie.Title.ForeColor = Color.Teal;
+            chartCalorie.Title.Text = "Calorie";
             chartFont43.FontName = "Arial";
-            gunaChart3.Tooltips.BodyFont = chartFont43;
+            chartCalorie.Tooltips.BodyFont = chartFont43;
             chartFont44.FontName = "Arial";
             chartFont44.Size = 9;
             chartFont44.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart3.Tooltips.TitleFont = chartFont44;
-            gunaChart3.XAxes.GridLines = grid16;
+            chartCalorie.Tooltips.TitleFont = chartFont44;
+            chartCalorie.XAxes.GridLines = grid16;
             chartFont45.FontName = "Arial";
             tick16.Font = chartFont45;
-            gunaChart3.XAxes.Ticks = tick16;
-            gunaChart3.YAxes.GridLines = grid17;
+            chartCalorie.XAxes.Ticks = tick16;
+            chartCalorie.YAxes.GridLines = grid17;
             chartFont46.FontName = "Arial";
             tick17.Font = chartFont46;
-            gunaChart3.YAxes.Ticks = tick17;
-            gunaChart3.ZAxes.GridLines = grid18;
+            chartCalorie.YAxes.Ticks = tick17;
+            chartCalorie.ZAxes.GridLines = grid18;
             chartFont47.FontName = "Arial";
             pointLabel6.Font = chartFont47;
-            gunaChart3.ZAxes.PointLabels = pointLabel6;
+            chartCalorie.ZAxes.PointLabels = pointLabel6;
             chartFont48.FontName = "Arial";
             tick18.Font = chartFont48;
-            gunaChart3.ZAxes.Ticks = tick18;
+            chartCalorie.ZAxes.Ticks = tick18;
             // 
             // barDataCalories1
             // 
@@ -402,7 +403,7 @@
             barDataCalories1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint22 });
             barDataCalories1.FillColors.AddRange(new Color[] { Color.SeaGreen });
             barDataCalories1.Label = "My";
-            barDataCalories1.TargetChart = gunaChart3;
+            barDataCalories1.TargetChart = chartCalorie;
             // 
             // barDataCalories2
             // 
@@ -411,7 +412,7 @@
             barDataCalories2.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint23 });
             barDataCalories2.FillColors.AddRange(new Color[] { Color.SandyBrown });
             barDataCalories2.Label = "Users";
-            barDataCalories2.TargetChart = gunaChart3;
+            barDataCalories2.TargetChart = chartCalorie;
             // 
             // tsWeekMonth
             // 
@@ -485,10 +486,10 @@
             Controls.Add(lblMealType);
             Controls.Add(lblLastWeek);
             Controls.Add(tsWeekMonth);
-            Controls.Add(gunaChart3);
+            Controls.Add(chartCalorie);
             Controls.Add(pnlStick);
-            Controls.Add(gunaChart2);
-            Controls.Add(gunaChart1);
+            Controls.Add(chartFoodCategory1);
+            Controls.Add(chartFoodCategory2);
             Controls.Add(btnOthers);
             Controls.Add(btnDinner);
             Controls.Add(btnLunch);
@@ -507,12 +508,12 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnLunch;
         private Guna.UI2.WinForms.Guna2CircleButton btnDinner;
         private Guna.UI2.WinForms.Guna2CircleButton btnOthers;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
-        private Guna.Charts.WinForms.GunaChart gunaChart2;
+        private Guna.Charts.WinForms.GunaChart chartFoodCategory2;
+        private Guna.Charts.WinForms.GunaChart chartFoodCategory1;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryMy1;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryUsers1;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlStick;
-        private Guna.Charts.WinForms.GunaChart gunaChart3;
+        private Guna.Charts.WinForms.GunaChart chartCalorie;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryMy2;
         private Guna.Charts.WinForms.GunaBarDataset barDataFoodCategoryUsers2;
         private Guna.Charts.WinForms.GunaBarDataset barDataCalories1;

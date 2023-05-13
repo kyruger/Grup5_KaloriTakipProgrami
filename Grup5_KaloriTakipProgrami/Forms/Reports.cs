@@ -30,5 +30,10 @@ namespace WndPL.Forms
 
 
         }
+        private void btnFoods_Click(object sender, EventArgs e)
+        {
+            FoodReports foodReports = new FoodReports();
+            helper.ShowPanel(foodReports, pnlMain);
+        }
     }
 }

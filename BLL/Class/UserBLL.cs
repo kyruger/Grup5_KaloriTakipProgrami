@@ -4,6 +4,7 @@ using Entities;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,6 +67,64 @@ namespace BLL
                     }
                 }
             }
+            return totalCalorie;
+        }
+        public double GetCaloriesForDaysById(int id, int howManyDaysBeforeToday, out int emptyDays, MealType[] mealTypes)
+        {
+            User? user = db.Users.Find(id);
+            TimeSpan timePassed = DateTime.Now - user.CreationTime;
+            double totalCalorie = 0;
+            emptyDays = 0;
+            if (mealTypes.Count() == 1)
+            {
+                for (int i = 0; i < howManyDaysBeforeToday; i++)
+                {
+                    int day = (int)timePassed.TotalDays - i + 1;
+                    var cfList = user.ConsumedFoods.Where(cf => cf.Day == day && cf.MealType == mealTypes[0]).ToList();
+                    if (cfList.Count == 0 && (int)timePassed.TotalDays >= howManyDaysBeforeToday)
+                        emptyDays++;
+                    foreach (var cf in cfList)
+                    {
+                        if (cf.Quantity > 0)
+                            totalCalorie += cf.Quantity * (double)cf.Food.CalorieFor100Gram;
+                        else if (cf.PortionCount > 0)
+                        {
+                            if (cf.PortionType == PortionType.Full)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Full;
+                            else if (cf.PortionType == PortionType.Half)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Half;
+                            else if (cf.PortionType == PortionType.Quarter)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Quarter;
+                        }
+                    }
+                }
+            }
+            else
+            {
+
+                for (int i = 0; i < howManyDaysBeforeToday; i++)
+                {
+                    int day = (int)timePassed.TotalDays - i + 1;
+                    var cfList = user.ConsumedFoods.Where(cf => cf.Day == day && (cf.MealType != mealTypes[0] || cf.MealType != mealTypes[1] || cf.MealType != mealTypes[2])).ToList();
+                    if (cfList.Count == 0 && (int)timePassed.TotalDays >= howManyDaysBeforeToday)
+                        emptyDays++;
+                    foreach (var cf in cfList)
+                    {
+                        if (cf.Quantity > 0)
+                            totalCalorie += cf.Quantity * (double)cf.Food.CalorieFor100Gram;
+                        else if (cf.PortionCount > 0)
+                        {
+                            if (cf.PortionType == PortionType.Full)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Full;
+                            else if (cf.PortionType == PortionType.Half)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Half;
+                            else if (cf.PortionType == PortionType.Quarter)
+                                totalCalorie += cf.PortionCount * (double)(cf.Food.PortionGram / 100) * (double)cf.Food.CalorieFor100Gram / (int)PortionType.Quarter;
+                        }
+                    }
+                }
+            }
+
             return totalCalorie;
         }
 

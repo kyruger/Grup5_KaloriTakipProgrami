@@ -17,5 +17,13 @@ namespace WndPL
             pnl.Controls.Add(form);
             form.Show();
         }
+        public void ClearTexts(Form form)
+        {
+            foreach (var item in form.Controls)
+            {
+                if (item is TextBox txt)
+                    txt.Text = null;
+            }
+        }
     }
 }
