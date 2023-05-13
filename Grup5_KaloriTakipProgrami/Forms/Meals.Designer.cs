@@ -60,6 +60,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meals));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblMeal = new Label();
             btnDeleteSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
             btnSaveSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
@@ -101,9 +106,16 @@
             columnHeader17 = new ColumnHeader();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             deleteToolStripMenuItem = new ToolStripMenuItem();
+            lvSearchedFoods = new ListView();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            lblFoodSearch = new Label();
+            txtFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudAmount).BeginInit();
             guna2ContextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblMeal
@@ -160,7 +172,7 @@
             tbxFoodSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxFoodSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             tbxFoodSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxFoodSearch.Location = new Point(697, 320);
+            tbxFoodSearch.Location = new Point(190, 239);
             tbxFoodSearch.Name = "tbxFoodSearch";
             tbxFoodSearch.PasswordChar = '\0';
             tbxFoodSearch.PlaceholderText = "Yemek Ara";
@@ -173,7 +185,7 @@
             // lviFood
             // 
             lviFood.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
-            lviFood.Location = new Point(697, 368);
+            lviFood.Location = new Point(190, 287);
             lviFood.Name = "lviFood";
             lviFood.Size = new Size(226, 406);
             lviFood.TabIndex = 6;
@@ -571,11 +583,90 @@
             deleteToolStripMenuItem.Size = new Size(122, 24);
             deleteToolStripMenuItem.Text = "Delete";
             // 
+            // lvSearchedFoods
+            // 
+            lvSearchedFoods.Columns.AddRange(new ColumnHeader[] { columnHeader3, columnHeader4 });
+            lvSearchedFoods.FullRowSelect = true;
+            lvSearchedFoods.Location = new Point(662, 373);
+            lvSearchedFoods.Margin = new Padding(3, 4, 3, 4);
+            lvSearchedFoods.Name = "lvSearchedFoods";
+            lvSearchedFoods.Size = new Size(285, 352);
+            lvSearchedFoods.TabIndex = 45;
+            lvSearchedFoods.UseCompatibleStateImageBehavior = false;
+            lvSearchedFoods.View = View.Details;
+            lvSearchedFoods.Visible = false;
+            lvSearchedFoods.SelectedIndexChanged += lvSearchedFoods_SelectedIndexChanged;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Name";
+            columnHeader3.Width = 123;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Category";
+            columnHeader4.Width = 123;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges33;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(902, 322);
+            guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2PictureBox1.Size = new Size(37, 43);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.TabIndex = 44;
+            guna2PictureBox1.TabStop = false;
+            // 
+            // lblFoodSearch
+            // 
+            lblFoodSearch.AutoSize = true;
+            lblFoodSearch.BackColor = Color.Transparent;
+            lblFoodSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFoodSearch.ForeColor = Color.FromArgb(193, 200, 207);
+            lblFoodSearch.Location = new Point(672, 327);
+            lblFoodSearch.Name = "lblFoodSearch";
+            lblFoodSearch.Size = new Size(121, 28);
+            lblFoodSearch.TabIndex = 43;
+            lblFoodSearch.Text = "Food Search";
+            lblFoodSearch.Click += lblFoodSearch_Click;
+            // 
+            // txtFoodSearch
+            // 
+            txtFoodSearch.CustomizableEdges = customizableEdges35;
+            txtFoodSearch.DefaultText = "";
+            txtFoodSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtFoodSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtFoodSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtFoodSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtFoodSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFoodSearch.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFoodSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFoodSearch.Location = new Point(662, 309);
+            txtFoodSearch.Margin = new Padding(5);
+            txtFoodSearch.Name = "txtFoodSearch";
+            txtFoodSearch.PasswordChar = '\0';
+            txtFoodSearch.PlaceholderText = "Food Search";
+            txtFoodSearch.SelectedText = "";
+            txtFoodSearch.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtFoodSearch.Size = new Size(286, 67);
+            txtFoodSearch.TabIndex = 42;
+            txtFoodSearch.TextChanged += txtFoodSearch_TextChanged;
+            txtFoodSearch.MouseEnter += txtFoodSearch_MouseEnter;
+            txtFoodSearch.MouseLeave += txtFoodSearch_MouseLeave;
+            // 
             // Meals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 933);
+            Controls.Add(lvSearchedFoods);
+            Controls.Add(guna2PictureBox1);
+            Controls.Add(lblFoodSearch);
+            Controls.Add(txtFoodSearch);
             Controls.Add(lviDailyConsumedFood);
             Controls.Add(label3);
             Controls.Add(cbxPortion);
@@ -605,6 +696,7 @@
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)nudAmount).EndInit();
             guna2ContextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -652,5 +744,11 @@
         private ColumnHeader columnHeader17;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private ToolStripMenuItem deleteToolStripMenuItem;
+        private ListView lvSearchedFoods;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Label lblFoodSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtFoodSearch;
     }
 }

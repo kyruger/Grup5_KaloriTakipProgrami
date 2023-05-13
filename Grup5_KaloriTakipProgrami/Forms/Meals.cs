@@ -500,5 +500,44 @@ namespace WndPL.Forms
                 ButtonActivity(true);
             }
         }
+
+        private void lblFoodSearch_Click(object sender, EventArgs e)
+        {
+            lblFoodSearch.Hide();
+            txtFoodSearch.Focus();
+        }
+
+        private void txtFoodSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFoodSearch_MouseEnter(object sender, EventArgs e)
+        {
+            lblFoodSearch.Hide();
+        }
+
+        private void txtFoodSearch_MouseLeave(object sender, EventArgs e)
+        {
+            lblFoodSearch.Show();
+        }
+
+        private void lvSearchedFoods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bl
+            lvSearchedFoods.Items.Clear();
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
+            foreach (var food in searchedFoods)
+            {
+                ListViewItem lv1 = new ListViewItem();
+                lv1.Tag = food.ID;
+                lv1.Text = food.Name;
+                lv1.SubItems.Add(food.Category.ToString());
+                lvSearchedFoods.Items.Add(lv1);
+            }
+
+
+            lvSearchedFoods.Show();
+        }
     }
 }
