@@ -39,27 +39,12 @@ namespace WndPL.Forms
             addNewFood.ShowDialog();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lviFood.SelectedItems.Count > 0)
-            {
-                ButtonActivity(true);
-                int foodId = (int)lviFood.FocusedItem.Tag;
-                Food food = bl.Foods.GetById(foodId);
-                tbxFoodName.Text = food.Name;
-                tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
-                foodID = (int)lviFood.FocusedItem.Tag;
 
-
-
-            }
-        }
 
         private void Meals_Load(object sender, EventArgs e)
         {
             bl = new BusinessLogic();
             List<Food> foods = bl.Foods.GetAll();
-            ListViewFillFood(foods);
             cbxPortion.SelectedIndex = 0;
             btnNumbers = new();
             tbxFoodCalorie.Enabled = false;
@@ -77,26 +62,7 @@ namespace WndPL.Forms
 
 
         }
-        private void ListViewFillFood(List<Food> foods)
-        {
-            lviFood.Items.Clear();
-            foreach (Food food in foods)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = food.Name;
-                lvi.SubItems.Add(food.PortionGram.ToString());
-                lvi.SubItems.Add(food.Category.ToString());
-                lvi.SubItems.Add(food.CalorieFor100Gram.ToString());
-                lvi.SubItems.Add(food.ProteinRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.FatRateFor100Gram.ToString());
-                lvi.SubItems.Add(food.CarbonhydrateAmountFor100Gram.ToString());
-                lvi.Tag = food.ID;
-                lviFood.Items.Add(lvi);
-            }
 
-
-
-        }
 
         private void ButtonActivity(bool control)
         {
@@ -172,45 +138,6 @@ namespace WndPL.Forms
             }
             lviDailyConsumedFood.Items.Add(lvi);
             ButtonActivity(false);
-            //foreach (ConsumedFood consumed in consumedFoods)
-            //{
-            //    ListViewItem lvi = new ListViewItem();
-            //    int foodId = consumed.FoodId;
-            //    Food food = bl.Foods.GetById(foodId);
-            //    lvi.Text = food.Name;//food name
-            //    lvi.SubItems.Add(food.Category.ToString());//category
-            //    if (consumed.PortionType == null)
-            //    {
-            //        lvi.SubItems.Add("100Gram");
-            //        lvi.SubItems.Add(consumed.Quantity.ToString());
-            //        lvi.SubItems.Add((100 * consumed.Quantity).ToString());
-            //        lvi.SubItems.Add((food.CalorieFor100Gram * consumed.Quantity).ToString());
-            //        lvi.SubItems.Add((food.ProteinRateFor100Gram * consumed.Quantity).ToString());
-            //        lvi.SubItems.Add((food.FatRateFor100Gram * consumed.Quantity).ToString());
-            //        lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * consumed.Quantity).ToString());
-
-            //    }
-            //    else
-            //    {
-            //        decimal portionGramForType = food.PortionGram / (int)consumed.PortionType;
-            //        lvi.SubItems.Add(consumed.PortionType.ToString());
-            //        lvi.SubItems.Add(consumed.PortionCount.ToString());
-            //        lvi.SubItems.Add(portionGramForType.ToString());
-            //        lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
-            //        lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
-            //        lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
-            //        lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
-
-
-
-            //    }
-
-
-            //    lvi.Tag = consumed.ID;
-            //    lviDailyConsumedFood.Items.Add(lvi);
-
-
-
 
         }
 
@@ -227,8 +154,14 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
+            double totalCalorie = 0;
             mealType = MealType.Breakfast;
             FillListViewConsumedFood(userID, mealType);
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
         }
         private void FillListViewConsumedFood(int id, MealType meal)
         {
@@ -277,24 +210,30 @@ namespace WndPL.Forms
             }
         }
 
-        private void FoodSearch_TextChanged(object sender, EventArgs e)
-        {
-            List<Food> foods = bl.Foods.GetFoodsByWord(tbxFoodSearch.Text);
-            ListViewFillFood(foods);
 
-
-        }
 
         private void btnLunch_Click(object sender, EventArgs e)
         {
             mealType = MealType.Lunch;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
         {
             mealType = MealType.Dinner;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
         }
 
         private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
@@ -466,27 +405,61 @@ namespace WndPL.Forms
         {
             mealType = MealType.Snack2;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpbTotalMealCalorie.Value = (int)totalCalorie;
         }
         private void SnackClick3(object sender, EventArgs e)
         {
             mealType = MealType.Snack3;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpbTotalMealCalorie.Value = (int)totalCalorie;
         }
         private void SnackClick4(object sender, EventArgs e)
         {
             mealType = MealType.Snack4;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpbTotalMealCalorie.Value = (int)totalCalorie;
         }
         private void SnackClick5(object sender, EventArgs e)
         {
             mealType = MealType.Snack5;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpbTotalMealCalorie.Value = (int)totalCalorie;
         }
 
         private void SnackClick1(object sender, EventArgs e)
         {
             mealType = MealType.Snack1;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
         }
 
         private void nudAmount_ValueChanged(object sender, EventArgs e)
@@ -509,7 +482,19 @@ namespace WndPL.Forms
 
         private void txtFoodSearch_TextChanged(object sender, EventArgs e)
         {
+            lvSearchedFoods.Items.Clear();
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
+            foreach (var food in searchedFoods)
+            {
+                ListViewItem lv1 = new ListViewItem();
+                lv1.Tag = food.ID;
+                lv1.Text = food.Name;
+                lv1.SubItems.Add(food.Category.ToString());
+                lvSearchedFoods.Items.Add(lv1);
+            }
 
+
+            lvSearchedFoods.Show();
         }
 
         private void txtFoodSearch_MouseEnter(object sender, EventArgs e)
@@ -524,20 +509,27 @@ namespace WndPL.Forms
 
         private void lvSearchedFoods_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bl
-            lvSearchedFoods.Items.Clear();
-            List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
-            foreach (var food in searchedFoods)
+            lvSearchedFoods.Hide();
+            if (lvSearchedFoods.SelectedItems.Count > 0)
             {
-                ListViewItem lv1 = new ListViewItem();
-                lv1.Tag = food.ID;
-                lv1.Text = food.Name;
-                lv1.SubItems.Add(food.Category.ToString());
-                lvSearchedFoods.Items.Add(lv1);
+                ButtonActivity(true);
+                int foodId = (int)lvSearchedFoods.SelectedItems[0].Tag;
+                Food food = bl.Foods.GetById(foodId);
+                tbxFoodName.Text = food.Name;
+                tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
+                foodID = (int)lvSearchedFoods.SelectedItems[0].Tag;
             }
 
+        }
 
-            lvSearchedFoods.Show();
+        private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lviDailyConsumedFood_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

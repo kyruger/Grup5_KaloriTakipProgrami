@@ -36,10 +36,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,8 +47,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -59,31 +59,26 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meals));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meals));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblMeal = new Label();
             btnDeleteSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
             btnSaveSelectedMeal = new Guna.UI2.WinForms.Guna2Button();
-            tbxFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            lviFood = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
             btnAddToMeal = new Guna.UI2.WinForms.Guna2Button();
             btnAddNewFood = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2CircleProgressBar3 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            guna2CircleProgressBar4 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbLunchCalorie = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbDinnerCalorie = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbBreakfeastCalorie = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             btnDinner = new Guna.UI2.WinForms.Guna2Button();
             btnLunch = new Guna.UI2.WinForms.Guna2Button();
             btnBreakFeast = new Guna.UI2.WinForms.Guna2Button();
             flyo = new FlowLayoutPanel();
             btnAddSnack = new Guna.UI2.WinForms.Guna2Button();
-            guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            cpbTotalMealCalorie = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             tbxFoodName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -113,6 +108,7 @@
             lblFoodSearch = new Label();
             txtFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
+            cpbTotalMealCalorie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudAmount).BeginInit();
             guna2ContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -161,51 +157,9 @@
             btnSaveSelectedMeal.Text = "Save Selected Meal";
             btnSaveSelectedMeal.Click += btnSaveSelectedMeal_Click;
             // 
-            // tbxFoodSearch
-            // 
-            tbxFoodSearch.CustomizableEdges = customizableEdges5;
-            tbxFoodSearch.DefaultText = "";
-            tbxFoodSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxFoodSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxFoodSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxFoodSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxFoodSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxFoodSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            tbxFoodSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxFoodSearch.Location = new Point(190, 239);
-            tbxFoodSearch.Name = "tbxFoodSearch";
-            tbxFoodSearch.PasswordChar = '\0';
-            tbxFoodSearch.PlaceholderText = "Yemek Ara";
-            tbxFoodSearch.SelectedText = "";
-            tbxFoodSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            tbxFoodSearch.Size = new Size(226, 31);
-            tbxFoodSearch.TabIndex = 5;
-            tbxFoodSearch.TextChanged += FoodSearch_TextChanged;
-            // 
-            // lviFood
-            // 
-            lviFood.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
-            lviFood.Location = new Point(190, 287);
-            lviFood.Name = "lviFood";
-            lviFood.Size = new Size(226, 406);
-            lviFood.TabIndex = 6;
-            lviFood.UseCompatibleStateImageBehavior = false;
-            lviFood.View = View.Details;
-            lviFood.SelectedIndexChanged += listView1_SelectedIndexChanged;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Name";
-            columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "CalorieFor100Gram";
-            columnHeader2.Width = 150;
-            // 
             // btnAddToMeal
             // 
-            btnAddToMeal.CustomizableEdges = customizableEdges7;
+            btnAddToMeal.CustomizableEdges = customizableEdges5;
             btnAddToMeal.DisabledState.BorderColor = Color.DarkGray;
             btnAddToMeal.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddToMeal.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -214,7 +168,7 @@
             btnAddToMeal.ForeColor = Color.White;
             btnAddToMeal.Location = new Point(953, 780);
             btnAddToMeal.Name = "btnAddToMeal";
-            btnAddToMeal.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAddToMeal.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnAddToMeal.Size = new Size(162, 56);
             btnAddToMeal.TabIndex = 7;
             btnAddToMeal.Text = "Add To Meal";
@@ -222,7 +176,7 @@
             // 
             // btnAddNewFood
             // 
-            btnAddNewFood.CustomizableEdges = customizableEdges9;
+            btnAddNewFood.CustomizableEdges = customizableEdges7;
             btnAddNewFood.DisabledState.BorderColor = Color.DarkGray;
             btnAddNewFood.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddNewFood.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -231,7 +185,7 @@
             btnAddNewFood.ForeColor = Color.White;
             btnAddNewFood.Location = new Point(697, 780);
             btnAddNewFood.Name = "btnAddNewFood";
-            btnAddNewFood.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAddNewFood.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAddNewFood.Size = new Size(226, 56);
             btnAddNewFood.TabIndex = 8;
             btnAddNewFood.Text = "Add New Food";
@@ -240,71 +194,68 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = SystemColors.Highlight;
-            guna2Panel1.Controls.Add(guna2CircleProgressBar3);
-            guna2Panel1.Controls.Add(guna2CircleProgressBar4);
-            guna2Panel1.Controls.Add(guna2CircleProgressBar2);
+            guna2Panel1.Controls.Add(cpbLunchCalorie);
+            guna2Panel1.Controls.Add(cpbDinnerCalorie);
+            guna2Panel1.Controls.Add(cpbBreakfeastCalorie);
             guna2Panel1.Controls.Add(btnDinner);
             guna2Panel1.Controls.Add(btnLunch);
             guna2Panel1.Controls.Add(btnBreakFeast);
-            guna2Panel1.CustomizableEdges = customizableEdges20;
+            guna2Panel1.CustomizableEdges = customizableEdges18;
             guna2Panel1.Dock = DockStyle.Top;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges19;
             guna2Panel1.Size = new Size(1143, 137);
             guna2Panel1.TabIndex = 9;
             // 
-            // guna2CircleProgressBar3
+            // cpbLunchCalorie
             // 
-            guna2CircleProgressBar3.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar3.FillThickness = 15;
-            guna2CircleProgressBar3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleProgressBar3.ForeColor = Color.White;
-            guna2CircleProgressBar3.Location = new Point(652, 24);
-            guna2CircleProgressBar3.Minimum = 0;
-            guna2CircleProgressBar3.Name = "guna2CircleProgressBar3";
-            guna2CircleProgressBar3.ProgressThickness = 15;
-            guna2CircleProgressBar3.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2CircleProgressBar3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar3.Size = new Size(79, 79);
-            guna2CircleProgressBar3.TabIndex = 15;
-            guna2CircleProgressBar3.Text = "guna2CircleProgressBar3";
+            cpbLunchCalorie.FillColor = Color.Transparent;
+            cpbLunchCalorie.FillThickness = 15;
+            cpbLunchCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cpbLunchCalorie.ForeColor = Color.White;
+            cpbLunchCalorie.Location = new Point(652, 24);
+            cpbLunchCalorie.Minimum = 0;
+            cpbLunchCalorie.Name = "cpbLunchCalorie";
+            cpbLunchCalorie.ProgressThickness = 15;
+            cpbLunchCalorie.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            cpbLunchCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbLunchCalorie.Size = new Size(79, 79);
+            cpbLunchCalorie.TabIndex = 15;
             // 
-            // guna2CircleProgressBar4
+            // cpbDinnerCalorie
             // 
-            guna2CircleProgressBar4.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar4.FillThickness = 15;
-            guna2CircleProgressBar4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleProgressBar4.ForeColor = Color.White;
-            guna2CircleProgressBar4.Location = new Point(1036, 24);
-            guna2CircleProgressBar4.Minimum = 0;
-            guna2CircleProgressBar4.Name = "guna2CircleProgressBar4";
-            guna2CircleProgressBar4.ProgressThickness = 15;
-            guna2CircleProgressBar4.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2CircleProgressBar4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar4.Size = new Size(79, 79);
-            guna2CircleProgressBar4.TabIndex = 16;
-            guna2CircleProgressBar4.Text = "guna2CircleProgressBar4";
+            cpbDinnerCalorie.FillColor = Color.Transparent;
+            cpbDinnerCalorie.FillThickness = 15;
+            cpbDinnerCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cpbDinnerCalorie.ForeColor = Color.White;
+            cpbDinnerCalorie.Location = new Point(1036, 24);
+            cpbDinnerCalorie.Minimum = 0;
+            cpbDinnerCalorie.Name = "cpbDinnerCalorie";
+            cpbDinnerCalorie.ProgressThickness = 15;
+            cpbDinnerCalorie.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cpbDinnerCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbDinnerCalorie.Size = new Size(79, 79);
+            cpbDinnerCalorie.TabIndex = 16;
             // 
-            // guna2CircleProgressBar2
+            // cpbBreakfeastCalorie
             // 
-            guna2CircleProgressBar2.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar2.FillThickness = 15;
-            guna2CircleProgressBar2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleProgressBar2.ForeColor = Color.White;
-            guna2CircleProgressBar2.Location = new Point(278, 24);
-            guna2CircleProgressBar2.Minimum = 0;
-            guna2CircleProgressBar2.Name = "guna2CircleProgressBar2";
-            guna2CircleProgressBar2.ProgressThickness = 15;
-            guna2CircleProgressBar2.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2CircleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar2.Size = new Size(79, 79);
-            guna2CircleProgressBar2.TabIndex = 14;
-            guna2CircleProgressBar2.Text = "guna2CircleProgressBar2";
+            cpbBreakfeastCalorie.FillColor = Color.Transparent;
+            cpbBreakfeastCalorie.FillThickness = 15;
+            cpbBreakfeastCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cpbBreakfeastCalorie.ForeColor = Color.White;
+            cpbBreakfeastCalorie.Location = new Point(278, 24);
+            cpbBreakfeastCalorie.Minimum = 0;
+            cpbBreakfeastCalorie.Name = "cpbBreakfeastCalorie";
+            cpbBreakfeastCalorie.ProgressThickness = 15;
+            cpbBreakfeastCalorie.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            cpbBreakfeastCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbBreakfeastCalorie.Size = new Size(79, 79);
+            cpbBreakfeastCalorie.TabIndex = 14;
             // 
             // btnDinner
             // 
-            btnDinner.CustomizableEdges = customizableEdges14;
+            btnDinner.CustomizableEdges = customizableEdges12;
             btnDinner.DisabledState.BorderColor = Color.DarkGray;
             btnDinner.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDinner.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -313,7 +264,7 @@
             btnDinner.ForeColor = Color.White;
             btnDinner.Location = new Point(791, 35);
             btnDinner.Name = "btnDinner";
-            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges13;
             btnDinner.Size = new Size(225, 56);
             btnDinner.TabIndex = 2;
             btnDinner.Text = "Dinner";
@@ -321,7 +272,7 @@
             // 
             // btnLunch
             // 
-            btnLunch.CustomizableEdges = customizableEdges16;
+            btnLunch.CustomizableEdges = customizableEdges14;
             btnLunch.DisabledState.BorderColor = Color.DarkGray;
             btnLunch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLunch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -330,7 +281,7 @@
             btnLunch.ForeColor = Color.White;
             btnLunch.Location = new Point(421, 35);
             btnLunch.Name = "btnLunch";
-            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges15;
             btnLunch.Size = new Size(225, 56);
             btnLunch.TabIndex = 1;
             btnLunch.Text = "Lunch";
@@ -338,7 +289,7 @@
             // 
             // btnBreakFeast
             // 
-            btnBreakFeast.CustomizableEdges = customizableEdges18;
+            btnBreakFeast.CustomizableEdges = customizableEdges16;
             btnBreakFeast.DisabledState.BorderColor = Color.DarkGray;
             btnBreakFeast.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBreakFeast.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -347,7 +298,7 @@
             btnBreakFeast.ForeColor = Color.White;
             btnBreakFeast.Location = new Point(38, 35);
             btnBreakFeast.Name = "btnBreakFeast";
-            btnBreakFeast.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            btnBreakFeast.ShadowDecoration.CustomizableEdges = customizableEdges17;
             btnBreakFeast.Size = new Size(225, 56);
             btnBreakFeast.TabIndex = 0;
             btnBreakFeast.Text = "BreakFeast";
@@ -362,7 +313,7 @@
             // 
             // btnAddSnack
             // 
-            btnAddSnack.CustomizableEdges = customizableEdges22;
+            btnAddSnack.CustomizableEdges = customizableEdges20;
             btnAddSnack.DisabledState.BorderColor = Color.DarkGray;
             btnAddSnack.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddSnack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -371,25 +322,37 @@
             btnAddSnack.ForeColor = Color.White;
             btnAddSnack.Location = new Point(999, 151);
             btnAddSnack.Name = "btnAddSnack";
-            btnAddSnack.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            btnAddSnack.ShadowDecoration.CustomizableEdges = customizableEdges21;
             btnAddSnack.Size = new Size(132, 95);
             btnAddSnack.TabIndex = 11;
             btnAddSnack.Text = "Add Snack";
             btnAddSnack.Click += btnAddSnack_Click;
             // 
-            // guna2CircleProgressBar1
+            // cpbTotalMealCalorie
             // 
-            guna2CircleProgressBar1.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleProgressBar1.ForeColor = Color.White;
-            guna2CircleProgressBar1.Location = new Point(953, 320);
-            guna2CircleProgressBar1.Minimum = 0;
-            guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar1.Size = new Size(162, 162);
-            guna2CircleProgressBar1.TabIndex = 12;
-            guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
+            cpbTotalMealCalorie.Controls.Add(guna2HtmlLabel3);
+            cpbTotalMealCalorie.FillColor = Color.Transparent;
+            cpbTotalMealCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cpbTotalMealCalorie.ForeColor = Color.White;
+            cpbTotalMealCalorie.Location = new Point(953, 320);
+            cpbTotalMealCalorie.Minimum = 0;
+            cpbTotalMealCalorie.Name = "cpbTotalMealCalorie";
+            cpbTotalMealCalorie.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            cpbTotalMealCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            cpbTotalMealCalorie.Size = new Size(162, 162);
+            cpbTotalMealCalorie.TabIndex = 12;
+            cpbTotalMealCalorie.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value;
+            cpbTotalMealCalorie.ValueChanged += guna2CircleProgressBar1_ValueChanged;
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.ForeColor = Color.Black;
+            guna2HtmlLabel3.Location = new Point(28, 86);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(158, 30);
+            guna2HtmlLabel3.TabIndex = 0;
+            guna2HtmlLabel3.Text = "guna2HtmlLabel3";
             // 
             // guna2HtmlLabel1
             // 
@@ -403,7 +366,7 @@
             // tbxFoodName
             // 
             tbxFoodName.BackColor = SystemColors.ActiveCaptionText;
-            tbxFoodName.CustomizableEdges = customizableEdges25;
+            tbxFoodName.CustomizableEdges = customizableEdges23;
             tbxFoodName.DefaultText = "";
             tbxFoodName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxFoodName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -417,13 +380,13 @@
             tbxFoodName.PasswordChar = '\0';
             tbxFoodName.PlaceholderText = "FoodName";
             tbxFoodName.SelectedText = "";
-            tbxFoodName.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            tbxFoodName.ShadowDecoration.CustomizableEdges = customizableEdges24;
             tbxFoodName.Size = new Size(162, 29);
             tbxFoodName.TabIndex = 14;
             // 
             // tbxFoodCalorie
             // 
-            tbxFoodCalorie.CustomizableEdges = customizableEdges27;
+            tbxFoodCalorie.CustomizableEdges = customizableEdges25;
             tbxFoodCalorie.DefaultText = "";
             tbxFoodCalorie.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxFoodCalorie.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -437,7 +400,7 @@
             tbxFoodCalorie.PasswordChar = '\0';
             tbxFoodCalorie.PlaceholderText = "Total Calorie";
             tbxFoodCalorie.SelectedText = "";
-            tbxFoodCalorie.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            tbxFoodCalorie.ShadowDecoration.CustomizableEdges = customizableEdges26;
             tbxFoodCalorie.Size = new Size(162, 27);
             tbxFoodCalorie.TabIndex = 15;
             // 
@@ -454,11 +417,11 @@
             // 
             nudAmount.BackColor = Color.Transparent;
             nudAmount.BorderRadius = 15;
-            nudAmount.CustomizableEdges = customizableEdges29;
+            nudAmount.CustomizableEdges = customizableEdges27;
             nudAmount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             nudAmount.Location = new Point(953, 745);
             nudAmount.Name = "nudAmount";
-            nudAmount.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            nudAmount.ShadowDecoration.CustomizableEdges = customizableEdges28;
             nudAmount.Size = new Size(165, 29);
             nudAmount.TabIndex = 17;
             nudAmount.ValueChanged += nudAmount_ValueChanged;
@@ -476,7 +439,7 @@
             // 
             cbxPortion.BackColor = Color.Transparent;
             cbxPortion.BorderRadius = 15;
-            cbxPortion.CustomizableEdges = customizableEdges31;
+            cbxPortion.CustomizableEdges = customizableEdges29;
             cbxPortion.DrawMode = DrawMode.OwnerDrawFixed;
             cbxPortion.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxPortion.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -487,7 +450,7 @@
             cbxPortion.Items.AddRange(new object[] { "Full", "Half", "Quarter", "100Gram" });
             cbxPortion.Location = new Point(953, 683);
             cbxPortion.Name = "cbxPortion";
-            cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges30;
             cbxPortion.Size = new Size(162, 36);
             cbxPortion.TabIndex = 20;
             // 
@@ -510,6 +473,7 @@
             lviDailyConsumedFood.TabIndex = 23;
             lviDailyConsumedFood.UseCompatibleStateImageBehavior = false;
             lviDailyConsumedFood.View = View.Details;
+            lviDailyConsumedFood.SelectedIndexChanged += lviDailyConsumedFood_SelectedIndexChanged;
             // 
             // columnHeader8
             // 
@@ -609,13 +573,13 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges33;
+            guna2PictureBox1.CustomizableEdges = customizableEdges31;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(902, 322);
             guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges32;
             guna2PictureBox1.Size = new Size(37, 43);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 44;
@@ -636,7 +600,7 @@
             // 
             // txtFoodSearch
             // 
-            txtFoodSearch.CustomizableEdges = customizableEdges35;
+            txtFoodSearch.CustomizableEdges = customizableEdges33;
             txtFoodSearch.DefaultText = "";
             txtFoodSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtFoodSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -651,7 +615,7 @@
             txtFoodSearch.PasswordChar = '\0';
             txtFoodSearch.PlaceholderText = "Food Search";
             txtFoodSearch.SelectedText = "";
-            txtFoodSearch.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtFoodSearch.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtFoodSearch.Size = new Size(286, 67);
             txtFoodSearch.TabIndex = 42;
             txtFoodSearch.TextChanged += txtFoodSearch_TextChanged;
@@ -662,6 +626,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1143, 933);
             Controls.Add(lvSearchedFoods);
             Controls.Add(guna2PictureBox1);
@@ -676,14 +641,12 @@
             Controls.Add(tbxFoodCalorie);
             Controls.Add(tbxFoodName);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(guna2CircleProgressBar1);
+            Controls.Add(cpbTotalMealCalorie);
             Controls.Add(btnAddSnack);
             Controls.Add(flyo);
             Controls.Add(guna2Panel1);
             Controls.Add(btnAddNewFood);
             Controls.Add(btnAddToMeal);
-            Controls.Add(lviFood);
-            Controls.Add(tbxFoodSearch);
             Controls.Add(btnSaveSelectedMeal);
             Controls.Add(btnDeleteSelectedMeal);
             Controls.Add(lblMeal);
@@ -694,6 +657,8 @@
             Text = "Meals";
             Load += Meals_Load;
             guna2Panel1.ResumeLayout(false);
+            cpbTotalMealCalorie.ResumeLayout(false);
+            cpbTotalMealCalorie.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudAmount).EndInit();
             guna2ContextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
@@ -706,26 +671,22 @@
         private Label lblMeal;
         private Guna.UI2.WinForms.Guna2Button btnDeleteSelectedMeal;
         private Guna.UI2.WinForms.Guna2Button btnSaveSelectedMeal;
-        private Guna.UI2.WinForms.Guna2TextBox tbxFoodSearch;
-        private ListView lviFood;
-        private ColumnHeader columnHeader1;
         private Guna.UI2.WinForms.Guna2Button btnAddToMeal;
         private Guna.UI2.WinForms.Guna2Button btnAddNewFood;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar4;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbLunchCalorie;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbDinnerCalorie;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbBreakfeastCalorie;
         private Guna.UI2.WinForms.Guna2Button btnDinner;
         private Guna.UI2.WinForms.Guna2Button btnLunch;
         private Guna.UI2.WinForms.Guna2Button btnBreakFeast;
         private FlowLayoutPanel flyo;
         private Guna.UI2.WinForms.Guna2Button btnAddSnack;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar cpbTotalMealCalorie;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Guna.UI2.WinForms.Guna2TextBox tbxFoodName;
         private Guna.UI2.WinForms.Guna2TextBox tbxFoodCalorie;
-        private ColumnHeader columnHeader2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudAmount;
         private Label label2;
@@ -750,5 +711,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Label lblFoodSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodSearch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }
