@@ -29,6 +29,7 @@ namespace WndPL.Forms
         MealType mealType;
         int count;
         int deleted;
+        List<int> btnNumbers;
 
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -59,9 +60,10 @@ namespace WndPL.Forms
             List<Food> foods = bl.Foods.GetAll();
             ListViewFillFood(foods);
             cbxPortion.SelectedIndex = 0;
+            btnNumbers = new();
 
-            count = 2;
-            deleted = 0;
+            count = 1;
+
 
 
 
@@ -252,23 +254,27 @@ namespace WndPL.Forms
 
             }
         }
-        
+
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
-
+            //int count2=1;
             foreach (Control control in flyo.Controls)
             {
-                if(control is Guna2Button)
+                if (control is Guna2Button)
                 {
                     Guna2Button btn = (Guna2Button)control;
-                    if (mealType.ToString()==btn.Text)
+                    string a = btn.Text[^1].ToString();
+                    int number = Convert.ToInt32(a);
+                    if (mealType.ToString() == btn.Text)
                     {
                         flyo.Controls.Remove(btn);
-                        count = count - 1;
+                        btnNumbers.Remove(number);
+                        count--;
                     }
-               
+                    //count2++;
+
                 }
-            }                           
+            }
             for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
             {
                 if (lviDailyConsumedFood.Items[i].Tag != null)
@@ -302,40 +308,56 @@ namespace WndPL.Forms
 
         private void btnAddSnack_Click(object sender, EventArgs e)
         {
-            if (count<=5)
+            if (count <= 5)
             {
-                if (count==2)
+                if (!btnNumbers.Contains(1))
                 {
+
                     Guna2Button btn = new Guna2Button();
-                    btn.Text = $"Snack{count}";
+                    btn.Text = $"Snack{1}";
+                    btn.Width = 164;
+                    btn.Height = 92;
+                    btn.Click += new EventHandler(SnackClick1);
+                    count++;
+                    btnNumbers.Add(1);
+                    flyo.Controls.Add(btn);
+                }
+                else if (!btnNumbers.Contains(2))
+                {
+
+                    Guna2Button btn = new Guna2Button();
+                    btn.Text = $"Snack{2}";
                     btn.Width = 164;
                     btn.Height = 92;
                     btn.Click += new EventHandler(SnackClick2);
                     count++;
+                    btnNumbers.Add(2);
                     flyo.Controls.Add(btn);
                 }
-                else if (count == 3)
+                else if (!btnNumbers.Contains(3))
                 {
                     Guna2Button btn = new Guna2Button();
-                    btn.Text = $"Snack{count}";
+                    btn.Text = $"Snack{3}";
                     btn.Width = 164;
                     btn.Height = 92;
                     btn.Click += new EventHandler(SnackClick3);
                     count++;
+                    btnNumbers.Add(3);
                     flyo.Controls.Add(btn);
 
                 }
-                else if (count == 4)
+                else if (!btnNumbers.Contains(4))
                 {
                     Guna2Button btn = new Guna2Button();
-                    btn.Text = $"Snack{count}";
+                    btn.Text = $"Snack{4}";
                     btn.Width = 164;
                     btn.Height = 92;
                     btn.Click += new EventHandler(SnackClick4);
                     count++;
+                    btnNumbers.Add(4);
                     flyo.Controls.Add(btn);
                 }
-                else if (count == 5)
+                else if (!btnNumbers.Contains(5))
                 {
                     Guna2Button btn = new Guna2Button();
                     btn.Text = $"Snack{count}";
@@ -343,6 +365,7 @@ namespace WndPL.Forms
                     btn.Height = 92;
                     btn.Click += new EventHandler(SnackClick5);
                     count++;
+                    btnNumbers.Add(5);
                     flyo.Controls.Add(btn);
                 }
 
@@ -353,7 +376,7 @@ namespace WndPL.Forms
             }
 
         }
-        private void SnackClick2(object sender,EventArgs e)
+        private void SnackClick2(object sender, EventArgs e)
         {
             mealType = MealType.Snack2;
             FillListViewConsumedFood(userID, mealType);
@@ -373,6 +396,11 @@ namespace WndPL.Forms
             mealType = MealType.Snack5;
             FillListViewConsumedFood(userID, mealType);
         }
-        
+
+        private void SnackClick1(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack1;
+            FillListViewConsumedFood(userID, mealType);
+        }
     }
 }
