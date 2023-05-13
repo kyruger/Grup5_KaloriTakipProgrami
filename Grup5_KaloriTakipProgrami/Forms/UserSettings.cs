@@ -35,7 +35,7 @@ namespace WndPL.Forms
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
-            
+
 
             if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
             {
