@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,8 +29,8 @@ namespace WndPL.Forms
         int userID = 2;
         MealType mealType;
         int count;
-        int deleted;
         List<int> btnNumbers;
+        int day;
 
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -61,6 +62,12 @@ namespace WndPL.Forms
             ListViewFillFood(foods);
             cbxPortion.SelectedIndex = 0;
             btnNumbers = new();
+            tbxFoodCalorie.Enabled = false;
+            tbxFoodName.Enabled = false;
+            Entities.User user = bl.Users.GetById(userID);
+            TimeSpan timePassed = DateTime.Now - user.CreationTime;
+            day = (int)timePassed.TotalDays + 1;
+
 
             count = 1;
 
@@ -95,37 +102,114 @@ namespace WndPL.Forms
         {
             if (control)
             {
-                btnAddNewFood.Enabled = true;
+
                 btnAddToMeal.Enabled = true;
             }
             else
             {
-                btnAddNewFood.Enabled = true;
-                btnAddToMeal.Enabled = true;
+
+                btnAddToMeal.Enabled = false;
             }
 
         }
 
         private void btnAddToMeal_Click(object sender, EventArgs e)
         {
-            ConsumedFood consumedFood = new ConsumedFood();
-            consumedFood.FoodId = foodID;
-            if (cbxPortion.SelectedItem.ToString() == "Full")
+            Food food = bl.Foods.GetById(foodID);
+            ListViewItem lvi = new();
+            lvi.Text = food.Name;
+            lvi.SubItems.Add(food.Category.ToString());
+
+
+
+            if (cbxPortion.SelectedIndex == 0 || cbxPortion.SelectedIndex == 1 || cbxPortion.SelectedIndex == 2)
             {
-                consumedFood.PortionType = PortionType.Full;
-            }
-            else if (cbxPortion.SelectedItem.ToString() == "Half")
-            {
-                consumedFood.PortionType = PortionType.Half;
-            }
-            else if (cbxPortion.SelectedItem.ToString() == "Quarter")
-            {
-                consumedFood.PortionType = PortionType.Quarter;
-            }
-            else
-            {
+                if (cbxPortion.SelectedIndex == 0)//Full
+                {
+                    decimal portionGramForType = food.PortionGram / 1;
+                    lvi.SubItems.Add("Full");
+                    lvi.SubItems.Add(nudAmount.Value.ToString());
+                    lvi.SubItems.Add(portionGramForType.ToString());
+                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                }
+                else if (cbxPortion.SelectedIndex == 1)//Half 
+                {
+                    decimal portionGramForType = food.PortionGram / 2;
+                    lvi.SubItems.Add("Half");
+                    lvi.SubItems.Add(nudAmount.Value.ToString());
+                    lvi.SubItems.Add(portionGramForType.ToString());
+                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                }
+                else if (cbxPortion.SelectedIndex == 2)//Quartar
+                {
+                    decimal portionGramForType = food.PortionGram / 4;
+                    lvi.SubItems.Add("Quarter");
+                    lvi.SubItems.Add(nudAmount.Value.ToString());
+                    lvi.SubItems.Add(portionGramForType.ToString());
+                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                }
 
             }
+            else if (cbxPortion.SelectedIndex == 3)//100Gram
+            {
+                lvi.SubItems.Add("100Gram");
+                lvi.SubItems.Add(nudAmount.Value.ToString());
+                lvi.SubItems.Add((100 * nudAmount.Value).ToString());
+                lvi.SubItems.Add((food.CalorieFor100Gram * nudAmount.Value).ToString());
+                lvi.SubItems.Add((food.ProteinRateFor100Gram * nudAmount.Value).ToString());
+                lvi.SubItems.Add((food.FatRateFor100Gram * nudAmount.Value).ToString());
+                lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * nudAmount.Value).ToString());
+
+            }
+            lviDailyConsumedFood.Items.Add(lvi);
+            ButtonActivity(false);
+            //foreach (ConsumedFood consumed in consumedFoods)
+            //{
+            //    ListViewItem lvi = new ListViewItem();
+            //    int foodId = consumed.FoodId;
+            //    Food food = bl.Foods.GetById(foodId);
+            //    lvi.Text = food.Name;//food name
+            //    lvi.SubItems.Add(food.Category.ToString());//category
+            //    if (consumed.PortionType == null)
+            //    {
+            //        lvi.SubItems.Add("100Gram");
+            //        lvi.SubItems.Add(consumed.Quantity.ToString());
+            //        lvi.SubItems.Add((100 * consumed.Quantity).ToString());
+            //        lvi.SubItems.Add((food.CalorieFor100Gram * consumed.Quantity).ToString());
+            //        lvi.SubItems.Add((food.ProteinRateFor100Gram * consumed.Quantity).ToString());
+            //        lvi.SubItems.Add((food.FatRateFor100Gram * consumed.Quantity).ToString());
+            //        lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * consumed.Quantity).ToString());
+
+            //    }
+            //    else
+            //    {
+            //        decimal portionGramForType = food.PortionGram / (int)consumed.PortionType;
+            //        lvi.SubItems.Add(consumed.PortionType.ToString());
+            //        lvi.SubItems.Add(consumed.PortionCount.ToString());
+            //        lvi.SubItems.Add(portionGramForType.ToString());
+            //        lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+            //        lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+            //        lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+            //        lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+
+
+
+            //    }
+
+
+            //    lvi.Tag = consumed.ID;
+            //    lviDailyConsumedFood.Items.Add(lvi);
+
+
 
 
         }
@@ -222,9 +306,7 @@ namespace WndPL.Forms
                     ConsumedFood consumed = new ConsumedFood();
                     consumed.MealType = mealType;
 
-                    Entities.User user = bl.Users.GetById(userID);
-                    TimeSpan timePassed = DateTime.Now - user.CreationTime;
-                    int day = (int)timePassed.TotalDays + 1;
+
                     consumed.Day = day;
                     consumed.UserId = userID;
                     int foodId = bl.Foods.GetFoodIdByFoodName(lviDailyConsumedFood.Items[i].SubItems[0].Text);
@@ -257,32 +339,36 @@ namespace WndPL.Forms
 
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
-            //int count2=1;
-            foreach (Control control in flyo.Controls)
+            if (mealType.ToString() != "Breakfast" || mealType.ToString() != "Lunch" || mealType.ToString() != "Dinner")
             {
-                if (control is Guna2Button)
+                foreach (Control control in flyo.Controls)
                 {
-                    Guna2Button btn = (Guna2Button)control;
-                    string a = btn.Text[^1].ToString();
-                    int number = Convert.ToInt32(a);
-                    if (mealType.ToString() == btn.Text)
+                    if (control is Guna2Button)
                     {
-                        flyo.Controls.Remove(btn);
-                        btnNumbers.Remove(number);
-                        count--;
-                    }
-                    //count2++;
+                        Guna2Button btn = (Guna2Button)control;
+                        string a = btn.Text[^1].ToString();
+                        int number = Convert.ToInt32(a);
+                        if (mealType.ToString() == btn.Text)
+                        {
+                            flyo.Controls.Remove(btn);
+                            btnNumbers.Remove(number);
+                            count--;
+                        }
 
+
+                    }
                 }
             }
+
+
             for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
             {
                 if (lviDailyConsumedFood.Items[i].Tag != null)
                 {
                     int id = (int)lviDailyConsumedFood.Items[i].Tag;
-                    bool isRemoved = bl.ConsumedFoods.Remove(id);
                     ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
                     Food food = bl.Foods.GetById(consumed.FoodId);
+                    bool isRemoved = bl.ConsumedFoods.Remove(id);
                     if (isRemoved)
                     {
                         MessageBox.Show($"{food.Name} deleted from your meal");
@@ -293,8 +379,8 @@ namespace WndPL.Forms
                     }
 
                 }
-                lviDailyConsumedFood.Items.Clear();
             }
+            lviDailyConsumedFood.Items.Clear();
 
 
 
@@ -401,6 +487,18 @@ namespace WndPL.Forms
         {
             mealType = MealType.Snack1;
             FillListViewConsumedFood(userID, mealType);
+        }
+
+        private void nudAmount_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudAmount.Value == 0)
+            {
+                ButtonActivity(false);
+            }
+            else
+            {
+                ButtonActivity(true);
+            }
         }
     }
 }

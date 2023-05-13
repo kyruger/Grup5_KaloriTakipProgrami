@@ -84,7 +84,7 @@
             tbxFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             tbxFoodCalorie = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            nudAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             label2 = new Label();
             cbxPortion = new Guna.UI2.WinForms.Guna2ComboBox();
             label3 = new Label();
@@ -99,8 +99,11 @@
             columnHeader15 = new ColumnHeader();
             columnHeader16 = new ColumnHeader();
             columnHeader17 = new ColumnHeader();
+            guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudAmount).BeginInit();
+            guna2ContextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lblMeal
@@ -387,6 +390,7 @@
             // 
             // tbxFoodName
             // 
+            tbxFoodName.BackColor = SystemColors.ActiveCaptionText;
             tbxFoodName.CustomizableEdges = customizableEdges25;
             tbxFoodName.DefaultText = "";
             tbxFoodName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -434,17 +438,18 @@
             guna2HtmlLabel2.TabIndex = 16;
             guna2HtmlLabel2.Text = "Selected Food Info";
             // 
-            // guna2NumericUpDown1
+            // nudAmount
             // 
-            guna2NumericUpDown1.BackColor = Color.Transparent;
-            guna2NumericUpDown1.BorderRadius = 15;
-            guna2NumericUpDown1.CustomizableEdges = customizableEdges29;
-            guna2NumericUpDown1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2NumericUpDown1.Location = new Point(953, 745);
-            guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            guna2NumericUpDown1.Size = new Size(165, 29);
-            guna2NumericUpDown1.TabIndex = 17;
+            nudAmount.BackColor = Color.Transparent;
+            nudAmount.BorderRadius = 15;
+            nudAmount.CustomizableEdges = customizableEdges29;
+            nudAmount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            nudAmount.Location = new Point(953, 745);
+            nudAmount.Name = "nudAmount";
+            nudAmount.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            nudAmount.Size = new Size(165, 29);
+            nudAmount.TabIndex = 17;
+            nudAmount.ValueChanged += nudAmount_ValueChanged;
             // 
             // label2
             // 
@@ -467,12 +472,11 @@
             cbxPortion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbxPortion.ForeColor = Color.Black;
             cbxPortion.ItemHeight = 30;
-            cbxPortion.Items.AddRange(new object[] { " Full", "Half", "Quarter", "100Gram" });
+            cbxPortion.Items.AddRange(new object[] { "Full", "Half", "Quarter", "100Gram" });
             cbxPortion.Location = new Point(953, 683);
             cbxPortion.Name = "cbxPortion";
             cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges32;
             cbxPortion.Size = new Size(162, 36);
-            cbxPortion.StartIndex = 0;
             cbxPortion.TabIndex = 20;
             // 
             // label3
@@ -487,6 +491,7 @@
             // lviDailyConsumedFood
             // 
             lviDailyConsumedFood.Columns.AddRange(new ColumnHeader[] { columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16, columnHeader17 });
+            lviDailyConsumedFood.ContextMenuStrip = guna2ContextMenuStrip1;
             lviDailyConsumedFood.Location = new Point(15, 320);
             lviDailyConsumedFood.Name = "lviDailyConsumedFood";
             lviDailyConsumedFood.Size = new Size(631, 405);
@@ -544,6 +549,28 @@
             columnHeader17.Text = "Image";
             columnHeader17.Width = 100;
             // 
+            // guna2ContextMenuStrip1
+            // 
+            guna2ContextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            guna2ContextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
+            guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            guna2ContextMenuStrip1.RenderStyle.ArrowColor = Color.FromArgb(151, 143, 255);
+            guna2ContextMenuStrip1.RenderStyle.BorderColor = Color.Gainsboro;
+            guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = Color.White;
+            guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = Color.FromArgb(100, 88, 255);
+            guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = Color.White;
+            guna2ContextMenuStrip1.RenderStyle.SeparatorColor = Color.Gainsboro;
+            guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            guna2ContextMenuStrip1.Size = new Size(123, 28);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(122, 24);
+            deleteToolStripMenuItem.Text = "Delete";
+            // 
             // Meals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -553,7 +580,7 @@
             Controls.Add(label3);
             Controls.Add(cbxPortion);
             Controls.Add(label2);
-            Controls.Add(guna2NumericUpDown1);
+            Controls.Add(nudAmount);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(tbxFoodCalorie);
             Controls.Add(tbxFoodName);
@@ -569,13 +596,15 @@
             Controls.Add(btnSaveSelectedMeal);
             Controls.Add(btnDeleteSelectedMeal);
             Controls.Add(lblMeal);
+            ForeColor = SystemColors.MenuText;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Meals";
             Text = "Meals";
             Load += Meals_Load;
             guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2NumericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudAmount).EndInit();
+            guna2ContextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -606,7 +635,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tbxFoodCalorie;
         private ColumnHeader columnHeader2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudAmount;
         private Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbxPortion;
         private Label label3;
@@ -621,5 +650,7 @@
         private ColumnHeader columnHeader15;
         private ColumnHeader columnHeader16;
         private ColumnHeader columnHeader17;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
