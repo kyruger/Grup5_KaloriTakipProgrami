@@ -341,13 +341,12 @@
             cpbTotalMealCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             cpbTotalMealCalorie.Size = new Size(162, 162);
             cpbTotalMealCalorie.TabIndex = 12;
-            cpbTotalMealCalorie.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value;
             cpbTotalMealCalorie.ValueChanged += guna2CircleProgressBar1_ValueChanged;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.ForeColor = Color.Black;
+            guna2HtmlLabel3.ForeColor = Color.Transparent;
             guna2HtmlLabel3.Location = new Point(28, 86);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(158, 30);
