@@ -21,6 +21,8 @@ namespace WndPL.Forms
         {
             Home homeForm = new Home();
             helper.ShowPanel(homeForm, pnlMain);
+            btnActivity.Enabled = false;
+            btnDiets.Enabled = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)

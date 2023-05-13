@@ -170,7 +170,6 @@ namespace WndPL.Forms
 
         private void txtCurrentWeight_Leave(object sender, EventArgs e)
         {
-            //if (System.Text.RegularExpressions.Regex.IsMatch(txtCurrentWeight.Text, "^[0-9.]*$"))
             if (char.IsDigit(txtCurrentWeight.Text[0]) && char.IsDigit(txtCurrentWeight.Text[^1]))
             {
                 user.Weight = Convert.ToDecimal(txtCurrentWeight.Text);

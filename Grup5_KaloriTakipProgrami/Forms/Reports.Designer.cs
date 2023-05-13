@@ -141,6 +141,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Reports";
             Text = "Reports";
+            Load += Reports_Load;
             pnlTop.ResumeLayout(false);
             ResumeLayout(false);
         }

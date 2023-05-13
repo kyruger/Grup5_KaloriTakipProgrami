@@ -180,10 +180,11 @@
             txtPlace.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPlace.FillColor = Color.Teal;
             txtPlace.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPlace.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtPlace.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
             txtPlace.ForeColor = Color.White;
             txtPlace.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPlace.Location = new Point(417, 402);
+            txtPlace.Location = new Point(417, 400);
+            txtPlace.Margin = new Padding(4, 5, 4, 5);
             txtPlace.Name = "txtPlace";
             txtPlace.PasswordChar = '\0';
             txtPlace.PlaceholderText = "";
@@ -413,10 +414,11 @@
             txtTotal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtTotal.FillColor = Color.Teal;
             txtTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTotal.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
             txtTotal.ForeColor = Color.White;
             txtTotal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTotal.Location = new Point(709, 402);
+            txtTotal.Location = new Point(709, 400);
+            txtTotal.Margin = new Padding(4, 5, 4, 5);
             txtTotal.Name = "txtTotal";
             txtTotal.PasswordChar = '\0';
             txtTotal.PlaceholderText = "";

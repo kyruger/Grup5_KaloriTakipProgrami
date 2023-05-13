@@ -18,11 +18,16 @@ namespace WndPL.Forms
         public Reports()
         {
             InitializeComponent();
-            MealsReports mealsReports = new MealsReports();
-            helper.ShowPanel(mealsReports, pnlMain);
+
         }
         Helper helper = new Helper();
 
+        private void Reports_Load(object sender, EventArgs e)
+        {
+            btnActivity.Enabled = false;
+            MealsReports mealsReports = new MealsReports();
+            helper.ShowPanel(mealsReports, pnlMain);
+        }
         private void btnMeals_Click(object sender, EventArgs e)
         {
             MealsReports mealsReports = new MealsReports();
@@ -35,5 +40,6 @@ namespace WndPL.Forms
             FoodReports foodReports = new FoodReports();
             helper.ShowPanel(foodReports, pnlMain);
         }
+
     }
 }
