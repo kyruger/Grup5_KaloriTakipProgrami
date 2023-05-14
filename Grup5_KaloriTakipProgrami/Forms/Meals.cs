@@ -33,11 +33,7 @@ namespace WndPL.Forms
         int day;
 
 
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            AddNewFood addNewFood = new AddNewFood();
-            addNewFood.ShowDialog();
-        }
+    
 
 
 
@@ -348,11 +344,11 @@ namespace WndPL.Forms
                     ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
                     Food food = bl.Foods.GetById(consumed.FoodId);
                     bool isRemoved = bl.ConsumedFoods.Remove(id);
-                   
+
 
                 }
             }
-            MessageBox.Show($"{food.Name} deleted from your meal");
+            MessageBox.Show($"{mealType.ToString()} deleted from your meal");
             lviDailyConsumedFood.Items.Clear();
 
 
@@ -525,7 +521,7 @@ namespace WndPL.Forms
         private void txtFoodSearch_TextChanged(object sender, EventArgs e)
         {
             lvSearchedFoods.Items.Clear();
-            List<Food> searchedFoods = bl.Foods.GetFoodsByContainTextAndOwnerId(txtFoodSearch.Text.Trim(),userID);
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainTextAndOwnerId(txtFoodSearch.Text.Trim(), userID);
             foreach (var food in searchedFoods)
             {
                 ListViewItem lv1 = new ListViewItem();
@@ -580,6 +576,22 @@ namespace WndPL.Forms
         private void cbxPortion_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lviDailyConsumedFood.SelectedItems.Count > 0)
+            {
+                int consumedId = (int)lviDailyConsumedFood.SelectedItems[0].Tag;
+                bl.ConsumedFoods.Remove(consumedId);
+                FillListViewConsumedFood(userID, mealType);
+
+            }
         }
     }
 }
