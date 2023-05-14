@@ -411,7 +411,7 @@
             cbxPortion.ShadowDecoration.CustomizableEdges = customizableEdges59;
             cbxPortion.Size = new Size(162, 36);
             cbxPortion.TabIndex = 20;
-            cbxPortion.SelectedIndexChanged += cbxPortion_SelectedIndexChanged;
+            //cbxPortion.SelectedIndexChanged += cbxPortion_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -432,7 +432,7 @@
             lviDailyConsumedFood.TabIndex = 23;
             lviDailyConsumedFood.UseCompatibleStateImageBehavior = false;
             lviDailyConsumedFood.View = View.Details;
-            lviDailyConsumedFood.SelectedIndexChanged += lviDailyConsumedFood_SelectedIndexChanged;
+            //lviDailyConsumedFood.SelectedIndexChanged += lviDailyConsumedFood_SelectedIndexChanged;
             // 
             // columnHeader8
             // 
@@ -499,7 +499,7 @@
             guna2ContextMenuStrip1.RenderStyle.SeparatorColor = Color.Gainsboro;
             guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             guna2ContextMenuStrip1.Size = new Size(211, 56);
-            guna2ContextMenuStrip1.Opening += guna2ContextMenuStrip1_Opening;
+           // guna2ContextMenuStrip1.Opening += guna2ContextMenuStrip1_Opening;
             // 
             // deleteToolStripMenuItem
             // 

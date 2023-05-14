@@ -572,26 +572,7 @@ namespace WndPL.Forms
 
         }
 
-        private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lviDailyConsumedFood_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxPortion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
+      
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lviDailyConsumedFood.SelectedItems.Count > 0)
