@@ -3,6 +3,7 @@ using DAL;
 using Entities;
 using Entities.Enums;
 using Entities.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WndPL.Forms
 {
@@ -21,36 +23,51 @@ namespace WndPL.Forms
         {
             InitializeComponent();
             userId = id;
+            user = bl.Users.GetById(userId);
         }
         BusinessLogic bl = new BusinessLogic();
+        Helper helper = new Helper();
         int userId;
+        Entities.User user;
         private void UserSettings_Load(object sender, EventArgs e)
         {
+            foreach (var item in Enum.GetNames(typeof(Gender)))
+                cmbGender.Items.Add(item);
+            txtEmail.Text = user.Mail;
+            txtEmail.ReadOnly = true;
+            txtFirstName.Text = user.FirstName.ToString();
+            txtLastName.Text = user.LastName.ToString();
+            txtAge.Text = user.Age.ToString();
+            txtHeight.Text = user.Height.ToString();
+            txtWeight.Text = user.Weight.ToString();
+            txtDailyCaloriesGoal.Text = user.DailyGoalCalorie.ToString();
+            txtWeightGoal.Text = user.GoalWeight.ToString();
+            txtDayGoal.Text = user.DayGoal.ToString();
+            cmbGender.SelectedIndex = (int)user.Gender - 1;
+            if (user.PhoneNumber != null)
+                mtbTelephone.Text = user.PhoneNumber.ToString();
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (AreFieldsEmpty())
+            bool emptyControl = helper.AreTextBoxesEmpty(this);
+            if (emptyControl)
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
-
-
-            if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
+            else if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
             {
                 MessageBox.Show("Lütfen geçerli bir isim giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            if ((txtFirstName.Text).Length < 2 || (txtLastName.Text).Length < 2)
+            }
+            else if ((txtFirstName.Text).Length < 2 || (txtLastName.Text).Length < 2)
             {
                 MessageBox.Show("İsim ve soyisim en az 2 harf içermelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            if (!IsPasswordValid(txtPassword.Text))
+            }
+            else if (!IsPasswordValid(txtPassword.Text))
             {
                 MessageBox.Show("Şifreler uygun kriterlere sahip değil\n---Kriterler---\n•En az 8 karakter uzunluğunda olmalıdır.\n• En az 2 büyük harf içermelidir.\n• En az 3 küçük harf içermelidir.\n• ! (ünlem), : (iki nokta üst üste), +(artı), *(yıldız) karakterlerinden en az 2 tanesini içermelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -58,56 +75,35 @@ namespace WndPL.Forms
             else if (txtPassword.Text != txtConfirmPassword.Text)
             {
                 MessageBox.Show("Şifreler eşleşmiyor. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
             }
             else
             {
-                string mail = txtEmail.Text;
-                string password = txtPassword.Text;
-                string confirmPassword = txtConfirmPassword.Text;
-                string firstName = txtFirstName.Text;
-                string lastName = txtLastName.Text;
-                int age = Convert.ToInt32(txtAge.Text);
-                Gender gender = (Gender)cmbGender.SelectedItem;
-                string? phoneNumber = mtbTelephone.Text;
-                decimal height = Convert.ToDecimal(txtHeight.Text);
-                decimal weight = Convert.ToDecimal(txtWeight.Text);
-                decimal goalWeight = Convert.ToDecimal(txtWeightGoal.Text);
-                int dailyTargetCalories = Convert.ToInt32(txtDailyCaloriesGoal.Text);
-                int dayGoal = Convert.ToInt32(txtDayGoal.Text);
-
-                using (var dbContext = new CalorieTrackingDbContext())
+                if (helper.StartAndEndWithDigit(this.pnlText))
                 {
-                    BusinessLogic bl = new BusinessLogic();
 
-                    User user = new User()
-                    {
-                        Mail = mail,
-                        Password = password,
-                        FirstName = firstName,
-                        LastName = lastName,
-                        Age = age,
-                        Gender = gender,
-                        PhoneNumber = phoneNumber,
-                        Height = height,
-                        Weight = weight,
-                        GoalWeight = goalWeight,
-                        DailyGoalCalorie = dailyTargetCalories,
-                        DayGoal = dayGoal
-
-                    };
+                    user.Password = txtPassword.Text;
+                    user.FirstName = txtFirstName.Text;
+                    user.LastName = txtLastName.Text;
+                    user.Age = Convert.ToInt32(txtAge.Text);
+                    user.Gender = (Gender)cmbGender.SelectedIndex + 1;
+                    string phoneNumber = new string(mtbTelephone.Text.Where(char.IsDigit).ToArray());
+                    user.PhoneNumber = phoneNumber;
+                    user.Height = Convert.ToDecimal(txtHeight.Text);
+                    user.Weight = Convert.ToDecimal(txtWeight.Text);
+                    user.GoalWeight = Convert.ToDecimal(txtWeightGoal.Text);
+                    user.DailyGoalCalorie = Convert.ToInt32(txtDailyCaloriesGoal.Text);
+                    user.DayGoal = Convert.ToInt32(txtDayGoal.Text);
 
                     bool result = bl.Users.Add(user);
-
                     if (result)
-                    {
-
                         MessageBox.Show("Güncelleme başarılı.");
-                    }
                     else
-                    {
                         MessageBox.Show("Güncelleme başarısız.");
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ölçülerini doğru girdiğinizden emin olun.");
                 }
             }
         }
@@ -143,29 +139,6 @@ namespace WndPL.Forms
 
             }
         }
-        private bool AreFieldsEmpty()
-        {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtConfirmPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txtLastName.Text) ||
-                string.IsNullOrWhiteSpace(mtbTelephone.Text) ||
-                cmbGender.SelectedItem == null ||
-                string.IsNullOrWhiteSpace(txtHeight.Text) ||
-                string.IsNullOrWhiteSpace(txtWeight.Text) ||
-                string.IsNullOrWhiteSpace(txtDailyCaloriesGoal.Text) ||
-                string.IsNullOrWhiteSpace(txtWeightGoal.Text) ||
-                string.IsNullOrWhiteSpace(txtDayGoal.Text)
-                )
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         private bool ContainsNumeric(string text)
         {
@@ -187,6 +160,12 @@ namespace WndPL.Forms
             return true;
         }
 
-
+        private void Texts_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

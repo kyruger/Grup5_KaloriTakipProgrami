@@ -78,12 +78,12 @@ namespace WndPL
             form2.ShowDialog();
             from1.Show();
         }
-        public bool StartAndEndWithDigit(Guna2Panel panel,Guna2TextBox textBox)
+        public bool StartAndEndWithDigit(Guna2Panel panel)
         {
             bool result = true;
             foreach (var item in panel.Controls)
             {
-                if (item is Guna2TextBox txt && textBox != item)
+                if (item is Guna2TextBox txt)
                     if (!(char.IsDigit(txt.Text[0]) && char.IsDigit(txt.Text[^1])))
                         result = false;
             }

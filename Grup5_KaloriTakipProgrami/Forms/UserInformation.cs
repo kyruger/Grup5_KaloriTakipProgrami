@@ -62,7 +62,7 @@ namespace WndPL.Forms
             }
             else
             {
-                if (helper.StartAndEndWithDigit(this.pnlRight, txtBodyMassIndex))
+                if (helper.StartAndEndWithDigit(this.pnlRight))
                 {
 
                     user.Height = Convert.ToDecimal(txtHeight.Text);

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,6 +46,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -60,7 +60,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            pnlUserSettings = new Guna.UI2.WinForms.Guna2Panel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnChangeUserPicture = new Guna.UI2.WinForms.Guna2Button();
             txtAge = new Guna.UI2.WinForms.Guna2TextBox();
             cmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -77,29 +78,11 @@
             txtDailyCaloriesGoal = new Guna.UI2.WinForms.Guna2TextBox();
             txtWeightGoal = new Guna.UI2.WinForms.Guna2TextBox();
             txtDayGoal = new Guna.UI2.WinForms.Guna2TextBox();
-            pnlUserSettings.SuspendLayout();
+            pnlStick = new Guna.UI2.WinForms.Guna2Panel();
+            pnlText = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)pbChangePicture).BeginInit();
+            pnlText.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlUserSettings
-            // 
-            pnlUserSettings.Controls.Add(btnChangeUserPicture);
-            pnlUserSettings.Controls.Add(txtAge);
-            pnlUserSettings.Controls.Add(cmbGender);
-            pnlUserSettings.Controls.Add(pbChangePicture);
-            pnlUserSettings.Controls.Add(mtbTelephone);
-            pnlUserSettings.Controls.Add(txtEmail);
-            pnlUserSettings.Controls.Add(txtPassword);
-            pnlUserSettings.Controls.Add(txtConfirmPassword);
-            pnlUserSettings.Controls.Add(txtFirstName);
-            pnlUserSettings.Controls.Add(txtLastName);
-            pnlUserSettings.CustomizableEdges = customizableEdges18;
-            pnlUserSettings.Location = new Point(-49, -44);
-            pnlUserSettings.Margin = new Padding(3, 2, 3, 2);
-            pnlUserSettings.Name = "pnlUserSettings";
-            pnlUserSettings.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            pnlUserSettings.Size = new Size(701, 699);
-            pnlUserSettings.TabIndex = 51;
             // 
             // btnChangeUserPicture
             // 
@@ -113,7 +96,7 @@
             btnChangeUserPicture.FillColor = Color.RosyBrown;
             btnChangeUserPicture.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnChangeUserPicture.ForeColor = Color.White;
-            btnChangeUserPicture.Location = new Point(132, 240);
+            btnChangeUserPicture.Location = new Point(337, 99);
             btnChangeUserPicture.Name = "btnChangeUserPicture";
             btnChangeUserPicture.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnChangeUserPicture.Size = new Size(165, 45);
@@ -134,17 +117,18 @@
             txtAge.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtAge.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtAge.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAge.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAge.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAge.Location = new Point(403, 507);
-            txtAge.Margin = new Padding(3, 4, 3, 4);
+            txtAge.Location = new Point(53, 203);
+            txtAge.Margin = new Padding(3, 5, 3, 5);
             txtAge.Name = "txtAge";
             txtAge.PasswordChar = '\0';
             txtAge.PlaceholderText = "Age";
             txtAge.SelectedText = "";
             txtAge.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtAge.Size = new Size(198, 37);
+            txtAge.Size = new Size(220, 44);
             txtAge.TabIndex = 63;
+            txtAge.KeyPress += Texts_KeyPress;
             // 
             // cmbGender
             // 
@@ -159,23 +143,22 @@
             cmbGender.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             cmbGender.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cmbGender.ForeColor = Color.FromArgb(68, 88, 112);
-            cmbGender.ItemHeight = 30;
-            cmbGender.Items.AddRange(new object[] { "Female", "Male", "Others" });
-            cmbGender.Location = new Point(144, 578);
+            cmbGender.ItemHeight = 36;
+            cmbGender.Location = new Point(337, 450);
             cmbGender.Name = "cmbGender";
             cmbGender.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbGender.Size = new Size(198, 36);
+            cmbGender.Size = new Size(220, 42);
             cmbGender.TabIndex = 60;
             // 
             // pbChangePicture
             // 
             pbChangePicture.Image = (Image)resources.GetObject("pbChangePicture.Image");
             pbChangePicture.ImageRotate = 0F;
-            pbChangePicture.Location = new Point(132, 75);
+            pbChangePicture.Location = new Point(64, 12);
             pbChangePicture.Name = "pbChangePicture";
             pbChangePicture.ShadowDecoration.CustomizableEdges = customizableEdges7;
             pbChangePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            pbChangePicture.Size = new Size(155, 139);
+            pbChangePicture.Size = new Size(238, 193);
             pbChangePicture.SizeMode = PictureBoxSizeMode.Zoom;
             pbChangePicture.TabIndex = 53;
             pbChangePicture.TabStop = false;
@@ -183,11 +166,11 @@
             // mtbTelephone
             // 
             mtbTelephone.BorderStyle = BorderStyle.None;
-            mtbTelephone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            mtbTelephone.Location = new Point(403, 592);
+            mtbTelephone.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            mtbTelephone.Location = new Point(224, 552);
             mtbTelephone.Mask = "(999) 000-0000";
             mtbTelephone.Name = "mtbTelephone";
-            mtbTelephone.Size = new Size(198, 22);
+            mtbTelephone.Size = new Size(198, 27);
             mtbTelephone.TabIndex = 62;
             // 
             // txtEmail
@@ -204,16 +187,16 @@
             txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(144, 356);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(64, 276);
+            txtEmail.Margin = new Padding(3, 5, 3, 5);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "Email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            txtEmail.Size = new Size(198, 37);
+            txtEmail.Size = new Size(220, 44);
             txtEmail.TabIndex = 55;
             // 
             // txtPassword
@@ -230,16 +213,16 @@
             txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(144, 430);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(62, 363);
+            txtPassword.Margin = new Padding(3, 5, 3, 5);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '\0';
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            txtPassword.Size = new Size(198, 36);
+            txtPassword.Size = new Size(220, 44);
             txtPassword.TabIndex = 56;
             // 
             // txtConfirmPassword
@@ -256,16 +239,16 @@
             txtConfirmPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtConfirmPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConfirmPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtConfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmPassword.Location = new Point(144, 503);
-            txtConfirmPassword.Margin = new Padding(3, 4, 3, 4);
+            txtConfirmPassword.Location = new Point(62, 449);
+            txtConfirmPassword.Margin = new Padding(3, 5, 3, 5);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PasswordChar = '\0';
             txtConfirmPassword.PlaceholderText = "Confirm Password";
             txtConfirmPassword.SelectedText = "";
             txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            txtConfirmPassword.Size = new Size(198, 38);
+            txtConfirmPassword.Size = new Size(220, 44);
             txtConfirmPassword.TabIndex = 57;
             // 
             // txtFirstName
@@ -282,16 +265,16 @@
             txtFirstName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtFirstName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtFirstName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtFirstName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFirstName.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtFirstName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtFirstName.Location = new Point(403, 356);
-            txtFirstName.Margin = new Padding(3, 4, 3, 4);
+            txtFirstName.Location = new Point(337, 276);
+            txtFirstName.Margin = new Padding(3, 5, 3, 5);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PasswordChar = '\0';
             txtFirstName.PlaceholderText = "Fist Name";
             txtFirstName.SelectedText = "";
             txtFirstName.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            txtFirstName.Size = new Size(198, 39);
+            txtFirstName.Size = new Size(220, 44);
             txtFirstName.TabIndex = 58;
             // 
             // txtLastName
@@ -308,22 +291,22 @@
             txtLastName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtLastName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtLastName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLastName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLastName.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtLastName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLastName.Location = new Point(403, 429);
-            txtLastName.Margin = new Padding(3, 4, 3, 4);
+            txtLastName.Location = new Point(335, 364);
+            txtLastName.Margin = new Padding(3, 5, 3, 5);
             txtLastName.Name = "txtLastName";
             txtLastName.PasswordChar = '\0';
             txtLastName.PlaceholderText = "Last Name";
             txtLastName.SelectedText = "";
             txtLastName.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            txtLastName.Size = new Size(198, 37);
+            txtLastName.Size = new Size(220, 44);
             txtLastName.TabIndex = 59;
             // 
             // btnSave
             // 
             btnSave.BorderRadius = 20;
-            btnSave.CustomizableEdges = customizableEdges20;
+            btnSave.CustomizableEdges = customizableEdges18;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -331,9 +314,9 @@
             btnSave.FillColor = Color.RosyBrown;
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(721, 525);
+            btnSave.Location = new Point(769, 643);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges19;
             btnSave.Size = new Size(194, 45);
             btnSave.TabIndex = 53;
             btnSave.Text = "Save";
@@ -345,24 +328,25 @@
             txtHeight.BorderRadius = 16;
             txtHeight.BorderThickness = 3;
             txtHeight.Cursor = Cursors.IBeam;
-            txtHeight.CustomizableEdges = customizableEdges22;
+            txtHeight.CustomizableEdges = customizableEdges20;
             txtHeight.DefaultText = "";
             txtHeight.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtHeight.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtHeight.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtHeight.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtHeight.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtHeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtHeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtHeight.Location = new Point(721, 120);
-            txtHeight.Margin = new Padding(3, 4, 3, 4);
+            txtHeight.Location = new Point(53, 27);
+            txtHeight.Margin = new Padding(3, 5, 3, 5);
             txtHeight.Name = "txtHeight";
             txtHeight.PasswordChar = '\0';
             txtHeight.PlaceholderText = "Height";
             txtHeight.SelectedText = "";
-            txtHeight.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            txtHeight.Size = new Size(194, 39);
+            txtHeight.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            txtHeight.Size = new Size(220, 44);
             txtHeight.TabIndex = 59;
+            txtHeight.KeyPress += Texts_KeyPress;
             // 
             // txtWeight
             // 
@@ -371,24 +355,25 @@
             txtWeight.BorderRadius = 16;
             txtWeight.BorderThickness = 3;
             txtWeight.Cursor = Cursors.IBeam;
-            txtWeight.CustomizableEdges = customizableEdges24;
+            txtWeight.CustomizableEdges = customizableEdges22;
             txtWeight.DefaultText = "";
             txtWeight.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtWeight.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtWeight.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtWeight.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtWeight.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtWeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtWeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtWeight.Location = new Point(721, 203);
-            txtWeight.Margin = new Padding(3, 4, 3, 4);
+            txtWeight.Location = new Point(53, 115);
+            txtWeight.Margin = new Padding(3, 5, 3, 5);
             txtWeight.Name = "txtWeight";
             txtWeight.PasswordChar = '\0';
             txtWeight.PlaceholderText = "Weight";
             txtWeight.SelectedText = "";
-            txtWeight.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            txtWeight.Size = new Size(194, 39);
+            txtWeight.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            txtWeight.Size = new Size(220, 44);
             txtWeight.TabIndex = 60;
+            txtWeight.KeyPress += Texts_KeyPress;
             // 
             // txtDailyCaloriesGoal
             // 
@@ -397,24 +382,25 @@
             txtDailyCaloriesGoal.BorderRadius = 16;
             txtDailyCaloriesGoal.BorderThickness = 3;
             txtDailyCaloriesGoal.Cursor = Cursors.IBeam;
-            txtDailyCaloriesGoal.CustomizableEdges = customizableEdges26;
+            txtDailyCaloriesGoal.CustomizableEdges = customizableEdges24;
             txtDailyCaloriesGoal.DefaultText = "";
             txtDailyCaloriesGoal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDailyCaloriesGoal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtDailyCaloriesGoal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtDailyCaloriesGoal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtDailyCaloriesGoal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDailyCaloriesGoal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDailyCaloriesGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtDailyCaloriesGoal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDailyCaloriesGoal.Location = new Point(721, 286);
-            txtDailyCaloriesGoal.Margin = new Padding(3, 4, 3, 4);
+            txtDailyCaloriesGoal.Location = new Point(53, 375);
+            txtDailyCaloriesGoal.Margin = new Padding(3, 5, 3, 5);
             txtDailyCaloriesGoal.Name = "txtDailyCaloriesGoal";
             txtDailyCaloriesGoal.PasswordChar = '\0';
             txtDailyCaloriesGoal.PlaceholderText = "Daily Calories Goal";
             txtDailyCaloriesGoal.SelectedText = "";
-            txtDailyCaloriesGoal.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            txtDailyCaloriesGoal.Size = new Size(194, 39);
+            txtDailyCaloriesGoal.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            txtDailyCaloriesGoal.Size = new Size(220, 44);
             txtDailyCaloriesGoal.TabIndex = 61;
+            txtDailyCaloriesGoal.KeyPress += Texts_KeyPress;
             // 
             // txtWeightGoal
             // 
@@ -423,24 +409,25 @@
             txtWeightGoal.BorderRadius = 16;
             txtWeightGoal.BorderThickness = 3;
             txtWeightGoal.Cursor = Cursors.IBeam;
-            txtWeightGoal.CustomizableEdges = customizableEdges28;
+            txtWeightGoal.CustomizableEdges = customizableEdges26;
             txtWeightGoal.DefaultText = "";
             txtWeightGoal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtWeightGoal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtWeightGoal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtWeightGoal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtWeightGoal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtWeightGoal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtWeightGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtWeightGoal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtWeightGoal.Location = new Point(721, 369);
-            txtWeightGoal.Margin = new Padding(3, 4, 3, 4);
+            txtWeightGoal.Location = new Point(53, 289);
+            txtWeightGoal.Margin = new Padding(3, 5, 3, 5);
             txtWeightGoal.Name = "txtWeightGoal";
             txtWeightGoal.PasswordChar = '\0';
             txtWeightGoal.PlaceholderText = "Weight Goal";
             txtWeightGoal.SelectedText = "";
-            txtWeightGoal.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            txtWeightGoal.Size = new Size(194, 37);
+            txtWeightGoal.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            txtWeightGoal.Size = new Size(220, 44);
             txtWeightGoal.TabIndex = 64;
+            txtWeightGoal.KeyPress += Texts_KeyPress;
             // 
             // txtDayGoal
             // 
@@ -449,24 +436,51 @@
             txtDayGoal.BorderRadius = 16;
             txtDayGoal.BorderThickness = 3;
             txtDayGoal.Cursor = Cursors.IBeam;
-            txtDayGoal.CustomizableEdges = customizableEdges30;
+            txtDayGoal.CustomizableEdges = customizableEdges28;
             txtDayGoal.DefaultText = "";
             txtDayGoal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtDayGoal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtDayGoal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtDayGoal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtDayGoal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDayGoal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDayGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtDayGoal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDayGoal.Location = new Point(717, 450);
-            txtDayGoal.Margin = new Padding(3, 4, 3, 4);
+            txtDayGoal.Location = new Point(53, 463);
+            txtDayGoal.Margin = new Padding(3, 5, 3, 5);
             txtDayGoal.Name = "txtDayGoal";
             txtDayGoal.PasswordChar = '\0';
             txtDayGoal.PlaceholderText = "Day Goal";
             txtDayGoal.SelectedText = "";
-            txtDayGoal.ShadowDecoration.CustomizableEdges = customizableEdges31;
-            txtDayGoal.Size = new Size(198, 37);
+            txtDayGoal.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            txtDayGoal.Size = new Size(220, 44);
             txtDayGoal.TabIndex = 65;
+            txtDayGoal.KeyPress += Texts_KeyPress;
+            // 
+            // pnlStick
+            // 
+            pnlStick.BorderRadius = 5;
+            pnlStick.CustomizableEdges = customizableEdges30;
+            pnlStick.FillColor = Color.DarkSlateBlue;
+            pnlStick.Location = new Point(610, 51);
+            pnlStick.Name = "pnlStick";
+            pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges31;
+            pnlStick.Size = new Size(10, 600);
+            pnlStick.TabIndex = 66;
+            // 
+            // pnlText
+            // 
+            pnlText.Controls.Add(txtDayGoal);
+            pnlText.Controls.Add(txtHeight);
+            pnlText.Controls.Add(txtWeight);
+            pnlText.Controls.Add(txtDailyCaloriesGoal);
+            pnlText.Controls.Add(txtWeightGoal);
+            pnlText.Controls.Add(txtAge);
+            pnlText.CustomizableEdges = customizableEdges32;
+            pnlText.Location = new Point(650, 72);
+            pnlText.Name = "pnlText";
+            pnlText.ShadowDecoration.CustomizableEdges = customizableEdges33;
+            pnlText.Size = new Size(313, 565);
+            pnlText.TabIndex = 67;
             // 
             // UserSettings
             // 
@@ -474,25 +488,29 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1000, 700);
-            Controls.Add(txtDayGoal);
-            Controls.Add(txtWeightGoal);
-            Controls.Add(txtDailyCaloriesGoal);
-            Controls.Add(txtWeight);
-            Controls.Add(txtHeight);
+            Controls.Add(pnlText);
+            Controls.Add(pnlStick);
+            Controls.Add(btnChangeUserPicture);
+            Controls.Add(pbChangePicture);
+            Controls.Add(cmbGender);
+            Controls.Add(txtEmail);
+            Controls.Add(txtPassword);
+            Controls.Add(txtConfirmPassword);
+            Controls.Add(mtbTelephone);
             Controls.Add(btnSave);
-            Controls.Add(pnlUserSettings);
+            Controls.Add(txtFirstName);
+            Controls.Add(txtLastName);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UserSettings";
             Text = "UserSettings";
             Load += UserSettings_Load;
-            pnlUserSettings.ResumeLayout(false);
-            pnlUserSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbChangePicture).EndInit();
+            pnlText.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel pnlUserSettings;
         private Guna.UI2.WinForms.Guna2Button btnChangeUserPicture;
         private Guna.UI2.WinForms.Guna2TextBox txtAge;
         private Guna.UI2.WinForms.Guna2ComboBox cmbGender;
@@ -509,5 +527,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDailyCaloriesGoal;
         private Guna.UI2.WinForms.Guna2TextBox txtWeightGoal;
         private Guna.UI2.WinForms.Guna2TextBox txtDayGoal;
+        private Guna.UI2.WinForms.Guna2Panel pnlStick;
+        private Guna.UI2.WinForms.Guna2Panel pnlText;
     }
 }
