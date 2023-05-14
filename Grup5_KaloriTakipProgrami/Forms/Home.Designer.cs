@@ -138,10 +138,9 @@
             chartFont1.Size = 9;
             chartDailyNutrient.Legend.LabelFont = chartFont1;
             chartDailyNutrient.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
-            chartDailyNutrient.Location = new Point(31, 395);
-            chartDailyNutrient.Margin = new Padding(3, 4, 3, 4);
+            chartDailyNutrient.Location = new Point(27, 296);
             chartDailyNutrient.Name = "chartDailyNutrient";
-            chartDailyNutrient.Size = new Size(394, 364);
+            chartDailyNutrient.Size = new Size(345, 273);
             chartDailyNutrient.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 15;
@@ -195,15 +194,14 @@
             cpbDailyCalorie.FillColor = Color.FromArgb(200, 213, 218, 223);
             cpbDailyCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cpbDailyCalorie.ForeColor = Color.White;
-            cpbDailyCalorie.Location = new Point(25, 0);
-            cpbDailyCalorie.Margin = new Padding(3, 4, 3, 4);
+            cpbDailyCalorie.Location = new Point(22, 0);
             cpbDailyCalorie.Minimum = 0;
             cpbDailyCalorie.Name = "cpbDailyCalorie";
             cpbDailyCalorie.ProgressColor = Color.DarkOrange;
             cpbDailyCalorie.ProgressColor2 = Color.DarkOrange;
             cpbDailyCalorie.ShadowDecoration.CustomizableEdges = customizableEdges1;
             cpbDailyCalorie.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbDailyCalorie.Size = new Size(200, 200);
+            cpbDailyCalorie.Size = new Size(150, 150);
             cpbDailyCalorie.TabIndex = 1;
             cpbDailyCalorie.Text = "Daily Calorie";
             cpbDailyCalorie.ValueChanged += cpbDailyCalorie_ValueChanged;
@@ -212,9 +210,9 @@
             // 
             lblLeftCalorie.AutoSize = true;
             lblLeftCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblLeftCalorie.Location = new Point(51, 88);
+            lblLeftCalorie.Location = new Point(45, 66);
             lblLeftCalorie.Name = "lblLeftCalorie";
-            lblLeftCalorie.Size = new Size(78, 28);
+            lblLeftCalorie.Size = new Size(64, 21);
             lblLeftCalorie.TabIndex = 4;
             lblLeftCalorie.Text = "Calorie";
             // 
@@ -242,11 +240,10 @@
             pnlHomeTop.CustomizableEdges = customizableEdges15;
             pnlHomeTop.FillColor = Color.Teal;
             pnlHomeTop.FillColor2 = Color.MediumPurple;
-            pnlHomeTop.Location = new Point(64, 71);
-            pnlHomeTop.Margin = new Padding(3, 4, 3, 4);
+            pnlHomeTop.Location = new Point(56, 53);
             pnlHomeTop.Name = "pnlHomeTop";
             pnlHomeTop.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            pnlHomeTop.Size = new Size(1015, 200);
+            pnlHomeTop.Size = new Size(888, 150);
             pnlHomeTop.TabIndex = 2;
             // 
             // cpbDaysRemaining
@@ -256,8 +253,7 @@
             cpbDaysRemaining.FillThickness = 12;
             cpbDaysRemaining.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cpbDaysRemaining.ForeColor = Color.White;
-            cpbDaysRemaining.Location = new Point(871, 57);
-            cpbDaysRemaining.Margin = new Padding(3, 4, 3, 4);
+            cpbDaysRemaining.Location = new Point(762, 43);
             cpbDaysRemaining.Minimum = 0;
             cpbDaysRemaining.Name = "cpbDaysRemaining";
             cpbDaysRemaining.ProgressColor = Color.DarkOrange;
@@ -265,7 +261,7 @@
             cpbDaysRemaining.ProgressThickness = 12;
             cpbDaysRemaining.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cpbDaysRemaining.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbDaysRemaining.Size = new Size(133, 133);
+            cpbDaysRemaining.Size = new Size(100, 100);
             cpbDaysRemaining.TabIndex = 18;
             cpbDaysRemaining.Text = "Days Remaining";
             // 
@@ -273,9 +269,9 @@
             // 
             lblRemainingDay.AutoSize = true;
             lblRemainingDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRemainingDay.Location = new Point(43, 51);
+            lblRemainingDay.Location = new Point(38, 38);
             lblRemainingDay.Name = "lblRemainingDay";
-            lblRemainingDay.Size = new Size(49, 28);
+            lblRemainingDay.Size = new Size(40, 21);
             lblRemainingDay.TabIndex = 5;
             lblRemainingDay.Text = "Day";
             // 
@@ -284,9 +280,9 @@
             lblGoalCalorie.AutoSize = true;
             lblGoalCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblGoalCalorie.ForeColor = Color.White;
-            lblGoalCalorie.Location = new Point(307, 112);
+            lblGoalCalorie.Location = new Point(269, 84);
             lblGoalCalorie.Name = "lblGoalCalorie";
-            lblGoalCalorie.Size = new Size(127, 28);
+            lblGoalCalorie.Size = new Size(103, 21);
             lblGoalCalorie.TabIndex = 17;
             lblGoalCalorie.Text = "Goal Calorie";
             // 
@@ -295,9 +291,9 @@
             lblSlash.AutoSize = true;
             lblSlash.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSlash.ForeColor = Color.White;
-            lblSlash.Location = new Point(288, 112);
+            lblSlash.Location = new Point(252, 84);
             lblSlash.Name = "lblSlash";
-            lblSlash.Size = new Size(21, 28);
+            lblSlash.Size = new Size(17, 21);
             lblSlash.TabIndex = 16;
             lblSlash.Text = "/";
             // 
@@ -306,9 +302,9 @@
             lblCalorie.AutoSize = true;
             lblCalorie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCalorie.ForeColor = Color.White;
-            lblCalorie.Location = new Point(215, 112);
+            lblCalorie.Location = new Point(188, 84);
             lblCalorie.Name = "lblCalorie";
-            lblCalorie.Size = new Size(78, 28);
+            lblCalorie.Size = new Size(64, 21);
             lblCalorie.TabIndex = 13;
             lblCalorie.Text = "Calorie";
             // 
@@ -317,9 +313,9 @@
             lblDaysRemaining.AutoSize = true;
             lblDaysRemaining.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblDaysRemaining.ForeColor = Color.Orange;
-            lblDaysRemaining.Location = new Point(850, 15);
+            lblDaysRemaining.Location = new Point(744, 11);
             lblDaysRemaining.Name = "lblDaysRemaining";
-            lblDaysRemaining.Size = new Size(165, 28);
+            lblDaysRemaining.Size = new Size(134, 21);
             lblDaysRemaining.TabIndex = 12;
             lblDaysRemaining.Text = "Days Remaining";
             // 
@@ -328,11 +324,10 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(745, 49);
-            guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2PictureBox1.Location = new Point(652, 37);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new Size(57, 67);
+            guna2PictureBox1.Size = new Size(50, 50);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 11;
             guna2PictureBox1.TabStop = false;
@@ -350,15 +345,14 @@
             txtDayGoal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtDayGoal.ForeColor = Color.Black;
             txtDayGoal.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDayGoal.Location = new Point(745, 124);
-            txtDayGoal.Margin = new Padding(3, 4, 3, 4);
+            txtDayGoal.Location = new Point(652, 93);
             txtDayGoal.MaxLength = 2;
             txtDayGoal.Name = "txtDayGoal";
             txtDayGoal.PasswordChar = '\0';
             txtDayGoal.PlaceholderText = "";
             txtDayGoal.SelectedText = "";
             txtDayGoal.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtDayGoal.Size = new Size(57, 67);
+            txtDayGoal.Size = new Size(50, 50);
             txtDayGoal.TabIndex = 4;
             txtDayGoal.TextAlign = HorizontalAlignment.Center;
             txtDayGoal.TextOffset = new Point(9, 0);
@@ -371,9 +365,9 @@
             lblGoalWeight.AutoSize = true;
             lblGoalWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblGoalWeight.ForeColor = Color.Orange;
-            lblGoalWeight.Location = new Point(593, 15);
+            lblGoalWeight.Location = new Point(519, 11);
             lblGoalWeight.Name = "lblGoalWeight";
-            lblGoalWeight.Size = new Size(110, 23);
+            lblGoalWeight.Size = new Size(92, 19);
             lblGoalWeight.TabIndex = 10;
             lblGoalWeight.Text = "Goal Weight";
             // 
@@ -382,9 +376,9 @@
             lblCurrentWeight.AutoSize = true;
             lblCurrentWeight.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblCurrentWeight.ForeColor = Color.Orange;
-            lblCurrentWeight.Location = new Point(453, 15);
+            lblCurrentWeight.Location = new Point(396, 11);
             lblCurrentWeight.Name = "lblCurrentWeight";
-            lblCurrentWeight.Size = new Size(135, 23);
+            lblCurrentWeight.Size = new Size(111, 19);
             lblCurrentWeight.TabIndex = 9;
             lblCurrentWeight.Text = "Current Weight";
             // 
@@ -393,11 +387,10 @@
             guna2PictureBox2.CustomizableEdges = customizableEdges7;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(615, 49);
-            guna2PictureBox2.Margin = new Padding(3, 4, 3, 4);
+            guna2PictureBox2.Location = new Point(538, 37);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2PictureBox2.Size = new Size(57, 67);
+            guna2PictureBox2.Size = new Size(50, 50);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 8;
             guna2PictureBox2.TabStop = false;
@@ -407,11 +400,10 @@
             pbCurrentWeight.CustomizableEdges = customizableEdges9;
             pbCurrentWeight.Image = (Image)resources.GetObject("pbCurrentWeight.Image");
             pbCurrentWeight.ImageRotate = 0F;
-            pbCurrentWeight.Location = new Point(485, 49);
-            pbCurrentWeight.Margin = new Padding(3, 4, 3, 4);
+            pbCurrentWeight.Location = new Point(424, 37);
             pbCurrentWeight.Name = "pbCurrentWeight";
             pbCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            pbCurrentWeight.Size = new Size(57, 67);
+            pbCurrentWeight.Size = new Size(50, 50);
             pbCurrentWeight.SizeMode = PictureBoxSizeMode.Zoom;
             pbCurrentWeight.TabIndex = 7;
             pbCurrentWeight.TabStop = false;
@@ -421,9 +413,9 @@
             lblDayGoal.AutoSize = true;
             lblDayGoal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblDayGoal.ForeColor = Color.Orange;
-            lblDayGoal.Location = new Point(738, 15);
+            lblDayGoal.Location = new Point(646, 11);
             lblDayGoal.Name = "lblDayGoal";
-            lblDayGoal.Size = new Size(87, 23);
+            lblDayGoal.Size = new Size(74, 19);
             lblDayGoal.TabIndex = 6;
             lblDayGoal.Text = "Day Goal ";
             // 
@@ -432,9 +424,9 @@
             lblCaloriesName.AutoSize = true;
             lblCaloriesName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCaloriesName.ForeColor = Color.Orange;
-            lblCaloriesName.Location = new Point(215, 77);
+            lblCaloriesName.Location = new Point(188, 58);
             lblCaloriesName.Name = "lblCaloriesName";
-            lblCaloriesName.Size = new Size(214, 28);
+            lblCaloriesName.Size = new Size(172, 21);
             lblCaloriesName.TabIndex = 4;
             lblCaloriesName.Text = "Calorie / Goal Calorie";
             // 
@@ -451,15 +443,14 @@
             txtGoalWeight.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtGoalWeight.ForeColor = Color.Black;
             txtGoalWeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtGoalWeight.Location = new Point(615, 124);
-            txtGoalWeight.Margin = new Padding(3, 4, 3, 4);
+            txtGoalWeight.Location = new Point(538, 93);
             txtGoalWeight.MaxLength = 5;
             txtGoalWeight.Name = "txtGoalWeight";
             txtGoalWeight.PasswordChar = '\0';
             txtGoalWeight.PlaceholderText = "";
             txtGoalWeight.SelectedText = "";
             txtGoalWeight.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtGoalWeight.Size = new Size(57, 67);
+            txtGoalWeight.Size = new Size(50, 50);
             txtGoalWeight.TabIndex = 3;
             txtGoalWeight.TextAlign = HorizontalAlignment.Center;
             txtGoalWeight.KeyPress += txtWeightTexts_KeyPress;
@@ -477,15 +468,14 @@
             txtCurrentWeight.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtCurrentWeight.ForeColor = Color.Black;
             txtCurrentWeight.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCurrentWeight.Location = new Point(485, 124);
-            txtCurrentWeight.Margin = new Padding(3, 4, 3, 4);
+            txtCurrentWeight.Location = new Point(424, 93);
             txtCurrentWeight.MaxLength = 5;
             txtCurrentWeight.Name = "txtCurrentWeight";
             txtCurrentWeight.PasswordChar = '\0';
             txtCurrentWeight.PlaceholderText = "";
             txtCurrentWeight.SelectedText = "";
             txtCurrentWeight.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtCurrentWeight.Size = new Size(57, 67);
+            txtCurrentWeight.Size = new Size(50, 50);
             txtCurrentWeight.TabIndex = 2;
             txtCurrentWeight.TextAlign = HorizontalAlignment.Center;
             txtCurrentWeight.Enter += txtCurrentWeight_Enter;
@@ -498,10 +488,9 @@
             chartWeeklyCalorie.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { lineData, barData });
             chartFont9.FontName = "Arial";
             chartWeeklyCalorie.Legend.LabelFont = chartFont9;
-            chartWeeklyCalorie.Location = new Point(549, 381);
-            chartWeeklyCalorie.Margin = new Padding(3, 4, 3, 4);
+            chartWeeklyCalorie.Location = new Point(480, 286);
             chartWeeklyCalorie.Name = "chartWeeklyCalorie";
-            chartWeeklyCalorie.Size = new Size(581, 427);
+            chartWeeklyCalorie.Size = new Size(508, 320);
             chartWeeklyCalorie.TabIndex = 3;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 15;
@@ -578,10 +567,11 @@
             pnlStick.BorderRadius = 5;
             pnlStick.CustomizableEdges = customizableEdges17;
             pnlStick.FillColor = Color.DarkSlateBlue;
-            pnlStick.Location = new Point(452, 269);
+            pnlStick.Location = new Point(452, 273);
+            pnlStick.Margin = new Padding(3, 2, 3, 2);
             pnlStick.Name = "pnlStick";
             pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            pnlStick.Size = new Size(11, 483);
+            pnlStick.Size = new Size(10, 362);
             pnlStick.TabIndex = 4;
             // 
             // lblProteinPercentage
@@ -589,9 +579,9 @@
             lblProteinPercentage.AutoSize = true;
             lblProteinPercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblProteinPercentage.ForeColor = Color.DimGray;
-            lblProteinPercentage.Location = new Point(422, 561);
+            lblProteinPercentage.Location = new Point(369, 421);
             lblProteinPercentage.Name = "lblProteinPercentage";
-            lblProteinPercentage.Size = new Size(57, 18);
+            lblProteinPercentage.Size = new Size(47, 15);
             lblProteinPercentage.TabIndex = 5;
             lblProteinPercentage.Text = "%00.00";
             // 
@@ -600,9 +590,9 @@
             lblFatPercentage.AutoSize = true;
             lblFatPercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblFatPercentage.ForeColor = Color.DimGray;
-            lblFatPercentage.Location = new Point(422, 593);
+            lblFatPercentage.Location = new Point(369, 445);
             lblFatPercentage.Name = "lblFatPercentage";
-            lblFatPercentage.Size = new Size(57, 18);
+            lblFatPercentage.Size = new Size(47, 15);
             lblFatPercentage.TabIndex = 6;
             lblFatPercentage.Text = "%00.00";
             // 
@@ -611,18 +601,18 @@
             lblCarbohydratePercentage.AutoSize = true;
             lblCarbohydratePercentage.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblCarbohydratePercentage.ForeColor = Color.DimGray;
-            lblCarbohydratePercentage.Location = new Point(422, 625);
+            lblCarbohydratePercentage.Location = new Point(369, 469);
             lblCarbohydratePercentage.Name = "lblCarbohydratePercentage";
-            lblCarbohydratePercentage.Size = new Size(57, 18);
+            lblCarbohydratePercentage.Size = new Size(47, 15);
             lblCarbohydratePercentage.TabIndex = 7;
             lblCarbohydratePercentage.Text = "%00.00";
             // 
             // Home
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1143, 933);
+            ClientSize = new Size(1000, 700);
             Controls.Add(lblCarbohydratePercentage);
             Controls.Add(lblFatPercentage);
             Controls.Add(lblProteinPercentage);
@@ -631,7 +621,6 @@
             Controls.Add(pnlHomeTop);
             Controls.Add(chartDailyNutrient);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Home";
             Text = "Home";
             Load += Home_Load;
