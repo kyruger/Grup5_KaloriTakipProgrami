@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,20 @@ namespace WndPL.Forms
 {
     public partial class Main : Form
     {
-        public Main()
+        public Main(int id)
         {
             InitializeComponent();
+            userId = id;
         }
+        BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
+        int userId;
         private void Main_Load(object sender, EventArgs e)
         {
-            Home homeForm = new Home();
+            Home homeForm = new Home(userId);
+            Entities.User user = bl.Users.GetById(userId);
+            lblName.Text = user.FullName;
+            lblMail.Text = user.Mail;
             helper.ShowPanel(homeForm, pnlMain);
             btnActivity.Enabled = false;
             btnDiets.Enabled = false;
@@ -28,7 +35,7 @@ namespace WndPL.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Home homeForm = new Home();
+            Home homeForm = new Home(userId);
             helper.ShowPanel(homeForm, pnlMain);
         }
 

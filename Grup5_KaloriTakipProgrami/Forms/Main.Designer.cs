@@ -60,6 +60,7 @@
             btnExit = new Guna.UI2.WinForms.Guna2Button();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
             pnl = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picboxProfile).BeginInit();
             pnl.SuspendLayout();
             SuspendLayout();
@@ -218,7 +219,7 @@
             lblMail.BackColor = Color.Transparent;
             lblMail.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMail.ForeColor = Color.White;
-            lblMail.Location = new Point(101, 65);
+            lblMail.Location = new Point(56, 91);
             lblMail.Name = "lblMail";
             lblMail.Size = new Size(44, 21);
             lblMail.TabIndex = 9;
@@ -230,7 +231,7 @@
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.White;
-            lblName.Location = new Point(98, 37);
+            lblName.Location = new Point(82, 46);
             lblName.Name = "lblName";
             lblName.Size = new Size(56, 21);
             lblName.TabIndex = 8;
@@ -241,11 +242,11 @@
             picboxProfile.BackColor = Color.Transparent;
             picboxProfile.Image = (Image)resources.GetObject("picboxProfile.Image");
             picboxProfile.ImageRotate = 0F;
-            picboxProfile.Location = new Point(12, 24);
+            picboxProfile.Location = new Point(3, 12);
             picboxProfile.Name = "picboxProfile";
             picboxProfile.ShadowDecoration.CustomizableEdges = customizableEdges13;
             picboxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            picboxProfile.Size = new Size(64, 64);
+            picboxProfile.Size = new Size(73, 76);
             picboxProfile.SizeMode = PictureBoxSizeMode.Zoom;
             picboxProfile.TabIndex = 7;
             picboxProfile.TabStop = false;
@@ -264,7 +265,7 @@
             btnExit.FillColor = Color.OrangeRed;
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(0, 638);
+            btnExit.Location = new Point(0, 622);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges15;
             btnExit.Size = new Size(180, 50);
@@ -287,6 +288,7 @@
             // pnl
             // 
             pnl.BorderRadius = 30;
+            pnl.Controls.Add(label1);
             pnl.Controls.Add(btnDiets);
             pnl.Controls.Add(btnExit);
             pnl.Controls.Add(btnActivity);
@@ -308,6 +310,17 @@
             pnl.ShadowDecoration.CustomizableEdges = customizableEdges19;
             pnl.Size = new Size(200, 700);
             pnl.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(36, 675);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 19);
+            label1.TabIndex = 16;
+            label1.Text = "Version v1.0.1";
             // 
             // Main
             // 
@@ -340,5 +353,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMeals;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl;
+        private Label label1;
     }
 }

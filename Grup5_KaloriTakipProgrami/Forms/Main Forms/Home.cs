@@ -19,22 +19,17 @@ namespace WndPL.Forms
 {
     public partial class Home : Form
     {
-        //public Home(int id)
-        //{
-        //    InitializeComponent();
-        //    userId = id;
-        //    user = bl.Users.GetById(userId);
-        //}
-        int userId = 2;
+        public Home(int id)
+        {
+            InitializeComponent();
+            userId = id;
+            user = bl.Users.GetById(userId);
+        }
         BusinessLogic bl = new BusinessLogic();
+        int userId;
         Entities.User user;
         decimal currentWeight = 0;
 
-        public Home()
-        {
-            InitializeComponent();
-            user = bl.Users.GetById(userId);
-        }
         private void Home_Load(object sender, EventArgs e)
         {
             lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();

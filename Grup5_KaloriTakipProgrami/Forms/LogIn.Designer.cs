@@ -447,7 +447,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "LogIn";
             Text = "Log In";
-            Load += Form1_Load;
             pnlIncoming.ResumeLayout(false);
             pnlIncoming.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogin).EndInit();
