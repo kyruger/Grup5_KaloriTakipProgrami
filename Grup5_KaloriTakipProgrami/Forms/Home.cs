@@ -55,7 +55,11 @@ namespace WndPL.Forms
             if (remainingDay > 0)
                 lblRemainingDay.Text = remainingDay.ToString();
             else
+            {
                 lblRemainingDay.Text = "0";
+                user.DayGoal = 0;
+                bl.Users.Update(user);
+            }
 
             // fill DailyRemaining circle progress bar
             FillDaysRemainingProgressBar();

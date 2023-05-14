@@ -23,16 +23,22 @@ namespace BLL
 
         }
         public List<Food> GetFoodsByContainText(string text)
+        public List<Food> GetFoodsByContainTextAndOwnerId(string text,int ownerId)
         {
             
             List<Food> searchedFoods = new List<Food>();
-            var allFoods = GetAll();
-            foreach (var food in allFoods)
+            var foods = db.Foods.Where(f => f.OwnerId == 0 || f.OwnerId == ownerId);
+            foreach (var food in foods)
             {
                 if (food.Category.ToString().ToLower().Contains(text.ToLower()) || food.Name.ToLower().Contains(text.ToLower()))
                     searchedFoods.Add(food);
             }
             return searchedFoods;
+        }
+
+        public bool IsFoodExist(string name)
+        {
+            return db.Foods.Any(f => f.Name == name);
         }
 
 

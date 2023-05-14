@@ -19,6 +19,7 @@ namespace DAL.Configurations
             builder.Property(a => a.ProteinRateFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.FatRateFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.CarbonhydrateAmountFor100Gram).HasPrecision(5, 2);
+            builder.Property(a => a.OwnerId).HasDefaultValue(0);
 
 
             builder.HasData(

@@ -25,24 +25,24 @@ namespace DAL.Configurations
         {
             Random rand = new Random();
             var consumedFoods = new List<ConsumedFood>();
-            for (int i = 1; i <= 1500; i++)
+            for (int i = 1; i <= 1250; i++)
             {
                 consumedFoods.Add(new ConsumedFood
                 {
                     ID = i,
-                    MealType = (MealType)rand.Next(1, 6),
+                    MealType = (MealType)rand.Next(1, 4),
                     Quantity = rand.Next(1, 5),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
                     FoodId = rand.Next(1, 29),
                 });
             }
-            for (int i = 1501; i <= 3000; i++)
+            for (int i = 1251; i <= 2500; i++)
             {
                 consumedFoods.Add(new ConsumedFood
                 {
                     ID = i,
-                    MealType = (MealType)rand.Next(1, 6),
+                    MealType = (MealType)rand.Next(1, 4),
                     PortionCount = rand.Next(1, 5),
                     PortionType = (PortionType)rand.Next(1, 4),
                     Day = rand.Next(1, 46),
@@ -50,6 +50,45 @@ namespace DAL.Configurations
                     FoodId = rand.Next(1, 29),
                 });
             }
+            for (int i = 2501; i <= 2700; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(4, 9),
+                    PortionCount = rand.Next(1, 5),
+                    PortionType = (PortionType)rand.Next(1, 3),
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+            for (int i = 2701; i <= 2750; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(4, 9),
+                    PortionCount = rand.Next(1, 5),
+                    PortionType = (PortionType)4,
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+            for (int i = 2751; i <= 3000; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(4, 9),
+                    Quantity = rand.Next(1, 5),
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+
             return consumedFoods;
         }        
     }
