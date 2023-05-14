@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Castle.Core.Internal;
 using DAL;
 using Entities;
 using Entities.Enums;
@@ -33,6 +34,8 @@ namespace WndPL.Forms
         {
             foreach (var item in Enum.GetNames(typeof(Gender)))
                 cmbGender.Items.Add(item);
+            txtBodyMassIndex.ReadOnly = true;
+            txtBodyMassIndex.Text = "0";
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -52,27 +55,39 @@ namespace WndPL.Forms
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            bool emptyControl = helper.AreTextBoxesEmpty(this);
-            if (emptyControl)
+            bool emptyControl = helper.AreTextBoxesEmptyExceptOne(this.pnlRight, txtDayTarget);
+            if (emptyControl || cmbGender.SelectedIndex == -1)
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
             else
             {
-                user.Height = Convert.ToDecimal(txtHeight.Text);
-                user.Weight = Convert.ToDecimal(txtWeight.Text);
-                user.GoalWeight = Convert.ToDecimal(txtTargetWeight.Text);
-                user.DailyGoalCalorie = Convert.ToInt32(txtDailyTargetCalories.Text);
-                user.Age = Convert.ToInt32(txtAge.Text);
-                user.PhoneNumber = mtbTelephone.Text;
-                user.Gender = (Gender)cmbGender.SelectedIndex + 1;
+                if (helper.StartAndEndWithDigit(this.pnlRight, txtBodyMassIndex))
+                {
 
-                bool result = bl.Users.Add(user);
-                if (result)
-                    MessageBox.Show("Ekleme başarılı.");
+                    user.Height = Convert.ToDecimal(txtHeight.Text);
+                    user.Weight = Convert.ToDecimal(txtWeight.Text);
+                    user.GoalWeight = Convert.ToDecimal(txtTargetWeight.Text);
+                    user.DailyGoalCalorie = Convert.ToInt32(txtDailyTargetCalories.Text);
+                    user.Age = Convert.ToInt32(txtAge.Text);
+                    string phoneNumber = new string(mtbTelephone.Text.Where(char.IsDigit).ToArray());
+                    user.PhoneNumber = phoneNumber;
+                    user.Gender = (Gender)cmbGender.SelectedIndex + 1;
+                    if (!string.IsNullOrEmpty(txtDayTarget.Text))
+                        user.DayGoal = Convert.ToInt32(txtDayTarget.Text);
+
+                    bool result = bl.Users.Add(user);
+                    if (result)
+
+                        MessageBox.Show("Kayıt başarılı.");
+                    else
+                        MessageBox.Show("Kayıt başarısız.");
+                    this.Close();
+                }
                 else
-                    MessageBox.Show("Ekleme başarısız.");
-
+                {
+                    MessageBox.Show("Ölçülerini doğru girdiğinizden emin olun.");
+                }
             }
         }
 
@@ -111,6 +126,15 @@ namespace WndPL.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private void Texts_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 

@@ -73,7 +73,6 @@ namespace WndPL.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Sisteme başarıyla kayıt oldunuz.");
                     User newUser = new User()
                     {
                         Mail = txtMail.Text,

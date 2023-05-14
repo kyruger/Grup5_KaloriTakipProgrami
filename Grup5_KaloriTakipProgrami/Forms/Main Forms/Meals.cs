@@ -310,7 +310,7 @@ namespace WndPL.Forms
 
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
-            if (mealType==0)
+            if (mealType == 0)
             {
                 MessageBox.Show("Please select a meal before deleting");
             }
@@ -374,9 +374,11 @@ namespace WndPL.Forms
                 {
 
                     Guna2Button btn = new Guna2Button();
+
+                    btn = btnSnack;
                     btn.Text = $"Snack{1}";
-                    btn.Width = 164;
-                    btn.Height = 92;
+                    btn.Enabled = true;
+                    btn.Visible = true;
                     btn.Click += new EventHandler(SnackClick1);
                     count++;
                     btnNumbers.Add(1);
@@ -386,9 +388,10 @@ namespace WndPL.Forms
                 {
 
                     Guna2Button btn = new Guna2Button();
+                    btn = btnSnack2;
                     btn.Text = $"Snack{2}";
-                    btn.Width = 164;
-                    btn.Height = 92;
+                    btn.Enabled = true;
+                    btn.Visible = true;
                     btn.Click += new EventHandler(SnackClick2);
                     count++;
                     btnNumbers.Add(2);
@@ -397,9 +400,10 @@ namespace WndPL.Forms
                 else if (!btnNumbers.Contains(3))
                 {
                     Guna2Button btn = new Guna2Button();
+                    btn = btnSnack3;
                     btn.Text = $"Snack{3}";
-                    btn.Width = 164;
-                    btn.Height = 92;
+                    btn.Enabled = true;
+                    btn.Visible = true;
                     btn.Click += new EventHandler(SnackClick3);
                     count++;
                     btnNumbers.Add(3);
@@ -409,9 +413,10 @@ namespace WndPL.Forms
                 else if (!btnNumbers.Contains(4))
                 {
                     Guna2Button btn = new Guna2Button();
+                    btn = btnSnack4;
                     btn.Text = $"Snack{4}";
-                    btn.Width = 164;
-                    btn.Height = 92;
+                    btn.Enabled = true;
+                    btn.Visible = true;
                     btn.Click += new EventHandler(SnackClick4);
                     count++;
                     btnNumbers.Add(4);
@@ -420,9 +425,10 @@ namespace WndPL.Forms
                 else if (!btnNumbers.Contains(5))
                 {
                     Guna2Button btn = new Guna2Button();
+                    btn = btnSnack5;
                     btn.Text = $"Snack{count}";
-                    btn.Width = 164;
-                    btn.Height = 92;
+                    btn.Enabled = true;
+                    btn.Visible = true;
                     btn.Click += new EventHandler(SnackClick5);
                     count++;
                     btnNumbers.Add(5);
@@ -568,7 +574,7 @@ namespace WndPL.Forms
 
         }
 
-      
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lviDailyConsumedFood.SelectedItems.Count > 0)

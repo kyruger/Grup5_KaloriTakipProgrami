@@ -30,8 +30,8 @@ namespace Entities
         public decimal GoalWeight { get; set; }
 
         public DateTime DayGoalCreationTime {  get; private set; }
-
-        public int dayGoal;
+        [NotMapped]
+        private int dayGoal;
         public int DayGoal
         {
             get { return dayGoal; }
