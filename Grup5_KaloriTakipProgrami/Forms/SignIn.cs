@@ -8,13 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WndPL.Forms
+namespace WndPL.Nazli_s_Forms
 {
-    public partial class SignIn : Form
+    public partial class frmSignIn : Form
     {
-        public SignIn()
+        public frmSignIn()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlPhoto_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
