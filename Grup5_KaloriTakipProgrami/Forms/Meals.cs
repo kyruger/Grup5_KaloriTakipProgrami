@@ -64,7 +64,7 @@ namespace WndPL.Forms
         }
 
 
-        private void ButtonActivity(bool control)
+        private void ButtonActivity(bool control)//changes the activity of the button according to the incoming value
         {
             if (control)
             {
@@ -79,7 +79,7 @@ namespace WndPL.Forms
 
         }
 
-        private void btnAddToMeal_Click(object sender, EventArgs e)
+        private void btnAddToMeal_Click(object sender, EventArgs e)//Adds selected food to Meal
         {
             if (tbxFoodName != null || tbxFoodCalorie != null)
             {
@@ -180,18 +180,13 @@ namespace WndPL.Forms
 
         }
 
-        private void btnAddNewFood_Click(object sender, EventArgs e)
-        {
-            AddNewFood addNewFood = new AddNewFood();
-            addNewFood.ShowDialog();
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnBreakFeast_Click(object sender, EventArgs e)
+        private void btnBreakFeast_Click(object sender, EventArgs e)//Fills the Meal listview for breakfeast and calculates the breakfeast calorie
         {
             mealType = MealType.Breakfast;
             FillListViewConsumedFood(userID, mealType);
@@ -204,7 +199,7 @@ namespace WndPL.Forms
             cpbBreakfeastCalorie.Maximum = 9999;
             cpbBreakfeastCalorie.Value = (int)totalCalorie;
         }
-        private void FillListViewConsumedFood(int id, MealType meal)
+        private void FillListViewConsumedFood(int id, MealType meal)//Fills the consumedfood list view for incoming meal
         {
 
             lviDailyConsumedFood.Items.Clear();
@@ -517,7 +512,7 @@ namespace WndPL.Forms
 
         private void nudAmount_ValueChanged(object sender, EventArgs e)
         {
-            if (nudAmount.Value == 0 || tbxFoodCalorie.Text==string.Empty || tbxFoodName.Text==string.Empty  || mealType==0)
+            if (nudAmount.Value == 0 || tbxFoodCalorie.Text == string.Empty || tbxFoodName.Text == string.Empty || mealType == 0)
             {
                 ButtonActivity(false);
             }
@@ -570,9 +565,9 @@ namespace WndPL.Forms
                 tbxFoodName.Text = food.Name;
                 tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
                 foodID = (int)lvSearchedFoods.SelectedItems[0].Tag;
-                if(nudAmount.Value > 0)
+                if (nudAmount.Value > 0)
                 {
-                   ButtonActivity(true);
+                    ButtonActivity(true);
                 }
             }
 
@@ -584,6 +579,11 @@ namespace WndPL.Forms
         }
 
         private void lviDailyConsumedFood_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxPortion_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
