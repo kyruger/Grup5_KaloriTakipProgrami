@@ -32,6 +32,7 @@ namespace WndPL.Forms
         Entities.User user;
         private void UserInformation_Load(object sender, EventArgs e)
         {
+
             foreach (var item in Enum.GetNames(typeof(Gender)))
                 cmbGender.Items.Add(item);
             txtBodyMassIndex.ReadOnly = true;
@@ -62,7 +63,7 @@ namespace WndPL.Forms
             }
             else
             {
-                if (helper.StartAndEndWithDigit(this.pnlRight))
+                if (helper.StartAndEndWithDigitExceptOne(this.pnlRight,txtDayTarget))
                 {
 
                     user.Height = Convert.ToDecimal(txtHeight.Text);

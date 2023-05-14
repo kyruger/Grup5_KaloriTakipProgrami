@@ -336,6 +336,7 @@
             txtBodyMassIndex.ShadowDecoration.CustomizableEdges = customizableEdges11;
             txtBodyMassIndex.Size = new Size(130, 33);
             txtBodyMassIndex.TabIndex = 40;
+            txtBodyMassIndex.TextAlign = HorizontalAlignment.Center;
             // 
             // txtAge
             // 
@@ -544,6 +545,7 @@
             Controls.Add(pnlLight);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UserInformation";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalInformation";
             Load += UserInformation_Load;
             pnlLight.ResumeLayout(false);

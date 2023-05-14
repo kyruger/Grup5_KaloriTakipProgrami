@@ -21,6 +21,10 @@ namespace WndPL.Forms
         }
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            helper.ClearTexts(this);
+        }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {

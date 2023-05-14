@@ -82,10 +82,9 @@
             pnlIncoming.CustomizableEdges = customizableEdges7;
             pnlIncoming.Dock = DockStyle.Left;
             pnlIncoming.Location = new Point(0, 0);
-            pnlIncoming.Margin = new Padding(3, 4, 3, 4);
             pnlIncoming.Name = "pnlIncoming";
             pnlIncoming.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pnlIncoming.Size = new Size(334, 739);
+            pnlIncoming.Size = new Size(292, 554);
             pnlIncoming.TabIndex = 0;
             // 
             // txtLineInfo
@@ -94,10 +93,9 @@
             txtLineInfo.BorderStyle = BorderStyle.None;
             txtLineInfo.Enabled = false;
             txtLineInfo.ForeColor = Color.FromArgb(64, 64, 64);
-            txtLineInfo.Location = new Point(21, 615);
-            txtLineInfo.Margin = new Padding(3, 4, 3, 4);
+            txtLineInfo.Location = new Point(18, 461);
             txtLineInfo.Name = "txtLineInfo";
-            txtLineInfo.Size = new Size(232, 20);
+            txtLineInfo.Size = new Size(203, 16);
             txtLineInfo.TabIndex = 30;
             txtLineInfo.Text = "_______________________________________________________________________";
             // 
@@ -117,15 +115,15 @@
             txtDiscription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDiscription.ForeColor = Color.DarkOliveGreen;
             txtDiscription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDiscription.Location = new Point(21, 381);
-            txtDiscription.Margin = new Padding(4, 8, 4, 8);
+            txtDiscription.Location = new Point(18, 286);
+            txtDiscription.Margin = new Padding(4, 6, 4, 6);
             txtDiscription.Multiline = true;
             txtDiscription.Name = "txtDiscription";
             txtDiscription.PasswordChar = '\0';
             txtDiscription.PlaceholderText = "";
             txtDiscription.SelectedText = "";
             txtDiscription.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtDiscription.Size = new Size(207, 185);
+            txtDiscription.Size = new Size(181, 139);
             txtDiscription.TabIndex = 29;
             // 
             // txtStartInfo
@@ -146,14 +144,14 @@
             txtStartInfo.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             txtStartInfo.ForeColor = Color.DarkKhaki;
             txtStartInfo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStartInfo.Location = new Point(113, 659);
-            txtStartInfo.Margin = new Padding(3, 5, 3, 5);
+            txtStartInfo.Location = new Point(99, 494);
+            txtStartInfo.Margin = new Padding(3, 4, 3, 4);
             txtStartInfo.Name = "txtStartInfo";
             txtStartInfo.PasswordChar = '\0';
             txtStartInfo.PlaceholderText = "";
             txtStartInfo.SelectedText = "";
             txtStartInfo.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtStartInfo.Size = new Size(140, 10);
+            txtStartInfo.Size = new Size(122, 8);
             txtStartInfo.TabIndex = 28;
             txtStartInfo.TextAlign = HorizontalAlignment.Right;
             // 
@@ -172,26 +170,27 @@
             txtboxWelcome.Enabled = false;
             txtboxWelcome.FillColor = Color.OldLace;
             txtboxWelcome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxWelcome.Font = new Font("Castellar", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtboxWelcome.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
             txtboxWelcome.ForeColor = Color.FromArgb(0, 64, 0);
             txtboxWelcome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxWelcome.Location = new Point(21, 231);
-            txtboxWelcome.Margin = new Padding(12);
+            txtboxWelcome.Location = new Point(18, 173);
+            txtboxWelcome.Margin = new Padding(10, 9, 10, 9);
             txtboxWelcome.Multiline = true;
             txtboxWelcome.Name = "txtboxWelcome";
             txtboxWelcome.PasswordChar = '\0';
             txtboxWelcome.PlaceholderText = "";
             txtboxWelcome.SelectedText = "";
             txtboxWelcome.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtboxWelcome.Size = new Size(250, 66);
+            txtboxWelcome.Size = new Size(219, 50);
             txtboxWelcome.TabIndex = 27;
             // 
             // pbLogin
             // 
             pbLogin.Image = Properties.Resources.ac72f3b6344ee95f222d1e5ff857b166;
             pbLogin.Location = new Point(0, 0);
+            pbLogin.Margin = new Padding(3, 2, 3, 2);
             pbLogin.Name = "pbLogin";
-            pbLogin.Size = new Size(334, 757);
+            pbLogin.Size = new Size(292, 568);
             pbLogin.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogin.TabIndex = 26;
             pbLogin.TabStop = false;
@@ -206,10 +205,9 @@
             cbShowPassword.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             cbShowPassword.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             cbShowPassword.ForeColor = Color.OliveDrab;
-            cbShowPassword.Location = new Point(564, 464);
-            cbShowPassword.Margin = new Padding(3, 4, 3, 4);
+            cbShowPassword.Location = new Point(494, 348);
             cbShowPassword.Name = "cbShowPassword";
-            cbShowPassword.Size = new Size(195, 27);
+            cbShowPassword.Size = new Size(161, 23);
             cbShowPassword.TabIndex = 21;
             cbShowPassword.Text = "Don't Show Password";
             cbShowPassword.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -230,11 +228,10 @@
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.DarkOliveGreen;
             btnExit.ImageAlign = HorizontalAlignment.Right;
-            btnExit.Location = new Point(490, 670);
-            btnExit.Margin = new Padding(3, 4, 3, 4);
+            btnExit.Location = new Point(429, 502);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnExit.Size = new Size(269, 56);
+            btnExit.Size = new Size(235, 42);
             btnExit.TabIndex = 20;
             btnExit.Text = "Exit";
             btnExit.Click += btnExit_Click;
@@ -250,11 +247,10 @@
             btnSignUp.FillColor = Color.FromArgb(255, 224, 192);
             btnSignUp.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnSignUp.ForeColor = Color.DarkOliveGreen;
-            btnSignUp.Location = new Point(490, 595);
-            btnSignUp.Margin = new Padding(3, 4, 3, 4);
+            btnSignUp.Location = new Point(429, 446);
             btnSignUp.Name = "btnSignUp";
             btnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnSignUp.Size = new Size(269, 56);
+            btnSignUp.Size = new Size(235, 42);
             btnSignUp.TabIndex = 19;
             btnSignUp.Text = "Sign Up";
             btnSignUp.Click += btnSignIn_Click;
@@ -270,11 +266,10 @@
             btnLogin.FillColor = Color.FromArgb(255, 224, 192);
             btnLogin.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.DarkOliveGreen;
-            btnLogin.Location = new Point(490, 370);
-            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Location = new Point(429, 278);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnLogin.Size = new Size(269, 56);
+            btnLogin.Size = new Size(235, 42);
             btnLogin.TabIndex = 18;
             btnLogin.Text = "Log In";
             btnLogin.Click += btnLogin_Click;
@@ -292,14 +287,14 @@
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(490, 275);
-            txtPassword.Margin = new Padding(3, 5, 3, 5);
+            txtPassword.Location = new Point(429, 206);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '\0';
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtPassword.Size = new Size(269, 60);
+            txtPassword.Size = new Size(235, 45);
             txtPassword.TabIndex = 17;
             // 
             // txtEmail
@@ -317,14 +312,14 @@
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(490, 190);
-            txtEmail.Margin = new Padding(3, 5, 3, 5);
+            txtEmail.Location = new Point(429, 142);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "Email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtEmail.Size = new Size(269, 60);
+            txtEmail.Size = new Size(235, 45);
             txtEmail.TabIndex = 16;
             // 
             // txtTitleGet
@@ -343,17 +338,17 @@
             txtTitleGet.Enabled = false;
             txtTitleGet.FillColor = Color.OldLace;
             txtTitleGet.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTitleGet.Font = new Font("Castellar", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTitleGet.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
             txtTitleGet.ForeColor = Color.FromArgb(0, 64, 0);
             txtTitleGet.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTitleGet.Location = new Point(454, 14);
-            txtTitleGet.Margin = new Padding(13, 16, 13, 16);
+            txtTitleGet.Location = new Point(397, 10);
+            txtTitleGet.Margin = new Padding(11, 12, 11, 12);
             txtTitleGet.Name = "txtTitleGet";
             txtTitleGet.PasswordChar = '\0';
             txtTitleGet.PlaceholderText = "";
             txtTitleGet.SelectedText = "";
             txtTitleGet.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtTitleGet.Size = new Size(170, 96);
+            txtTitleGet.Size = new Size(149, 72);
             txtTitleGet.TabIndex = 24;
             txtTitleGet.TextAlign = HorizontalAlignment.Center;
             // 
@@ -362,12 +357,11 @@
             txtTitleStart.BackColor = Color.OldLace;
             txtTitleStart.BorderStyle = BorderStyle.None;
             txtTitleStart.Enabled = false;
-            txtTitleStart.Font = new Font("Papyrus", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTitleStart.Location = new Point(697, 105);
-            txtTitleStart.Margin = new Padding(3, 4, 3, 4);
+            txtTitleStart.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTitleStart.Location = new Point(610, 79);
             txtTitleStart.Multiline = true;
             txtTitleStart.Name = "txtTitleStart";
-            txtTitleStart.Size = new Size(146, 61);
+            txtTitleStart.Size = new Size(128, 46);
             txtTitleStart.TabIndex = 25;
             txtTitleStart.Text = "START";
             // 
@@ -386,14 +380,14 @@
             ttLine.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             ttLine.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ttLine.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            ttLine.Location = new Point(657, 51);
-            ttLine.Margin = new Padding(3, 5, 3, 5);
+            ttLine.Location = new Point(575, 38);
+            ttLine.Margin = new Padding(3, 4, 3, 4);
             ttLine.Name = "ttLine";
             ttLine.PasswordChar = '\0';
             ttLine.PlaceholderText = "";
             ttLine.SelectedText = "";
             ttLine.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            ttLine.Size = new Size(202, 28);
+            ttLine.Size = new Size(177, 21);
             ttLine.TabIndex = 7;
             // 
             // txtAccount
@@ -414,24 +408,24 @@
             txtAccount.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txtAccount.ForeColor = Color.DarkOliveGreen;
             txtAccount.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAccount.Location = new Point(490, 512);
-            txtAccount.Margin = new Padding(4, 6, 4, 6);
+            txtAccount.Location = new Point(429, 384);
+            txtAccount.Margin = new Padding(4);
             txtAccount.Name = "txtAccount";
             txtAccount.PasswordChar = '\0';
             txtAccount.PlaceholderForeColor = Color.OldLace;
             txtAccount.PlaceholderText = "";
             txtAccount.SelectedText = "";
             txtAccount.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txtAccount.Size = new Size(269, 54);
+            txtAccount.Size = new Size(235, 40);
             txtAccount.TabIndex = 7;
             txtAccount.TextAlign = HorizontalAlignment.Center;
             // 
             // LogIn
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
-            ClientSize = new Size(974, 739);
+            ClientSize = new Size(852, 554);
             Controls.Add(txtAccount);
             Controls.Add(ttLine);
             Controls.Add(txtTitleStart);
@@ -444,9 +438,10 @@
             Controls.Add(txtEmail);
             Controls.Add(pnlIncoming);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "LogIn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Log In";
+            Load += LogIn_Load;
             pnlIncoming.ResumeLayout(false);
             pnlIncoming.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogin).EndInit();
