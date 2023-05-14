@@ -32,8 +32,8 @@ namespace WndPL.Forms
 
         private void Home_Load(object sender, EventArgs e)
         {
-            lblCalorie.Text = bl.Users.GetDailyCalorieById(userId).ToString();
-            lblGoalCalorie.Text = user.DailyGoalCalorie.ToString();
+            lblCalorie.Text = ((int)bl.Users.GetDailyCalorieById(userId)).ToString();
+            lblGoalCalorie.Text = ((int)user.DailyGoalCalorie).ToString();
             int leftCalorie = (int)(Convert.ToDouble(lblGoalCalorie.Text) - Convert.ToDouble(lblCalorie.Text));
             if (leftCalorie >= 0)
                 lblLeftCalorie.Text = "-" + leftCalorie.ToString();

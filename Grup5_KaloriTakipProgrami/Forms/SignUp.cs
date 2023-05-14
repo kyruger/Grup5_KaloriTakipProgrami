@@ -65,7 +65,7 @@ namespace WndPL.Forms
             else
             {
                 var users = bl.Users.GetAll();
-                User user = users.SingleOrDefault(u=>u.Mail == txtMail.Text);
+                User user = users.SingleOrDefault(u => u.Mail == txtMail.Text);
                 if (user != null)
                 {
                     MessageBox.Show("Bu mail adresi sistemde mevcut. \nLütfen bilgilerinizi kontrol ediniz.");
