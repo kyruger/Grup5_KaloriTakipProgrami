@@ -208,5 +208,10 @@ namespace WndPL.Forms
 
         }
         #endregion
+
+        private void cpbDailyCalorie_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

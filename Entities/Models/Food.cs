@@ -27,4 +27,4 @@ namespace Entities
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
-}
+} 
