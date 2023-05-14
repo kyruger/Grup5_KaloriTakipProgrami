@@ -15,22 +15,42 @@ namespace Entities
         public User()
         {
             ConsumedFoods = new HashSet<ConsumedFood>();
+            DayGoalCreationTime = DateTime.Now;
         }
         public string Mail { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }    
-        public string FullName { get => FirstName +" "+LastName; }
+        public string LastName { get; set; }
+        public string FullName { get => FirstName + " " + LastName; }
         public Gender Gender { get; set; }
         public int Age { get; set; }
         public string? PhoneNumber { get; set; }
         public decimal Weight { get; set; }
+        public int DailyGoalCalorie { get; set; }
         public decimal GoalWeight { get; set; }
-        public decimal DailyGoal { get; set; }
+
+        public DateTime DayGoalCreationTime {  get; private set; }
+
+        public int dayGoal;
+        public int DayGoal
+        {
+            get { return dayGoal; }
+            set
+            {
+                if (dayGoal != value)
+                {
+                    dayGoal = value;
+                    if (dayGoal != 0)
+                    {
+                        DayGoalCreationTime = DateTime.Now;
+                    }
+                }
+            }
+        }
         public decimal Height { get; set; }
         public decimal BodyMassIndex { get => Weight / (Height * Height); }
 
-        public virtual ICollection<ConsumedFood> ConsumedFoods{ get; set; }
+        public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }
 }
