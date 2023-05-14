@@ -33,7 +33,7 @@ namespace WndPL.Forms
         int day;
 
 
-
+    
 
 
 
@@ -314,50 +314,53 @@ namespace WndPL.Forms
 
         private void btnDeleteSelectedMeal_Click(object sender, EventArgs e)
         {
-            if (mealType.ToString() != "Breakfast" || mealType.ToString() != "Lunch" || mealType.ToString() != "Dinner")
+            if (mealType==0)
             {
-                foreach (Control control in flyo.Controls)
+                MessageBox.Show("Please select a meal before deleting");
+            }
+            else
+            {
+                if (mealType.ToString() != "Breakfast" || mealType.ToString() != "Lunch" || mealType.ToString() != "Dinner")
                 {
-                    if (control is Guna2Button)
+                    foreach (Control control in flyo.Controls)
                     {
-                        Guna2Button btn = (Guna2Button)control;
-                        string a = btn.Text[^1].ToString();
-                        int number = Convert.ToInt32(a);
-                        if (mealType.ToString() == btn.Text)
+                        if (control is Guna2Button)
                         {
-                            flyo.Controls.Remove(btn);
-                            btnNumbers.Remove(number);
-                            count--;
+                            Guna2Button btn = (Guna2Button)control;
+                            string a = btn.Text[^1].ToString();
+                            int number = Convert.ToInt32(a);
+                            if (mealType.ToString() == btn.Text)
+                            {
+
+                                flyo.Controls.Remove(btn);
+                                btnNumbers.Remove(number);
+                                count--;
+                            }
+
+
                         }
-
-
                     }
                 }
-            }
 
 
-            for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
-            {
-                if (lviDailyConsumedFood.Items[i].Tag != null)
+                for (int i = 0; i < lviDailyConsumedFood.Items.Count; i++)
                 {
-                    int id = (int)lviDailyConsumedFood.Items[i].Tag;
-                    ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
-                    Food food = bl.Foods.GetById(consumed.FoodId);
-                    bool isRemoved = bl.ConsumedFoods.Remove(id);
-                    if (isRemoved)
+                    if (lviDailyConsumedFood.Items[i].Tag != null)
                     {
-                        MessageBox.Show($"{food.Name} deleted from your meal");
-                    }
-                    else
-                    {
-                        MessageBox.Show($"{food.Name} can't deleted from your meal something go wrong");
-                    }
+                        int id = (int)lviDailyConsumedFood.Items[i].Tag;
+                        ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
+                        Food food = bl.Foods.GetById(consumed.FoodId);
+                        bool isRemoved = bl.ConsumedFoods.Remove(id);
 
+
+                    }
                 }
+                MessageBox.Show($"{mealType.ToString()} deleted from your meal");
+                lviDailyConsumedFood.Items.Clear();
+
+
+
             }
-            lviDailyConsumedFood.Items.Clear();
-
-
 
         }
 
@@ -527,7 +530,7 @@ namespace WndPL.Forms
         private void txtFoodSearch_TextChanged(object sender, EventArgs e)
         {
             lvSearchedFoods.Items.Clear();
-            List<Food> searchedFoods = bl.Foods.GetFoodsByContainTextAndOwnerId(txtFoodSearch.Text.Trim(),userID);
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainTextAndOwnerId(txtFoodSearch.Text.Trim(), userID);
             foreach (var food in searchedFoods)
             {
                 ListViewItem lv1 = new ListViewItem();
@@ -569,19 +572,16 @@ namespace WndPL.Forms
 
         }
 
-        private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
+      
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (lviDailyConsumedFood.SelectedItems.Count > 0)
+            {
+                int consumedId = (int)lviDailyConsumedFood.SelectedItems[0].Tag;
+                bl.ConsumedFoods.Remove(consumedId);
+                FillListViewConsumedFood(userID, mealType);
 
-        }
-
-        private void lviDailyConsumedFood_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxPortion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }
