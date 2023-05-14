@@ -33,6 +33,7 @@ namespace WndPL.Forms
         List<int> btnNumbers;
         int day;
 
+
         private void Meals_Load(object sender, EventArgs e)
         {
             bl = new BusinessLogic();
@@ -46,11 +47,49 @@ namespace WndPL.Forms
             day = (int)timePassed.TotalDays + 1;
             btnAddToMeal.Enabled = false;
 
+            double totalCalorie1 = bl.Users.GetCaloriesForDailyMeal(userID, MealType.Breakfast); ;
+            cpbBreakfeastCalorie.Maximum = 9999;
+            cpbBreakfeastCalorie.Value = (int)totalCalorie1;
+
+            double totalCalorie2 = bl.Users.GetCaloriesForDailyMeal(userID, MealType.Lunch); ;
+            cpbLunchCalorie.Maximum = 9999;
+            cpbLunchCalorie.Value = (int)totalCalorie2;
+
+            double totalCalorie3 = bl.Users.GetCaloriesForDailyMeal(userID, MealType.Dinner); ;
+            cpbDinnerCalorie.Maximum = 9999;
+            cpbDinnerCalorie.Value = (int)totalCalorie3;
+
+         
+
+
+
+            if (bl.ConsumedFoods.GetConsumedFoodsByUserID(userID, day, MealType.Snack1))
+            {
+                btnSnack.Enabled = true;
+                btnSnack.Visible = true;
+            }
+            if (bl.ConsumedFoods.GetConsumedFoodsByUserID(userID, day, MealType.Snack2))
+            {
+                btnSnack2.Enabled = true;
+                btnSnack2.Visible = true;
+            }
+            if (bl.ConsumedFoods.GetConsumedFoodsByUserID(userID, day, MealType.Snack3))
+            {
+                btnSnack3.Enabled = true;
+                btnSnack3.Visible = true;
+            }
+            if (bl.ConsumedFoods.GetConsumedFoodsByUserID(userID, day, MealType.Snack4))
+            {
+                btnSnack4.Enabled = true;
+                btnSnack4.Visible = true;
+            }
+            if (bl.ConsumedFoods.GetConsumedFoodsByUserID(userID, day, MealType.Snack5))
+            {
+                btnSnack5.Enabled = true;
+                btnSnack5.Visible = true;
+            }
+
             count = 1;
-
-
-
-
 
 
         }
@@ -182,14 +221,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Breakfast;
             FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpbBreakfeastCalorie.Maximum = 9999;
-            cpbBreakfeastCalorie.Value = (int)totalCalorie;
+           
         }
         private void FillListViewConsumedFood(int id, MealType meal)//Fills the consumedfood list view for incoming meal
         {
@@ -203,7 +235,7 @@ namespace WndPL.Forms
                 Food food = bl.Foods.GetById(foodId);
                 lvi.Text = food.Name;//food name
                 lvi.SubItems.Add(food.Category.ToString());//category
-                if (consumed.PortionType == null)
+                if (consumed.Quantity > 0)
                 {
                     lvi.SubItems.Add("100Gram");
                     lvi.SubItems.Add(consumed.Quantity.ToString());
@@ -216,17 +248,43 @@ namespace WndPL.Forms
                 }
                 else
                 {
-                    decimal portionGramForType = food.PortionGram / (int)consumed.PortionType;
                     lvi.SubItems.Add(consumed.PortionType.ToString());
                     lvi.SubItems.Add(consumed.PortionCount.ToString());
+                    double portionGramForType = 0;
+                    double totalCalorie = 0;
+                    if (consumed.PortionType == PortionType.Full)
+                    {
+                         totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Full;
+                         portionGramForType = (double)food.PortionGram / (int)PortionType.Full;
+
+
+                    }
+                    else if (consumed.PortionType == PortionType.Half)
+                    {
+                         totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Half;
+                         portionGramForType = (double)food.PortionGram / (int)PortionType.Half;
+
+                    }
+                    else if (consumed.PortionType == PortionType.Quarter)
+                    {
+                        totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Quarter;
+                         portionGramForType = (double)food.PortionGram / (int)PortionType.Quarter;
+
+                    }
+
                     lvi.SubItems.Add(Math.Round(portionGramForType, 2).ToString());
-                    lvi.SubItems.Add(Math.Round(((food.CalorieFor100Gram * portionGramForType) / 100), 2).ToString());
-                    lvi.SubItems.Add(Math.Round(((food.ProteinRateFor100Gram * portionGramForType) / 100), 2).ToString());
-                    lvi.SubItems.Add(Math.Round(((food.FatRateFor100Gram * portionGramForType) / 100), 2).ToString());
-                    lvi.SubItems.Add(Math.Round(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round(totalCalorie, 2).ToString());
+                    lvi.SubItems.Add(Math.Round((((double)food.ProteinRateFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round((((double)food.FatRateFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round((((double)food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100), 2).ToString());
 
                 }
+                //if (.Quantity > 0)
+                //    totalCalorie += cf.Quantity * (double)cf.Food.CalorieFor100Gram;
+                //else if (cf.PortionCount > 0)
+                //{
 
+                //}
 
                 lvi.Tag = consumed.ID;
                 lviDailyConsumedFood.Items.Add(lvi);
@@ -242,14 +300,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Lunch;
             FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpbLunchCalorie.Maximum = 9999;
-            cpbLunchCalorie.Value = (int)totalCalorie;
+           
 
 
         }
@@ -258,14 +309,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Dinner;
             FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpbDinnerCalorie.Maximum = 9999;
-            cpbDinnerCalorie.Value = (int)totalCalorie;
+            
         }
 
         private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
@@ -318,24 +362,43 @@ namespace WndPL.Forms
             {
                 if (mealType.ToString() != "Breakfast" || mealType.ToString() != "Lunch" || mealType.ToString() != "Dinner")
                 {
-                    foreach (Control control in flyo.Controls)
+
+                    if (mealType.ToString() == btnSnack.Text)
                     {
-                        if (control is Guna2Button)
-                        {
-                            Guna2Button btn = (Guna2Button)control;
-                            string a = btn.Text[^1].ToString();
-                            int number = Convert.ToInt32(a);
-                            if (mealType.ToString() == btn.Text)
-                            {
-
-                                flyo.Controls.Remove(btn);
-                                btnNumbers.Remove(number);
-                                count--;
-                            }
-
-
-                        }
+                        btnSnack.Visible = false;
+                        btnSnack.Enabled = false;
+                        count--;
+                        btnNumbers.Remove(1);
                     }
+                    else if (mealType.ToString() == btnSnack2.Text)
+                    {
+                        btnSnack2.Visible = false;
+                        btnSnack2.Enabled = false;
+                        count--;
+                        btnNumbers.Remove(2);
+                    }
+                    else if (mealType.ToString() == btnSnack3.Text)
+                    {
+                        btnSnack3.Visible = false;
+                        btnSnack3.Enabled = false;
+                        count--;
+                        btnNumbers.Remove(3);
+                    }
+                    else if (mealType.ToString() == btnSnack4.Text)
+                    {
+                        btnSnack4.Visible = false;
+                        btnSnack4.Enabled = false;
+                        count--;
+                        btnNumbers.Remove(4);
+                    }
+                    else if (mealType.ToString() == btnSnack5.Text)
+                    {
+                        btnSnack5.Visible = false;
+                        btnSnack5.Enabled = false;
+                        count--;
+                        btnNumbers.Remove(5);
+                    }
+              
                 }
 
 
@@ -372,67 +435,50 @@ namespace WndPL.Forms
             {
                 if (!btnNumbers.Contains(1))
                 {
-
-                    Guna2Button btn = new Guna2Button();
-
-                    btn = btnSnack;
-                    btn.Text = $"Snack{1}";
-                    btn.Enabled = true;
-                    btn.Visible = true;
-                    btn.Click += new EventHandler(SnackClick1);
+                    btnSnack.Enabled = true;
+                    btnSnack.Visible = true;
+                    bool visible1 = true;
                     count++;
                     btnNumbers.Add(1);
-                    flyo.Controls.Add(btn);
+
                 }
                 else if (!btnNumbers.Contains(2))
                 {
 
-                    Guna2Button btn = new Guna2Button();
-                    btn = btnSnack2;
-                    btn.Text = $"Snack{2}";
-                    btn.Enabled = true;
-                    btn.Visible = true;
-                    btn.Click += new EventHandler(SnackClick2);
+                    btnSnack2.Enabled = true;
+                    btnSnack2.Visible = true;
+                    bool visible2 = true;
                     count++;
                     btnNumbers.Add(2);
-                    flyo.Controls.Add(btn);
+
                 }
                 else if (!btnNumbers.Contains(3))
                 {
-                    Guna2Button btn = new Guna2Button();
-                    btn = btnSnack3;
-                    btn.Text = $"Snack{3}";
-                    btn.Enabled = true;
-                    btn.Visible = true;
-                    btn.Click += new EventHandler(SnackClick3);
+                    btnSnack3.Enabled = true;
+                    btnSnack3.Visible = true;
+                    bool visible3 = true;
                     count++;
                     btnNumbers.Add(3);
-                    flyo.Controls.Add(btn);
+
 
                 }
                 else if (!btnNumbers.Contains(4))
                 {
-                    Guna2Button btn = new Guna2Button();
-                    btn = btnSnack4;
-                    btn.Text = $"Snack{4}";
-                    btn.Enabled = true;
-                    btn.Visible = true;
-                    btn.Click += new EventHandler(SnackClick4);
+                    btnSnack4.Enabled = true;
+                    btnSnack4.Visible = true;
+                    bool visible4 = true;
                     count++;
                     btnNumbers.Add(4);
-                    flyo.Controls.Add(btn);
+
                 }
                 else if (!btnNumbers.Contains(5))
                 {
-                    Guna2Button btn = new Guna2Button();
-                    btn = btnSnack5;
-                    btn.Text = $"Snack{count}";
-                    btn.Enabled = true;
-                    btn.Visible = true;
-                    btn.Click += new EventHandler(SnackClick5);
+                    btnSnack5.Enabled = true;
+                    btnSnack5.Visible = true;
+                    bool visible5 = true;
                     count++;
                     btnNumbers.Add(5);
-                    flyo.Controls.Add(btn);
+
                 }
 
             }
@@ -442,74 +488,7 @@ namespace WndPL.Forms
             }
 
         }
-        private void SnackClick2(object sender, EventArgs e)
-        {
-            mealType = MealType.Snack2;
-            FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
-            }
-            cpgTotalMealCalorie.Maximum = 9999;
-            cpgTotalMealCalorie.Value = (int)totalCalorie;
-
-        }
-        private void SnackClick3(object sender, EventArgs e)
-        {
-            mealType = MealType.Snack3;
-            FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpgTotalMealCalorie.Maximum = 9999;
-            cpgTotalMealCalorie.Value = (int)totalCalorie;
-
-        }
-        private void SnackClick4(object sender, EventArgs e)
-        {
-            mealType = MealType.Snack4;
-            FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpgTotalMealCalorie.Maximum = 9999;
-            cpgTotalMealCalorie.Value = (int)totalCalorie;
-        }
-        private void SnackClick5(object sender, EventArgs e)
-        {
-            mealType = MealType.Snack5;
-            FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpgTotalMealCalorie.Maximum = 9999;
-            cpgTotalMealCalorie.Value = (int)totalCalorie;
-        }
-
-        private void SnackClick1(object sender, EventArgs e)
-        {
-            mealType = MealType.Snack1;
-            FillListViewConsumedFood(userID, mealType);
-            double totalCalorie = 0;
-            foreach (ListViewItem item in lviDailyConsumedFood.Items)
-            {
-                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
-
-            }
-            cpgTotalMealCalorie.Maximum = 9999;
-            cpgTotalMealCalorie.Value = (int)totalCalorie;
-        }
 
         private void nudAmount_ValueChanged(object sender, EventArgs e)
         {
@@ -584,6 +563,76 @@ namespace WndPL.Forms
                 FillListViewConsumedFood(userID, mealType);
 
             }
+        }
+
+        private void btnSnack_Click_1(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack1;
+            FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+        }
+
+        private void btnSnack2_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack2;
+            FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+        }
+
+        private void btnSnack3_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack3;
+            FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+        }
+
+        private void btnSnack4_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack4;
+            FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+        }
+
+        private void btnSnack5_Click(object sender, EventArgs e)
+        {
+            mealType = MealType.Snack5;
+            FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
+            foreach (ListViewItem item in lviDailyConsumedFood.Items)
+            {
+                totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+            }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
         }
     }
 }
