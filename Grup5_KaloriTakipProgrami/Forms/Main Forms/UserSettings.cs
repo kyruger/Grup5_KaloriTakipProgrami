@@ -78,12 +78,12 @@ namespace WndPL.Forms
                 MessageBox.Show("Şifreler eşleşmiyor. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (user.Password !=txtPassword.Text)
+            else if (user.Password != txtPassword.Text)
             {
                 MessageBox.Show("Önceki Şifrenizi yanlış girdiniz. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else 
-            { 
+            else
+            {
                 if (helper.StartAndEndWithDigit(this.pnlText))
                 {
 
