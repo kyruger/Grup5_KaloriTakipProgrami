@@ -46,22 +46,22 @@ namespace BLL
             {
                 var list = db.ConsumedFoods.GroupBy(cf => cf.FoodId)
                                             .Select(group => new
-                                             {
-                                                 FoodId = group.Key,
-                                                 TotalQuantityAndPortionCount = group.Sum(cf => cf.Quantity + cf.PortionCount)
-                                             })
+                                            {
+                                                FoodId = group.Key,
+                                                TotalQuantityAndPortionCount = group.Sum(cf => cf.Quantity + cf.PortionCount)
+                                            })
                                              .OrderByDescending(x => x.TotalQuantityAndPortionCount)
                                              .ToList();
-                place = list.FindIndex(f => f.FoodId == foodId)+1;
+                place = list.FindIndex(f => f.FoodId == foodId) + 1;
             }
         }
- 
+
         public int GetFoodConsumedTotalQuantityByFoodId(int foodId, params MealType[] mealTypes)
         {
             int totalQuantity = 0;
             if (mealTypes.Count() == 1)
             {
-                var list = db.ConsumedFoods.Where(cf => cf.FoodId == foodId &&  cf.MealType == mealTypes[0] && cf.Quantity>0).ToList();
+                var list = db.ConsumedFoods.Where(cf => cf.FoodId == foodId && cf.MealType == mealTypes[0] && cf.Quantity > 0).ToList();
                 totalQuantity = list.Sum(cf => cf.Quantity);
             }
             else if (mealTypes.Count() < 6)
@@ -85,10 +85,10 @@ namespace BLL
                 var list = db.ConsumedFoods.Where(cf => cf.FoodId == foodId && cf.MealType == mealTypes[0] && cf.PortionCount > 0).ToList();
                 totalPortionCount = list.Sum(cf => cf.PortionCount);
             }
-            else if (mealTypes.Count() <6)
+            else if (mealTypes.Count() < 6)
             {
                 var list = db.ConsumedFoods.Where(cf => cf.FoodId == foodId && (cf.MealType != MealType.Breakfast && cf.MealType != MealType.Lunch && cf.MealType != MealType.Dinner) && cf.PortionCount > 0).ToList();
-                totalPortionCount = list.Sum(cf=>cf.PortionCount);
+                totalPortionCount = list.Sum(cf => cf.PortionCount);
             }
             else
             {
@@ -103,13 +103,12 @@ namespace BLL
         {
             int totalDays = 0;
             var cflist = db.ConsumedFoods.GroupBy(cf => cf.Day);
-            totalDays=cflist.Count();
+            totalDays = cflist.Count();
             return totalDays;
         }
-        
-    public class ConsumedFoodBLL : BaseClass<ConsumedFood>
-    {
-       
+
+
+
         public List<ConsumedFood> GetConsumedFoodsByDayAndMealType(int userId, MealType meal)
         {
             User user = db.Users.Find(userId);
@@ -120,7 +119,7 @@ namespace BLL
             return consumedFoods;
         }
 
-      
-      
+
+
     }
 }
