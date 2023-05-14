@@ -96,7 +96,7 @@
             pnlPhoto.Margin = new Padding(3, 4, 3, 4);
             pnlPhoto.Name = "pnlPhoto";
             pnlPhoto.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            pnlPhoto.Size = new Size(308, 581);
+            pnlPhoto.Size = new Size(530, 752);
             pnlPhoto.TabIndex = 0;
             pnlPhoto.Paint += pnlPhoto_Paint;
             // 
@@ -113,14 +113,14 @@
             txtWater.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtWater.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtWater.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtWater.Location = new Point(111, 486);
+            txtWater.Location = new Point(159, 575);
             txtWater.Margin = new Padding(4, 5, 4, 5);
             txtWater.Name = "txtWater";
             txtWater.PasswordChar = '\0';
             txtWater.PlaceholderText = "";
             txtWater.SelectedText = "";
             txtWater.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtWater.Size = new Size(118, 39);
+            txtWater.Size = new Size(224, 76);
             txtWater.TabIndex = 14;
             // 
             // txtDrink
@@ -138,7 +138,7 @@
             txtDrink.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDrink.Font = new Font("Showcard Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
             txtDrink.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDrink.Location = new Point(17, 421);
+            txtDrink.Location = new Point(24, 521);
             txtDrink.Margin = new Padding(5, 6, 5, 6);
             txtDrink.Multiline = true;
             txtDrink.Name = "txtDrink";
@@ -146,7 +146,7 @@
             txtDrink.PlaceholderText = "";
             txtDrink.SelectedText = "";
             txtDrink.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtDrink.Size = new Size(117, 75);
+            txtDrink.Size = new Size(194, 101);
             txtDrink.TabIndex = 13;
             // 
             // txtAboutWater
@@ -164,7 +164,7 @@
             txtAboutWater.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtAboutWater.ForeColor = Color.FromArgb(64, 64, 64);
             txtAboutWater.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAboutWater.Location = new Point(34, 175);
+            txtAboutWater.Location = new Point(148, 233);
             txtAboutWater.Margin = new Padding(3, 5, 3, 5);
             txtAboutWater.Multiline = true;
             txtAboutWater.Name = "txtAboutWater";
@@ -172,7 +172,7 @@
             txtAboutWater.PlaceholderText = "";
             txtAboutWater.SelectedText = "";
             txtAboutWater.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtAboutWater.Size = new Size(151, 49);
+            txtAboutWater.Size = new Size(145, 49);
             txtAboutWater.TabIndex = 12;
             // 
             // txtBody
@@ -188,7 +188,7 @@
             txtBody.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtBody.Font = new Font("SimSun", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtBody.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBody.Location = new Point(122, 126);
+            txtBody.Location = new Point(194, 151);
             txtBody.Margin = new Padding(4, 5, 4, 5);
             txtBody.Name = "txtBody";
             txtBody.PasswordChar = '\0';
@@ -221,7 +221,7 @@
             txtYour.PlaceholderText = "";
             txtYour.SelectedText = "";
             txtYour.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtYour.Size = new Size(117, 75);
+            txtYour.Size = new Size(194, 142);
             txtYour.TabIndex = 10;
             // 
             // pbInterface
@@ -233,7 +233,7 @@
             pbInterface.Margin = new Padding(3, 4, 3, 4);
             pbInterface.Name = "pbInterface";
             pbInterface.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            pbInterface.Size = new Size(305, 599);
+            pbInterface.Size = new Size(543, 748);
             pbInterface.SizeMode = PictureBoxSizeMode.StretchImage;
             pbInterface.TabIndex = 9;
             pbInterface.TabStop = false;
@@ -247,7 +247,7 @@
             pbContactScreen.Margin = new Padding(3, 4, 3, 4);
             pbContactScreen.Name = "pbContactScreen";
             pbContactScreen.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            pbContactScreen.Size = new Size(281, 596);
+            pbContactScreen.Size = new Size(281, 752);
             pbContactScreen.SizeMode = PictureBoxSizeMode.StretchImage;
             pbContactScreen.TabIndex = 10;
             pbContactScreen.TabStop = false;
@@ -266,7 +266,7 @@
             txtMail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMail.Location = new Point(25, 78);
+            txtMail.Location = new Point(25, 116);
             txtMail.Margin = new Padding(3, 5, 3, 5);
             txtMail.Name = "txtMail";
             txtMail.PasswordChar = '\0';
@@ -290,7 +290,7 @@
             txtMailRepeat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMailRepeat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtMailRepeat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMailRepeat.Location = new Point(25, 136);
+            txtMailRepeat.Location = new Point(25, 190);
             txtMailRepeat.Margin = new Padding(3, 5, 3, 5);
             txtMailRepeat.Name = "txtMailRepeat";
             txtMailRepeat.PasswordChar = '\0';
@@ -314,7 +314,7 @@
             txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(25, 209);
+            txtPassword.Location = new Point(25, 269);
             txtPassword.Margin = new Padding(3, 5, 3, 5);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '\0';
@@ -338,7 +338,7 @@
             txtPasswordRepeat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPasswordRepeat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtPasswordRepeat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPasswordRepeat.Location = new Point(25, 280);
+            txtPasswordRepeat.Location = new Point(25, 346);
             txtPasswordRepeat.Margin = new Padding(3, 5, 3, 5);
             txtPasswordRepeat.Name = "txtPasswordRepeat";
             txtPasswordRepeat.PasswordChar = '\0';
@@ -362,7 +362,7 @@
             txtFirstName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFirstName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtFirstName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtFirstName.Location = new Point(25, 352);
+            txtFirstName.Location = new Point(25, 425);
             txtFirstName.Margin = new Padding(3, 5, 3, 5);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PasswordChar = '\0';
@@ -386,7 +386,7 @@
             txtLastName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtLastName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtLastName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtLastName.Location = new Point(25, 419);
+            txtLastName.Location = new Point(25, 497);
             txtLastName.Margin = new Padding(3, 5, 3, 5);
             txtLastName.Name = "txtLastName";
             txtLastName.PasswordChar = '\0';
@@ -408,7 +408,7 @@
             btnBack.FillColor = Color.DarkOliveGreen;
             btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(12, 482);
+            btnBack.Location = new Point(12, 571);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.ShadowDecoration.CustomizableEdges = customizableEdges30;
@@ -429,7 +429,7 @@
             btnConfirm.FillColor = Color.DarkOliveGreen;
             btnConfirm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirm.ForeColor = Color.White;
-            btnConfirm.Location = new Point(145, 482);
+            btnConfirm.Location = new Point(142, 571);
             btnConfirm.Margin = new Padding(3, 4, 3, 4);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.ShadowDecoration.CustomizableEdges = customizableEdges32;
@@ -442,7 +442,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(581, 582);
+            ClientSize = new Size(806, 746);
             Controls.Add(btnConfirm);
             Controls.Add(btnBack);
             Controls.Add(txtLastName);

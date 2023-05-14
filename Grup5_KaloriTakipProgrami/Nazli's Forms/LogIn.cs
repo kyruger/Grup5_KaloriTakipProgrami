@@ -50,9 +50,9 @@ namespace WndPL.Forms
             User.User user = new User.User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
-            
-            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text );
-            
+
+            user = users.SingleOrDefault(a => a.Mail == txtEmail.Text);
+
             if (user == null)
             {
 

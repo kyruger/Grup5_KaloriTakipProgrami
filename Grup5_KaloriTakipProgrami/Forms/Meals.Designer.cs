@@ -349,7 +349,7 @@
             guna2HtmlLabel3.ForeColor = Color.Transparent;
             guna2HtmlLabel3.Location = new Point(28, 86);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(158, 30);
+            guna2HtmlLabel3.Size = new Size(121, 22);
             guna2HtmlLabel3.TabIndex = 0;
             guna2HtmlLabel3.Text = "guna2HtmlLabel3";
             // 
