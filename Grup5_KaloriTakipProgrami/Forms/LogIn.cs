@@ -23,7 +23,8 @@ namespace WndPL.Forms
         Helper helper = new Helper();
         private void LogIn_Load(object sender, EventArgs e)
         {
-            helper.ClearTexts(this);
+            txtEmail.Clear();
+            txtPassword.Clear();
         }
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)

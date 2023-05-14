@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -67,22 +68,26 @@ namespace WndPL.Forms
                 MessageBox.Show("İsim ve soyisim en az 2 harf içermelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (!IsPasswordValid(txtPassword.Text))
+            else if (!IsPasswordValid(txtNewPassword.Text))
             {
                 MessageBox.Show("Şifreler uygun kriterlere sahip değil\n---Kriterler---\n•En az 8 karakter uzunluğunda olmalıdır.\n• En az 2 büyük harf içermelidir.\n• En az 3 küçük harf içermelidir.\n• ! (ünlem), : (iki nokta üst üste), +(artı), *(yıldız) karakterlerinden en az 2 tanesini içermelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else if (txtPassword.Text != txtConfirmPassword.Text)
+            else if (txtNewPassword.Text != txtConfirmPassword.Text)
             {
                 MessageBox.Show("Şifreler eşleşmiyor. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else
+            else if (user.Password !=txtPassword.Text)
             {
+                MessageBox.Show("Önceki Şifrenizi yanlış girdiniz. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            { 
                 if (helper.StartAndEndWithDigit(this.pnlText))
                 {
 
-                    user.Password = txtPassword.Text;
+                    user.Password = txtNewPassword.Text;
                     user.FirstName = txtFirstName.Text;
                     user.LastName = txtLastName.Text;
                     user.Age = Convert.ToInt32(txtAge.Text);

@@ -62,6 +62,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnChangeUserPicture = new Guna.UI2.WinForms.Guna2Button();
             txtAge = new Guna.UI2.WinForms.Guna2TextBox();
             cmbGender = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -80,6 +82,7 @@
             txtDayGoal = new Guna.UI2.WinForms.Guna2TextBox();
             pnlStick = new Guna.UI2.WinForms.Guna2Panel();
             pnlText = new Guna.UI2.WinForms.Guna2Panel();
+            txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)pbChangePicture).BeginInit();
             pnlText.SuspendLayout();
             SuspendLayout();
@@ -167,10 +170,10 @@
             // 
             mtbTelephone.BorderStyle = BorderStyle.None;
             mtbTelephone.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            mtbTelephone.Location = new Point(224, 552);
+            mtbTelephone.Location = new Point(337, 552);
             mtbTelephone.Mask = "(999) 000-0000";
             mtbTelephone.Name = "mtbTelephone";
-            mtbTelephone.Size = new Size(198, 27);
+            mtbTelephone.Size = new Size(218, 27);
             mtbTelephone.TabIndex = 62;
             // 
             // txtEmail
@@ -241,7 +244,7 @@
             txtConfirmPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtConfirmPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtConfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtConfirmPassword.Location = new Point(62, 449);
+            txtConfirmPassword.Location = new Point(62, 535);
             txtConfirmPassword.Margin = new Padding(3, 5, 3, 5);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PasswordChar = '\0';
@@ -482,12 +485,39 @@
             pnlText.Size = new Size(313, 565);
             pnlText.TabIndex = 67;
             // 
+            // txtNewPassword
+            // 
+            txtNewPassword.BackColor = Color.White;
+            txtNewPassword.BorderColor = Color.Salmon;
+            txtNewPassword.BorderRadius = 16;
+            txtNewPassword.BorderThickness = 3;
+            txtNewPassword.Cursor = Cursors.IBeam;
+            txtNewPassword.CustomizableEdges = customizableEdges34;
+            txtNewPassword.DefaultText = "";
+            txtNewPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNewPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNewPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNewPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNewPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            txtNewPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewPassword.Location = new Point(64, 450);
+            txtNewPassword.Margin = new Padding(3, 5, 3, 5);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PasswordChar = '\0';
+            txtNewPassword.PlaceholderText = "New Password";
+            txtNewPassword.SelectedText = "";
+            txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            txtNewPassword.Size = new Size(220, 44);
+            txtNewPassword.TabIndex = 68;
+            // 
             // UserSettings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1000, 700);
+            Controls.Add(txtNewPassword);
             Controls.Add(pnlText);
             Controls.Add(pnlStick);
             Controls.Add(btnChangeUserPicture);
@@ -529,5 +559,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDayGoal;
         private Guna.UI2.WinForms.Guna2Panel pnlStick;
         private Guna.UI2.WinForms.Guna2Panel pnlText;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
     }
 }

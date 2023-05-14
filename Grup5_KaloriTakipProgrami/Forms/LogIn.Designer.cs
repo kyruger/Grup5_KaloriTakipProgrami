@@ -341,7 +341,7 @@
             txtTitleGet.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point);
             txtTitleGet.ForeColor = Color.FromArgb(0, 64, 0);
             txtTitleGet.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTitleGet.Location = new Point(397, 10);
+            txtTitleGet.Location = new Point(402, 21);
             txtTitleGet.Margin = new Padding(11, 12, 11, 12);
             txtTitleGet.Name = "txtTitleGet";
             txtTitleGet.PasswordChar = '\0';
