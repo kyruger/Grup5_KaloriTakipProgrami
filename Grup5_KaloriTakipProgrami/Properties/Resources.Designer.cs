@@ -59,5 +59,15 @@ namespace WndPL.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ac72f3b6344ee95f222d1e5ff857b166 {
+            get {
+                object obj = ResourceManager.GetObject("ac72f3b6344ee95f222d1e5ff857b166", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
