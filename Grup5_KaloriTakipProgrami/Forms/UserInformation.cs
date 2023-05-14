@@ -1,8 +1,8 @@
 ﻿using BLL;
 using DAL;
-using User;
-using User.Enums;
-using User.Models;
+using Entities;
+using Entities.Enums;
+using Entities.Models;
 using FluentFTP.Helpers;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
@@ -25,7 +25,7 @@ namespace WndPL.Forms
         {
             InitializeComponent();
         }
-        User.User user = new User.User();
+        Entities.User user = new();
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
 
@@ -68,7 +68,7 @@ namespace WndPL.Forms
 
                     BusinessLogic bl = new BusinessLogic();
 
-                    User.User user = new User.User()
+                    Entities.User user = new()
                     {
                         Height = height,
                         Weight = weight,

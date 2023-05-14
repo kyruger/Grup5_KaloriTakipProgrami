@@ -1,7 +1,7 @@
 ﻿using BLL;
 using Castle.Core.Internal;
 using Entities;
-using User;
+using Entities.Models;
 using Guna.Charts.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
@@ -27,7 +27,7 @@ namespace WndPL.Forms
         //}
         int userId = 2;
         BusinessLogic bl = new BusinessLogic();
-        User.User user;
+        Entities.User user;
         decimal currentWeight = 0;
 
         public Home()

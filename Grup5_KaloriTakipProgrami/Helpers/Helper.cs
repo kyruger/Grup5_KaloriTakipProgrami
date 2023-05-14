@@ -34,6 +34,25 @@ namespace WndPL
                     txt.Text = null;
             }
         }
-       
+
+        public bool AreTextBoxesEmpty(Form form)
+        {
+            bool IsEmpty = false;
+            foreach (var item in form.Controls)
+            {
+
+                if (item is Guna2TextBox txt)
+                    if (string.IsNullOrWhiteSpace(txt.Text))
+
+                        IsEmpty = true;
+            }
+            return IsEmpty;
+        }
+        public void HideAndShow(Form from1, Form form2)
+        {
+            from1.Hide();
+            form2.ShowDialog();
+            from1.Show();
+        }
     }
 }

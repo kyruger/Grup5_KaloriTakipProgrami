@@ -33,11 +33,7 @@ namespace WndPL.Forms
         int day;
 
 
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            AddNewFood addNewFood = new AddNewFood();
-            addNewFood.ShowDialog();
-        }
+
 
 
 

@@ -1,8 +1,8 @@
 ﻿using BLL;
 using DAL;
-using User;
-using User.Enums;
-using User.Models;
+using Entities;
+using Entities.Enums;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,7 @@ namespace WndPL.Forms
             InitializeComponent();
         }
         BusinessLogic bl = new BusinessLogic();
-        User.User user = new User.User();
+
         private void UserSettings_Load(object sender, EventArgs e)
         {
 
@@ -79,7 +79,7 @@ namespace WndPL.Forms
                 {
                     BusinessLogic bl = new BusinessLogic();
 
-                    User.User user = new User.User()
+                    User user = new User()
                     {
                         Mail = mail,
                         Password = password,

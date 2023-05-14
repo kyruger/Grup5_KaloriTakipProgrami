@@ -23,33 +23,32 @@ namespace WndPL.Forms
             helper.ShowPanel(homeForm, pnlMain);
             btnActivity.Enabled = false;
             btnDiets.Enabled = false;
-            //Home homeForm = new Home();
-            //helper.ShowPanel(homeForm, pnlMain);
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            //Home homeForm = new Home();
-            //helper.ShowPanel(homeForm, pnlMain);
+            Home homeForm = new Home();
+            helper.ShowPanel(homeForm, pnlMain);
         }
 
         private void btnMeals_Click(object sender, EventArgs e)
         {
-            //Meals mealForm = new Meals();
-            //helper.ShowPanel(mealForm, pnlMain);
+            Meals mealForm = new Meals();
+            helper.ShowPanel(mealForm, pnlMain);
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-            //Reports reportsForm = new Reports();
-            //helper.ShowPanel(reportsForm, pnlMain);
+            Reports reportsForm = new Reports();
+            helper.ShowPanel(reportsForm, pnlMain);
         }
 
 
         private void btnUserSettings_Click(object sender, EventArgs e)
         {
-            //UserSettings userSettingsForm = new UserSettings();
-            //helper.ShowPanel(userSettingsForm, pnlMain);
+            UserSettings userSettingsForm = new UserSettings();
+            helper.ShowPanel(userSettingsForm, pnlMain);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿using BLL;
-using User;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace WndPL.Forms
         }
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
-        User.User user = new User.User();
+        User user = new User();
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -66,7 +66,7 @@ namespace WndPL.Forms
             else
             {
                 var users = bl.Users.GetAll();
-                User.User user = users.SingleOrDefault(a => a.Mail == txtMail.Text);
+                User user = users.SingleOrDefault(a => a.Mail == txtMail.Text);
                 if (user != null)
                 {
                     MessageBox.Show("Bu mail adresi sistemde mevcut. \nLütfen bilgilerinizi kontrol ediniz.");
@@ -75,7 +75,7 @@ namespace WndPL.Forms
                 else
                 {
                     MessageBox.Show("Sisteme başarıyla kayıt oldunuz.");
-                    User.User _user = new User.User();
+                    User _user = new User();
                     bl = new BusinessLogic();
                     bl.Users.Add(_user);
                     UserInformation userInfo = new();

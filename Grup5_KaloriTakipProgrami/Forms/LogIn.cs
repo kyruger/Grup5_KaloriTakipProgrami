@@ -1,5 +1,5 @@
 ﻿using BLL;
-using User;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace WndPL.Forms
             InitializeComponent();
         }
         BusinessLogic bl = new BusinessLogic();
-        User.User user = new User.User();
+        User user = new User();
         Helper helper = new Helper();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace WndPL.Forms
                 MessageBox.Show("Eksik bilgi girdiniz. \nLütfen tüm alanları doldurunuz.");
                 return;
             }
-            User.User user = new User.User();
+            User user = new User();
             bl = new BusinessLogic();
             var users = bl.Users.GetAll();
 
