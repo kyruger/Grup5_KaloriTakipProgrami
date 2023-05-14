@@ -238,7 +238,7 @@
             chartFont2.Size = 12;
             chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
             chartFoodAvgDayConsume.Title.Font = chartFont2;
-            chartFoodAvgDayConsume.Title.ForeColor = Color.Teal;
+            chartFoodAvgDayConsume.Title.ForeColor = Color.DarkSlateBlue;
             chartFoodAvgDayConsume.Title.Text = "Food Amount Avgarage For One Day ";
             chartFont3.FontName = "Arial";
             chartFoodAvgDayConsume.Tooltips.BodyFont = chartFont3;

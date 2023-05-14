@@ -565,7 +565,7 @@
             pnlStick.BackColor = Color.Transparent;
             pnlStick.BorderRadius = 5;
             pnlStick.CustomizableEdges = customizableEdges17;
-            pnlStick.FillColor = Color.Teal;
+            pnlStick.FillColor = Color.DarkSlateBlue;
             pnlStick.Location = new Point(452, 269);
             pnlStick.Name = "pnlStick";
             pnlStick.ShadowDecoration.CustomizableEdges = customizableEdges18;

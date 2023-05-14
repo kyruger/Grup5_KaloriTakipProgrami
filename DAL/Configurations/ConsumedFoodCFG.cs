@@ -31,20 +31,33 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(1, 4),
-                    Quantity = rand.Next(1, 5),
+                    Quantity = rand.Next(1, 6),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
                     FoodId = rand.Next(1, 29),
                 });
             }
-            for (int i = 1251; i <= 2500; i++)
+            for (int i = 1251; i <= 2250; i++)
             {
                 consumedFoods.Add(new ConsumedFood
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(1, 4),
-                    PortionCount = rand.Next(1, 5),
-                    PortionType = (PortionType)rand.Next(1, 4),
+                    PortionCount = rand.Next(1, 4),
+                    PortionType = (PortionType)rand.Next(1, 3),
+                    Day = rand.Next(1, 46),
+                    UserId = rand.Next(1, 6),
+                    FoodId = rand.Next(1, 29),
+                });
+            }
+            for (int i = 2251; i <= 2500; i++)
+            {
+                consumedFoods.Add(new ConsumedFood
+                {
+                    ID = i,
+                    MealType = (MealType)rand.Next(1, 4),
+                    PortionCount = rand.Next(1, 4),
+                    PortionType = (PortionType)4,
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
                     FoodId = rand.Next(1, 29),
@@ -56,7 +69,7 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(4, 9),
-                    PortionCount = rand.Next(1, 5),
+                    PortionCount = rand.Next(1, 4),
                     PortionType = (PortionType)rand.Next(1, 3),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
@@ -69,7 +82,7 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(4, 9),
-                    PortionCount = rand.Next(1, 5),
+                    PortionCount = rand.Next(1, 4),
                     PortionType = (PortionType)4,
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
@@ -82,7 +95,7 @@ namespace DAL.Configurations
                 {
                     ID = i,
                     MealType = (MealType)rand.Next(4, 9),
-                    Quantity = rand.Next(1, 5),
+                    Quantity = rand.Next(1, 6),
                     Day = rand.Next(1, 46),
                     UserId = rand.Next(1, 6),
                     FoodId = rand.Next(1, 29),

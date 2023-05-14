@@ -55,8 +55,7 @@ namespace BLL
                 place = list.FindIndex(f => f.FoodId == foodId)+1;
             }
         }
-
-        
+ 
         public int GetFoodConsumedTotalQuantityByFoodId(int foodId, params MealType[] mealTypes)
         {
             int totalQuantity = 0;

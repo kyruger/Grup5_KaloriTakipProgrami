@@ -126,7 +126,7 @@ namespace WndPL.Forms.ReportForms
 
                 for (int i = 0; i < dataPointCount - 1; i++)
                 {
-                    Guna.Charts.WinForms.LPoint lPoint = new();
+                    LPoint lPoint = new();
                     lPoint.Label = ((MealType)(i + 1)).ToString();
                     int totalQuantity1 = bl.ConsumedFoods.GetFoodConsumedTotalQuantityByFoodId(foodId, (MealType)(i + 1));
                     int totalPortionCount1 = bl.ConsumedFoods.GetFoodConsumedTotalPortionCountByFoodId(foodId, (MealType)(i + 1));
@@ -134,7 +134,7 @@ namespace WndPL.Forms.ReportForms
                     lPoint.Y = Math.Round(dailyConsumeAmount / totalDay, 2);
                     pieDataFoodAvgDayConsume.DataPoints.Add(lPoint);
                 }
-                Guna.Charts.WinForms.LPoint lPointLast = new();
+                LPoint lPointLast = new();
                 lPointLast.Label = "Others";
                 int totalQuantity = bl.ConsumedFoods.GetFoodConsumedTotalQuantityByFoodId(foodId, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
                 int totalPortionCount = bl.ConsumedFoods.GetFoodConsumedTotalPortionCountByFoodId(foodId, MealType.Snack1, MealType.Snack2, MealType.Snack3, MealType.Snack4, MealType.Snack5);
@@ -247,7 +247,6 @@ namespace WndPL.Forms.ReportForms
         {
             var allFoods = bl.Foods.GetAll();
             lblTotalFoodCount.Text = allFoods.Count.ToString();
-            //txtTotal.Text = bl.ConsumedFoods.GetFoodConsumedQuantityByFoodId(foodId, mealTypes).ToString();
             int totalQuantity = bl.ConsumedFoods.GetFoodConsumedTotalQuantityByFoodId(foodId, mealTypes);
             int totalPortionCount = bl.ConsumedFoods.GetFoodConsumedTotalPortionCountByFoodId(foodId, mealTypes);
             int totalCount = totalQuantity + totalPortionCount;
