@@ -531,7 +531,7 @@ namespace WndPL.Forms
         private void txtFoodSearch_TextChanged(object sender, EventArgs e)
         {
             lvSearchedFoods.Items.Clear();
-            List<Food> searchedFoods = bl.Foods.GetFoodsByContainText(txtFoodSearch.Text.Trim());
+            List<Food> searchedFoods = bl.Foods.GetFoodsByContainTextAndOwnerId(txtFoodSearch.Text.Trim(),userID);
             foreach (var food in searchedFoods)
             {
                 ListViewItem lv1 = new ListViewItem();

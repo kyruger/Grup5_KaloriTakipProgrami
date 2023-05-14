@@ -22,7 +22,7 @@ namespace BLL
             return id;
 
         }
-        public List<Food> GetFoodsByContainText(string text)
+       
         public List<Food> GetFoodsByContainTextAndOwnerId(string text,int ownerId)
         {
             
