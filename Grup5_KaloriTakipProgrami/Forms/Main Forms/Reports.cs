@@ -26,8 +26,8 @@ namespace WndPL.Forms
         private void Reports_Load(object sender, EventArgs e)
         {
             btnActivity.Enabled = false;
-            MealsReports mealsReports = new MealsReports(userId);
-            helper.ShowPanel(mealsReports, pnlMain);
+            FoodReports foodReports = new FoodReports(userId);
+            helper.ShowPanel(foodReports, pnlMain);
         }
         private void btnMeals_Click(object sender, EventArgs e)
         {
