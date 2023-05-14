@@ -52,7 +52,7 @@ namespace WndPL.Forms
             Entities.User user = bl.Users.GetById(userID);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             day = (int)timePassed.TotalDays + 1;
-
+            btnAddToMeal.Enabled = false;
 
             count = 1;
 
@@ -81,63 +81,102 @@ namespace WndPL.Forms
 
         private void btnAddToMeal_Click(object sender, EventArgs e)
         {
-            Food food = bl.Foods.GetById(foodID);
-            ListViewItem lvi = new();
-            lvi.Text = food.Name;
-            lvi.SubItems.Add(food.Category.ToString());
-
-
-
-            if (cbxPortion.SelectedIndex == 0 || cbxPortion.SelectedIndex == 1 || cbxPortion.SelectedIndex == 2)
+            if (tbxFoodName != null || tbxFoodCalorie != null)
             {
-                if (cbxPortion.SelectedIndex == 0)//Full
+                Food food = bl.Foods.GetById(foodID);
+                ListViewItem lvi = new();
+                lvi.Text = food.Name;
+                lvi.SubItems.Add(food.Category.ToString());
+
+
+
+                if (cbxPortion.SelectedIndex == 0 || cbxPortion.SelectedIndex == 1 || cbxPortion.SelectedIndex == 2)
                 {
-                    decimal portionGramForType = food.PortionGram / 1;
-                    lvi.SubItems.Add("Full");
-                    lvi.SubItems.Add(nudAmount.Value.ToString());
-                    lvi.SubItems.Add(portionGramForType.ToString());
-                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    if (cbxPortion.SelectedIndex == 0)//Full
+                    {
+                        decimal portionGramForType = food.PortionGram / 1;
+                        lvi.SubItems.Add("Full");
+                        lvi.SubItems.Add(nudAmount.Value.ToString());
+                        lvi.SubItems.Add(portionGramForType.ToString());
+                        lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    }
+                    else if (cbxPortion.SelectedIndex == 1)//Half 
+                    {
+                        decimal portionGramForType = food.PortionGram / 2;
+                        lvi.SubItems.Add("Half");
+                        lvi.SubItems.Add(nudAmount.Value.ToString());
+                        lvi.SubItems.Add(portionGramForType.ToString());
+                        lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    }
+                    else if (cbxPortion.SelectedIndex == 2)//Quartar
+                    {
+                        decimal portionGramForType = food.PortionGram / 4;
+                        lvi.SubItems.Add("Quarter");
+                        lvi.SubItems.Add(nudAmount.Value.ToString());
+                        lvi.SubItems.Add(portionGramForType.ToString());
+                        lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
+                        lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    }
+
                 }
-                else if (cbxPortion.SelectedIndex == 1)//Half 
+                else if (cbxPortion.SelectedIndex == 3)//100Gram
                 {
-                    decimal portionGramForType = food.PortionGram / 2;
-                    lvi.SubItems.Add("Half");
+                    lvi.SubItems.Add("100Gram");
                     lvi.SubItems.Add(nudAmount.Value.ToString());
-                    lvi.SubItems.Add(portionGramForType.ToString());
-                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    lvi.SubItems.Add((100 * nudAmount.Value).ToString());
+                    lvi.SubItems.Add((food.CalorieFor100Gram * nudAmount.Value).ToString());
+                    lvi.SubItems.Add((food.ProteinRateFor100Gram * nudAmount.Value).ToString());
+                    lvi.SubItems.Add((food.FatRateFor100Gram * nudAmount.Value).ToString());
+                    lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * nudAmount.Value).ToString());
+
                 }
-                else if (cbxPortion.SelectedIndex == 2)//Quartar
+                lviDailyConsumedFood.Items.Add(lvi);
+                if (MealType.Breakfast == mealType)
                 {
-                    decimal portionGramForType = food.PortionGram / 4;
-                    lvi.SubItems.Add("Quarter");
-                    lvi.SubItems.Add(nudAmount.Value.ToString());
-                    lvi.SubItems.Add(portionGramForType.ToString());
-                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
+                    double totalCalorie = 0;
+                    foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                    {
+                        totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                    }
+                    cpbBreakfeastCalorie.Value = (int)totalCalorie;
                 }
+                else if (MealType.Lunch == mealType)
+                {
+                    double totalCalorie = 0;
+                    foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                    {
+                        totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                    }
+                    cpbLunchCalorie.Value = (int)totalCalorie;
+                }
+                else if (MealType.Dinner == mealType)
+                {
+                    double totalCalorie = 0;
+                    foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                    {
+                        totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                    }
+                    cpbDinnerCalorie.Value = (int)totalCalorie;
+                }
+                ButtonActivity(false);
 
             }
-            else if (cbxPortion.SelectedIndex == 3)//100Gram
+            else
             {
-                lvi.SubItems.Add("100Gram");
-                lvi.SubItems.Add(nudAmount.Value.ToString());
-                lvi.SubItems.Add((100 * nudAmount.Value).ToString());
-                lvi.SubItems.Add((food.CalorieFor100Gram * nudAmount.Value).ToString());
-                lvi.SubItems.Add((food.ProteinRateFor100Gram * nudAmount.Value).ToString());
-                lvi.SubItems.Add((food.FatRateFor100Gram * nudAmount.Value).ToString());
-                lvi.SubItems.Add((food.CarbonhydrateAmountFor100Gram * nudAmount.Value).ToString());
-
+                ButtonActivity(false);
             }
-            lviDailyConsumedFood.Items.Add(lvi);
-            ButtonActivity(false);
+
 
         }
 
@@ -154,14 +193,16 @@ namespace WndPL.Forms
 
         private void btnBreakFeast_Click(object sender, EventArgs e)
         {
-            double totalCalorie = 0;
             mealType = MealType.Breakfast;
             FillListViewConsumedFood(userID, mealType);
+            double totalCalorie = 0;
             foreach (ListViewItem item in lviDailyConsumedFood.Items)
             {
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
+            cpbBreakfeastCalorie.Maximum = 9999;
+            cpbBreakfeastCalorie.Value = (int)totalCalorie;
         }
         private void FillListViewConsumedFood(int id, MealType meal)
         {
@@ -191,13 +232,11 @@ namespace WndPL.Forms
                     decimal portionGramForType = food.PortionGram / (int)consumed.PortionType;
                     lvi.SubItems.Add(consumed.PortionType.ToString());
                     lvi.SubItems.Add(consumed.PortionCount.ToString());
-                    lvi.SubItems.Add(portionGramForType.ToString());
-                    lvi.SubItems.Add(((food.CalorieFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.ProteinRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.FatRateFor100Gram * portionGramForType) / 100).ToString());
-                    lvi.SubItems.Add(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100).ToString());
-
-
+                    lvi.SubItems.Add(Math.Round(portionGramForType, 2).ToString());
+                    lvi.SubItems.Add(Math.Round(((food.CalorieFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round(((food.ProteinRateFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round(((food.FatRateFor100Gram * portionGramForType) / 100), 2).ToString());
+                    lvi.SubItems.Add(Math.Round(((food.CarbonhydrateAmountFor100Gram * portionGramForType) / 100), 2).ToString());
 
                 }
 
@@ -222,6 +261,10 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
+            cpbLunchCalorie.Maximum = 9999;
+            cpbLunchCalorie.Value = (int)totalCalorie;
+
+
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
@@ -234,6 +277,8 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
+            cpbDinnerCalorie.Maximum = 9999;
+            cpbDinnerCalorie.Value = (int)totalCalorie;
         }
 
         private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
@@ -411,7 +456,9 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
-            cpbTotalMealCalorie.Value = (int)totalCalorie;
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+
         }
         private void SnackClick3(object sender, EventArgs e)
         {
@@ -423,7 +470,9 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
-            cpbTotalMealCalorie.Value = (int)totalCalorie;
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
+
         }
         private void SnackClick4(object sender, EventArgs e)
         {
@@ -435,7 +484,8 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
-            cpbTotalMealCalorie.Value = (int)totalCalorie;
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
         }
         private void SnackClick5(object sender, EventArgs e)
         {
@@ -447,7 +497,8 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
-            cpbTotalMealCalorie.Value = (int)totalCalorie;
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
         }
 
         private void SnackClick1(object sender, EventArgs e)
@@ -460,11 +511,13 @@ namespace WndPL.Forms
                 totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
 
             }
+            cpgTotalMealCalorie.Maximum = 9999;
+            cpgTotalMealCalorie.Value = (int)totalCalorie;
         }
 
         private void nudAmount_ValueChanged(object sender, EventArgs e)
         {
-            if (nudAmount.Value == 0)
+            if (nudAmount.Value == 0 || tbxFoodCalorie.Text==string.Empty || tbxFoodName.Text==string.Empty  || mealType==0)
             {
                 ButtonActivity(false);
             }
@@ -512,12 +565,15 @@ namespace WndPL.Forms
             lvSearchedFoods.Hide();
             if (lvSearchedFoods.SelectedItems.Count > 0)
             {
-                ButtonActivity(true);
                 int foodId = (int)lvSearchedFoods.SelectedItems[0].Tag;
                 Food food = bl.Foods.GetById(foodId);
                 tbxFoodName.Text = food.Name;
                 tbxFoodCalorie.Text = food.CalorieFor100Gram.ToString();
                 foodID = (int)lvSearchedFoods.SelectedItems[0].Tag;
+                if(nudAmount.Value > 0)
+                {
+                   ButtonActivity(true);
+                }
             }
 
         }
