@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    public enum MealType
+    public enum PortionType
     {
-        Breakfast = 1,
-        Lunch,
-        Dinner,
-        Snack1, 
-        Snack2,
-        Snack3,
-        Snack4,
-        Snack5
+        Full = 1,
+        Half = 2,
+        Quarter = 4,
     }
 }

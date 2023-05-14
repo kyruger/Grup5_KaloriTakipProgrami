@@ -21,6 +21,8 @@ namespace WndPL.Forms
         {
             Home homeForm = new Home();
             helper.ShowPanel(homeForm, pnlMain);
+            btnActivity.Enabled = false;
+            btnDiets.Enabled = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace WndPL.Forms
             helper.ShowPanel(mealForm, pnlMain);
         }
 
-        private void brnReports_Click(object sender, EventArgs e)
+        private void btnReports_Click(object sender, EventArgs e)
         {
             Reports reportsForm = new Reports();
             helper.ShowPanel(reportsForm, pnlMain);
@@ -50,6 +52,7 @@ namespace WndPL.Forms
         {
             this.Close();
         }
+
 
     }
 }
