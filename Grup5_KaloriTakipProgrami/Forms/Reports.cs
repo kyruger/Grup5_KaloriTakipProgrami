@@ -30,8 +30,8 @@ namespace WndPL.Forms
         }
         private void btnMeals_Click(object sender, EventArgs e)
         {
-            MealsReports mealsReports = new MealsReports();
-            helper.ShowPanel(mealsReports, pnlMain);
+            //MealsReports mealsReports = new MealsReports();
+            //helper.ShowPanel(mealsReports, pnlMain);
 
 
         }

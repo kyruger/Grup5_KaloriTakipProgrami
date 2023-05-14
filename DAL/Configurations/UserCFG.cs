@@ -1,5 +1,5 @@
-﻿using Entities;
-using Entities.Enums;
+﻿using User;
+using User.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Configurations
 {
-    public class UserCFG : IEntityTypeConfiguration<User>
+    public class UserCFG : IEntityTypeConfiguration<User.User>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<User.User> builder)
         {
             builder.Property(x => x.FirstName).HasColumnType("nvarchar").HasMaxLength(30);
             builder.Property(x => x.LastName).HasColumnType("nvarchar").HasMaxLength(30);

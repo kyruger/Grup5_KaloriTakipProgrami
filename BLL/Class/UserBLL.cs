@@ -1,7 +1,7 @@
 ﻿using Castle.DynamicProxy.Generators;
 using DAL;
-using Entities;
-using Entities.Enums;
+using User;
+using User.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -12,11 +12,11 @@ using System.Xml.Schema;
 
 namespace BLL
 {
-    public class UserBLL : BaseClass<User>
+    public class UserBLL : BaseClass<User.User>
     {
         public double GetDailyCalorieById(int id)
         {
-            User? user = db.Users.Find(id);
+            User.User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
             var cfList = user.ConsumedFoods.Where(cf => cf.Day == day).ToList();
@@ -42,7 +42,7 @@ namespace BLL
 
         public double GetCaloriesForDaysById(int id, int howManyDaysBeforeToday, out int emptyDays, MealType[] mealTypes)
         {
-            User? user = db.Users.Find(id);
+            User.User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             double totalCalorie = 0;
             emptyDays = 0;
@@ -128,7 +128,7 @@ namespace BLL
             dailyProteinGram = 0;
             dailyFatGram = 0;
             dailyCarbohydrateGram = 0;
-            User? user = db.Users.Find(id);
+            User.User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays + 1;
             var cfList = user.ConsumedFoods.Where(cf => cf.Day == day).ToList();
@@ -169,7 +169,7 @@ namespace BLL
 
         public double GetSpesificDayCaloriesById(int id, int howManyDaysBeforeToday)
         {
-            User? user = db.Users.Find(id);
+            User.User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int day = (int)timePassed.TotalDays - howManyDaysBeforeToday;
             var cfList = user.ConsumedFoods.Where(cf => cf.Day == day).ToList();
@@ -194,7 +194,7 @@ namespace BLL
 
         public int GetConsumedFoodsAmountForDaysById(int id, int howManyDaysBeforeToday, FoodCategory foodCategory, params MealType[] mealTypes)
         {
-            User? user = db.Users.Find(id);
+            User.User? user = db.Users.Find(id);
             TimeSpan timePassed = DateTime.Now - user.CreationTime;
             int totalAmount = 0;
             foreach (var mealType in mealTypes)

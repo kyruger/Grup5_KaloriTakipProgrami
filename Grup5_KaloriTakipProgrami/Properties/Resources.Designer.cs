@@ -59,5 +59,45 @@ namespace WndPL.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _24a2c167ada77bd5a1c893f968e28585 {
+            get {
+                object obj = ResourceManager.GetObject("24a2c167ada77bd5a1c893f968e28585", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _24a2c167ada77bd5a1c893f968e285851 {
+            get {
+                object obj = ResourceManager.GetObject("24a2c167ada77bd5a1c893f968e285851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ac72f3b6344ee95f222d1e5ff857b166 {
+            get {
+                object obj = ResourceManager.GetObject("ac72f3b6344ee95f222d1e5ff857b166", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d33bc8ab06f0592a8ff282d497906901 {
+            get {
+                object obj = ResourceManager.GetObject("d33bc8ab06f0592a8ff282d497906901", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

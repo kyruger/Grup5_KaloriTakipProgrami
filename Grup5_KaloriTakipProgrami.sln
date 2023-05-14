@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WndPL", "Grup5_KaloriTakipProgrami\WndPL.csproj", "{6CE22F2E-7A58-46A3-98B1-DB026E385A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WndPL", "Grup5_KaloriTakipProgrami\WndPL.csproj", "{6CE22F2E-7A58-46A3-98B1-DB026E385A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C6439E2A-8ED7-4333-B3BB-A7B83B943679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{C6439E2A-8ED7-4333-B3BB-A7B83B943679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C40882B5-9735-44D0-8A9C-7191462E66FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{C40882B5-9735-44D0-8A9C-7191462E66FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{81577278-278A-4AE1-A5C6-B996BCF07136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{81577278-278A-4AE1-A5C6-B996BCF07136}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

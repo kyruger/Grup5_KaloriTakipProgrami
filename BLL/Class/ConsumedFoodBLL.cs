@@ -1,4 +1,5 @@
-﻿using Castle.DynamicProxy.Generators;
+﻿using User;
+using Castle.DynamicProxy.Generators;
 using Entities;
 using Entities.Enums;
 using System;
