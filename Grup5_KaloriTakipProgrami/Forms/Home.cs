@@ -124,7 +124,7 @@ namespace WndPL.Forms
             {
                 lpLinePoints[i].Y = Convert.ToDouble(lblCalorie.Text);
             }
->>>>>>> EnesBranch
+
         }
 
         private void txtWeightTexts_KeyPress(object sender, KeyPressEventArgs e)

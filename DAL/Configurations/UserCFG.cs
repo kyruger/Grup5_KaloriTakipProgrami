@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Configurations
 {
-    public class UserCFG : IEntityTypeConfiguration<User.User>
+    public class UserCFG : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<User.User> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.Property(x => x.FirstName).HasColumnType("nvarchar").HasMaxLength(30);
             builder.Property(x => x.LastName).HasColumnType("nvarchar").HasMaxLength(30);
