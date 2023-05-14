@@ -41,20 +41,20 @@ namespace WndPL.Forms
 
         private void btnMeals_Click(object sender, EventArgs e)
         {
-            Meals mealForm = new Meals();
+            Meals mealForm = new Meals(userId);
             helper.ShowPanel(mealForm, pnlMain);
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-            Reports reportsForm = new Reports();
+            Reports reportsForm = new Reports(userId);
             helper.ShowPanel(reportsForm, pnlMain);
         }
 
 
         private void btnUserSettings_Click(object sender, EventArgs e)
         {
-            UserSettings userSettingsForm = new UserSettings();
+            UserSettings userSettingsForm = new UserSettings(userId);
             helper.ShowPanel(userSettingsForm, pnlMain);
         }
 

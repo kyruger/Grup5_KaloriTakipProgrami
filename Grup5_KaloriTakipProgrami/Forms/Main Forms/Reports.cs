@@ -15,29 +15,28 @@ namespace WndPL.Forms
 {
     public partial class Reports : Form
     {
-        public Reports()
+        public Reports(int id)
         {
             InitializeComponent();
+            userId = id;
 
         }
         Helper helper = new Helper();
-
+        int userId;
         private void Reports_Load(object sender, EventArgs e)
         {
             btnActivity.Enabled = false;
-            MealsReports mealsReports = new MealsReports();
+            MealsReports mealsReports = new MealsReports(userId);
             helper.ShowPanel(mealsReports, pnlMain);
         }
         private void btnMeals_Click(object sender, EventArgs e)
         {
-            //MealsReports mealsReports = new MealsReports();
-            //helper.ShowPanel(mealsReports, pnlMain);
-
-
+            MealsReports mealsReports = new MealsReports(userId);
+            helper.ShowPanel(mealsReports, pnlMain);
         }
         private void btnFoods_Click(object sender, EventArgs e)
         {
-            FoodReports foodReports = new FoodReports();
+            FoodReports foodReports = new FoodReports(userId);
             helper.ShowPanel(foodReports, pnlMain);
         }
 

@@ -21,13 +21,19 @@ namespace WndPL.Forms
 {
     public partial class UserInformation : Form
     {
-        public UserInformation()
+        public UserInformation(Entities.User user)
         {
             InitializeComponent();
+            this.user = user;
         }
-        Entities.User user = new();
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
+        Entities.User user;
+        private void UserInformation_Load(object sender, EventArgs e)
+        {
+            foreach (var item in Enum.GetNames(typeof(Gender)))
+                cmbGender.Items.Add(item);
+        }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -37,70 +43,39 @@ namespace WndPL.Forms
             }
             else
             {
-
                 double height = Convert.ToDouble(txtHeight.Text) / 100.0;
                 double weight = Convert.ToDouble(txtHeight.Text);
                 double bodyMassIndex = weight / (height * height);
                 txtBodyMassIndex.Text = bodyMassIndex.ToString("0.00");
-
             }
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            if (AreFieldsEmpty())
+            bool emptyControl = helper.AreTextBoxesEmpty(this);
+            if (emptyControl)
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
             }
-
             else
             {
-                decimal height = Convert.ToDecimal(txtHeight.Text);
-                decimal weight = Convert.ToDecimal(txtWeight.Text);
-                decimal goalWeight = Convert.ToDecimal(txtTargetWeight.Text);
-                int dailyTargetCalories = Convert.ToInt32(txtDailyTargetCalories.Text);
-                int age = Convert.ToInt32(txtAge.Text);
-                string? phoneNumber = mtbTelephone.Text;
-                Gender gender = (Gender)cmbGender.SelectedItem;
+                user.Height = Convert.ToDecimal(txtHeight.Text);
+                user.Weight = Convert.ToDecimal(txtWeight.Text);
+                user.GoalWeight = Convert.ToDecimal(txtTargetWeight.Text);
+                user.DailyGoalCalorie = Convert.ToInt32(txtDailyTargetCalories.Text);
+                user.Age = Convert.ToInt32(txtAge.Text);
+                user.PhoneNumber = mtbTelephone.Text;
+                user.Gender = (Gender)cmbGender.SelectedIndex + 1;
 
-                using (var dbContext = new CalorieTrackingDbContext())
-                {
+                bool result = bl.Users.Add(user);
+                if (result)
+                    MessageBox.Show("Ekleme başarılı.");
+                else
+                    MessageBox.Show("Ekleme başarısız.");
 
-                    BusinessLogic bl = new BusinessLogic();
-
-                    Entities.User user = new()
-                    {
-                        Height = height,
-                        Weight = weight,
-                        GoalWeight = goalWeight,
-                        DailyGoalCalorie = dailyTargetCalories,
-                        Age = age,
-                        PhoneNumber = phoneNumber,
-                        Gender = gender
-                    };
-
-
-                    bool result = bl.Users.Add(user);
-
-                    if (result)
-                    {
-
-                        MessageBox.Show("Ekleme başarılı.");
-
-                    }
-
-                    else
-                    {
-
-                        MessageBox.Show("Ekleme başarısız.");
-
-                    }
-
-                }
             }
-
-
         }
+
         private void btnAddPhoto_Click(object sender, EventArgs e)
         {
 
@@ -130,35 +105,12 @@ namespace WndPL.Forms
                 Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
                 pbPhoto.Image = resizedImage;
                 pbPhoto.SizeMode = PictureBoxSizeMode.CenterImage;
-
             }
-
         }
 
-        private void btnSkip_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-            SignUp signUp = new SignUp();
-            helper.HideAndShow(this, signUp);
-
-        }
-
-        private bool AreFieldsEmpty()
-        {
-            if (string.IsNullOrWhiteSpace(txtHeight.Text) ||
-                string.IsNullOrWhiteSpace(txtWeight.Text) ||
-                string.IsNullOrWhiteSpace(txtDailyTargetCalories.Text) ||
-                string.IsNullOrWhiteSpace(txtDayTarget.Text) ||
-                string.IsNullOrWhiteSpace(txtAge.Text) ||
-                string.IsNullOrWhiteSpace(mtbTelephone.Text) ||
-                cmbGender.SelectedItem == null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            this.Close();
         }
     }
 

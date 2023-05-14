@@ -2,6 +2,7 @@
 using Entities;
 using Entities.Enums;
 using Guna.Charts.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,15 @@ namespace WndPL.Forms.ReportForms
 {
     public partial class FoodReports : Form
     {
-        public FoodReports()
+        public FoodReports(int id)
         {
             InitializeComponent();
+            userId = id;
         }
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
         int foodId;
-        int userId = 2;
+        int userId;
         private void FoodReports_Load(object sender, EventArgs e)
         {
             foreach (var item in Enum.GetNames(typeof(FoodCategory)))

@@ -20,22 +20,18 @@ namespace WndPL.Forms
 {
     public partial class Meals : Form
     {
-        public Meals()
+        public Meals(int id)
         {
             InitializeComponent();
+            userID = id;
         }
         BusinessLogic bl;
         int foodID;
-        int userID = 2;
+        int userID;
         MealType mealType;
         int count;
         List<int> btnNumbers;
         int day;
-
-
-    
-
-
 
         private void Meals_Load(object sender, EventArgs e)
         {

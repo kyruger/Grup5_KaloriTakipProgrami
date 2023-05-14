@@ -98,7 +98,7 @@
             pnlPhoto.ShadowDecoration.CustomizableEdges = customizableEdges14;
             pnlPhoto.Size = new Size(530, 752);
             pnlPhoto.TabIndex = 0;
-            pnlPhoto.Paint += pnlPhoto_Paint;
+
             // 
             // txtWater
             // 

@@ -18,12 +18,13 @@ namespace WndPL.Forms.ReportForms
 {
     public partial class MealsReports : Form
     {
-        public MealsReports()
+        public MealsReports(int id)
         {
             InitializeComponent();
+            userId = id;
         }
         BusinessLogic bl = new BusinessLogic();
-        int userId = 2;
+        int userId;
 
         private void MealsReports_Load(object sender, EventArgs e)
         {

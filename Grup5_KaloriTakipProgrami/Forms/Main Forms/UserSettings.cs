@@ -17,12 +17,13 @@ namespace WndPL.Forms
 {
     public partial class UserSettings : Form
     {
-        public UserSettings()
+        public UserSettings(int id)
         {
             InitializeComponent();
+            userId = id;
         }
         BusinessLogic bl = new BusinessLogic();
-
+        int userId;
         private void UserSettings_Load(object sender, EventArgs e)
         {
 

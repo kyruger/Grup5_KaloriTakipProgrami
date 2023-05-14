@@ -20,36 +20,35 @@ namespace WndPL.Forms
         }
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
-        User user = new User();
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            LogIn login = new();
-            helper.HideAndShow(this, login);
+            this.Close();
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (AreFieldsEmpty())
+            bool emptyControl = helper.AreTextBoxesEmpty(this);
+            if (emptyControl)
             {
                 MessageBox.Show("Alanlar boş geçilemez. Lütfen eksik bilgilerinizi giriniz.");
+                return;
             }
 
-            if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
+            else if (ContainsNumeric(txtFirstName.Text) || ContainsNumeric(txtLastName.Text))
             {
                 MessageBox.Show("Lütfen geçerli bir isim giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
 
-            if ((txtFirstName.Text).Length < 2 || (txtLastName.Text).Length < 2)
+            else if ((txtFirstName.Text).Length < 2 || (txtLastName.Text).Length < 2)
             {
                 MessageBox.Show("İsim ve soyisim en az 2 harf içermelidir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
             }
 
-            if (txtMail.Text != txtMailRepeat.Text)
+            else if (txtMail.Text != txtMailRepeat.Text)
             {
                 MessageBox.Show("Girdiğiniz mail adresleri uyuşmuyor.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -61,30 +60,32 @@ namespace WndPL.Forms
             else if (txtPassword.Text != txtPasswordRepeat.Text)
             {
                 MessageBox.Show("Şifreler eşleşmiyor. \nLütfen şifreleri kontrol ediniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
             }
             else
             {
                 var users = bl.Users.GetAll();
-                User user = users.SingleOrDefault(a => a.Mail == txtMail.Text);
+                User user = users.SingleOrDefault(u=>u.Mail == txtMail.Text);
                 if (user != null)
                 {
                     MessageBox.Show("Bu mail adresi sistemde mevcut. \nLütfen bilgilerinizi kontrol ediniz.");
-                    return;
+
                 }
                 else
                 {
                     MessageBox.Show("Sisteme başarıyla kayıt oldunuz.");
-                    User _user = new User();
-                    bl = new BusinessLogic();
-                    bl.Users.Add(_user);
-                    UserInformation userInfo = new();
+                    User newUser = new User()
+                    {
+                        Mail = txtMail.Text,
+                        Password = txtPassword.Text,
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text
+                    };
+                    UserInformation userInfo = new(newUser);
                     helper.HideAndShow(this, userInfo);
 
                 }
             }
-
-
         }
 
         private bool IsPasswordValid(string password)
@@ -107,36 +108,6 @@ namespace WndPL.Forms
             return false;
         }
 
-        private bool AreFieldsEmpty()
-        {
-            if (string.IsNullOrWhiteSpace(txtMail.Text) ||
-                string.IsNullOrWhiteSpace(txtMailRepeat.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtPasswordRepeat.Text) ||
-                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txtLastName.Text)
-               )
-
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }
-        }
-
-
-        private void guna2PictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlPhoto_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
     }
 }
