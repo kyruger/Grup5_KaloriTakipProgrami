@@ -348,17 +348,11 @@ namespace WndPL.Forms
                     ConsumedFood consumed = bl.ConsumedFoods.GetById(id);
                     Food food = bl.Foods.GetById(consumed.FoodId);
                     bool isRemoved = bl.ConsumedFoods.Remove(id);
-                    if (isRemoved)
-                    {
-                        MessageBox.Show($"{food.Name} deleted from your meal");
-                    }
-                    else
-                    {
-                        MessageBox.Show($"{food.Name} can't deleted from your meal something go wrong");
-                    }
+                   
 
                 }
             }
+            MessageBox.Show($"{food.Name} deleted from your meal");
             lviDailyConsumedFood.Items.Clear();
 
 
