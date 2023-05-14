@@ -21,9 +21,19 @@ namespace WndPL
         {
             foreach (var item in form.Controls)
             {
-                if (item is TextBox txt)
+                if (item is Guna2TextBox txt)
                     txt.Text = null;
             }
         }
+
+        public void ClearTextsExceptOne(Form form,Guna2TextBox textBox)
+        {
+            foreach (var item in form.Controls)
+            {
+                if (item is Guna2TextBox txt && item != textBox)
+                    txt.Text = null;
+            }
+        }
+       
     }
 }

@@ -22,7 +22,8 @@ namespace Entities
         public decimal FatRateFor100Gram { get; set; }
         public decimal CarbonhydrateAmountFor100Gram { get; set; }
         public byte[]? ImageResource { get; set; }
-   
+        public int OwnerId { get; set; }
+
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }
 
     }

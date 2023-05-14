@@ -2,6 +2,7 @@
 using Castle.DynamicProxy.Generators;
 using Entities;
 using Entities.Enums;
+using Guna.Charts.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WndPL.Forms.ReportForms
 {
@@ -181,60 +183,118 @@ namespace WndPL.Forms.ReportForms
             }
         }
 
+        //public void FillFoodCategoryDatas(int day, params MealType[] mealTypes)
+        //{
+        //    //Data1
+        //    barDataFoodCategoryMy1.DataPoints.Clear();
+        //    for (int i = 0; i < Enum.GetValues(typeof(FoodCategory)).Length/2; i++)
+        //    {
+        //        LPoint lPoint = new LPoint();
+        //        lPoint.Label = ((FoodCategory)(i + 1)).ToString();
+        //        lPoint.Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
+        //        barDataFoodCategoryUsers1.DataPoints.Add(lPoint);
+        //    }
+
+        //    barDataFoodCategoryUsers1.DataPoints.Clear();
+        //    for (int i = 0; i < Enum.GetValues(typeof(FoodCategory)).Length / 2; i++)
+        //    {
+        //        LPoint lPoint = new LPoint();
+        //        lPoint.Label = ((FoodCategory)(i + 1)).ToString();
+        //        var users = bl.Users.GetAll();
+        //        int usersTotal = 0;
+        //        foreach (var user in users)
+        //        {
+        //            usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
+        //        }
+        //        lPoint.Y = usersTotal / users.Count;
+        //        barDataFoodCategoryUsers1.DataPoints.Add(lPoint);
+        //    }
+
+        //    //Data2
+        //    barDataFoodCategoryMy2.DataPoints.Clear();
+        //    for (int i = 0; i < Enum.GetValues(typeof(FoodCategory)).Length / 2; i++)
+        //    {
+        //        LPoint lPoint = new LPoint();
+        //        lPoint.Label = ((FoodCategory)(Enum.GetValues(typeof(FoodCategory)).Length / 2 + i + 1)).ToString();
+        //        lPoint.Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(Enum.GetValues(typeof(FoodCategory)).Length / 2 + i + 1), mealTypes);
+        //        barDataFoodCategoryMy2.DataPoints.Add(lPoint);
+        //    }
+
+        //    barDataFoodCategoryUsers2.DataPoints.Clear();
+        //    for (int i = 0; i < Enum.GetValues(typeof(FoodCategory)).Length / 2; i++)
+        //    {
+        //        LPoint lPoint = new LPoint();
+        //        lPoint.Label = ((FoodCategory)(FoodCategory)(Enum.GetValues(typeof(FoodCategory)).Length + i + 1)).ToString();
+        //        var users = bl.Users.GetAll();
+        //        int usersTotal = 0;
+        //        foreach (var user in users)
+        //        {
+        //            usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(FoodCategory)(Enum.GetValues(typeof(FoodCategory)).Length + i + 1), mealTypes);
+
+        //        }
+        //        lPoint.Y = usersTotal / users.Count;
+        //    }
+        //} 
+
+
+
+
+
         #region Helper Methods
-        public void FillFoodCategoryDatas(int day, params MealType[] mealTypes)
-        {
-            //Data1
-            barDataFoodCategoryMy1.DataPoints.Clear();
-            Guna.Charts.WinForms.LPoint[] lpMyCategoryPoints = new Guna.Charts.WinForms.LPoint[] { lpMyFurit, lpMyVegetable, lpMyDessert, lpMyMeat, lpMySoup, lpMyBeverage, lpMyDairy };
-            for (int i = 0; i < lpMyCategoryPoints.Length; i++)
-            {
-                lpMyCategoryPoints[i].Label = ((FoodCategory)(i + 1)).ToString();
-                lpMyCategoryPoints[i].Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
-            }
-            barDataFoodCategoryMy1.DataPoints.AddRange(lpMyCategoryPoints);
+         public void FillFoodCategoryDatas(int day, params MealType[] mealTypes)
+         {
+             //Data1
+             barDataFoodCategoryMy1.DataPoints.Clear();
+             Guna.Charts.WinForms.LPoint[] lpMyCategoryPoints = new Guna.Charts.WinForms.LPoint[] { lpMyFurit, lpMyVegetable, lpMyDessert, lpMyMeat, lpMySoup, lpMyBeverage, lpMyDairy };
+             for (int i = 0; i < lpMyCategoryPoints.Length; i++)
+             {
+                 lpMyCategoryPoints[i].Label = ((FoodCategory)(i + 1)).ToString();
+                 lpMyCategoryPoints[i].Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
+             }
+             barDataFoodCategoryMy1.DataPoints.AddRange(lpMyCategoryPoints);
 
-            barDataFoodCategoryUsers1.DataPoints.Clear();
-            Guna.Charts.WinForms.LPoint[] lpUsersCategoryPoints = new Guna.Charts.WinForms.LPoint[] { lpUsersFurit, lpUsersVegetable, lpUsersDessert, lpUsersMeat, lpUsersSoup, lpUsersBeverage, lpUsersDairy };
-            for (int i = 0; i < lpUsersCategoryPoints.Length; i++)
-            {
-                lpUsersCategoryPoints[i].Label = ((FoodCategory)(i + 1)).ToString();
-                var users = bl.Users.GetAll();
-                int usersTotal = 0;
-                foreach (var user in users)
-                {
-                    usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
-                }
-                lpUsersCategoryPoints[i].Y = usersTotal/ users.Count;
-            }
-            barDataFoodCategoryUsers1.DataPoints.AddRange(lpUsersCategoryPoints);
+             barDataFoodCategoryUsers1.DataPoints.Clear();
+             Guna.Charts.WinForms.LPoint[] lpUsersCategoryPoints = new Guna.Charts.WinForms.LPoint[] { lpUsersFurit, lpUsersVegetable, lpUsersDessert, lpUsersMeat, lpUsersSoup, lpUsersBeverage, lpUsersDairy };
+             for (int i = 0; i < lpUsersCategoryPoints.Length; i++)
+             {
+                 lpUsersCategoryPoints[i].Label = ((FoodCategory)(i + 1)).ToString();
+                 var users = bl.Users.GetAll();
+                 int usersTotal = 0;
+                 foreach (var user in users)
+                 {
+                     usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(i + 1), mealTypes);
+                 }
+                 lpUsersCategoryPoints[i].Y = usersTotal/ users.Count;
+             }
+             barDataFoodCategoryUsers1.DataPoints.AddRange(lpUsersCategoryPoints);
 
-            //Data2
-            barDataFoodCategoryMy2.DataPoints.Clear();
-            Guna.Charts.WinForms.LPoint[] lpMyCategoryPoints2 = new Guna.Charts.WinForms.LPoint[] { lpMySalad, lpMyBakedGood, lpMyCereals, lpMySeaFood, lpMyFastFood, lpMyLegume, lpMyOthers };
-            for (int i = 0; i < lpMyCategoryPoints2.Length; i++)
-            {
-                lpMyCategoryPoints2[i].Label = ((FoodCategory)(lpMyCategoryPoints.Length + i + 1)).ToString();
-                lpMyCategoryPoints2[i].Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(lpMyCategoryPoints.Length + i + 1), mealTypes);
-            }
-            barDataFoodCategoryMy2.DataPoints.AddRange(lpMyCategoryPoints2);
+             //Data2
+             barDataFoodCategoryMy2.DataPoints.Clear();
+             Guna.Charts.WinForms.LPoint[] lpMyCategoryPoints2 = new Guna.Charts.WinForms.LPoint[] { lpMySalad, lpMyBakedGood, lpMyCereals, lpMySeaFood, lpMyFastFood, lpMyLegume, lpMyOthers };
+             for (int i = 0; i < lpMyCategoryPoints2.Length; i++)
+             {
+                 lpMyCategoryPoints2[i].Label = ((FoodCategory)(lpMyCategoryPoints.Length + i + 1)).ToString();
+                 lpMyCategoryPoints2[i].Y = bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(lpMyCategoryPoints.Length + i + 1), mealTypes);
+             }
+             barDataFoodCategoryMy2.DataPoints.AddRange(lpMyCategoryPoints2);
 
-            barDataFoodCategoryUsers2.DataPoints.Clear();
-            Guna.Charts.WinForms.LPoint[] lpUsersCategoryPoints2 = new Guna.Charts.WinForms.LPoint[] { lpUsersSalad, lpUsersBakedGood, lpUsersCereals, lpUsersSeaFood, lpUsersFastFood, lpUsersLegume, lpUsersOthers };
-            for (int i = 0; i < lpUsersCategoryPoints2.Length; i++)
-            {
-                lpUsersCategoryPoints2[i].Label = ((FoodCategory)(lpUsersCategoryPoints.Length + i + 1)).ToString();
-                var users = bl.Users.GetAll();
-                int usersTotal = 0;
-                foreach (var user in users)
-                {
-                    usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(lpUsersCategoryPoints.Length + i + 1), mealTypes);
+             barDataFoodCategoryUsers2.DataPoints.Clear();
+             Guna.Charts.WinForms.LPoint[] lpUsersCategoryPoints2 = new Guna.Charts.WinForms.LPoint[] { lpUsersSalad, lpUsersBakedGood, lpUsersCereals, lpUsersSeaFood, lpUsersFastFood, lpUsersLegume, lpUsersOthers };
+             for (int i = 0; i < lpUsersCategoryPoints2.Length; i++)
+             {
+                 lpUsersCategoryPoints2[i].Label = ((FoodCategory)(lpUsersCategoryPoints.Length + i + 1)).ToString();
+                 var users = bl.Users.GetAll();
+                 int usersTotal = 0;
+                 foreach (var user in users)
+                 {
+                     usersTotal += bl.Users.GetConsumedFoodsAmountForDaysById(userId, day, (FoodCategory)(lpUsersCategoryPoints.Length + i + 1), mealTypes);
 
-                }
-                lpUsersCategoryPoints2[i].Y = usersTotal/ users.Count;
-            }
-            barDataFoodCategoryUsers2.DataPoints.AddRange(lpUsersCategoryPoints2);
-        }
+                 }
+                 lpUsersCategoryPoints2[i].Y = usersTotal/ users.Count;
+             }
+             barDataFoodCategoryUsers2.DataPoints.AddRange(lpUsersCategoryPoints2);
+         } 
+
         public void FillFoodCategoryDatas(MealType mealType, int day)
         {
             //Data1

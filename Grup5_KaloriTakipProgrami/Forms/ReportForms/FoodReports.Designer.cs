@@ -78,9 +78,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodReports));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodReports));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -90,14 +90,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             txtPlace = new Guna.UI2.WinForms.Guna2TextBox();
             txtCalorie = new Guna.UI2.WinForms.Guna2TextBox();
             chartFoodAvgDayConsume = new Guna.Charts.WinForms.GunaChart();
             pieDataFoodAvgDayConsume = new Guna.Charts.WinForms.GunaPieDataset();
-            lblFoodName = new Label();
-            txtCategory = new Guna.UI2.WinForms.Guna2TextBox();
             txtPortion = new Guna.UI2.WinForms.Guna2TextBox();
             txtProtein = new Guna.UI2.WinForms.Guna2TextBox();
             txtFat = new Guna.UI2.WinForms.Guna2TextBox();
@@ -132,6 +132,8 @@
             txtPortionCount = new Guna.UI2.WinForms.Guna2TextBox();
             txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             btnNew = new Guna.UI2.WinForms.Guna2Button();
+            txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
+            cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)picboxFoodPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -173,11 +175,11 @@
             // 
             txtPlace.BorderRadius = 40;
             txtPlace.CustomizableEdges = customizableEdges3;
-            txtPlace.DefaultText = "";
+            txtPlace.DefaultText = "-";
             txtPlace.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPlace.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPlace.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPlace.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPlace.DisabledState.FillColor = Color.Teal;
+            txtPlace.DisabledState.ForeColor = Color.White;
+            txtPlace.DisabledState.PlaceholderForeColor = Color.White;
             txtPlace.FillColor = Color.Teal;
             txtPlace.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPlace.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
@@ -188,6 +190,7 @@
             txtPlace.Name = "txtPlace";
             txtPlace.PasswordChar = '\0';
             txtPlace.PlaceholderText = "";
+            txtPlace.ReadOnly = true;
             txtPlace.SelectedText = "";
             txtPlace.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtPlace.Size = new Size(80, 80);
@@ -196,22 +199,24 @@
             // 
             // txtCalorie
             // 
-            txtCalorie.BorderRadius = 20;
+            txtCalorie.BorderColor = Color.Teal;
+            txtCalorie.BorderRadius = 14;
+            txtCalorie.BorderThickness = 8;
             txtCalorie.CustomizableEdges = customizableEdges5;
             txtCalorie.DefaultText = "";
             txtCalorie.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCalorie.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtCalorie.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtCalorie.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtCalorie.FillColor = Color.Teal;
             txtCalorie.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCalorie.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtCalorie.ForeColor = Color.White;
+            txtCalorie.ForeColor = Color.Black;
             txtCalorie.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCalorie.Location = new Point(371, 172);
             txtCalorie.Name = "txtCalorie";
             txtCalorie.PasswordChar = '\0';
-            txtCalorie.PlaceholderText = "";
+            txtCalorie.PlaceholderForeColor = Color.Black;
+            txtCalorie.PlaceholderText = "-";
             txtCalorie.SelectedText = "";
             txtCalorie.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtCalorie.Size = new Size(149, 42);
@@ -273,132 +278,106 @@
             pieDataFoodAvgDayConsume.Label = "FoodAvgDayConsume";
             pieDataFoodAvgDayConsume.TargetChart = chartFoodAvgDayConsume;
             // 
-            // lblFoodName
-            // 
-            lblFoodName.AutoSize = true;
-            lblFoodName.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFoodName.Location = new Point(535, 39);
-            lblFoodName.Name = "lblFoodName";
-            lblFoodName.Size = new Size(165, 37);
-            lblFoodName.TabIndex = 9;
-            lblFoodName.Text = "Food Name";
-            // 
-            // txtCategory
-            // 
-            txtCategory.BorderRadius = 20;
-            txtCategory.CustomizableEdges = customizableEdges7;
-            txtCategory.DefaultText = "";
-            txtCategory.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtCategory.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtCategory.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtCategory.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtCategory.FillColor = Color.Teal;
-            txtCategory.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCategory.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtCategory.ForeColor = Color.White;
-            txtCategory.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCategory.Location = new Point(573, 172);
-            txtCategory.Name = "txtCategory";
-            txtCategory.PasswordChar = '\0';
-            txtCategory.PlaceholderText = "";
-            txtCategory.SelectedText = "";
-            txtCategory.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtCategory.Size = new Size(149, 42);
-            txtCategory.TabIndex = 10;
-            txtCategory.TextAlign = HorizontalAlignment.Center;
-            // 
             // txtPortion
             // 
-            txtPortion.BorderRadius = 20;
-            txtPortion.CustomizableEdges = customizableEdges9;
+            txtPortion.BorderColor = Color.Teal;
+            txtPortion.BorderRadius = 14;
+            txtPortion.BorderThickness = 8;
+            txtPortion.CustomizableEdges = customizableEdges7;
             txtPortion.DefaultText = "";
             txtPortion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPortion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtPortion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtPortion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPortion.FillColor = Color.Teal;
             txtPortion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPortion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtPortion.ForeColor = Color.White;
+            txtPortion.ForeColor = Color.Black;
             txtPortion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPortion.Location = new Point(775, 172);
             txtPortion.Name = "txtPortion";
             txtPortion.PasswordChar = '\0';
-            txtPortion.PlaceholderText = "";
+            txtPortion.PlaceholderForeColor = Color.Black;
+            txtPortion.PlaceholderText = "-";
             txtPortion.SelectedText = "";
-            txtPortion.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtPortion.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPortion.Size = new Size(149, 42);
             txtPortion.TabIndex = 11;
             txtPortion.TextAlign = HorizontalAlignment.Center;
             // 
             // txtProtein
             // 
-            txtProtein.BorderRadius = 20;
-            txtProtein.CustomizableEdges = customizableEdges11;
+            txtProtein.BorderColor = Color.Teal;
+            txtProtein.BorderRadius = 14;
+            txtProtein.BorderThickness = 8;
+            txtProtein.CustomizableEdges = customizableEdges9;
             txtProtein.DefaultText = "";
             txtProtein.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtProtein.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtProtein.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtProtein.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtProtein.FillColor = Color.Teal;
             txtProtein.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProtein.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtProtein.ForeColor = Color.White;
+            txtProtein.ForeColor = Color.Black;
             txtProtein.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtProtein.Location = new Point(371, 269);
             txtProtein.Name = "txtProtein";
             txtProtein.PasswordChar = '\0';
-            txtProtein.PlaceholderText = "";
+            txtProtein.PlaceholderForeColor = Color.Black;
+            txtProtein.PlaceholderText = "-";
             txtProtein.SelectedText = "";
-            txtProtein.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtProtein.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtProtein.Size = new Size(149, 42);
             txtProtein.TabIndex = 12;
             txtProtein.TextAlign = HorizontalAlignment.Center;
             // 
             // txtFat
             // 
-            txtFat.BorderRadius = 20;
-            txtFat.CustomizableEdges = customizableEdges13;
+            txtFat.BorderColor = Color.Teal;
+            txtFat.BorderRadius = 14;
+            txtFat.BorderThickness = 8;
+            txtFat.CustomizableEdges = customizableEdges11;
             txtFat.DefaultText = "";
             txtFat.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtFat.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtFat.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtFat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtFat.FillColor = Color.Teal;
             txtFat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtFat.ForeColor = Color.White;
+            txtFat.ForeColor = Color.Black;
             txtFat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFat.Location = new Point(573, 269);
             txtFat.Name = "txtFat";
             txtFat.PasswordChar = '\0';
-            txtFat.PlaceholderText = "";
+            txtFat.PlaceholderForeColor = Color.Black;
+            txtFat.PlaceholderText = "-";
             txtFat.SelectedText = "";
-            txtFat.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtFat.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtFat.Size = new Size(149, 42);
             txtFat.TabIndex = 13;
             txtFat.TextAlign = HorizontalAlignment.Center;
             // 
             // txtCarbohydrate
             // 
-            txtCarbohydrate.BorderRadius = 20;
-            txtCarbohydrate.CustomizableEdges = customizableEdges15;
+            txtCarbohydrate.BorderColor = Color.Teal;
+            txtCarbohydrate.BorderRadius = 14;
+            txtCarbohydrate.BorderThickness = 8;
+            txtCarbohydrate.CustomizableEdges = customizableEdges13;
             txtCarbohydrate.DefaultText = "";
             txtCarbohydrate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCarbohydrate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtCarbohydrate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtCarbohydrate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtCarbohydrate.FillColor = Color.Teal;
             txtCarbohydrate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCarbohydrate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtCarbohydrate.ForeColor = Color.White;
+            txtCarbohydrate.ForeColor = Color.Black;
             txtCarbohydrate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCarbohydrate.Location = new Point(775, 269);
             txtCarbohydrate.Name = "txtCarbohydrate";
             txtCarbohydrate.PasswordChar = '\0';
-            txtCarbohydrate.PlaceholderText = "";
+            txtCarbohydrate.PlaceholderForeColor = Color.Black;
+            txtCarbohydrate.PlaceholderText = "-";
             txtCarbohydrate.SelectedText = "";
-            txtCarbohydrate.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtCarbohydrate.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtCarbohydrate.Size = new Size(149, 42);
             txtCarbohydrate.TabIndex = 14;
             txtCarbohydrate.TextAlign = HorizontalAlignment.Center;
@@ -406,12 +385,12 @@
             // txtTotal
             // 
             txtTotal.BorderRadius = 40;
-            txtTotal.CustomizableEdges = customizableEdges17;
-            txtTotal.DefaultText = "";
+            txtTotal.CustomizableEdges = customizableEdges15;
+            txtTotal.DefaultText = "-";
             txtTotal.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtTotal.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtTotal.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtTotal.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTotal.DisabledState.FillColor = Color.Teal;
+            txtTotal.DisabledState.ForeColor = Color.White;
+            txtTotal.DisabledState.PlaceholderForeColor = Color.White;
             txtTotal.FillColor = Color.Teal;
             txtTotal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTotal.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
@@ -422,8 +401,9 @@
             txtTotal.Name = "txtTotal";
             txtTotal.PasswordChar = '\0';
             txtTotal.PlaceholderText = "";
+            txtTotal.ReadOnly = true;
             txtTotal.SelectedText = "";
-            txtTotal.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtTotal.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtTotal.Size = new Size(80, 80);
             txtTotal.TabIndex = 15;
             txtTotal.TextAlign = HorizontalAlignment.Center;
@@ -539,9 +519,9 @@
             // 
             btnAll.BorderRadius = 10;
             btnAll.BorderThickness = 2;
-            customizableEdges19.BottomRight = false;
-            customizableEdges19.TopRight = false;
-            btnAll.CustomizableEdges = customizableEdges19;
+            customizableEdges17.BottomRight = false;
+            customizableEdges17.TopRight = false;
+            btnAll.CustomizableEdges = customizableEdges17;
             btnAll.DisabledState.BorderColor = Color.DarkGray;
             btnAll.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -551,7 +531,7 @@
             btnAll.ForeColor = Color.White;
             btnAll.Location = new Point(392, 343);
             btnAll.Name = "btnAll";
-            btnAll.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnAll.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnAll.Size = new Size(105, 22);
             btnAll.TabIndex = 26;
             btnAll.Text = "All";
@@ -560,7 +540,7 @@
             // btnBreakfast
             // 
             btnBreakfast.BorderThickness = 2;
-            btnBreakfast.CustomizableEdges = customizableEdges21;
+            btnBreakfast.CustomizableEdges = customizableEdges19;
             btnBreakfast.DisabledState.BorderColor = Color.DarkGray;
             btnBreakfast.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBreakfast.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -570,7 +550,7 @@
             btnBreakfast.ForeColor = Color.White;
             btnBreakfast.Location = new Point(497, 343);
             btnBreakfast.Name = "btnBreakfast";
-            btnBreakfast.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnBreakfast.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnBreakfast.Size = new Size(105, 22);
             btnBreakfast.TabIndex = 27;
             btnBreakfast.Text = "Breakfast";
@@ -579,7 +559,7 @@
             // btnLunch
             // 
             btnLunch.BorderThickness = 2;
-            btnLunch.CustomizableEdges = customizableEdges23;
+            btnLunch.CustomizableEdges = customizableEdges21;
             btnLunch.DisabledState.BorderColor = Color.DarkGray;
             btnLunch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLunch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -589,7 +569,7 @@
             btnLunch.ForeColor = Color.White;
             btnLunch.Location = new Point(603, 343);
             btnLunch.Name = "btnLunch";
-            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnLunch.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnLunch.Size = new Size(105, 22);
             btnLunch.TabIndex = 28;
             btnLunch.Text = "Lunch";
@@ -598,7 +578,7 @@
             // btnDinner
             // 
             btnDinner.BorderThickness = 2;
-            btnDinner.CustomizableEdges = customizableEdges25;
+            btnDinner.CustomizableEdges = customizableEdges23;
             btnDinner.DisabledState.BorderColor = Color.DarkGray;
             btnDinner.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDinner.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -608,7 +588,7 @@
             btnDinner.ForeColor = Color.White;
             btnDinner.Location = new Point(709, 343);
             btnDinner.Name = "btnDinner";
-            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnDinner.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnDinner.Size = new Size(105, 22);
             btnDinner.TabIndex = 29;
             btnDinner.Text = "Dinner";
@@ -617,50 +597,54 @@
             // btnSave
             // 
             btnSave.BorderRadius = 22;
-            customizableEdges27.BottomLeft = false;
-            customizableEdges27.TopRight = false;
-            btnSave.CustomizableEdges = customizableEdges27;
+            customizableEdges25.BottomLeft = false;
+            customizableEdges25.TopRight = false;
+            btnSave.CustomizableEdges = customizableEdges25;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSave.Enabled = false;
             btnSave.FillColor = Color.DarkSlateBlue;
             btnSave.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(774, 521);
             btnSave.Name = "btnSave";
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnSave.Size = new Size(180, 44);
             btnSave.TabIndex = 30;
             btnSave.Text = "Save";
+            btnSave.Click += btnSave_Click;
             // 
             // btnDelete
             // 
             btnDelete.BorderRadius = 22;
-            customizableEdges29.BottomLeft = false;
-            customizableEdges29.TopRight = false;
-            btnDelete.CustomizableEdges = customizableEdges29;
+            customizableEdges27.BottomLeft = false;
+            customizableEdges27.TopRight = false;
+            btnDelete.CustomizableEdges = customizableEdges27;
             btnDelete.DisabledState.BorderColor = Color.DarkGray;
             btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelete.Enabled = false;
             btnDelete.FillColor = Color.DarkSlateBlue;
             btnDelete.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
             btnDelete.Location = new Point(332, 521);
             btnDelete.Name = "btnDelete";
-            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnDelete.Size = new Size(180, 44);
             btnDelete.TabIndex = 31;
             btnDelete.Text = "Delete";
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnOthers
             // 
             btnOthers.BorderRadius = 10;
             btnOthers.BorderThickness = 2;
-            customizableEdges31.BottomLeft = false;
-            customizableEdges31.TopLeft = false;
-            btnOthers.CustomizableEdges = customizableEdges31;
+            customizableEdges29.BottomLeft = false;
+            customizableEdges29.TopLeft = false;
+            btnOthers.CustomizableEdges = customizableEdges29;
             btnOthers.DisabledState.BorderColor = Color.DarkGray;
             btnOthers.DisabledState.CustomBorderColor = Color.DarkGray;
             btnOthers.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -670,7 +654,7 @@
             btnOthers.ForeColor = Color.White;
             btnOthers.Location = new Point(814, 343);
             btnOthers.Name = "btnOthers";
-            btnOthers.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnOthers.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnOthers.Size = new Size(105, 22);
             btnOthers.TabIndex = 34;
             btnOthers.Text = "Others";
@@ -678,12 +662,12 @@
             // 
             // picboxFoodPicture
             // 
-            picboxFoodPicture.CustomizableEdges = customizableEdges33;
+            picboxFoodPicture.CustomizableEdges = customizableEdges31;
             picboxFoodPicture.Image = (Image)resources.GetObject("picboxFoodPicture.Image");
             picboxFoodPicture.ImageRotate = 0F;
             picboxFoodPicture.Location = new Point(381, 1);
             picboxFoodPicture.Name = "picboxFoodPicture";
-            picboxFoodPicture.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            picboxFoodPicture.ShadowDecoration.CustomizableEdges = customizableEdges32;
             picboxFoodPicture.Size = new Size(120, 120);
             picboxFoodPicture.SizeMode = PictureBoxSizeMode.Zoom;
             picboxFoodPicture.TabIndex = 35;
@@ -714,12 +698,12 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges35;
+            guna2PictureBox1.CustomizableEdges = customizableEdges33;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(250, 30);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges34;
             guna2PictureBox1.Size = new Size(32, 32);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 39;
@@ -771,12 +755,12 @@
             // txtPortionCount
             // 
             txtPortionCount.BorderRadius = 25;
-            txtPortionCount.CustomizableEdges = customizableEdges37;
-            txtPortionCount.DefaultText = "";
+            txtPortionCount.CustomizableEdges = customizableEdges35;
+            txtPortionCount.DefaultText = "-";
             txtPortionCount.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPortionCount.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPortionCount.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPortionCount.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPortionCount.DisabledState.FillColor = Color.Teal;
+            txtPortionCount.DisabledState.ForeColor = Color.White;
+            txtPortionCount.DisabledState.PlaceholderForeColor = Color.White;
             txtPortionCount.FillColor = Color.Teal;
             txtPortionCount.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPortionCount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -786,8 +770,9 @@
             txtPortionCount.Name = "txtPortionCount";
             txtPortionCount.PasswordChar = '\0';
             txtPortionCount.PlaceholderText = "";
+            txtPortionCount.ReadOnly = true;
             txtPortionCount.SelectedText = "";
-            txtPortionCount.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            txtPortionCount.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtPortionCount.Size = new Size(50, 50);
             txtPortionCount.TabIndex = 43;
             txtPortionCount.TextAlign = HorizontalAlignment.Center;
@@ -795,12 +780,12 @@
             // txtQuantity
             // 
             txtQuantity.BorderRadius = 25;
-            txtQuantity.CustomizableEdges = customizableEdges39;
-            txtQuantity.DefaultText = "";
+            txtQuantity.CustomizableEdges = customizableEdges37;
+            txtQuantity.DefaultText = "-";
             txtQuantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtQuantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtQuantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtQuantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQuantity.DisabledState.FillColor = Color.Teal;
+            txtQuantity.DisabledState.ForeColor = Color.White;
+            txtQuantity.DisabledState.PlaceholderForeColor = Color.White;
             txtQuantity.FillColor = Color.Teal;
             txtQuantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtQuantity.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -810,8 +795,9 @@
             txtQuantity.Name = "txtQuantity";
             txtQuantity.PasswordChar = '\0';
             txtQuantity.PlaceholderText = "";
+            txtQuantity.ReadOnly = true;
             txtQuantity.SelectedText = "";
-            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges38;
             txtQuantity.Size = new Size(50, 50);
             txtQuantity.TabIndex = 44;
             txtQuantity.TextAlign = HorizontalAlignment.Center;
@@ -819,9 +805,9 @@
             // btnNew
             // 
             btnNew.BorderRadius = 22;
-            customizableEdges41.BottomLeft = false;
-            customizableEdges41.TopRight = false;
-            btnNew.CustomizableEdges = customizableEdges41;
+            customizableEdges39.BottomLeft = false;
+            customizableEdges39.TopRight = false;
+            btnNew.CustomizableEdges = customizableEdges39;
             btnNew.DisabledState.BorderColor = Color.DarkGray;
             btnNew.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNew.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -831,10 +817,59 @@
             btnNew.ForeColor = Color.White;
             btnNew.Location = new Point(553, 521);
             btnNew.Name = "btnNew";
-            btnNew.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btnNew.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btnNew.Size = new Size(180, 44);
             btnNew.TabIndex = 45;
             btnNew.Text = "New";
+            btnNew.Click += btnNew_Click;
+            // 
+            // txtFoodName
+            // 
+            txtFoodName.BorderColor = Color.White;
+            txtFoodName.BorderThickness = 0;
+            txtFoodName.CustomizableEdges = customizableEdges41;
+            txtFoodName.DefaultText = "Food Name";
+            txtFoodName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtFoodName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtFoodName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtFoodName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtFoodName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFoodName.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            txtFoodName.ForeColor = Color.Black;
+            txtFoodName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFoodName.Location = new Point(528, 20);
+            txtFoodName.Margin = new Padding(7, 7, 7, 7);
+            txtFoodName.Name = "txtFoodName";
+            txtFoodName.PasswordChar = '\0';
+            txtFoodName.PlaceholderText = "";
+            txtFoodName.SelectedText = "";
+            txtFoodName.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            txtFoodName.Size = new Size(210, 88);
+            txtFoodName.TabIndex = 46;
+            // 
+            // cbCategory
+            // 
+            cbCategory.BackColor = Color.Transparent;
+            cbCategory.BorderColor = Color.Teal;
+            cbCategory.BorderRadius = 14;
+            cbCategory.BorderThickness = 8;
+            cbCategory.CustomizableEdges = customizableEdges43;
+            cbCategory.DisabledState.BorderColor = Color.Teal;
+            cbCategory.DisabledState.FillColor = Color.White;
+            cbCategory.DisabledState.ForeColor = Color.Black;
+            cbCategory.DrawMode = DrawMode.OwnerDrawFixed;
+            cbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbCategory.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbCategory.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbCategory.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            cbCategory.ForeColor = Color.Black;
+            cbCategory.ItemHeight = 36;
+            cbCategory.Location = new Point(573, 172);
+            cbCategory.Name = "cbCategory";
+            cbCategory.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            cbCategory.Size = new Size(149, 42);
+            cbCategory.TabIndex = 47;
+            cbCategory.TextAlign = HorizontalAlignment.Center;
             // 
             // FoodReports
             // 
@@ -842,6 +877,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1000, 580);
+            Controls.Add(cbCategory);
+            Controls.Add(txtFoodName);
             Controls.Add(btnNew);
             Controls.Add(txtQuantity);
             Controls.Add(txtPortionCount);
@@ -874,8 +911,6 @@
             Controls.Add(txtFat);
             Controls.Add(txtProtein);
             Controls.Add(txtPortion);
-            Controls.Add(txtCategory);
-            Controls.Add(lblFoodName);
             Controls.Add(chartFoodAvgDayConsume);
             Controls.Add(txtCalorie);
             Controls.Add(txtPlace);
@@ -885,6 +920,7 @@
             Name = "FoodReports";
             Text = "FoodReports";
             Load += FoodReports_Load;
+            Click += FoodReports_Click;
             ((System.ComponentModel.ISupportInitialize)picboxFoodPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
@@ -898,8 +934,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPlace;
         private Guna.UI2.WinForms.Guna2TextBox txtCalorie;
         private Guna.Charts.WinForms.GunaChart chartFoodAvgDayConsume;
-        private Label lblFoodName;
-        private Guna.UI2.WinForms.Guna2TextBox txtCategory;
         private Guna.UI2.WinForms.Guna2TextBox txtPortion;
         private Guna.UI2.WinForms.Guna2TextBox txtProtein;
         private Guna.UI2.WinForms.Guna2TextBox txtFat;
@@ -935,5 +969,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPortionCount;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2Button btnNew;
+        private Guna.UI2.WinForms.Guna2TextBox txtFoodName;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
     }
 }

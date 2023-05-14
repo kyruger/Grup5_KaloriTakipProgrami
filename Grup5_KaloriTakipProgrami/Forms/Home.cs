@@ -58,6 +58,7 @@ namespace WndPL.Forms
             {
                 lblRemainingDay.Text = "0";
                 user.DayGoal = 0;
+                bl.Users.Update(user);
             }
 
             // fill DailyRemaining circle progress bar
