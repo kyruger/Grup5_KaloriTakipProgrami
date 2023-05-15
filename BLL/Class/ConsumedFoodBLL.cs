@@ -4,13 +4,27 @@ using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL
 {
+
+
     public class ConsumedFoodBLL : BaseClass<ConsumedFood>
     {
+        public List<ConsumedFood> GetConsumedFoodsByDayAndMealType(int userId, MealType meal)
+        {
+            User? user = db.Users.Find(userId);
+            TimeSpan timePassed = DateTime.Now - user.CreationTime;
+            int day = (int)timePassed.TotalDays + 1;
+            double totalCalorie = 0;
+
+
+            var cfList = user.ConsumedFoods.Where(cf => cf.Day == day && cf.MealType == meal).ToList();
+            return cfList;
+        }
 
         public void GetFoodConsumedPlaceByFoodId(int foodId, out int place, params MealType[] mealTypes)
         {
@@ -55,6 +69,8 @@ namespace BLL
                 place = list.FindIndex(f => f.FoodId == foodId) + 1;
             }
         }
+
+
 
         public int GetFoodConsumedTotalQuantityByFoodId(int foodId, params MealType[] mealTypes)
         {
@@ -107,19 +123,10 @@ namespace BLL
             return totalDays;
         }
 
-
-
-        public List<ConsumedFood> GetConsumedFoodsByDayAndMealType(int userId, MealType meal)
+        public bool GetConsumedFoodsByUserID(int id, int day, MealType type)
         {
-            User user = db.Users.Find(userId);
-            TimeSpan timePassed = DateTime.Now - user.CreationTime;
-            int day = (int)timePassed.TotalDays + 1;
-            List<ConsumedFood> consumedFoods = db.ConsumedFoods.Where(x => x.Day == day && x.MealType == meal).ToList();
-
-            return consumedFoods;
+            int number = db.ConsumedFoods.Where(x => x.UserId == id && x.Day == day && x.MealType == type).Count();
+            return number > 0;
         }
-
-
-
     }
 }

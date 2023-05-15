@@ -57,9 +57,10 @@
             lblMail = new Label();
             lblName = new Label();
             picboxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            btnExit = new Guna.UI2.WinForms.Guna2Button();
+            btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             pnlMain = new Guna.UI2.WinForms.Guna2Panel();
             pnl = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picboxProfile).BeginInit();
             pnl.SuspendLayout();
             SuspendLayout();
@@ -216,11 +217,11 @@
             // 
             lblMail.AutoSize = true;
             lblMail.BackColor = Color.Transparent;
-            lblMail.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMail.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lblMail.ForeColor = Color.White;
-            lblMail.Location = new Point(101, 65);
+            lblMail.Location = new Point(12, 100);
             lblMail.Name = "lblMail";
-            lblMail.Size = new Size(44, 21);
+            lblMail.Size = new Size(38, 19);
             lblMail.TabIndex = 9;
             lblMail.Text = "Mail";
             // 
@@ -230,7 +231,7 @@
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.White;
-            lblName.Location = new Point(98, 37);
+            lblName.Location = new Point(82, 46);
             lblName.Name = "lblName";
             lblName.Size = new Size(56, 21);
             lblName.TabIndex = 8;
@@ -241,36 +242,36 @@
             picboxProfile.BackColor = Color.Transparent;
             picboxProfile.Image = (Image)resources.GetObject("picboxProfile.Image");
             picboxProfile.ImageRotate = 0F;
-            picboxProfile.Location = new Point(12, 24);
+            picboxProfile.Location = new Point(3, 12);
             picboxProfile.Name = "picboxProfile";
             picboxProfile.ShadowDecoration.CustomizableEdges = customizableEdges13;
             picboxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            picboxProfile.Size = new Size(64, 64);
+            picboxProfile.Size = new Size(73, 76);
             picboxProfile.SizeMode = PictureBoxSizeMode.Zoom;
             picboxProfile.TabIndex = 7;
             picboxProfile.TabStop = false;
             // 
-            // btnExit
+            // btnLogOut
             // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.BorderRadius = 25;
+            btnLogOut.BackColor = Color.Transparent;
+            btnLogOut.BorderRadius = 25;
             customizableEdges14.BottomLeft = false;
             customizableEdges14.TopLeft = false;
-            btnExit.CustomizableEdges = customizableEdges14;
-            btnExit.DisabledState.BorderColor = Color.DarkGray;
-            btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExit.FillColor = Color.OrangeRed;
-            btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(0, 638);
-            btnExit.Name = "btnExit";
-            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            btnExit.Size = new Size(180, 50);
-            btnExit.TabIndex = 6;
-            btnExit.Text = "Exit";
-            btnExit.Click += btnExit_Click;
+            btnLogOut.CustomizableEdges = customizableEdges14;
+            btnLogOut.DisabledState.BorderColor = Color.DarkGray;
+            btnLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogOut.FillColor = Color.OrangeRed;
+            btnLogOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogOut.ForeColor = Color.White;
+            btnLogOut.Location = new Point(0, 622);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnLogOut.Size = new Size(180, 50);
+            btnLogOut.TabIndex = 6;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.Click += btnExit_Click;
             // 
             // pnlMain
             // 
@@ -287,8 +288,9 @@
             // pnl
             // 
             pnl.BorderRadius = 30;
+            pnl.Controls.Add(label1);
             pnl.Controls.Add(btnDiets);
-            pnl.Controls.Add(btnExit);
+            pnl.Controls.Add(btnLogOut);
             pnl.Controls.Add(btnActivity);
             pnl.Controls.Add(picboxProfile);
             pnl.Controls.Add(btnUserSettings);
@@ -308,6 +310,17 @@
             pnl.ShadowDecoration.CustomizableEdges = customizableEdges19;
             pnl.Size = new Size(200, 700);
             pnl.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(36, 675);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 19);
+            label1.TabIndex = 16;
+            label1.Text = "Version v1.0.1";
             // 
             // Main
             // 
@@ -331,7 +344,7 @@
         private Label lblMail;
         private Label lblName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picboxProfile;
-        private Guna.UI2.WinForms.Guna2Button btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Panel pnlMain;
         private Guna.UI2.WinForms.Guna2Button btnDiets;
         private Guna.UI2.WinForms.Guna2Button btnActivity;
@@ -340,5 +353,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMeals;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl;
+        private Label label1;
     }
 }

@@ -20,6 +20,8 @@ namespace DAL.Configurations
             builder.Property(a => a.FatRateFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.CarbonhydrateAmountFor100Gram).HasPrecision(5, 2);
             builder.Property(a => a.OwnerId).HasDefaultValue(0);
+            builder.Property(p => p.Image).HasColumnType("varbinary(max)");
+
 
 
             builder.HasData(
