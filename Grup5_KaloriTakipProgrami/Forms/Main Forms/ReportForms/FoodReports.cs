@@ -24,6 +24,7 @@ namespace WndPL.Forms.ReportForms
         }
         BusinessLogic bl = new BusinessLogic();
         Helper helper = new Helper();
+        byte[] imageData1;
         int foodId;
         int userId;
         private void FoodReports_Load(object sender, EventArgs e)
@@ -92,6 +93,18 @@ namespace WndPL.Forms.ReportForms
                 txtProtein.Text = selectedFood.ProteinRateFor100Gram.ToString();
                 txtFat.Text = selectedFood.FatRateFor100Gram.ToString();
                 txtCarbohydrate.Text = selectedFood.CarbonhydrateAmountFor100Gram.ToString();
+                if (selectedFood.Image != null)
+                {
+                    byte[] imageData = selectedFood.Image;
+                    MemoryStream ms = new MemoryStream(imageData);
+                    var image = Image.FromStream(ms);
+                    picboxFoodPicture.Image = image;
+                }
+                else
+                {
+                    string imagePath = "C:\\Users\\llhol\\Source\\Repos\\kyruger\\Grup5_KaloriTakipProgrami\\Grup5_KaloriTakipProgrami\\Resources\\Icons\\FoodReports Icons\\2427852_burger_cheeseburger_fast food_food_junk food_icon.png";
+                    picboxFoodPicture.Image = Image.FromFile(imagePath);
+                }
                 if (selectedFood.OwnerId == 0)
                 {
                     txtFoodName.ReadOnly = true;
@@ -103,6 +116,7 @@ namespace WndPL.Forms.ReportForms
                     cbCategory.Enabled = false;
                     btnSave.Enabled = false;
                     btnDelete.Enabled = false;
+                    btnEdit.Enabled = false;
                 }
                 else
                 {
@@ -115,6 +129,7 @@ namespace WndPL.Forms.ReportForms
                     cbCategory.Enabled = true;
                     btnSave.Enabled = true;
                     btnDelete.Enabled = true;
+                    btnEdit.Enabled = true;
                 }
 
                 //fill place and total and Quantity and Count
@@ -200,6 +215,7 @@ namespace WndPL.Forms.ReportForms
             cbCategory.SelectedIndex = -1;
             cbCategory.Enabled = true;
             btnSave.Enabled = true;
+            btnEdit.Enabled = true;
             txtFoodName.Focus();
         }
 
@@ -212,13 +228,16 @@ namespace WndPL.Forms.ReportForms
                 if (result == DialogResult.OK)
                 {
                     food.Name = txtFoodName.Text;
-                    food.CalorieFor100Gram = Convert.ToInt32(txtCalorie.Text);
+                    food.CalorieFor100Gram = Convert.ToDecimal(txtCalorie.Text);
                     food.Category = (FoodCategory)(cbCategory.SelectedIndex + 1);
-                    food.PortionGram = Convert.ToInt32(txtPortion.Text);
-                    food.ProteinRateFor100Gram = Convert.ToInt32(txtProtein.Text);
-                    food.FatRateFor100Gram = Convert.ToInt32(txtFat.Text);
-                    food.CarbonhydrateAmountFor100Gram = Convert.ToInt32(txtCarbohydrate.Text);
+                    food.PortionGram = Convert.ToDecimal(txtPortion.Text);
+                    food.ProteinRateFor100Gram = Convert.ToDecimal(txtProtein.Text);
+                    food.FatRateFor100Gram = Convert.ToDecimal(txtFat.Text);
+                    food.CarbonhydrateAmountFor100Gram = Convert.ToDecimal(txtCarbohydrate.Text);
                     food.OwnerId = userId;
+
+                    if (imageData1 != null)
+                        food.Image = imageData1;
                     bl.Foods.Update(food);
                 }
             }
@@ -229,18 +248,53 @@ namespace WndPL.Forms.ReportForms
                 {
                     Food newFood = new Food();
                     newFood.Name = txtFoodName.Text;
-                    newFood.CalorieFor100Gram = Convert.ToInt32(txtCalorie.Text);
+                    newFood.CalorieFor100Gram = Convert.ToDecimal(txtCalorie.Text);
                     newFood.Category = (FoodCategory)(cbCategory.SelectedIndex + 1);
-                    newFood.PortionGram = Convert.ToInt32(txtPortion.Text);
-                    newFood.ProteinRateFor100Gram = Convert.ToInt32(txtProtein.Text);
-                    newFood.FatRateFor100Gram = Convert.ToInt32(txtFat.Text);
-                    newFood.CarbonhydrateAmountFor100Gram = Convert.ToInt32(txtCarbohydrate.Text);
+                    newFood.PortionGram = Convert.ToDecimal(txtPortion.Text);
+                    newFood.ProteinRateFor100Gram = Convert.ToDecimal(txtProtein.Text);
+                    newFood.FatRateFor100Gram = Convert.ToDecimal(txtFat.Text);
+                    newFood.CarbonhydrateAmountFor100Gram = Convert.ToDecimal(txtCarbohydrate.Text);
                     newFood.OwnerId = userId;
+                    if (imageData1 != null)
+                        newFood.Image = imageData1;
                     bl.Foods.Add(newFood);
                     foodId = newFood.ID;
                 }
             }
 
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif";
+            openFileDialog.Title = "Fotoğraf Seç";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                Image originalImage = Image.FromFile(imagePath);
+                int maxWidth = 100;
+                int maxHeight = 100;
+
+                int newWidth, newHeight;
+                if (originalImage.Width > originalImage.Height)
+                {
+                    newWidth = maxWidth;
+                    newHeight = (int)(originalImage.Height * (float)newWidth / originalImage.Width);
+                }
+                else
+                {
+                    newHeight = maxHeight;
+                    newWidth = (int)(originalImage.Width * (float)newHeight / originalImage.Height);
+                }
+
+                Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
+                MemoryStream ms = new MemoryStream();
+                resizedImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                picboxFoodPicture.Image = resizedImage;
+                picboxFoodPicture.SizeMode = PictureBoxSizeMode.CenterImage;
+                imageData1 = File.ReadAllBytes(imagePath);
+            }
         }
 
 
@@ -279,5 +333,6 @@ namespace WndPL.Forms.ReportForms
             }
         }
         #endregion
+
     }
 }

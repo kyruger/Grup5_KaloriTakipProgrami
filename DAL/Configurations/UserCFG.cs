@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,9 @@ namespace DAL.Configurations
             builder.Ignore(p => p.DayGoalCreationTime);
             builder.Ignore(p => p.FullName);
             builder.Ignore(p => p.BodyMassIndex);
+            builder.Property(p => p.Image).HasColumnType("varbinary(max)");
+
+                //.HasDefaultValue("C:\\Users\\llhol\\Source\\Repos\\kyruger\\Grup5_KaloriTakipProgrami\\Grup5_KaloriTakipProgrami\\Resources\\Icons\\Main Icons\\628298_anonym_avatar_default_head_person_icon.png");
 
             builder.HasData(
                 new User

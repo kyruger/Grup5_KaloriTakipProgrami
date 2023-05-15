@@ -47,6 +47,13 @@ namespace WndPL.Forms
             cmbGender.SelectedIndex = (int)user.Gender - 1;
             if (user.PhoneNumber != null)
                 mtbTelephone.Text = user.PhoneNumber.ToString();
+            if (user.Image != null)
+            {
+                byte[] imageData = user.Image;
+                MemoryStream ms = new MemoryStream(imageData);
+                var image = Image.FromStream(ms);
+                pbChangePicture.Image = image;
+            }
 
         }
 
@@ -170,6 +177,41 @@ namespace WndPL.Forms
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '\b')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btnChangeUserPicture_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif";
+            openFileDialog.Title = "Fotoğraf Seç";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                Image originalImage = Image.FromFile(imagePath);
+                int maxWidth = 100;
+                int maxHeight = 100;
+
+                int newWidth, newHeight;
+                if (originalImage.Width > originalImage.Height)
+                {
+                    newWidth = maxWidth;
+                    newHeight = (int)(originalImage.Height * (float)newWidth / originalImage.Width);
+                }
+                else
+                {
+                    newHeight = maxHeight;
+                    newWidth = (int)(originalImage.Width * (float)newHeight / originalImage.Height);
+                }
+
+                Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
+                MemoryStream ms = new MemoryStream();
+                resizedImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                pbChangePicture.Image = resizedImage;
+                pbChangePicture.SizeMode = PictureBoxSizeMode.CenterImage;
+                byte[] imageData = File.ReadAllBytes(imagePath);
+                user.Image = imageData;
             }
         }
     }

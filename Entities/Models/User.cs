@@ -25,6 +25,7 @@ namespace Entities
         public Gender Gender { get; set; }
         public int Age { get; set; }
         public string? PhoneNumber { get; set; }
+        public decimal Height { get; set; }
         public decimal Weight { get; set; }
         public int DailyGoalCalorie { get; set; }
         public decimal GoalWeight { get; set; }
@@ -47,7 +48,7 @@ namespace Entities
                 }
             }
         }
-        public decimal Height { get; set; }
+        public byte[]? Image { get; set; }
         public decimal BodyMassIndex { get => Weight / (Height * Height); }
 
         public virtual ICollection<ConsumedFood> ConsumedFoods { get; set; }

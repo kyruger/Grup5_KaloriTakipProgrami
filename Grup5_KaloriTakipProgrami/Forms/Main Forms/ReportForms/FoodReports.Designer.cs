@@ -92,6 +92,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtFoodSearch = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             txtPlace = new Guna.UI2.WinForms.Guna2TextBox();
@@ -134,6 +136,8 @@
             btnNew = new Guna.UI2.WinForms.Guna2Button();
             txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)picboxFoodPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -665,7 +669,7 @@
             picboxFoodPicture.CustomizableEdges = customizableEdges31;
             picboxFoodPicture.Image = (Image)resources.GetObject("picboxFoodPicture.Image");
             picboxFoodPicture.ImageRotate = 0F;
-            picboxFoodPicture.Location = new Point(381, 1);
+            picboxFoodPicture.Location = new Point(694, 0);
             picboxFoodPicture.Name = "picboxFoodPicture";
             picboxFoodPicture.ShadowDecoration.CustomizableEdges = customizableEdges32;
             picboxFoodPicture.Size = new Size(120, 120);
@@ -837,7 +841,7 @@
             txtFoodName.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
             txtFoodName.ForeColor = Color.Black;
             txtFoodName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtFoodName.Location = new Point(528, 20);
+            txtFoodName.Location = new Point(418, 20);
             txtFoodName.Margin = new Padding(7, 7, 7, 7);
             txtFoodName.Name = "txtFoodName";
             txtFoodName.PasswordChar = '\0';
@@ -871,12 +875,45 @@
             cbCategory.TabIndex = 47;
             cbCategory.TextAlign = HorizontalAlignment.Center;
             // 
+            // btnEdit
+            // 
+            btnEdit.BorderRadius = 18;
+            btnEdit.CustomizableEdges = customizableEdges45;
+            btnEdit.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit.Enabled = false;
+            btnEdit.FillColor = Color.DarkSlateBlue;
+            btnEdit.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Location = new Point(836, 48);
+            btnEdit.Name = "btnEdit";
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            btnEdit.Size = new Size(100, 36);
+            btnEdit.TabIndex = 48;
+            btnEdit.Text = "Edit";
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkOrange;
+            label2.Location = new Point(437, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(120, 28);
+            label2.TabIndex = 49;
+            label2.Text = "Food Name";
+            // 
             // FoodReports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1000, 580);
+            Controls.Add(label2);
+            Controls.Add(btnEdit);
             Controls.Add(cbCategory);
             Controls.Add(txtFoodName);
             Controls.Add(btnNew);
@@ -971,5 +1008,7 @@
         private Guna.UI2.WinForms.Guna2Button btnNew;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodName;
         private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Label label2;
     }
 }

@@ -79,11 +79,12 @@ namespace WndPL.Forms
 
                     bool result = bl.Users.Add(user);
                     if (result)
-
+                    {
                         MessageBox.Show("Kayıt başarılı.");
+                        this.Close();
+                    }
                     else
                         MessageBox.Show("Kayıt başarısız.");
-                    this.Close();
                 }
                 else
                 {
@@ -98,7 +99,7 @@ namespace WndPL.Forms
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif";
             openFileDialog.Title = "Fotoğraf Seç";
-
+            
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
@@ -117,10 +118,14 @@ namespace WndPL.Forms
                     newHeight = maxHeight;
                     newWidth = (int)(originalImage.Width * (float)newHeight / originalImage.Height);
                 }
-
+                
                 Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
+                MemoryStream ms = new MemoryStream();
+                resizedImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 pbPhoto.Image = resizedImage;
                 pbPhoto.SizeMode = PictureBoxSizeMode.CenterImage;
+                byte[] imageData = File.ReadAllBytes(imagePath);
+                user.Image = imageData;
             }
         }
 
