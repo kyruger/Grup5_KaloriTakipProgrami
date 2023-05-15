@@ -217,11 +217,11 @@
             // 
             lblMail.AutoSize = true;
             lblMail.BackColor = Color.Transparent;
-            lblMail.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblMail.ForeColor = Color.White;
             lblMail.Location = new Point(12, 100);
             lblMail.Name = "lblMail";
-            lblMail.Size = new Size(38, 19);
+            lblMail.Size = new Size(30, 15);
             lblMail.TabIndex = 9;
             lblMail.Text = "Mail";
             // 

@@ -59,7 +59,7 @@ namespace WndPL.Forms
             cpbDinnerCalorie.Maximum = 9999;
             cpbDinnerCalorie.Value = (int)totalCalorie3;
 
-         
+
 
 
 
@@ -221,7 +221,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Breakfast;
             FillListViewConsumedFood(userID, mealType);
-           
+
         }
         private void FillListViewConsumedFood(int id, MealType meal)//Fills the consumedfood list view for incoming meal
         {
@@ -254,21 +254,21 @@ namespace WndPL.Forms
                     double totalCalorie = 0;
                     if (consumed.PortionType == PortionType.Full)
                     {
-                         totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Full;
-                         portionGramForType = (double)food.PortionGram / (int)PortionType.Full;
+                        totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Full;
+                        portionGramForType = (double)food.PortionGram / (int)PortionType.Full;
 
 
                     }
                     else if (consumed.PortionType == PortionType.Half)
                     {
-                         totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Half;
-                         portionGramForType = (double)food.PortionGram / (int)PortionType.Half;
+                        totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Half;
+                        portionGramForType = (double)food.PortionGram / (int)PortionType.Half;
 
                     }
                     else if (consumed.PortionType == PortionType.Quarter)
                     {
                         totalCalorie = consumed.PortionCount * (double)(food.PortionGram / 100) * (double)food.CalorieFor100Gram / (int)PortionType.Quarter;
-                         portionGramForType = (double)food.PortionGram / (int)PortionType.Quarter;
+                        portionGramForType = (double)food.PortionGram / (int)PortionType.Quarter;
 
                     }
 
@@ -300,7 +300,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Lunch;
             FillListViewConsumedFood(userID, mealType);
-           
+
 
 
         }
@@ -309,7 +309,7 @@ namespace WndPL.Forms
         {
             mealType = MealType.Dinner;
             FillListViewConsumedFood(userID, mealType);
-            
+
         }
 
         private void btnSaveSelectedMeal_Click(object sender, EventArgs e)
@@ -398,7 +398,7 @@ namespace WndPL.Forms
                         count--;
                         btnNumbers.Remove(5);
                     }
-              
+
                 }
 
 
@@ -558,11 +558,50 @@ namespace WndPL.Forms
         {
             if (lviDailyConsumedFood.SelectedItems.Count > 0)
             {
-                int consumedId = (int)lviDailyConsumedFood.SelectedItems[0].Tag;
-                bl.ConsumedFoods.Remove(consumedId);
-                FillListViewConsumedFood(userID, mealType);
+                if (lviDailyConsumedFood.SelectedItems[0].Tag != null)
+                {
+                    int consumedId = (int)lviDailyConsumedFood.SelectedItems[0].Tag;
+                    bl.ConsumedFoods.Remove(consumedId);
+                    FillListViewConsumedFood(userID, mealType);
+
+                }
+                else
+                {
+                    lviDailyConsumedFood.SelectedItems[0].Remove();
+                    if (MealType.Breakfast == mealType)
+                    {
+                        double totalCalorie = 0;
+                        foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                        {
+                            totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                        }
+                        cpbBreakfeastCalorie.Value = (int)totalCalorie;
+                    }
+                    else if (MealType.Lunch == mealType)
+                    {
+                        double totalCalorie = 0;
+                        foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                        {
+                            totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                        }
+                        cpbLunchCalorie.Value = (int)totalCalorie;
+                    }
+                    else if (MealType.Dinner == mealType)
+                    {
+                        double totalCalorie = 0;
+                        foreach (ListViewItem item in lviDailyConsumedFood.Items)
+                        {
+                            totalCalorie += Convert.ToDouble(item.SubItems[5].Text);
+
+                        }
+                        cpbDinnerCalorie.Value = (int)totalCalorie;
+                    }
+                }
 
             }
+
         }
 
         private void btnSnack_Click_1(object sender, EventArgs e)

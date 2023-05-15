@@ -27,12 +27,12 @@ namespace WndPL.Forms
             Entities.User user = bl.Users.GetById(userId);
             lblName.Text = user.FullName;
             lblMail.Text = user.Mail;
-            if (user.Image != null) 
+            if (user.Image != null)
             {
-            byte[] imageData = user.Image;
-            MemoryStream ms = new MemoryStream(imageData);
-            var image = Image.FromStream(ms);
-            picboxProfile.Image = image;
+                byte[] imageData = user.Image;
+                MemoryStream ms = new MemoryStream(imageData);
+                var image = Image.FromStream(ms);
+                picboxProfile.Image = image;
             }
             helper.ShowPanel(homeForm, pnlMain);
             btnActivity.Enabled = false;
